@@ -1,0 +1,78 @@
+//==============================
+// Mixins
+//==============================
+
+// Breakpoints
+@mixin bp($bp) {
+  @if $bp == xxl {
+    @media only screen and (min-width: 1501px) { @content; }
+  }
+  @if $bp == xl {
+    @media only screen and (max-width: 1500px) { @content; }
+  }
+  @else if $bp == l {
+    @media only screen and (max-width: 1200px) { @content; }
+  }
+  @else if $bp == m {
+    @media only screen and (max-width: 1023px) { @content; }
+  }
+  @else if $bp == s {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $bp == xs {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+  @else if $bp == xxs {
+    @media only screen and (max-width: 340px) { @content; }
+  }
+  @else if $bp == retina {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+  }}
+
+// Font declaration
+@mixin font($font, $folder, $file, $weight, $style, $ext) {
+  @font-face {
+    font-family: '#{$font}';
+    src: url('assets/fonts/#{$folder}/#{$file}.#{$ext}');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin placeholder($autofill-bg, $autofill-color) {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $autofill-bg inset;
+    -webkit-text-fill-color: $autofill-color !important;
+  }
+}
+
+@mixin fillcontainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
