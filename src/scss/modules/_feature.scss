@@ -1,0 +1,45 @@
+//==============================
+// Feature
+//==============================
+
+.feature {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+
+  &:nth-child(even) {
+
+    .feature-content {
+      order: -1;
+
+      @include bp(s) {
+        order: inherit;
+      }
+    }
+  }
+
+  &-img {
+    width: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include bp(s) {
+      width: 100%;
+      height: 70vw;
+    }
+  }
+
+  &-content {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10vw;
+
+    @include bp(s) {
+      width: 100%;
+    }
+  }
+}
