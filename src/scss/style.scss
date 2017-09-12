@@ -32,6 +32,7 @@ Version: 1.0
 
 @import 'lib/contact-form-7';
 @import 'lib/jquery-ui';
+@import 'lib/slick';
 
 
 // Modules
@@ -50,8 +51,10 @@ Version: 1.0
 // Templates
 //------------------------------
 
-@import 'templates/post';
+@import 'templates/home';
+@import 'templates/wines';
 @import 'templates/shop';
+@import 'templates/post';
 @import 'templates/not-found';
 
 // Print

@@ -31,7 +31,7 @@
       <li class="header-nav-item"><a href="<?php echo the_permalink('5'); ?>">Aaron</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('7'); ?>">Aequorea</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('24'); ?>">Shop</a></li>
-      <li class="header-nav-item"><a href="<?php echo the_permalink('28'); ?>?club=5810ffaa123e3b02f087ed13">Club</a></li>
+      <li class="header-nav-item"><a href="<?php echo the_permalink('28'); ?>">Club</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('30'); ?>">Visit</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('32'); ?>">Contact</a></li>
     </ul>
