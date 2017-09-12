@@ -3,5 +3,58 @@
 //==============================
 
 .header {
-  position: fixed;
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  border-bottom: transparentize($white, .7) solid 1px;
+
+  &-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    &-items {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    &-item {
+      list-style-type: none;
+      margin: 0 5px;
+
+      a {
+        padding: 40px 10px;
+        display: block;
+        text-align: center;
+        position: relative;
+        font: 400 normal 12px/1.5 Helvetica;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: transparentize($white, .4);
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 100%;
+          border-bottom: $white solid 1px;
+          opacity: 0;
+          transition: opacity .2s;
+        }
+
+        &:hover {
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 }

@@ -23,3 +23,17 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<header class="header">
+  <nav class="header-nav">
+    <div class="header-nav-logo">Aaron Wines</div>
+    <ul class="header-nav-items">
+      <li class="header-nav-item"><a href="#">Aaron</a></li>
+      <li class="header-nav-item"><a href="#">Aequorea</a></li>
+      <li class="header-nav-item"><a href="#">Shop</a></li>
+      <li class="header-nav-item"><a href="#">Club</a></li>
+      <li class="header-nav-item"><a href="#">Visit</a></li>
+      <li class="header-nav-item"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>

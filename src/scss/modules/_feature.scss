@@ -9,7 +9,7 @@
 
   &:nth-child(even) {
 
-    .feature-content {
+    .feature-img {
       order: -1;
 
       @include bp(s) {

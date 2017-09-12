@@ -2,3 +2,119 @@
 // Footer
 //==============================
 
+.footer {
+  background: $white;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  position: relative;
+
+  @include bp(s) {
+    padding-top: 20px;
+  }
+
+  &-section {
+    width: calc(100% / 3);
+    position: relative;
+    padding: 20px 40px;
+
+    @include bp(m) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include bp(s) {
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    
+    // divider line
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      border-right: #cbd3dd solid 1px;
+
+      @include bp(s) {
+        border-right: 0;
+        width: 70%;
+        height: 0;
+        top: auto;
+        right: auto;
+        left: 50%;          
+        bottom: 0;
+        border-bottom: #cbd3dd solid 1px;
+        transform: translateX(-50%);
+        max-width: 300px;
+      }
+
+      @include bp(xs) {
+        width: calc(100% - 40px);
+      }
+    }
+
+    &.follow {
+
+      .social {
+        margin-top: 1em;
+      }
+    }
+
+    &.contact {
+    }
+
+    &.club {
+
+      .button {
+        margin-top: 20px;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &-copyright {
+    width: 100%;
+    font: 400 normal 10px/1.5 Helvetica;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-top: 40px;
+    color: #aaa;
+
+    @include bp(s) {
+      margin-top: 20px;
+    }
+
+    a {
+      color: currentColor;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-separator {
+
+      @include bp(s) {
+        display: none;
+      }
+    }
+
+    br {
+      display: none;
+
+      @include bp(s) {
+        display: inline;
+      }
+    }
+  }
+}

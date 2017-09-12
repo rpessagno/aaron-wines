@@ -1,0 +1,46 @@
+//==============================
+// Social
+//==============================
+
+.social {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  li {
+    list-style-type: none;
+
+    + li {
+      margin-left: 20px;
+    }
+  }
+
+  a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #b7b7c2;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: darken(#b7b7c2, 10%);
+    }
+
+    &.facebook {
+      background-image: url('assets/images/global/facebook.svg');
+      background-size: auto 50%;
+    }
+
+    &.instagram {
+      background-image: url('assets/images/global/instagram.svg');
+      background-size: auto 55%;
+    }
+
+    &.twitter {
+      background-image: url('assets/images/global/twitter.svg');
+      background-size: auto 45%;
+    }
+  }
+}
