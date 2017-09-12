@@ -1,0 +1,44 @@
+//==============================
+// Contact Form
+//==============================
+
+.contact-form {
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &-row {
+    margin-bottom: 10px;
+
+    &.one-half {
+      width: calc(50% - 5px);
+    }
+
+    &.full {
+      width: 100%;
+    }
+
+    &.submit {
+      text-align: center;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    @include input-reset;
+    width: 100%;
+    background: #f0f0f0;
+    padding: 10px 15px;
+  }
+
+  input[type="submit"] {
+    @include input-reset;
+    padding: 10px 15px;
+  }
+}

@@ -30,7 +30,8 @@ Version: 1.0
 // Libraries
 //------------------------------
 
-
+@import 'lib/contact-form-7';
+@import 'lib/jquery-ui';
 
 
 // Modules
@@ -43,6 +44,7 @@ Version: 1.0
 @import 'modules/feature';
 @import 'modules/section-header';
 @import 'modules/social';
+@import 'modules/contact-form';
 
 
 // Templates

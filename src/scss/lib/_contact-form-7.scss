@@ -1,0 +1,48 @@
+//==============================
+// Contact Form 7
+//==============================
+
+// .wpcf7-not-valid {
+//   box-shadow: inset 0 0 0px 2px red !important;
+// }
+
+.wpcf7-not-valid-tip {
+  color: red;
+  display: block;
+  padding: 7px 0 0;
+  text-align: left;
+}
+
+.wpcf7-response-output {
+  color: red;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  left: 0;
+}
+
+@keyframes loaderSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+span.ajax-loader {
+  left: calc(50% - 8px);
+  position: relative;
+  margin: 10px 0 0 !important;
+  display: block !important;
+  background: none !important;
+  border-radius: 50%;
+  border-left: 2px solid red !important;
+  border-top: 2px solid red !important;
+  border-bottom: 2px solid transparent !important;
+  border-right: 2px solid transparent !important;
+  animation: loaderSpin .7s infinite linear;
+}
