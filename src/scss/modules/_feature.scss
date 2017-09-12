@@ -7,13 +7,16 @@
   flex-flow: row wrap;
   align-items: stretch;
 
-  &:nth-child(even) {
+  &-wrap {
 
-    .feature-img {
-      order: -1;
+    .feature {
 
-      @include bp(s) {
-        order: inherit;
+      &:nth-child(even) .feature-img {
+        order: -1;
+
+        @include bp(s) {
+          order: inherit;
+        }
       }
     }
   }

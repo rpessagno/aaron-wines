@@ -7,9 +7,23 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   padding: 0;
 }
 
+.title {
+  font: 300 normal 60px/1.5 Helvetica;
+  text-transform: uppercase;
+}
+
 .subtitle {
+  font: 400 normal 30px/1.5 Helvetica;
 
   + p {
     margin-top: 1em;
+  }
+}
+
+p {
+  font: 400 normal 16px/1.5 Helvetica;
+
+  + .button {
+    margin-top: 3em;
   }
 }

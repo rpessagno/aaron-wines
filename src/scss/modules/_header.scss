@@ -36,6 +36,7 @@
         text-transform: uppercase;
         text-decoration: none;
         color: transparentize($white, .4);
+        transition: color .2s;
 
         &:after {
           content: '';
@@ -49,6 +50,7 @@
         }
 
         &:hover {
+          color: $white;
 
           &:after {
             opacity: 1;
