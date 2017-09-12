@@ -36,6 +36,7 @@
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript" src="https://platform.vinespring.com/scripts/2.0/all.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
 
 </body>

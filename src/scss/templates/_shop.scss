@@ -1,0 +1,70 @@
+//==============================
+// Shop
+//==============================
+
+.shop {
+
+  &-items {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &-item {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: calc(100% / 3);
+  }
+}
+
+
+.cart {
+
+  form {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .vs2-productList-price {
+    display: none;
+  }
+
+  .vs2-productList-quantity-dropdown {
+    @include input-reset;
+    border: #ccc solid 1px;
+    padding: 5px 20px 5px 10px;
+    margin-right: 20px;
+    background: transparent url('assets/images/global/arrow-down.svg') right center / 15px auto no-repeat;
+  }
+
+  .vs2-productList-addToCart {
+
+    button {
+      font: 500 normal 12px/1.3 Helvetica;
+      letter-spacing: .26em;
+      background-color: #aaa;
+      padding: 1em 2.3em;
+      color: $white;
+      display: inline-block;
+      border: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color .2s;
+      min-width: 130px;
+      text-align: center;
+
+      @include bp(xs) {
+        font-size: 11px;
+        min-width: 100px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: darken(#aaa, 10%);
+      }
+    }
+  }
+}

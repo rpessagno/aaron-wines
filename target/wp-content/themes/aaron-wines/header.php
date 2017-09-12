@@ -30,7 +30,7 @@
     <ul class="header-nav-items">
       <li class="header-nav-item"><a href="<?php echo the_permalink('5'); ?>">Aaron</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('7'); ?>">Aequorea</a></li>
-      <li class="header-nav-item"><a href="#">Shop</a></li>
+      <li class="header-nav-item"><a href="<?php echo the_permalink('24'); ?>">Shop</a></li>
       <li class="header-nav-item"><a href="#">Club</a></li>
       <li class="header-nav-item"><a href="#">Visit</a></li>
       <li class="header-nav-item"><a href="#">Contact</a></li>
