@@ -39,63 +39,32 @@ get_header();
   <h1 class="title">Current Releases</h1>
 </div>
 
-<div class="feature-wrap">
-  <div class="feature">
-    <div class="feature-content">
-      <h2 class="subtitle">Kick as wines from Paso Robles</h2>
-      <a href="#" class="button">Join the Club</a>
+<?php $brand = strtolower(get_the_title()); ?>
+
+<div class="wines" data-vsPlugin="productList" id="wines">
+
+  <script type="text/html" id="wines-custom">
+    <div data-bind="foreach: parentProducts" class="feature-wrap">
+      
+      <!-- ko if: Custom1 == '<?php echo $brand; ?>' -->
+
+      <div class="feature">
+        <div class="feature-content">
+          <h2 class="subtitle"><a data-bind="text: Title, attr: { href: '/shop/product/?item=' + Tag }"></a></h2>
+          <p data-bind="text: Teaser"></p>
+          <a data-bind="attr: { href: '/shop/product/?item=' + Tag }" class="button">View Wine</a>
+        </div>
+        <div class="feature-img" data-bind="attr: { style: 'background-image: url(' + ListImageUrl + ');' }"></div>
+      </div>
+
+
+      <!-- /ko -->
+
     </div>
-    <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
-  </div>
-  <div class="feature">
-    <div class="feature-content">
-      <h2 class="subtitle">Kick as wines from Paso Robles</h2>
-      <a href="#" class="button">Join the Club</a>
-    </div>
-    <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
-  </div>
-  <div class="feature">
-    <div class="feature-content">
-      <h2 class="subtitle">Kick as wines from Paso Robles</h2>
-      <a href="#" class="button">Join the Club</a>
-    </div>
-    <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
-  </div>
-  <div class="feature">
-    <div class="feature-content">
-      <h2 class="subtitle">Kick as wines from Paso Robles</h2>
-      <a href="#" class="button">Join the Club</a>
-    </div>
-    <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
-  </div>
-  <div class="feature">
-    <div class="feature-content">
-      <h2 class="subtitle">Kick as wines from Paso Robles</h2>
-      <a href="#" class="button">Join the Club</a>
-    </div>
-    <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
-  </div>
-  <div class="feature">
-    <div class="feature-content">
-      <h2 class="subtitle">Kick as wines from Paso Robles</h2>
-      <a href="#" class="button">Join the Club</a>
-    </div>
-    <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
-  </div>
-  <div class="feature">
-    <div class="feature-content">
-      <h2 class="subtitle">Kick as wines from Paso Robles</h2>
-      <a href="#" class="button">Join the Club</a>
-    </div>
-    <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
-  </div>
-  <div class="feature">
-    <div class="feature-content">
-      <h2 class="subtitle">Kick as wines from Paso Robles</h2>
-      <a href="#" class="button">Join the Club</a>
-    </div>
-    <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
-  </div>
+  </script>
+  
 </div>
+
+
 
 <?php get_footer(); ?>
