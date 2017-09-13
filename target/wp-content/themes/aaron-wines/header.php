@@ -35,10 +35,7 @@ $header_style = get_field('header_style', $page_id);
 <header class="header <?php echo $header_style == '1' ? 'light' : 'dark'; ?>">
   <nav class="header-nav">
     <div class="header-nav-logo">
-      <a href="/">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-white.svg" alt="Aaron" class="dark">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="light">
-      </a>
+      <a href="/">Aaron + Aequorea</a>
     </div>
     <button class="header-nav-button">
       <span class="top"></span>
@@ -46,12 +43,26 @@ $header_style = get_field('header_style', $page_id);
       <span class="bottom"></span>
     </button>
     <ul class="header-nav-items">
+      <li class="header-nav-item"><a href="/">Home</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('5'); ?>">Aaron</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('7'); ?>">Aequorea</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('24'); ?>">Shop</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('28'); ?>">Club</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('30'); ?>">Visit</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('32'); ?>">Contact</a></li>
+    </ul>
+    <ul class="header-utility-items">
+      <li class="header-utility-item">
+        <a href="#">
+          <?php echo file_get_contents(get_template_directory() . '/assets/images/global/cart.svg') ?>
+          <span class="cart-count">0</span>
+        </a>
+      </li>
+      <li class="header-utility-item">
+        <a href="#">
+          <?php echo file_get_contents(get_template_directory() . '/assets/images/global/account.svg') ?>
+        </a>
+      </li>
     </ul>
   </nav>
   <button class="header-nav-close"></button>

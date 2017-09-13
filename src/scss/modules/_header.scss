@@ -30,6 +30,21 @@
     .header-nav-button span {
       background: $charcoal;
     }
+
+    .header-utility-items {
+      border-color: #ccc;
+    }
+
+    .header-utility-item {
+      a svg {
+        fill: $charcoal;
+      }
+
+      .cart-count {
+        background: $charcoal;
+        color: $white;
+      }
+    }
   }
 
   &.dark {
@@ -63,21 +78,33 @@
     .header-nav-button span {
       background: $white;
     }
+
+    .header-utility-items {
+      border-color: $white;
+    }
   }
 
   &-nav {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     min-height: 60px;
 
     &-logo {
       margin-left: 5px;
+      margin-right: auto;
 
-      img {
-        width: 120px;
-        display: none;
+      a {
+        font: 300 normal 17px/1 $sans-serif;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+
+        @include bp(s) {
+          font-size: 14px;
+        }
       }
     }
     
@@ -165,6 +192,8 @@
       position: relative;
       background-color: transparent;
       display: none;
+      margin-left: 10px;
+      order: 1;
 
       @include bp(m) {
         display: block;
@@ -241,6 +270,64 @@
 
       &:after {
         transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+
+  &-utility {
+
+    &-items {
+      display: flex;
+      flex-flow: row nowrap;
+      border-left: $white solid 1px;
+      margin-left: 10px;
+      padding-left: 10px;
+
+      @include bp(m) {
+        border-left: none;
+        border-right: $white solid 1px;
+      }
+    }
+
+    &-item {
+      list-style-type: none;
+
+      a {
+        display: block;
+        height: 30px;
+        width: 50px;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+
+          svg {
+            opacity: .7;
+          }
+        }
+      }
+
+      svg {
+        display: block;
+        height: 16px;
+        width: 16px;
+        fill: $white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity .3s;
+      }
+
+      .cart-count {
+        background: $white;
+        color: $charcoal;
+        border-radius: 10px;
+        padding: 4px 6px 3px;
+        font: 500 normal 10px/1 $sans-serif;
+        position: absolute;
+        left: 28px;
+        top: 0;
       }
     }
   }

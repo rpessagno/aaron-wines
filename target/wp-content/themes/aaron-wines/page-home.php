@@ -20,7 +20,7 @@ get_header();
     <div class="feature-content">
       <h3 class="subtitle"><?php the_field('aaron_title'); ?></h3>
       <p><?php the_field('aaron_text'); ?></p>
-      <a href="#" class="button">Explore The Wines</a>
+      <a href="#" class="button">Explore Aaron Wines</a>
     </div>
     <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
   </div>
@@ -28,7 +28,7 @@ get_header();
     <div class="feature-content">
       <h3 class="subtitle"><?php the_field('aequorea_title'); ?></h3>
       <p><?php the_field('aequorea_text'); ?></p>
-      <a href="#" class="button">Explore The Wines</a>
+      <a href="#" class="button">Explore Aequorea Wines</a>
     </div>
     <div class="feature-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0362/4429/t/8/assets/slideshow_2.jpg?8356872384184126241');"></div>
   </div>
