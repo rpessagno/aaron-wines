@@ -13,15 +13,15 @@
   &:after {
     content: '';
     @include fillcontainer;
-    background: linear-gradient(to bottom, rgba(42,107,145,.9) 0%,rgba(42,107,145,.5) 100%);
-    // background: rgba(42,107,145,.7);
+    background: linear-gradient(to bottom, rgba(109,111,83,.8) 0%,rgba(109,111,83,.4) 100%);
+    // background: rgba(42,107,145,1);
   }
 
   h1 {
     position: relative;
     z-index: 2;
     color: $white;
-    font: 200 normal 70px/1.2 $roboto;
+    font: 200 normal 70px/1.2 $serif;
     // text-transform: uppercase;
     // letter-spacing: .1em;
   }

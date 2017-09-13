@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .headline {
-  font: 100 normal 50px/1.2 $roboto;
+  font: 100 normal 50px/1.2 $serif;
   text-transform: uppercase;
   letter-spacing: .05em;
   color: $blue;
@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .title {
-  font: 200 normal 45px/1.2 $roboto;
+  font: 200 normal 45px/1.2 $serif;
   color: $blue;
 
   + p {
@@ -28,16 +28,27 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .subtitle {
-  font: 400 normal 30px/1.5 $roboto;
+  font: 400 normal 30px/1.5 $serif;
   color: $blue;
 
   + p {
     margin-top: 1em;
   }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border-bottom: #ccc solid 1px;
+    }
+  }
 }
 
 p {
-  font: 300 normal 18px/1.6 $roboto;
+  font: 300 normal 18px/1.6 $sans-serif;
   letter-spacing: .02em;
   color: $charcoal;
 

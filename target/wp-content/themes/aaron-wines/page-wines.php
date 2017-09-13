@@ -49,7 +49,7 @@ get_header();
 
 
 
-<div class="intro">
+<div class="section-header">
   <h1 class="title">Current Releases</h1>
 </div>
 
@@ -58,7 +58,7 @@ get_header();
 <div class="wines" data-vsPlugin="productList" id="wines">
 
   <script type="text/html" id="wines-custom">
-    <div data-bind="foreach: parentProducts" class="feature-wrap">
+    <div data-bind="foreach: parentProducts" class="feature-wrap alt">
       
       <!-- ko if: Custom1 == '<?php echo $brand; ?>' -->
 
