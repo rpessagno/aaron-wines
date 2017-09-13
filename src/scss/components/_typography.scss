@@ -47,12 +47,41 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   }
 }
 
-p {
+.subtitle2 {
+  font: 400 normal 20px/1.5 $serif;
+  color: $charcoal;
+}
+
+@mixin text {
   font: 300 normal 18px/1.6 $sans-serif;
   letter-spacing: .02em;
   color: $charcoal;
 
+  @include bp(m) {
+    font-size: 16px;
+  }
+
+  @include bp(xs) {
+    font-size: 14px;
+  }
+}
+
+p {
+  @include text;
+
   + .button {
     margin-top: 3em;
   }
+}
+
+.text {
+  @include text;
+
+  + ul.text {
+    margin-top: 1em;
+  }
+}
+
+ul.text {
+  margin-left: 1em;
 }

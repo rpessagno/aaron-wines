@@ -2,7 +2,7 @@
 // Button
 //==============================
 
-.button {
+@mixin button {
   font: 500 normal 13px/1.2 $sans-serif;
   letter-spacing: .15em;
   background-color: transparent;
@@ -27,4 +27,8 @@
     background-color: $blue;
     color: $white;
   }
+}
+
+.button {
+  @include button;
 }
