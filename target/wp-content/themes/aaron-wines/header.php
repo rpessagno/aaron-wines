@@ -24,7 +24,12 @@
 
 <body <?php body_class(); ?>>
 
-<header class="header">
+<?php
+$page_id = get_the_ID();
+$header_style = get_field('header_style', $page_id);
+?>
+
+<header class="header <?php echo $header_style == '1' ? 'light' : 'dark'; ?>">
   <nav class="header-nav">
     <div class="header-nav-logo"><a href="/">Aaron Wines</a></div>
     <ul class="header-nav-items">

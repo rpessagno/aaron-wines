@@ -3,15 +3,30 @@
 //==============================
 
 .header {
-  position: absolute;
+  margin: 0 auto;
   width: calc(100% - 80px);
   max-width: 1200px;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  border-bottom: transparentize($white, .7) solid 1px;
   z-index: 2;
 
+  &.light {
+    border-bottom: transparentize($black, .9) solid 1px;
+
+    .header-nav-item a {
+      color: $black;
+    }
+  }
+
+  &.dark {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: transparentize($white, .7) solid 1px;
+
+    .header-nav-item a {
+      color: $white;
+    }
+  }
 
   &-nav {
     display: flex;
@@ -37,7 +52,6 @@
         letter-spacing: .15em;
         text-transform: uppercase;
         text-decoration: none;
-        color: $white;
         transition: color .2s;
 
         &:after {
