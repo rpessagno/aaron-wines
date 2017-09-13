@@ -8,10 +8,10 @@ get_header();
 
 ?>
 
-<div class="hero"></div>
+<div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
 
 <div class="intro">
-  <h1><?php the_field('intro_headline'); ?></h1>
+  <h1 class="headline"><?php the_field('intro_headline'); ?></h1>
   <p><?php the_field('intro_text'); ?></p>
 </div>
 
@@ -34,18 +34,18 @@ get_header();
   </div>
 </div>
 
-<div class="home-experience">
-  <h2>Experience</h2>
+<div class="intro home-experience">
+  <h2 class="title">Experience</h2>
   <div class="home-experience-items">
     <div class="home-experience-item">
       <img src="<?php the_field('club_image'); ?>">
-      <h3>Wine Club</h3>
+      <h3 class="subtitle">Wine Club</h3>
       <p><?php the_field('club_text'); ?></p>
       <a href="" class="button">Learn More</a>
     </div>
     <div class="home-experience-item">
       <img src="<?php the_field('visit_image'); ?>">
-      <h3>Visit</h3>
+      <h3 class="subtitle">Visit</h3>
       <p><?php the_field('visit_text'); ?></p>
       <a href="" class="button">Learn More</a>
     </div>

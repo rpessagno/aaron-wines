@@ -9,10 +9,12 @@ get_header();
 ?>
 
 
-<div class="hero"></div>
+<div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');">
+  <h1>Shop Our Wines</h1>
+</div>
 
 <div class="intro">
-  <h1>Aaron</h1>
+  <h2 class="headline">Aaron</h2>
 </div>
 
 
@@ -24,7 +26,7 @@ get_header();
 <!-- </div> -->
 
 <div class="intro">
-  <h1>Aequorea</h1>
+  <h2 class="headline">Aequorea</h2>
 </div>
 
 

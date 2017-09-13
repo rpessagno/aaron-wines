@@ -8,10 +8,10 @@ get_header();
 
 ?>
 
-<div class="hero"></div>
+<div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
 
 <div class="intro">
-  <h1 class="title"><?php the_field('intro_title'); ?></h1>
+  <h1 class="headline"><?php the_field('intro_title'); ?></h1>
   <p><?php the_field('intro_text'); ?></p>
 </div>
 

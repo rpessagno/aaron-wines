@@ -7,13 +7,29 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   padding: 0;
 }
 
-.title {
-  font: 300 normal 60px/1.5 Helvetica;
+.headline {
+  font: 100 normal 50px/1.2 $roboto;
   text-transform: uppercase;
+  letter-spacing: .05em;
+  color: $blue;
+
+  + p {
+    margin-top: 1.5em;
+  }
+}
+
+.title {
+  font: 200 normal 45px/1.2 $roboto;
+  color: $blue;
+
+  + p {
+    margin-top: 1.5em;
+  }
 }
 
 .subtitle {
-  font: 400 normal 30px/1.5 Helvetica;
+  font: 400 normal 30px/1.5 $roboto;
+  color: $blue;
 
   + p {
     margin-top: 1em;
@@ -21,7 +37,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 p {
-  font: 400 normal 16px/1.5 Helvetica;
+  font: 300 normal 18px/1.6 $roboto;
+  letter-spacing: .02em;
+  color: #333;
 
   + .button {
     margin-top: 3em;

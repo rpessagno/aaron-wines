@@ -10,7 +10,8 @@ get_header();
 
 
 
-<div class="hero">
+<div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');">
+  <h1>Visit Our Tasting Room</h1>
 </div>
 
 
@@ -34,7 +35,7 @@ get_header();
 
 
 <div class="intro">
-  <h2>Request a Tasting Appointment</h2>
+  <h2 class="title">Request a Tasting Appointment</h2>
   <div class="contact-form">
     <?php echo do_shortcode('[contact-form-7 id="51"]'); ?>
   </div>
