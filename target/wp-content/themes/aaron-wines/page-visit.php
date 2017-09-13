@@ -10,7 +10,8 @@ get_header();
 
 
 
-<div class="hero"></div>
+<div class="hero">
+</div>
 
 
 

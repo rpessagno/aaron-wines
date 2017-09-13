@@ -1,0 +1,55 @@
+//==============================
+// Newsletter
+//==============================
+
+.newsletter {
+  width: 100%;
+  background: #f2f2ee url('assets/images/global/footer-newsletter-bg.png') center center / cover no-repeat;
+  text-align: center;
+  padding: 115px 0 158px;
+
+  @include bp(m) {
+    padding: 80px 40px 143px;
+  }
+
+  @include bp(s) {
+    padding: 60px 30px 133px;
+  }
+
+   @include bp(xs) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  input[type="email"] {
+    @include input-reset;
+    background-color: $white;
+    width: calc(100% - 170px);
+    max-width: 400px;
+    margin-right: 20px;
+
+    @include bp(m) {
+      width: calc(100% - 140px);
+      margin-right: 10px;
+    }
+
+    @include bp(xs) {
+      width: calc(100% - 110px);
+    }
+  }
+
+  input[type="submit"] {
+    width: 150px;
+
+    @include bp(m) {
+      width: 100px;
+    }
+  }
+}
