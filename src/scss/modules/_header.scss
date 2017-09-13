@@ -6,13 +6,29 @@
   margin: 0 auto;
   width: calc(100% - 80px);
   max-width: 1200px;
-  z-index: 2;
+  z-index: 3;
+
+  @include bp(m) {
+    width: calc(100% - 40px);
+  }
 
   &.light {
     border-bottom: transparentize($black, .9) solid 1px;
 
+    .header-nav-logo img.light {
+      display: block;
+    }
+
     .header-nav-item a {
       color: $black;
+
+      &:after {
+        border-bottom: $charcoal solid 1px;
+      }
+    }
+
+    .header-nav-button span {
+      background: $charcoal;
     }
   }
 
@@ -23,8 +39,29 @@
     transform: translateX(-50%);
     border-bottom: transparentize($white, .7) solid 1px;
 
+    @include bp(m) {
+      transform: none;
+      left: 20px;
+    }
+
+    .header-nav-logo img.dark {
+      display: block;
+    }
+
     .header-nav-item a {
       color: $white;
+
+      @include bp(m) {
+        color: $charcoal;
+      }
+
+      &:after {
+        border-bottom: $white solid 1px;
+      }
+    }
+
+    .header-nav-button span {
+      background: $white;
     }
   }
 
@@ -33,10 +70,44 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    min-height: 60px;
+
+    &-logo {
+      margin-left: 5px;
+
+      img {
+        width: 120px;
+        display: none;
+      }
+    }
     
     &-items {
       display: flex;
       flex-flow: row nowrap;
+
+      @include bp(m) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background-color: $white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5s, visibility .5s;
+      }
+
+      &.open {
+
+        @include bp(m) {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
 
     &-item {
@@ -54,15 +125,27 @@
         text-decoration: none;
         transition: color .2s;
 
+        @include bp(m) {
+          padding: .5em;
+          font-size: 25px;
+        }
+
+        @include bp(xs) {
+          font-size: 20px;
+        }
+
         &:after {
           content: '';
           position: absolute;
           left: 0;
           bottom: -1px;
           width: 100%;
-          border-bottom: $white solid 1px;
           opacity: 0;
           transition: opacity .2s;
+
+          @include bp(m) {
+            display: none;
+          }
         }
 
         &:hover {
@@ -71,6 +154,93 @@
             opacity: 1;
           }
         }
+      }
+    }
+
+    &-button {
+      @include input-reset;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      position: relative;
+      background-color: transparent;
+      display: none;
+
+      @include bp(m) {
+        display: block;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      span {
+        position: absolute;
+        left: 10px;
+        display: block;
+        height: 2px;
+        width: 30px;
+
+        &.top {
+          top: 16px;
+        }
+
+        &.middle {
+          top: 24px;
+        }
+
+        &.bottom {
+          top: 32px;
+        }
+      }
+    }
+
+    &-close {
+      @include input-reset;
+      position: fixed;
+      right: 20px;
+      top: 5px;
+      background: transparent;
+      width: 50px;
+      height: 50px;
+      z-index: 101;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .5s, visibility .5s;
+      display: none;
+
+      @include bp(m) {
+        display: block;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      &.open {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        height: 2px;
+        width: 30px;
+        background: $blue;
+        transform-origin: center center;
+      }
+
+      &:before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &:after {
+        transform: translate(-50%, -50%) rotate(45deg);
       }
     }
   }
