@@ -7,14 +7,18 @@
 // }
 
 .wpcf7-not-valid-tip {
+  font: 500 normal 13px/1.2 $sans-serif !important;
+  letter-spacing: .02em;
   color: red;
   display: block;
-  padding: 7px 0 0;
+  padding: 7px 0 3px;
   text-align: left;
 }
 
 .wpcf7-response-output {
-  color: red;
+  font: 500 normal 16px/1.2 $sans-serif !important;
+  letter-spacing: .02em;
+  color: $brown;
   border: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -40,8 +44,8 @@ span.ajax-loader {
   display: block !important;
   background: none !important;
   border-radius: 50%;
-  border-left: 2px solid red !important;
-  border-top: 2px solid red !important;
+  border-left: 2px solid $blue !important;
+  border-top: 2px solid $blue !important;
   border-bottom: 2px solid transparent !important;
   border-right: 2px solid transparent !important;
   animation: loaderSpin .7s infinite linear;

@@ -63,25 +63,19 @@ input[type="submit"],
 button[type="submit"] {
   @include input-reset;
   @include button;
-  // font: 500 normal 13px/1.2 $sans-serif;
-  // letter-spacing: .15em;
-  // background-color: transparent;
-  // padding: 1em 2em;
-  // color: $blue;
-  // border: $blue solid 1px;
-  // display: inline-block;
-  // text-decoration: none;
-  // text-transform: uppercase;
-  // transition: background-color .2s, color .2s;
-  // min-width: 130px;
-  // margin-top: 20px;
 
   &:hover,
   &:focus {
     cursor: pointer;
     background-color: $blue;
     color: $white;
+    outline: 0;
   }
+}
+
+select {
+  padding-right: 2em !important;
+  background: transparent url('assets/images/global/arrow-down.svg') right center / 25px auto no-repeat;
 }
 
 textarea {

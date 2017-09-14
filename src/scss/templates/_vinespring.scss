@@ -169,7 +169,7 @@
 }
 
 .vs2-cart-section {
-  border-bottom: #cfc2b4 dashed 1px;
+  border-bottom: $light-grey-border solid 1px;
 
   &:last-child {
     border-bottom: 0;
@@ -177,20 +177,26 @@
 }
 
 .vs2-cart-edit {
-  // color: #aaa !important;
-  // @extend .button;
+  color: $blue !important;
+  @extend .button;
   // @extend .button-secondary;  
   text-decoration: none !important;
   font-size: 12px !important;
   font-style: normal;
-  padding: 9px 10px 8px !important;
+  padding: 9px 20px 8px !important;
+  min-width: 0;
+
+  &:hover {
+    color: $white !important;
+    border-bottom-color: $blue !important;
+  }
 }
 
 #vs2-cart-items {
   select {
     margin: -10px 20px 0 0;
     float: left;
-    background-color: $white !important;
+    // background-color: $white !important;
   }
 
   .vs2x-m8 {
@@ -368,21 +374,25 @@
 
 // Cart confirmation
 #vs2-cart-confirmation {
-  // background: $light-tan;
-  // @include shadow;
-  // @include triangle($size: 15px, $position: top)
-  padding: 20px 30px;
+  background: $white;
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(0,0,0,.15);
+  padding: 30px;
   position: fixed;
-  right: 40px;
-  top: 65px;
+  right: 30px;
+  top: 30px;
   z-index: 100;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s;
   text-align: center;
-  transform: scale(.7);
-  transform-origin: right top;
+  transform: scale(.8);
+  transform-origin: center center;
+
+  // opacity: 1;
+  //   visibility: visible;
+  //   transform: scale(1);
 
   &:after {
     left: auto;
@@ -406,6 +416,10 @@
     font-size: 15px;
     padding: 0;
     margin: 0;
+
+    + .button {
+      margin-top: 2em;
+    }
   }
 
   &.show {

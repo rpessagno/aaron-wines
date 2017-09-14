@@ -60,14 +60,7 @@
   }
 
   .vs2-productList-quantity-dropdown {
-    @include input-reset;
-    border: #ccc solid 1px;
-    font: 500 normal 13px/1.2 $sans-serif;
-    letter-spacing: .15em;
-    background-color: transparent;
-    padding: 1em 2em 1em 1em;
     margin-right: 20px;
-    background: transparent url('assets/images/global/arrow-down.svg') right center / 20px auto no-repeat;
   }
 
   .vs2-productList-addToCart {

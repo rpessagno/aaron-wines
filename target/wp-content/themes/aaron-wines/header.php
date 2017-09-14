@@ -4,7 +4,6 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
@@ -55,7 +54,7 @@ $header_style = get_field('header_style', $page_id);
       <li class="header-utility-item">
         <a href="/cart">
           <?php echo file_get_contents(get_template_directory() . '/assets/images/global/cart.svg') ?>
-          <span class="cart-count">0</span>
+          <span class="cart-count" id="vs2-accountLinks-cart-count">0</span>
         </a>
       </li>
       <li class="header-utility-item">
@@ -67,3 +66,8 @@ $header_style = get_field('header_style', $page_id);
   </nav>
   <button class="header-nav-close"></button>
 </header>
+
+<div id="vs2-cart-confirmation">
+  <p>This item has been added to your cart.</p>
+  <a href="/cart" class="button">Review Your Cart</a>
+</div>
