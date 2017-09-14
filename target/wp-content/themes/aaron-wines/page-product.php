@@ -33,8 +33,4 @@ get_header();
 
 
 
-
-<?php include('inc/wine-club-banner.php'); ?>
-
-
 <?php get_footer(); ?>
