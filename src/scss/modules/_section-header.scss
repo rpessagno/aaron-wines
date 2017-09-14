@@ -4,9 +4,8 @@
 
 .section-header {
   text-align: center;
-  padding: 200px 100px 100px;
-  background-color: $light-grey-bg;
-  border-top: #eee solid 1px;
+  padding: 100px 100px 60px;
+  border-top: $light-grey-border solid 1px;
 
   .title {
     position: relative;
@@ -22,5 +21,9 @@
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
     }
+  }
+
+  &.alt {
+    background-color: $light-grey-bg;
   }
 }

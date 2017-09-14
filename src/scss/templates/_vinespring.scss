@@ -1,0 +1,417 @@
+//==============================
+// VineSpring
+//==============================
+
+// General VineSpring styles
+.vinespring {
+  width: 100%;
+  max-width: 1280px;
+  padding: 60px 80px 100px;
+  margin: 0 auto;
+
+  @include bp(m) {
+    padding: 60px 60px 100px;
+  }
+
+  @include bp(s) {
+    padding: 40px 40px 100px;
+  }
+
+  @include bp(xs) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    @extend .subtitle;
+  }
+
+  p {
+    @extend .text;
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: underline;
+  }
+
+  legend {
+    @extend .subtitle;
+    margin: 1em 0 .5em;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  label {
+    text-align: left;
+    @extend .text;
+
+    span {
+      padding-bottom: 5px;
+      letter-spacing: .05em;
+      font-size: inherit;
+    }
+  }
+
+  .vs-form-row {
+    margin-bottom: 20px;
+  }
+
+  .vs2x-form {
+    margin: 0 auto;
+    text-align: left;
+    max-width: none !important;
+
+    // input[type="text"],
+    // input[type="email"],
+    // input[type="password"],
+    // input[type="date"],
+    // input[type="tel"],
+    // textarea,
+    // select {
+    //   padding: 1.5em 1em;
+    //   background-color: transparent;
+    //   text-transform: none;
+    //   letter-spacing: .1em;
+    //   margin-bottom: 0;
+    // }
+
+    // input[type="date"] {
+    //   padding: .75em 1em;
+    // }
+    
+    // input[type="submit"],
+    // button[type="submit"] {
+    //   @extend .button;
+    // }
+
+    // select {
+    //   padding-right: 40px;
+    //   padding-top: 1em;
+    //   padding-bottom: 1em;
+    // }
+  }
+
+  .vs2x-row {
+    @extend .text;
+    margin-bottom: 10px;
+    padding: {
+      left: 0;
+      right: 0;
+    }
+  }
+  
+  .vs2x-m7,
+  .vs2x-m5,
+  .vs2x-s7,
+  .vs2x-s5 {
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
+
+  .vs2x-max48 {
+    max-width: none;
+  }
+
+  .vs2-saveCancel {
+    button {
+      margin-right: 20px;
+    }
+  }
+
+  &-cart {
+    h2 {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+// Login
+#vs2-account-login-form,
+#vs2-account-forgotPassword-form {
+  text-align: center;
+
+  .vs2x-m6 {
+    margin: 0 auto;
+    float: none;
+  }
+
+  .vs2x-row:nth-child(3),
+  .vs2x-row:nth-child(4) {
+    text-align: center;
+  }
+}
+
+.login-form {
+  text-align: center;
+  max-width: 40em;
+  margin: 0 auto;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.vs2-account-header {
+  text-align: center;
+}
+
+// Cart
+.vs2-cart-header {
+  margin-bottom: 20px;
+
+  h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.vs2-cart-section {
+  border-bottom: #cfc2b4 dashed 1px;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.vs2-cart-edit {
+  // color: #aaa !important;
+  // @extend .button;
+  // @extend .button-secondary;  
+  text-decoration: none !important;
+  font-size: 12px !important;
+  font-style: normal;
+  padding: 9px 10px 8px !important;
+}
+
+#vs2-cart-items {
+  select {
+    margin: -10px 20px 0 0;
+    float: left;
+    background-color: $white !important;
+  }
+
+  .vs2x-m8 {
+    .vs2x-font-small {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+
+  .vs2-cart-itemBasePrice,
+  .vs2-cart-itemPrice,
+  .vs2-cart-itemPriceDiscounted {
+    margin-right: 10px;
+  }
+
+  .vs2x-m8 > div span:first-child{
+  }
+}
+
+
+// Account nav
+#vs2-account-nav {
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 15px 30px;
+  font: 300 normal 14px/1 $sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: $blue;
+  border: #ddd solid 1px;
+  background: $light-grey-bg;
+  border-radius: 3px;
+
+  @include bp(l) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  > div {
+    list-style-type: none;
+    margin: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+
+    @include bp(l) {
+      margin: 5px 0;
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+    }
+  }
+}
+
+#vs2-account-main {
+
+  h2 {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+// Shop
+.vs2-productList-notAvailable span {
+  color: #000;
+  padding: 10px 0;
+}
+
+.product-cart {
+  .vs2-productList-notAvailable span {
+    top: -20px;
+  }
+}
+
+.vs2-productList-notAvailable {
+  
+}
+
+
+// Product Detail
+.vs2-productList-bottleSize,
+.vs2-productList-price {
+  display: none;
+}
+
+.vs2-productList-quantity-input {
+  display: none;
+}
+
+.vs2x-form.vs2x-mediumForm {
+  max-width: none !important;
+}
+
+
+
+
+
+// Allocations page
+
+
+.vs2-account-allocations {
+
+  .vs2x-row {
+    border-bottom: #cfc2b4 dashed 1px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.vs2-allocations-image {
+
+  @include bp(s) {
+    float: none !important;
+    margin: 0 auto;
+    padding: 0 !important;
+  }
+
+  img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+.vs2x-row .vs2-allocations-details {
+  text-align: left;
+  padding-top: 30px;
+
+  @include bp(s) {
+    text-align: center;
+    width: 100% !important;
+    padding-top: 0;
+    padding-bottom: 2em;
+  }
+}
+
+.vs2-allocations-quantity-dropdown {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 1em;
+  // border: $light-brown solid 1px;
+
+  @include bp(s) {
+    margin: 10px auto 0;
+  }
+}
+
+.vs2-allocations-addToCart {
+  input[type="submit"],
+  button[type="submit"] {
+    // @extend .button;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+// Cart confirmation
+#vs2-cart-confirmation {
+  // background: $light-tan;
+  // @include shadow;
+  // @include triangle($size: 15px, $position: top)
+  padding: 20px 30px;
+  position: fixed;
+  right: 40px;
+  top: 65px;
+  z-index: 100;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  text-align: center;
+  transform: scale(.7);
+  transform-origin: right top;
+
+  &:after {
+    left: auto;
+    right: 8px;
+  }
+
+  @include bp(xl) {
+    right: 7%;
+  }
+
+  @include bp(m) {
+    right: 30px;
+  }
+
+  @include bp(xs) {
+    right: 10px;
+  }
+
+  p {
+    @extend .text;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+

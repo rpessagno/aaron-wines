@@ -16,6 +16,34 @@
     flex-flow: column nowrap;
     align-items: center;
     width: calc(100% / 3);
+    padding: 40px 20px 100px;
+    text-align: center;
+
+    @include bp(m) {
+      width: 50%;
+    }
+
+    @include bp(s) {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 250px;
+
+      @include bp(xs) {
+        max-width: 200px;
+      }
+    }
+
+    .subtitle {
+      margin-bottom: 10px;
+    }
+
+    .subtitle2 {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -46,6 +74,7 @@
 
     button {
       @include button;
+      margin-left: 20px;
     }
   }
 }

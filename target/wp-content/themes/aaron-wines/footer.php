@@ -1,7 +1,7 @@
 
 
 <div class="newsletter">
-  <h1 class="">Join Our Mailing List</h1>
+  <h1 class="subtitle">Join Our Mailing List</h1>
 
    <!-- Begin MailChimp Signup Form -->
   <div id="mc_embed_signup">
@@ -48,8 +48,8 @@
 
 <div class="footer-section club">
 <h3 class="subtitle">Member Login</h3>
-<p class="large-text">Not a member yet?<br> <a href="<?php echo the_permalink('56'); ?>" class="underline">Join now!</a></p>
-<a href="#" class="button">Sign In</a>
+<p class="large-text">Not a member yet?<br> <a href="<?php echo the_permalink('28'); ?>" class="underline">Join now!</a></p>
+<a href="/account" class="button">Sign In</a>
 </div>
 
 

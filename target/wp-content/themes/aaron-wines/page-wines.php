@@ -49,7 +49,7 @@ get_header();
 
 
 
-<div class="section-header">
+<div class="section-header alt">
   <h1 class="title">Current Releases</h1>
 </div>
 

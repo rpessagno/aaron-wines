@@ -53,13 +53,13 @@ $header_style = get_field('header_style', $page_id);
     </ul>
     <ul class="header-utility-items">
       <li class="header-utility-item">
-        <a href="#">
+        <a href="/cart">
           <?php echo file_get_contents(get_template_directory() . '/assets/images/global/cart.svg') ?>
           <span class="cart-count">0</span>
         </a>
       </li>
       <li class="header-utility-item">
-        <a href="#">
+        <a href="/account">
           <?php echo file_get_contents(get_template_directory() . '/assets/images/global/account.svg') ?>
         </a>
       </li>

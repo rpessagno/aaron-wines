@@ -14,27 +14,21 @@ get_header();
   <h1>Join Our Wine Club</h1>
 </div>
 
+<div class="intro">
+  <h3 class="subtitle"><?php the_field('intro_title'); ?></h3>
+      <p><?php the_field('intro_text'); ?></p>
+</div>
 
 <div class="feature-wrap">
   <div class="feature">
     <div class="feature-content">
-      <h3 class="subtitle"><?php the_field('intro_title'); ?></h3>
-      <p><?php the_field('intro_text'); ?></p>
-    </div>
-    <div class="feature-img" style="background-image: url('<?php the_field('intro_image'); ?>');"></div>
-  </div>
-  <div class="feature">
-    <div class="feature-content">
       <h3 class="subtitle"><?php the_field('details_title'); ?></h3>
       <p><?php the_field('details_text'); ?></p>
+      <a href="/club/signup?club=5810ffaa123e3b02f087ed13" class="button">Join the Club</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php the_field('detail_image'); ?>');"></div>
   </div>
 </div>
 
-
-<div class="intro">
-  <div data-vsPlugin="clubSignup"></div>
-</div>
 
 <?php get_footer(); ?>

@@ -26,47 +26,4 @@
       text-align: center;
     }
   }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select,
-  textarea {
-    @include input-reset;
-    width: 100%;
-    background: #fff;
-    border: #ddd solid 1px;
-    padding: 1em 1.2em;
-    font: 400 normal 15px/1.2 $sans-serif;
-    letter-spacing: .1em;
-    color: $black;
-  }
-
-  input[type="submit"] {
-    @include input-reset;
-    font: 500 normal 13px/1.2 $sans-serif;
-    letter-spacing: .15em;
-    background-color: transparent;
-    padding: 1em 2em;
-    color: $blue;
-    border: $blue solid 1px;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background-color .2s, color .2s;
-    min-width: 130px;
-    text-align: center;
-    margin-top: 20px;
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      background-color: $blue;
-      color: $white;
-    }
-  }
-
-  textarea {
-    resize: none;
-  }
 }

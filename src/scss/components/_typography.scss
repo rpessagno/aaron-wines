@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .subtitle2 {
-  font: 400 normal 20px/1.5 $serif;
+  font: 300 normal 20px/1.5 $serif;
   color: $charcoal;
 }
 
@@ -84,4 +84,30 @@ p {
 
 ul.text {
   margin-left: 1em;
+}
+
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  transition: color .2s;
+
+  &.no-underline {
+
+    &:hover {
+      border-bottom: currentColor solid 1px;
+      text-decoration: none;
+    }
+  }
+
+  &.underline {
+    color: $charcoal;
+    border-bottom: #ccc solid 1px;
+
+    &:hover {
+      color: $blue;
+      border-bottom-color: $blue;
+      text-decoration: none;
+    }
+  }
 }
