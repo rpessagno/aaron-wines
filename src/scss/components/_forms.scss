@@ -67,7 +67,7 @@ button[type="submit"] {
   &:hover,
   &:focus {
     cursor: pointer;
-    background-color: $blue;
+    background-color: darken($blue, 10%);
     color: $white;
     outline: 0;
   }

@@ -10,27 +10,32 @@
   @if $bp == xl {
     @media only screen and (max-width: 1500px) { @content; }
   }
-  @else if $bp == l {
+  @if $bp == l {
     @media only screen and (max-width: 1200px) { @content; }
   }
-  @else if $bp == m {
+  @if $bp == m {
     @media only screen and (max-width: 1023px) { @content; }
   }
-  @else if $bp == s {
+  @if $bp == s {
     @media only screen and (max-width: 767px) { @content; }
   }
-  @else if $bp == s-up {
+  @if $bp == s-up {
     @media only screen and (min-width: 768px) { @content; }
   }
-  @else if $bp == xs {
+  @if $bp == xs {
     @media only screen and (max-width: 480px) { @content; }
   }
-  @else if $bp == xxs {
+  @if $bp == xxs {
     @media only screen and (max-width: 340px) { @content; }
   }
-  @else if $bp == retina {
+  @if $bp == retina {
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
-  }}
+  }
+
+  @if $bp == m-up {
+    @media only screen and (min-width: 1024px) { @content; }
+  }
+}
 
 // Font declaration
 @mixin font($font, $folder, $file, $weight, $style, $ext) {
@@ -81,19 +86,19 @@
 }
 
 @mixin button {
-  font: 500 normal 13px/1.2 $sans-serif;
+  font: 500 normal 14px/.9 $serif;
   letter-spacing: .15em;
-  background-color: transparent;
-  padding: 1em 2em;
-  color: $blue;
-  border: $blue solid 1px;
+  background-color: $blue;
+  padding: 1.2em 1.8em;
+  color: $white;
+  border: 0;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color .2s, color .2s;
-  min-width: 130px;
+  min-width: 110px;
   text-align: center;
-  border-radius: 2em;
+  border-radius: 3px;
 
   @include bp(xs) {
     font-size: 11px;
@@ -102,8 +107,7 @@
 
   &:hover,
   &:focus {
-    background-color: $blue;
-    color: $white;
+    background-color: darken($blue, 10%);
   }
 }
 

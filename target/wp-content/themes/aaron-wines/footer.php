@@ -1,7 +1,7 @@
 
 
 <div class="newsletter">
-  <h1 class="subtitle">Join Our Mailing List</h1>
+  <h1 class="title">Join Our Mailing List</h1>
 
    <!-- Begin MailChimp Signup Form -->
   <div id="mc_embed_signup">
@@ -17,7 +17,7 @@
       <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
       <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0359c639da269b22382e5589d_6ad22d36a6" tabindex="-1" value=""></div>
     
-      <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
+      <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="button">
    
     </form>
   </div>

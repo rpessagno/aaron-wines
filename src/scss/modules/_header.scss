@@ -89,21 +89,17 @@
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
-    min-height: 60px;
+    min-height: 50px;
 
     &-logo {
       margin-left: 5px;
       margin-right: auto;
 
       a {
-        font: 300 normal 17px/1 $sans-serif;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $white;
+        display: block;
 
-        @include bp(s) {
-          font-size: 14px;
+        img {
+          width: 100px;
         }
       }
     }
@@ -142,11 +138,11 @@
       margin-left: 10px;
 
       a {
-        padding: 40px 10px;
+        padding: 30px 10px;
         display: block;
         text-align: center;
         position: relative;
-        font: 400 normal 12px/1.5 $sans-serif;
+        font: 400 normal 13px/1.5 $monospace;
         letter-spacing: .15em;
         text-transform: uppercase;
         text-decoration: none;

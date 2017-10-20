@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   font: 100 normal 50px/1.2 $serif;
   text-transform: uppercase;
   letter-spacing: .05em;
-  color: $blue;
+  color: $charcoal;
 
   + p {
     margin-top: 1.5em;
@@ -19,8 +19,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .title {
-  font: 200 normal 45px/1.2 $serif;
-  color: $blue;
+  font: 200 normal 30px/1.2 $serif;
+  color: $charcoal;
+  text-transform: uppercase;
 
   + p {
     margin-top: 1.5em;
@@ -29,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 
 .subtitle {
   font: 400 normal 30px/1.5 $serif;
-  color: $brown;
+  color: $charcoal;
 
   + p {
     margin-top: 1em;
@@ -53,16 +54,16 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 @mixin text {
-  font: 300 normal 18px/1.6 $sans-serif;
+  font: 300 normal 16px/2 $monospace;
   letter-spacing: .02em;
   color: $charcoal;
 
-  @include bp(m) {
-    font-size: 16px;
+  @include bp(l) {
+    font-size: 14px;
   }
 
   @include bp(xs) {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 

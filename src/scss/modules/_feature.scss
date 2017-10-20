@@ -60,7 +60,7 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
-    padding: 8vw;
+    padding: 10vw 8vw;
 
     @include bp(s) {
       width: 100%;
@@ -111,6 +111,23 @@
           cursor: pointer;
           outline: 0;
         }
+      }
+    }
+  }
+
+  &-wide {
+
+    .feature-content {
+
+      @include bp(m-up) {
+        width: 40%;
+      }
+    }
+
+    .feature-img {
+      
+      @include bp(m-up) {
+        width: 60%;
       }
     }
   }

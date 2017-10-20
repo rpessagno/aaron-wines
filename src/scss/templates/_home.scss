@@ -4,29 +4,11 @@
 
 .home {
 
-  &-experience {
-    padding: 150px calc(50% - 500px);
+  &-aequorea,
+  &-club {
 
-    &-items {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      margin-top: 60px;
-    }
-
-    &-item {
-      width: 50%;
-      max-width: 450px;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      padding: 0 40px;
-
-      img {
-        height: 150px;
-        margin-bottom: 40px;
-        opacity: .2;
-      }
+    .feature-content {
+      background-color: #e7eaea;
     }
   }
 }

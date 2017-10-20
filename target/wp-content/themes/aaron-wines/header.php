@@ -4,7 +4,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
@@ -34,7 +34,7 @@ $header_style = get_field('header_style', $page_id);
 <header class="header <?php echo $header_style == '1' ? 'light' : 'dark'; ?>">
   <nav class="header-nav">
     <div class="header-nav-logo">
-      <a href="/">Aaron + Aequorea</a>
+      <a href="/"><img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-white.svg" alt="Aaron"></a>
     </div>
     <button class="header-nav-button">
       <span class="top"></span>
