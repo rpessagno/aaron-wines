@@ -11,7 +11,7 @@ get_header();
 <div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
 
 <div class="intro">
-  <h1 class="headline"><?php the_field('intro_title'); ?></h1>
+  <img src="<?php the_field('intro_logo'); ?>" alt="<?php the_field('intro_title'); ?>" class="intro-logo">
   <p><?php the_field('intro_text'); ?></p>
 </div>
 
@@ -37,7 +37,6 @@ get_header();
     <?php if( have_rows('vineyards') ) { ?>
       <?php while ( have_rows('vineyards') ) { the_row(); ?>
         <div class="feature-img-slide" style="background-image: url('<?php the_sub_field('vineyard_image'); ?>');">
-          <span class="coordinates"><?php the_sub_field('north'); ?>&deg; N, <?php the_sub_field('west'); ?>&deg; W</span>
         </div>
       <?php } ?>
     <?php } ?>

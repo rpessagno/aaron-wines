@@ -10,9 +10,7 @@ get_header();
 
 
 
-<div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');">
-  <h1>Visit Our Tasting Room</h1>
-</div>
+<div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
 
 
 

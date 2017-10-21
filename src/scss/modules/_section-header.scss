@@ -5,7 +5,11 @@
 .section-header {
   text-align: center;
   padding: 100px 100px 60px;
-  border-top: $light-grey-border solid 1px;
+
+  @include bp(s) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   .title {
     position: relative;
@@ -16,8 +20,8 @@
       position: absolute;
       left: 50%;
       bottom: 0;
-      border-bottom: 1px solid $blue;
-      width: 1.5em;
+      border-bottom: 1px dashed $blue;
+      width: 3em;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
     }

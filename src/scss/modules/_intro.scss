@@ -18,5 +18,16 @@
     padding-bottom: 80px;
   }
 
-  // background: $light-grey-bg url('assets/images/home/vineyard.jpg') center center / cover no-repeat;
+  &-logo {
+    width: 280px;
+    margin-bottom: 30px;
+
+    @include bp(m) {
+      width: 250px;
+    }
+
+    @include bp(s) {
+      width: 180px;
+    }
+  }
 }

@@ -16,6 +16,10 @@
     border-bottom: transparentize($black, .9) solid 1px;
 
     .header-nav-logo img.light {
+      display: none;
+    }
+
+    .header-nav-logo img.dark {
       display: block;
     }
 
@@ -59,8 +63,12 @@
       left: 20px;
     }
 
-    .header-nav-logo img.dark {
+    .header-nav-logo img.light {
       display: block;
+    }
+
+    .header-nav-logo img.dark {
+      display: none;
     }
 
     .header-nav-item a {
@@ -135,10 +143,9 @@
 
     &-item {
       list-style-type: none;
-      margin-left: 10px;
 
       a {
-        padding: 30px 10px;
+        padding: 30px 15px;
         display: block;
         text-align: center;
         position: relative;
@@ -171,7 +178,8 @@
           }
         }
 
-        &:hover {
+        &:hover,
+        &.active {
 
           &:after {
             opacity: 1;
@@ -319,8 +327,8 @@
         background: $white;
         color: $charcoal;
         border-radius: 10px;
-        padding: 4px 6px 3px;
-        font: 500 normal 10px/1 $sans-serif;
+        padding: 3px 5px 4px 6px;
+        font: 500 normal 10px/1 $monospace;
         position: absolute;
         left: 28px;
         top: 0;

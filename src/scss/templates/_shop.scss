@@ -21,6 +21,7 @@
 
     @include bp(m) {
       width: 50%;
+      padding-bottom: 30px;
     }
 
     @include bp(s) {
@@ -29,11 +30,10 @@
 
     img {
       display: block;
-      width: 100%;
-      max-width: 250px;
+      height: 375px;
 
       @include bp(xs) {
-        max-width: 200px;
+        height: 300px;
       }
     }
 
@@ -45,9 +45,27 @@
       margin-bottom: 20px;
     }
   }
+
+  &-logo {
+    width: 250px;
+
+    @include bp(s) {
+      width: 150px;
+    }
+  }
+
+  &-aaron {
+    background-color: #f8f8f8;
+
+    + .shop {
+      background-color: #f8f8f8;
+    }
+  }
 }
 
 .cart {
+  margin-top: auto;
+  padding-top: 20px;
 
   form {
     display: flex;

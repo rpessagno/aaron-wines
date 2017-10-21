@@ -20,7 +20,7 @@ get_header();
     <div class="feature-content">
       <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="feature-logo">
       <p><?php the_field('aaron_text'); ?></p>
-      <a href="#" class="button">Shop Wines</a>
+      <a href="<?php echo the_permalink('5'); ?>" class="button">Shop Wines</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/aaron.jpg');"></div>
   </div>
@@ -28,7 +28,7 @@ get_header();
     <div class="feature-content">
       <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-black.svg" alt="Aequorea" class="feature-logo">
       <p><?php the_field('aequorea_text'); ?></p>
-      <a href="#" class="button">Shop Wines</a>
+      <a href="<?php echo the_permalink('7'); ?>" class="button">Shop Wines</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/aequorea.jpg');"></div>
   </div>
@@ -36,7 +36,7 @@ get_header();
     <div class="feature-content">
       <h3 class="title"><?php the_field('visit_title'); ?></h3>
       <p><?php the_field('visit_text'); ?></p>
-      <a href="#" class="button">Visit Us</a>
+      <a href="<?php echo the_permalink('30'); ?>" class="button">Visit Us</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/tasting-room.jpg');"></div>
   </div>
@@ -44,7 +44,7 @@ get_header();
     <div class="feature-content">
       <h3 class="title"><?php the_field('club_title'); ?></h3>
       <p><?php the_field('club_text'); ?></p>
-      <a href="#" class="button">Learn More</a>
+      <a href="<?php echo the_permalink('28'); ?>" class="button">Learn More</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/wine-club.jpg');"></div>
   </div>

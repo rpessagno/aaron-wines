@@ -61,7 +61,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
     font-size: 20px;
   }
 
-  + p {
+  + p,
+  + ul {
     margin-top: 1em;
   }
 
@@ -78,7 +79,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .subtitle2 {
-  font: 300 normal 20px/1.5 $serif;
+  font: 300 normal 24px/1.5 $serif;
   color: $charcoal;
 }
 
@@ -100,7 +101,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   }
 }
 
-p {
+p,
+ul {
   @include text;
 
   + .button {
