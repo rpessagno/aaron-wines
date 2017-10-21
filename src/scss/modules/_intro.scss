@@ -9,5 +9,14 @@
   border-top: #ececec solid 1px;
   border-bottom: #ececec solid 1px;
 
+  @include bp(l) {
+    padding: 120px 10vw;
+  }
+
+  @include bp(l) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
   // background: $light-grey-bg url('assets/images/home/vineyard.jpg') center center / cover no-repeat;
 }

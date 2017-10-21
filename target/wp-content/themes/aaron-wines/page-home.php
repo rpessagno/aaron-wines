@@ -18,7 +18,7 @@ get_header();
 <div class="feature-wrap home-features">
   <div class="feature feature-wide home-aaron">
     <div class="feature-content">
-      <h3 class="title"><?php the_field('aaron_title'); ?></h3>
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="feature-logo">
       <p><?php the_field('aaron_text'); ?></p>
       <a href="#" class="button">Shop Wines</a>
     </div>
@@ -26,7 +26,7 @@ get_header();
   </div>
   <div class="feature feature-wide home-aequorea">
     <div class="feature-content">
-      <h3 class="title"><?php the_field('aequorea_title'); ?></h3>
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-black.svg" alt="Aequorea" class="feature-logo">
       <p><?php the_field('aequorea_text'); ?></p>
       <a href="#" class="button">Shop Wines</a>
     </div>

@@ -4,7 +4,34 @@
 
 .home {
 
-  &-aequorea,
+  &-aaron {
+
+    .feature-logo {
+      width: 60%;
+      max-width: 250px;
+
+      @include bp(s) {
+        width: 40%;
+      }
+    }
+  }
+
+  &-aequorea {
+
+    .feature-content {
+      background-color: #e7eaea;
+    }
+
+    .feature-logo {
+      width: 70%;
+      max-width: 300px;
+
+      @include bp(s) {
+        width: 50%;
+      }
+    }
+  }
+
   &-club {
 
     .feature-content {

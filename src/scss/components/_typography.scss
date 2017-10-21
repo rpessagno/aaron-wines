@@ -13,15 +13,35 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   letter-spacing: .05em;
   color: $charcoal;
 
+  @include bp(l) {
+    font-size: 44px;
+  }
+
+  @include bp(m) {
+    font-size: 36px;
+  }
+
+  @include bp(s) {
+    font-size: 24px;
+  }
+
   + p {
     margin-top: 1.5em;
   }
 }
 
 .title {
-  font: 200 normal 30px/1.2 $serif;
+  font: 200 normal 34px/1.2 $serif;
   color: $charcoal;
   text-transform: uppercase;
+
+  @include bp(m) {
+    font-size: 30px;
+  }
+
+  @include bp(s) {
+    font-size: 22px;
+  }
 
   + p {
     margin-top: 1.5em;
@@ -31,6 +51,15 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 .subtitle {
   font: 400 normal 30px/1.5 $serif;
   color: $charcoal;
+  text-transform: uppercase;
+
+  @include bp(m) {
+    font-size: 24px;
+  }
+
+  @include bp(s) {
+    font-size: 20px;
+  }
 
   + p {
     margin-top: 1em;
@@ -60,6 +89,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 
   @include bp(l) {
     font-size: 14px;
+  }
+
+  @include bp(s) {
+    line-height: 1.8;
   }
 
   @include bp(xs) {
@@ -102,12 +135,11 @@ a {
   }
 
   &.underline {
-    color: $charcoal;
-    border-bottom: #ccc solid 1px;
+    color: $white;
+    border-bottom: currentColor solid 1px;
 
     &:hover {
-      color: $blue;
-      border-bottom-color: $blue;
+      color: #ccc;
       text-decoration: none;
     }
   }
