@@ -3,8 +3,8 @@
 //==============================
 
 .hero {
-  height: 80vh;
-  min-height: 800px;
+  height: 70vh;
+  min-height: 600px;
   background: transparent center bottom / cover no-repeat;
   position: relative;
   display: flex;
@@ -13,8 +13,7 @@
 
   @include bp(m) {
     min-height: 0;
-    height: 70vw;
-    padding-top: 7vw;
+    height: 55vw;
   }
 
   @include bp(s) {

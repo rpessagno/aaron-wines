@@ -33,13 +33,6 @@ $header_style = get_field('header_style', $page_id);
 
 <header class="header <?php echo $header_style == '1' ? 'light' : 'dark'; ?>">
   <nav class="header-nav">
-    <div class="header-nav-logo">
-      <a href="/">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-white.svg" alt="Aaron" class="light">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="dark">
-      </a>
-    </div>
-
     <button class="header-nav-button">
       <span class="top"></span>
       <span class="middle"></span>
@@ -49,10 +42,11 @@ $header_style = get_field('header_style', $page_id);
       <li class="header-nav-item"><a href="/">Home</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('5'); ?>"<?php if ($page_id == '5') { echo ' class="active"'; } ?>>Aaron</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('7'); ?>"<?php if ($page_id == '7') { echo ' class="active"'; } ?>>Aequorea</a></li>
-      <li class="header-nav-item"><a href="<?php echo the_permalink('24'); ?>"<?php if ($page_id == '24') { echo ' class="active"'; } ?>>Shop</a></li>
+      <li class="header-nav-item"><a href="<?php echo the_permalink('24'); ?>"<?php if ($page_id == '24') { echo ' class="active"'; } ?>>Wines</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('28'); ?>"<?php if ($page_id == '28') { echo ' class="active"'; } ?>>Club</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('30'); ?>"<?php if ($page_id == '30') { echo ' class="active"'; } ?>>Visit</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('32'); ?>"<?php if ($page_id == '32') { echo ' class="active"'; } ?>>Contact</a></li>
+      <li class="header-nav-item login"><a href="/account">Login</a></li>
     </ul>
     <ul class="header-utility-items">
       <li class="header-utility-item">

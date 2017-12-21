@@ -34,6 +34,7 @@ get_header();
 
 <div class="intro">
   <h2 class="title">Request a Tasting Appointment</h2>
+  <p class="text"><?php the_field('contact_intro'); ?></p>
   <div class="contact-form">
     <?php echo do_shortcode('[contact-form-7 id="51"]'); ?>
   </div>

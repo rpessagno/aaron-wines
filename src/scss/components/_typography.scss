@@ -8,10 +8,12 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .headline {
-  font: 100 normal 50px/1.2 $serif;
+  font: 100 normal 44px/1.2 $serif;
   text-transform: uppercase;
   letter-spacing: .05em;
   color: $charcoal;
+  margin: auto;
+  max-width: 750px;
 
   @include bp(l) {
     font-size: 44px;
@@ -58,7 +60,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   }
 
   @include bp(s) {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   + p,
@@ -79,12 +81,27 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .subtitle2 {
-  font: 300 normal 24px/1.5 $serif;
+  font: 300 normal 18px/1.3 $monospace;
   color: $charcoal;
+  letter-spacing: .02em;
+  // text-transform: uppercase;
+  color: $blue;
+
+  @include bp(m) {
+    font-size: 16px;
+  }
+
+  @include bp(s) {
+    font-size: 13px;
+  }
+
+  + p {
+    margin-top: 1em;
+  }
 }
 
 @mixin text {
-  font: 300 normal 16px/2 $monospace;
+  font: 300 normal 15px/1.9 $monospace;
   letter-spacing: .02em;
   color: $charcoal;
 
@@ -137,12 +154,6 @@ a {
   }
 
   &.underline {
-    color: $white;
-    border-bottom: currentColor solid 1px;
-
-    &:hover {
-      color: #ccc;
-      text-decoration: none;
-    }
+    text-decoration: underline;
   }
 }

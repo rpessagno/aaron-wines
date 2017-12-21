@@ -63,7 +63,8 @@ get_header();
 
       <div class="feature">
         <div class="feature-content">
-          <h2 class="subtitle"><a data-bind="text: Title, attr: { href: '/shop/product/?item=' + Tag }"></a></h2>
+          <h2 class="subtitle" data-bind="text: Custom2"></h2>
+          <h3 class="subtitle2" data-bind="text: Custom3"></h3>
           <p data-bind="text: Teaser"></p>
           <a data-bind="attr: { href: '/shop/product/?item=' + Tag }" class="button">View Wine</a>
         </div>

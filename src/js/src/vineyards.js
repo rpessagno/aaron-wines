@@ -28,3 +28,6 @@ $('.feature-content-slider').slick({
   draggable: false
 });
 
+$('.feature-img').click(function() {
+  $('.feature-content-slider').slick('slickNext');
+});

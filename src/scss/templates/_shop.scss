@@ -7,6 +7,7 @@
   &-items {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -16,7 +17,7 @@
     flex-flow: column nowrap;
     align-items: center;
     width: calc(100% / 3);
-    padding: 40px 20px 100px;
+    padding: 40px 40px 100px;
     text-align: center;
 
     @include bp(m) {
@@ -42,12 +43,15 @@
       }
     }
 
-    .subtitle {
-      margin-bottom: 10px;
+    &-title {
+      margin-bottom: 5px;
+      font-weight: 700;
     }
 
-    .subtitle2 {
-      margin-bottom: 20px;
+    &-subtitle {
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 15px;
     }
   }
 
@@ -64,6 +68,10 @@
 
     + .shop {
       background-color: #f8f8f8;
+
+      .shop-item-subtitle {
+        display: none;
+      }
     }
   }
 }
@@ -91,6 +99,16 @@
     button {
       @include button;
       margin-left: 20px;
+    }
+  }
+
+  .vs2-productList-notAvailable {
+    max-width: 200px;
+
+    span {
+      font: 300 normal 14px/1.4 $monospace;
+      letter-spacing: .02em;
+      color: $charcoal;
     }
   }
 }

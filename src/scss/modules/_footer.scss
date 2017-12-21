@@ -12,7 +12,7 @@
   &-section {
     width: 50%;
     position: relative;
-    padding: 10vw 0;
+    padding: 7vw 0;
 
     @include bp(s) {
       width: 100%;
@@ -89,31 +89,31 @@
     color: $blue !important;
   }
 
-  &-copyright {
-    width: 100%;
-    font: 400 normal 12px/1.5 $monospace;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: #aaa;
-    position: absolute;
-    left: 50%;
-    bottom: 25px;
-    transform: translateX(-50%);
+  // &-copyright {
+  //   width: 100%;
+  //   font: 400 normal 12px/1.5 $monospace;
+  //   letter-spacing: .1em;
+  //   text-transform: uppercase;
+  //   color: #aaa;
+  //   position: absolute;
+  //   left: 50%;
+  //   bottom: 25px;
+  //   transform: translateX(-50%);
 
-    @include bp(s) {
-      margin-top: 20px;
-      font-size: 10px;
-    }
+  //   @include bp(s) {
+  //     margin-top: 20px;
+  //     font-size: 10px;
+  //   }
 
-    a {
-      color: currentColor;
-      text-decoration: none;
+  //   a {
+  //     color: currentColor;
+  //     text-decoration: none;
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+  //     &:hover {
+  //       text-decoration: underline;
+  //     }
+  //   }
+  // }
 }
 
 

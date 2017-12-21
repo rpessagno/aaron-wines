@@ -5,7 +5,7 @@
 
    <!-- Begin MailChimp Signup Form -->
   <div id="mc_embed_signup">
-    <form action="//zinkewines.us3.list-manage.com/subscribe/post?u=0359c639da269b22382e5589d&amp;id=6ad22d36a6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <form action="https://aaronwines.us3.list-manage.com/subscribe/post?u=bc551c70f09510adff5329851&amp;id=6716f10d01" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       
       <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
       
@@ -15,7 +15,7 @@
       </div>
 
       <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0359c639da269b22382e5589d_6ad22d36a6" tabindex="-1" value=""></div>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bc551c70f09510adff5329851_6716f10d01" tabindex="-1" value=""></div>
     
       <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="button">
    
@@ -32,14 +32,14 @@
 <div class="footer-section contact">
   <h3 class="subtitle footer-title">Contact</h3>
   <p class="text">
-    <a href="tel:805.691.9718" class="no-underline">805.691.9718</a><br>
+    <a href="tel:805.369.2037" class="no-underline">805.369.2037</a><br>
     <a href="mailto:info@aaronwines.com" class="no-underline">info@aaronwines.com</a>
   </p>
   <h4 class="text footer-subtitle">Follow Along</h4>
   <ul class="social">
-    <li><a href="https://www.facebook.com/Zinke-Wine-Co-1396053543945307/" target="_blank" class="facebook"></a></li>
-    <li><a href="https://www.instagram.com/zinkewines/" target="_blank" class="instagram"></a></li>
-    <li><a href="https://twitter.com/zinkewines" target="_blank" class="twitter"></a></li>
+    <li><a href="https://www.facebook.com/AaronPetiteSirah/" target="_blank" class="facebook"></a></li>
+    <li><a href="https://www.instagram.com/aaronwines/" target="_blank" class="instagram"></a></li>
+    <li><a href="https://twitter.com/aaronwines" target="_blank" class="twitter"></a></li>
   </ul>
 </div>
 
@@ -47,11 +47,6 @@
   <h3 class="subtitle footer-title">Member Login</h3>
   <p class="text">Not a member yet? <a href="<?php echo the_permalink('28'); ?>" class="underline">Join now!</a></p>
   <a href="/account" class="button">Sign In</a>
-
-  <div class="footer-copyright">
-    &copy; <?php echo date('Y'); ?> Aaron Wines<span class="footer-copyright-separator">.</span>
-    <a href="<?php echo the_permalink('65'); ?>">Privacy Policy</a>
-  </div>
 </div>
 
 

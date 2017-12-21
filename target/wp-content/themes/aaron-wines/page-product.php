@@ -18,8 +18,9 @@ get_header();
         <img data-bind="attr: { alt: Title, src: DetailImageUrl }">
       </div>
       <div class="product-content">
-        <h1 class="product-title subtitle" data-bind="text: Title"></h1>
-        <h3 class="product-price text" data-bind="text: '$' + Price"></h3>
+        <h1 class="product-title subtitle" data-bind="text: Custom2"></h1>
+        <h1 class="product-title text" data-bind="text: Custom3"></h1>
+        <h3 class="product-price" data-bind="text: '$' + Price"></h3>
         <div class="cart" data-bind="template: 'vs2-productList-addToCart-default'"></div>
         <div class="product-description text" data-bind="html: Description.replace(/\n/g,'<br>')"></div>
         <ul class="vs2-productDetail-attributes text" data-bind="foreach: AttributeList &amp;&amp; AttributeList.split('\n')">
