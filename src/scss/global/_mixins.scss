@@ -86,10 +86,10 @@
 }
 
 @mixin button {
-  font: 500 normal 13px/.9 $serif;
+  font: 500 normal 13px/1 $serif;
   letter-spacing: .15em;
   background-color: $blue;
-  padding: 1.2em 1.8em;
+  padding: 1.3em 1.8em 1.1em;
   color: $white;
   border: 0;
   display: inline-block;

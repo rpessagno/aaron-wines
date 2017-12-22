@@ -2,6 +2,10 @@
 // Not Found
 //==============================
 
-.notfound {
-  text-align: center;
+.not-found {
+
+  &-hero {
+    background-image: url('https://aaronwines.com/wp-content/uploads/2017/09/Aaron-Wines-Tasting-Room-BW.jpg');
+    background-position: center center;
+  }
 }

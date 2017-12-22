@@ -7,7 +7,8 @@ FastClick.attach(document.body);
 // datepicker
 $('.datepicker input, input.datepicker').datepicker({
   inline: true,
-  dateFormat: "MM d, yy"
+  dateFormat: "MM d, yy",
+  minDate: 1
 });
 
 

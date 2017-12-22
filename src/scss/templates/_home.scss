@@ -4,6 +4,13 @@
 
 .home {
 
+  &-hero {
+
+    @include bp(s) {
+      background-position: right bottom;
+    }
+  }
+
   &-aaron {
 
     .feature-logo {

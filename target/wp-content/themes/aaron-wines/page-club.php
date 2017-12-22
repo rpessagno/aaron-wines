@@ -34,7 +34,7 @@ get_header();
         echo $new_items;
       ?>
 
-      <a href="/club/signup?club=5810ffaa123e3b02f087ed13" class="button">Join the Club</a>
+      <a href="/club/signup?club=547653b17c081c08d40b973c" class="button">Join the Club</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php the_field('detail_image'); ?>');"></div>
   </div>

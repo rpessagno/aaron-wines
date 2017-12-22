@@ -10,7 +10,7 @@ get_header();
 
 
 
-<div class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
+<div class="hero visit-hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
 
 
 

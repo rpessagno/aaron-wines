@@ -40,6 +40,10 @@
     @include bp(m) {
       font-size: 30px;
     }
+
+    @include bp(s) {
+      font-size: 24px;
+    }
   }
 
   &-content {

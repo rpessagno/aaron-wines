@@ -4,13 +4,13 @@
 
 .intro {
   text-align: center;
-  padding: 140px calc(50% - 500px);
+  padding: 120px calc(50% - 500px) 140px;
   background-color: $light-grey-bg;
   border-top: #ececec solid 1px;
   border-bottom: #ececec solid 1px;
 
   @include bp(l) {
-    padding: 120px 10vw;
+    padding: 100px 10vw 120px;
   }
 
   @include bp(l) {
