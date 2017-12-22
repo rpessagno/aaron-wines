@@ -12,7 +12,6 @@
 
     @include bp(s) {
       width: 100%;
-      // border-bottom: #ddd solid 1px;
     }
 
     img {
@@ -33,16 +32,16 @@
 
   &-price {
     margin: .5em 0;
-    font: 400 normal 30px/1.5 $monospace;
+    font: 400 normal 24px/1.5 $monospace;
     color: $charcoal;
     text-transform: uppercase;
 
     @include bp(m) {
-      font-size: 30px;
+      font-size: 20px;
     }
 
     @include bp(s) {
-      font-size: 24px;
+      font-size: 18px;
     }
   }
 

@@ -14,7 +14,7 @@ get_header();
 
 <div class="intro">
   <h3 class="title"><?php the_field('intro_title'); ?></h3>
-      <p><?php the_field('intro_text'); ?></p>
+  <p><?php the_field('intro_text'); ?></p>
 </div>
 
 <div class="feature-wrap">

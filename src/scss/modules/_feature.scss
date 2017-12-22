@@ -113,6 +113,15 @@
         }
       }
     }
+
+    p a {
+      border-bottom: #bbb solid 1px;
+      transition: border-color .3s;
+
+      &:hover {
+        border-bottom-color: $black;
+      }
+    }
   }
 
   &-wide {
