@@ -1,5 +1,3 @@
 # Aaron Wines
 
-https://www.aaronwines.com/
-
-http://local.aaronwines.com/
+Visit https://github.com/rpessagno/project-template for setup instructions
