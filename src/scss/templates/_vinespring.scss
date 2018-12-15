@@ -39,7 +39,6 @@
   legend {
     @extend .subtitle;
     margin: 1em 0 .5em;
-    margin-bottom: 30px;
     width: 100%;
   }
 
@@ -297,6 +296,7 @@
 
 .vs2x-form.vs2x-mediumForm {
   max-width: none !important;
+  margin-top: 2em;
 }
 
 
