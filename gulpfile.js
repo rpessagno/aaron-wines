@@ -7,31 +7,31 @@
 // Plugins
 //----------------------------------------
 
-var
-  gulp          = require('gulp'),
-  sass          = require('gulp-sass'),
-  autoprefixer  = require('gulp-autoprefixer'),
-  cssnano       = require('gulp-cssnano'),
-  jshint        = require('gulp-jshint'),
-  stylish       = require('jshint-stylish'),
-  uglify        = require('gulp-uglify'),
-  concat        = require('gulp-concat'),
-  browserSync   = require('browser-sync').create();
+var gulp          = require('gulp');
+var sass          = require('gulp-sass');
+var autoprefixer  = require('gulp-autoprefixer');
+var cssnano       = require('gulp-cssnano');
+var jshint        = require('gulp-jshint');
+var stylish       = require('jshint-stylish');
+var uglify        = require('gulp-uglify');
+var concat        = require('gulp-concat');
+var browserSync   = require('browser-sync').create();
 
 
 //----------------------------------------
 // Variables
 //----------------------------------------
 
-var domainName = 'aaronwines';
-var theme      = 'aaron-wines';
+var domainName   = 'aaronwines';
+var domainNameWD = 'template-domain';
+var theme        = 'aaron-wines';
 
 //----------------------------------------
 // CSS
 //----------------------------------------
 
 gulp.task('styles', function () {
-  gulp.src('src/scss/style.scss')
+  return gulp.src('src/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 5 versions']
@@ -45,28 +45,65 @@ gulp.task('styles', function () {
 
 
 //----------------------------------------
+// CSS | WineDirect
+//----------------------------------------
+
+gulp.task('styles-wd', function () {
+  return gulp.src('src/scss/winedirect.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions']
+    }))
+    .pipe(cssnano({
+      zindex: false
+    }))
+    .pipe(gulp.dest('winedirect-template'))
+    .pipe(gulp.dest('winedirect/assets/custom'))
+    .pipe(browserSync.stream());
+});
+
+
+//----------------------------------------
 // JS
 //----------------------------------------
 
+// Concat
 gulp.task('scripts', function () {
- 
-  // Lint
-  gulp.src([
-    './src/js/src/*.js',
-  ])
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
-
-  // Concat
-  gulp.src([
+  return gulp.src([
     './src/js/lib/jquery.js',
     './src/js/lib/*.js',
+    './src/js/src/global.js',
     './src/js/src/*.js'
   ])
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('target/wp-content/themes/' + theme + '/assets/js'))
+    .pipe(gulp.dest('winedirect-template'))
+    .pipe(gulp.dest('winedirect/assets/custom'))
     .pipe(browserSync.stream());
+});
+
+// Lint
+gulp.task('scripts-lint', function () {
+  return gulp.src([
+    './src/js/src/*.js',
+  ])
+    .pipe(jshint())
+    .pipe(jshint.reporter(stylish));
+});
+
+
+//---------------------------------------------------
+// Copy assets
+//---------------------------------------------------
+
+gulp.task('assets', function () {
+  gulp.src('./target/wp-content/themes/' + theme + '/assets/images/global/**/*')
+  .pipe(gulp.dest('./winedirect-template/assets/images/global/'))
+  .pipe(gulp.dest('./winedirect/assets/custom/assets/images/global/'));
+  gulp.src('./target/wp-content/themes/' + theme + '/assets/fonts/**/*')
+  .pipe(gulp.dest('./winedirect-template/assets/fonts/'))
+  .pipe(gulp.dest('./winedirect/assets/custom/assets/fonts/'));
 });
 
 
@@ -74,7 +111,7 @@ gulp.task('scripts', function () {
 // Watch
 //----------------------------------------
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   browserSync.init({
     // MAMP
     proxy: 'local.' + domainName + '.com'
@@ -85,7 +122,22 @@ gulp.task('watch', function () {
   });
   gulp.watch('./target/wp-content/themes/' + theme + '/**/*')
     .on('change', browserSync.reload);
-  gulp.watch('src/scss/**/*.scss', ['styles']);
+  gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));
+  gulp.watch('src/js/**/*.js', gulp.parallel('scripts', 'scripts-lint'));
+});
+
+
+//----------------------------------------
+// Watch | WineDirect
+//----------------------------------------
+
+gulp.task('watch-wd', function () {
+  browserSync.init({
+    proxy: 'local.' + domainNameWD + '.com'
+  });
+  gulp.watch('./winedirect-template/**/*')
+    .on('change', browserSync.reload);
+  gulp.watch('src/scss/**/*.scss', ['styles-wd']);
   gulp.watch('src/js/**/*.js', ['scripts']);
 });
 
@@ -94,12 +146,13 @@ gulp.task('watch', function () {
 // Default Task
 //----------------------------------------
 
-gulp.task('default', ['styles', 'scripts']);
+gulp.task('default', gulp.parallel('styles', 'scripts', 'scripts-lint'));
 
 
 //----------------------------------------
 // Dev Task
 //----------------------------------------
 
-gulp.task('dev', ['styles', 'scripts', 'watch']);
+gulp.task('dev', gulp.parallel('styles', 'scripts', 'scripts-lint', 'watch'));
+gulp.task('wd', gulp.parallel('styles-wd', 'scripts', 'scripts-lint', 'watch'));
 

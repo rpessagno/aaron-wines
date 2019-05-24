@@ -1,0 +1,3 @@
+<div class="v65-product-description">
+  <p>The east-facing altitudes of the Santa Lucia Highlands enjoy consistently warm days and cool nights throughout the growing season. The outcome? Beautifully ripe Chardonnay berries with moxie. Fragrant with heather and chamomile, the profile arrives on the palate modulated, the tiers of flavors playing upon each other. Peaches, Jonagold apples, and pineapples emerge. Kinetic twinges of lemon citrus notes merge with brioche and vanilla. Fine acidity grants an elegant, gliding, and persistent finish.</p>
+</div>
