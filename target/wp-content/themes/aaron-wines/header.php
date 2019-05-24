@@ -77,17 +77,16 @@ $header_style = get_field('header_style', $page_id);
       <li class="header-nav-item"><a href="<?php echo the_permalink('28'); ?>"<?php if ($page_id == '28') { echo ' class="active"'; } ?>>Club</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('30'); ?>"<?php if ($page_id == '30') { echo ' class="active"'; } ?>>Visit</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('32'); ?>"<?php if ($page_id == '32') { echo ' class="active"'; } ?>>Contact</a></li>
-      <li class="header-nav-item login"><a href="/account">Login</a></li>
+      <li class="header-nav-item login"><a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile">Login</a></li>
     </ul>
     <ul class="header-utility-items">
       <li class="header-utility-item">
-        <a href="/cart">
+        <a href="https://shop.aaronwines.com/index.cfm?method=cartV2.showCart">
           <?php echo file_get_contents(get_template_directory() . '/assets/images/global/cart.svg') ?>
-          <span class="cart-count" id="vs2-accountLinks-cart-count">0</span>
         </a>
       </li>
       <li class="header-utility-item">
-        <a href="/account">
+        <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile">
           <?php echo file_get_contents(get_template_directory() . '/assets/images/global/account.svg') ?>
         </a>
       </li>
@@ -96,7 +95,4 @@ $header_style = get_field('header_style', $page_id);
   <button class="header-nav-close"></button>
 </header>
 
-<div id="vs2-cart-confirmation">
-  <p>This item has been added to your cart.</p>
-  <a href="/cart" class="button">Review Your Cart</a>
-</div>
+

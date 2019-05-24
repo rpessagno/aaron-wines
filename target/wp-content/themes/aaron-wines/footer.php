@@ -45,8 +45,8 @@
 
 <div class="footer-section club">
   <h3 class="subtitle footer-title">Member Login</h3>
-  <p class="text">Not a member yet? <a href="<?php echo the_permalink('28'); ?>" class="underline">Join now!</a></p>
-  <a href="/account" class="button">Sign In</a>
+  <p class="text">Not a member yet? <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="underline">Join now!</a></p>
+  <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button">Sign In</a>
 </div>
 
 
@@ -55,7 +55,6 @@
 
 <?php wp_footer(); ?>
 
-<script type="text/javascript" src="https://platform.vinespring.com/scripts/2.0/all.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
 
 </body>
