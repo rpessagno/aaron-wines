@@ -1,0 +1,338 @@
+//==============================
+// Global
+//==============================
+
+
+// Options
+@mixin wd-title1 {
+  @include title1;
+}
+
+@mixin wd-title2 {
+  @include title2;
+}
+
+@mixin wd-title3 {
+  @include title3;
+}
+
+@mixin wd-title4 {
+  @include title4;
+}
+
+@mixin wd-text {
+  @include text;
+  color: #000;
+}
+
+$wd-background-color: $light-grey-bg;
+
+$wd-color-dark: #333;
+
+$wd-color-mid: #666;
+$wd-color-mid-darken: darken($wd-color-mid, 15%);
+
+$wd-color-light: #aaa;
+$wd-color-light-darken: darken($wd-color-light, 15%);
+
+$border: transparentize($black, .9) solid 1px;
+
+
+// Mixins
+@mixin wd-border($side: all) {
+  @if $side == top {
+    border-top: $border;
+  }
+  @else if $side == right {
+    border-right: $border;
+  }
+  @else if $side == bottom {
+    border-bottom: $border;
+  }
+  @else if $side == left {
+    border-left: $border;
+  }
+  @else {
+    border: $border;
+  }
+}
+
+@mixin wd-button {
+  @include button;
+}
+
+@mixin wd-button-small {
+  @include input-reset;
+  @include wd-text;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 80%;
+  display: inline-block;
+  padding: 0;
+  text-decoration: none;
+
+  @include bp(m) {
+    font-size: 80%;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+@mixin wd-button-filled {
+  @include input-reset;
+  @include wd-text;
+  background-color: $wd-color-mid;
+  color: $white;
+  text-decoration: none;
+  transition: background-color .3s;
+  text-transform: uppercase;
+  padding: .3em 1.5em;
+  white-space: nowrap;
+
+  @include bp(m) {
+    font-size: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $wd-color-mid-darken;
+    cursor: pointer;
+  }
+}
+
+@mixin wd-darken-bg {
+  background-color: transparentize($black, .95);
+}
+
+@mixin wd-select($amount: 3) {
+  width: calc((100% / #{$amount}) - (5px / #{$amount} * #{$amount - 1})) !important;
+  margin-right: 5px;
+  margin-left: auto;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin wd-label {
+  @include wd-text;
+  line-height: 1.4;
+  display: block;
+  text-transform: uppercase;
+  padding-top: 3px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+
+  @include bp(s) {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+
+  strong {
+    font-weight: inherit;
+  }
+}
+
+
+@mixin wd-input {
+  @include input-reset;
+  @include wd-text;
+  display: block;
+  background-color: $white;
+  padding: .8em 1em .7em;
+  line-height: 1.4;
+}
+
+@mixin wd-checkbox-radio {
+  input[type="radio"],
+  input[type="checkbox"] {
+    float: left;
+    margin: 3px 10px 0 0;
+  }
+}
+
+@mixin wd-form-elements {
+
+  legend {
+    @include wd-title2;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  label {
+    @include wd-label;
+    width: 100%;
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  input[name="shipNickName"],
+  select,
+  textarea {
+    @include input-reset;
+    @include wd-text;
+    @include wd-input;
+    width: 100% !important;
+    margin-left: auto;
+
+    @include placeholder($white, currentColor);
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  @include wd-checkbox-radio;
+
+  select {
+    background: $white url('assets/images/global/select-arrow.svg') right center / auto 100% no-repeat;
+    padding-right: 2.5em;
+
+    &[name="StateCode"] {
+      width: 100% !important;
+    }
+  }
+}
+
+@mixin wd-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  transition: opacity .3s;
+  text-indent: -9999px;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-bottom: $wd-color-light solid 1px;
+    width: 30px;
+    transition: border-bottom-color .3s;
+
+    @include bp(s) {
+      width: 20px;
+    }
+  }
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: 0;
+
+    &:before,
+    &:after {
+      border-bottom-color: $wd-color-light-darken;
+    }
+  }
+}
+
+
+
+.winedirect {
+  background-color: $wd-background-color;
+
+  &-wrapper {
+    padding: 200px calc(50% - 500px);
+
+    @include bp(l) {
+      padding: 200px 100px;
+    }
+
+    @include bp(m) {
+      padding: 150px 50px;
+    }
+
+    @include bp(s) {
+      padding: 100px 40px;
+    }
+
+    @include bp(xs) {
+      padding: 100px 25px;
+    }
+
+    h1 {
+      @include wd-title1;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    p {
+      @include wd-text;
+      line-height: 1.6;
+      text-align: center;
+
+      + p {
+        margin-top: 1em;
+      }
+
+      a {
+        color: currentColor;
+        text-decoration: underline;
+      }
+    }
+
+    li {
+      @include wd-text;
+    }
+
+    table {
+      text-align: left;
+      width: 100%;
+    }
+
+    tr {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+    }
+
+    th {
+      @include wd-text;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    td {
+      @include wd-text;
+      line-height: 1.4;
+      flex-grow: 1;
+      display: block;
+    }
+      
+    .clear,
+    .v65-clear {
+      display: none;
+    }
+  }
+
+  .error {
+    // text-align: center;
+
+    .button {
+      @include wd-button;
+      margin-top: 40px;
+    }
+  }
+}
+

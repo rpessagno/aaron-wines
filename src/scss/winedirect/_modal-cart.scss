@@ -1,0 +1,188 @@
+//==============================
+// Modal Cart
+//==============================
+
+#v65-modalCart {
+  position: fixed;
+  top: 80px;
+  right: 29px;
+  z-index: 10;
+  width: 500px;
+
+  @include bp(s) {
+    right: 15px;
+    width: 400px;
+    max-width: calc(100% - 30px);
+  }
+}
+
+#v65-toggleModalCart {
+  display: none;
+}
+
+#v65-modalCartDropdown {
+  padding: 70px 40px 30px;
+  background: $wd-background-color;
+  box-shadow: 0 0 30px rgba(0,0,0,.3);
+  display: none;
+  width: 100%;
+
+  @include bp(s) {
+    padding: 60px 25px 15px;
+  }
+}
+
+#v65-modalCartBody {
+    
+  // close button
+  > p:first-child .modalLinkAltBtn {
+    @include wd-close-button;
+  }
+
+  .v65-additionalItemsMessage {
+    @include wd-text;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+
+    @include bp(s) {
+      font-size: 11px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  > p:last-child {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    
+    .modalLinkAltBtn,
+    .modalLinkBtn {
+      @include wd-button;
+      margin: 0 5px;
+    }
+  }
+}
+
+#v65-itemAddedText {
+  @include wd-text;
+  @include wd-darken-bg;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 13px;
+
+  @include bp(s) {
+    font-size: 11px;
+  }
+}
+
+#v65-modalCartTable {
+  width: 100%;
+
+  th {
+    display: none;
+  }
+
+  tr:nth-child(2) {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+
+    td {
+      text-align: center;
+      display: block;
+
+      // Qty
+      &:nth-child(1) {
+        @include wd-text;
+        order: 3;
+
+        &:before {
+          content: 'Qty: ';
+        }
+      }
+
+      // Image
+      &:nth-child(2) {
+        order: 1;
+        padding-bottom: 20px;
+
+        img {
+          height: 200px;
+
+          @include bp(s) {
+            height: 120px;
+          }
+        }
+      }
+
+      // Title
+      &:nth-child(3) {
+        @include wd-title3;
+        order: 2;
+        padding-bottom: 10px;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        strong {
+          font-weight: normal;
+        }
+      }
+
+      // Price - x1
+      &:nth-child(4) {
+        display: none;
+      }
+
+      // Price - xQty
+      &:nth-child(5) {
+        order: 4;
+        @include wd-text;
+      }
+    }
+  }
+
+  #v65-modalCartTableSubtotal {
+    display: flex;
+    flex-flow: row nowrap;
+
+    td {
+      width: 50%;
+      @include wd-border(top);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 20px;
+      @include wd-text;
+      font-weight: 700;
+      display: block;
+
+      // Blank
+      &:nth-child(1) {
+        display: none;
+      }
+
+      // Subtotal text
+      &:nth-child(2) {
+        text-align: right;
+        padding-right: 5px;
+
+        &:after {
+          content: ':';
+        }
+      }
+
+      // Subtotal price
+      &:nth-child(3) {
+        text-align: left;
+      }
+    }
+  }
+}

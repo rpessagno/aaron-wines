@@ -7,13 +7,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   padding: 0;
 }
 
-.headline {
+@mixin title1 {
   font: 100 normal 44px/1.2 $serif;
   text-transform: uppercase;
   letter-spacing: .05em;
   color: $charcoal;
-  margin: auto;
-  max-width: 750px;
 
   @include bp(l) {
     font-size: 44px;
@@ -26,13 +24,19 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   @include bp(s) {
     font-size: 24px;
   }
+}
+
+.headline {
+  @include title1;
+  margin: auto;
+  max-width: 750px;
 
   + p {
     margin-top: 1.5em;
   }
 }
 
-.title {
+@mixin title2 {
   font: 200 normal 34px/1.2 $serif;
   color: $charcoal;
   text-transform: uppercase;
@@ -44,13 +48,17 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   @include bp(s) {
     font-size: 22px;
   }
+}
+
+.title {
+  @include title2;
 
   + p {
     margin-top: 1.5em;
   }
 }
 
-.subtitle {
+@mixin title3 {
   font: 400 normal 30px/1.5 $serif;
   color: $charcoal;
   text-transform: uppercase;
@@ -62,6 +70,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   @include bp(s) {
     font-size: 22px;
   }
+}
+
+.subtitle {
+  @include title3;
 
   + p,
   + ul {
@@ -80,11 +92,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   }
 }
 
-.subtitle2 {
+@mixin title4 {
   font: 300 normal 18px/1.3 $monospace;
   color: $charcoal;
   letter-spacing: .02em;
-  // text-transform: uppercase;
   color: $blue;
 
   @include bp(m) {
@@ -94,6 +105,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   @include bp(s) {
     font-size: 13px;
   }
+}
+
+.subtitle2 {
 
   + p {
     margin-top: 1em;

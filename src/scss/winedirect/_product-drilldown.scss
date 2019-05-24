@@ -1,0 +1,281 @@
+//==============================
+// Product Drilldown
+//==============================
+
+.product {
+
+  &-drilldown {
+    padding: 200px calc(50% - 600px);
+    display: flex;
+    flex-flow: row wrap;
+
+    @include bp(xl) {
+      padding: 200px 80px 200px 60px;
+    }
+
+    @include bp(m) {
+      padding: 150px 60px 150px 40px;
+    }
+
+    @include bp(s) {
+      padding: 100px 40px;
+    }
+
+    @include bp(xs) {
+      padding: 80px 20px;
+    }
+  }
+
+  &-img {
+    width: 50%;
+    padding-right: 60px;
+
+    @include bp(l) {
+      padding-right: 40px;
+    }
+
+    @include bp(m) {
+      padding-right: 30px;
+    }
+
+    @include bp(s) {
+      width: 100%;
+      padding: 0 40px;
+    }
+
+    .v65-product-photo {
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 900px;
+        margin: 0 auto;
+
+        @include bp(l) {
+          max-height: 700px;
+        }
+
+        @include bp(m) {
+          max-height: 600px;
+        }
+
+        @include bp(s) {
+          max-height: 300px;
+        }
+      }
+    }
+  }
+
+  &-cart {
+    margin-top: 20px;
+
+    .v65-addToCart {
+
+      + .v65-addToCart {
+        margin-top: 25px;
+      }
+
+      &.v65-addToCartCase {
+
+        .v65-product-addToCart-quantity {
+          display: none;
+        }
+      }
+    }
+
+    .v65-product-addToCart {
+
+      .v65-product-addToCart-priceWrapper {
+        margin-bottom: 20px;
+      }
+
+      .v65-product-addToCart-price,
+      .v65-product-addToCart-caseQuantity {
+        @include wd-title3;
+        display: inline-block;
+      }
+
+      .v65-product-addToCart-unitDescription {
+        @include wd-title3;
+        display: inline-block;
+      }
+
+      .v65-product-addToCart-securityMessage,
+      .v65-product-addToCart-outOfStockMessage {
+        @include wd-text;
+      }
+    }
+
+    .v65-product-availability {
+      display: none;
+    }
+
+    .v65-product-addToCart {
+
+      legend,
+      .v65-product-addToCart-productSKU {
+        display: none;
+      }
+
+      .v65-product-addToCart-price {
+        margin-bottom: 10px;
+      }
+    }
+
+    .v65-product-addToCart-quantity {
+      float: left;
+
+      input {
+        @include input-reset;
+        @include wd-text;
+        background-color: transparent;
+        border-top: $black solid 1px;
+        border-left: $black solid 1px;
+        border-bottom: $black solid 1px;
+        padding: 0 .8em;
+        color: $black;
+        width: 50px !important;
+        height: 40px;
+        border-radius: 2px 0 0 2px;
+      }
+    }
+
+    .v65-product-addToCart-button {
+      float: left;
+      
+      button {
+        @include input-reset;
+        @include wd-text;
+        background: transparent;
+        padding: 0 1.5em;
+        color: $black;
+        border: $black solid 1px;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        height: 40px;
+        transition: background-color .2s, color .2s;
+        border-radius: 0 2px 2px 0;
+
+        &:hover,
+        &:focus {
+          color: $white;
+          background-color: $black;
+          cursor: pointer;
+          outline: 0;
+        }
+
+        span {
+          padding: 0;
+          line-height: inherit;
+          height: auto;
+          color: inherit;
+          background: none;
+        }
+      }
+    }
+  }
+
+  &-content {
+    width: 50%;
+
+    @include bp(s) {
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    h1 {
+      @include wd-title1;
+    }
+
+    h2 {
+      @include wd-title2;
+    }
+
+    p {
+      @include wd-text;
+
+      + p {
+        margin-top: 1.5em;
+      }
+    }
+  }
+
+  &-description {
+    margin-top: 40px;
+
+    .v65-product-photos {
+      margin-top: 40px;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .v65-product-photos-photo {
+      width: 120px;
+      height: 120px;
+      margin: 0 10px 10px 0;
+      transition: border-color .2s;
+
+      @include bp(m) {
+        width: 80px;
+        height: 80px;
+      }
+
+      a {
+        display: block;
+        border: #ccc solid 1px;
+        padding: 10px 0;
+
+        &:hover,
+        &:focus {
+          border-color: #aaa;
+        }
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        height: 100px;
+
+        @include bp(m) {
+          height: 60px;
+        }
+      }
+    }
+
+    .v65-wine-tastingNotes,
+    .v65-wine-foodPairingNotes {
+
+      .v65-product-attributeLabel {
+        @include wd-text;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 2em;
+      }
+
+      .v65-product-attributeValue {
+        @include wd-text;
+        margin-top: .5em;
+      }
+    }
+  }
+
+  &-specs {
+    margin-top: 30px;
+
+    .v65-product-attributeLabel {
+      @include wd-text;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: inline;
+
+      &:after {
+        content: ':';
+      }
+    }
+
+    .v65-product-attributeValue {
+      display: inline;
+      @include wd-text;
+    }
+  }
+}

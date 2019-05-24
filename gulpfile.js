@@ -23,7 +23,7 @@ var browserSync   = require('browser-sync').create();
 //----------------------------------------
 
 var domainName   = 'aaronwines';
-var domainNameWD = 'template-domain';
+var domainNameWD = 'aaronwines-wd';
 var theme        = 'aaron-wines';
 
 //----------------------------------------
@@ -98,10 +98,10 @@ gulp.task('scripts-lint', function () {
 //---------------------------------------------------
 
 gulp.task('assets', function () {
-  gulp.src('./target/wp-content/themes/' + theme + '/assets/images/global/**/*')
+  return gulp.src('./target/wp-content/themes/' + theme + '/assets/images/global/**/*')
   .pipe(gulp.dest('./winedirect-template/assets/images/global/'))
   .pipe(gulp.dest('./winedirect/assets/custom/assets/images/global/'));
-  gulp.src('./target/wp-content/themes/' + theme + '/assets/fonts/**/*')
+  return gulp.src('./target/wp-content/themes/' + theme + '/assets/fonts/**/*')
   .pipe(gulp.dest('./winedirect-template/assets/fonts/'))
   .pipe(gulp.dest('./winedirect/assets/custom/assets/fonts/'));
 });
@@ -137,8 +137,8 @@ gulp.task('watch-wd', function () {
   });
   gulp.watch('./winedirect-template/**/*')
     .on('change', browserSync.reload);
-  gulp.watch('src/scss/**/*.scss', ['styles-wd']);
-  gulp.watch('src/js/**/*.js', ['scripts']);
+  gulp.watch('src/scss/**/*.scss', gulp.parallel('styles-wd'));
+  gulp.watch('src/js/**/*.js', gulp.parallel('scripts', 'scripts-lint'));
 });
 
 
@@ -154,5 +154,5 @@ gulp.task('default', gulp.parallel('styles', 'scripts', 'scripts-lint'));
 //----------------------------------------
 
 gulp.task('dev', gulp.parallel('styles', 'scripts', 'scripts-lint', 'watch'));
-gulp.task('wd', gulp.parallel('styles-wd', 'scripts', 'scripts-lint', 'watch'));
+gulp.task('wd', gulp.parallel('styles-wd', 'scripts', 'scripts-lint', 'watch-wd'));
 

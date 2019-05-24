@@ -1,0 +1,85 @@
+//==============================
+// Login
+//==============================
+
+#v65-LoginFormWrapper,
+#v65-forgotPasswordForm {
+
+  form {
+    max-width: 500px;
+    margin: 60px auto;
+  }
+
+  legend {
+    display: none;
+  }
+
+  fieldset {
+
+    > div {
+
+      + div {
+        margin-top: 20px;
+      }
+
+      &:last-child {
+        margin-top: 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  label {
+    @include wd-label;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    @include wd-input;
+    width: 100% !important;
+  }
+
+  @include wd-checkbox-radio;
+
+  button {
+    @include wd-button;
+  }
+
+  + p + p a {
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-decoration: underline;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+    color: currentColor;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+#v65-forgotPasswordForm {
+  max-width: 500px;
+  margin: 0 auto 60px;
+
+  .v65-formRecaptcha {
+
+    > div {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

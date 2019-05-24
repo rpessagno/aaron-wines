@@ -1,0 +1,90 @@
+//==============================
+// Modal Login
+//==============================
+
+#v65-modalContainer {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: $wd-background-color;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 30px rgba(0,0,0,.3);
+}
+
+#v65-modalContentHeader {
+
+  .modalLinkBtn {
+    @include wd-close-button;
+  }
+}
+
+#v65-modalContent {
+  padding: 40px;
+
+  @include bp(s) {
+    padding: 40px 25px;
+  }
+
+  fieldset div {
+    clear: both;
+  }
+
+  .error {
+    @include wd-text;
+    @include wd-darken-bg;
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    padding-bottom: 20px;
+  }
+
+  legend {
+    @include wd-title2;
+    margin-bottom: 20px;
+  }
+
+  label {
+    @include wd-label;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    @include wd-input;
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  @include wd-checkbox-radio;
+
+  button {
+    @include wd-button;
+    margin-top: 20px;
+  }
+
+  h3 {
+    @include wd-text;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  p {
+    @include wd-text;
+    text-align: center;
+    line-height: 1.6;
+
+    a {
+      color: inherit;
+    }
+  }
+}
+
