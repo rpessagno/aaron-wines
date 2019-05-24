@@ -70,7 +70,6 @@ gulp.task('styles-wd', function () {
 // Concat
 gulp.task('scripts', function () {
   return gulp.src([
-    './src/js/lib/jquery.js',
     './src/js/lib/*.js',
     './src/js/src/global.js',
     './src/js/src/*.js'

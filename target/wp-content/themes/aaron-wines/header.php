@@ -53,6 +53,8 @@ src="https://www.facebook.com/tr?id=1399755556828091&ev=PageView
 </noscript>
 <!-- End Facebook Pixel Code -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -95,4 +97,4 @@ $header_style = get_field('header_style', $page_id);
   <button class="header-nav-close"></button>
 </header>
 
-
+<div v65remotejs="modalCart"></div>

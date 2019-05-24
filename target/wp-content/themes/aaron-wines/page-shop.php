@@ -15,14 +15,14 @@ get_header();
   <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="shop-logo">
 </div>
 
-<?php $filter = 'aaron'; include('inc/shop-items.php'); ?>
 
+<?php $pageID = '5'; include('inc/shop-items.php'); ?>
 
 
 <div class="section-header shop-aequorea">
   <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-black.svg" alt="Aequorea" class="shop-logo">
 </div>
 
-<?php $filter = 'aequorea'; include('inc/shop-items.php'); ?>
+<?php $pageID = '7'; include('inc/shop-items.php'); ?>
 
 <?php get_footer(); ?>

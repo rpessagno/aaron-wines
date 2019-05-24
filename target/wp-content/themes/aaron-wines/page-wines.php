@@ -54,21 +54,29 @@ get_header();
 
 <?php $brand = strtolower(get_the_title()); ?>
 
-<div class="wines" id="wines">
+<div class="wines">
 
     <div class="feature-wrap alt">
 
       <?php if( have_rows('current_releases') ) { ?>
-      <?php while ( have_rows('current_releases') ) { the_row(); ?>      
+      <?php while ( have_rows('current_releases') ) { the_row(); ?>
+
+      <?php
+        $title = get_sub_field('title');
+        $subtitle = get_sub_field('subtitle');
+        $text = get_sub_field('text');
+        $link = get_sub_field('link');
+        $image = get_sub_field('image');
+      ?>
 
       <div class="feature">
         <div class="feature-content">
-          <h2 class="subtitle"><?php the_sub_field('title'); ?></h2>
-          <h3 class="subtitle2"><?php the_sub_field('subtitle'); ?></h3>
-          <p><?php the_sub_field('text'); ?></p>
-          <a href="<?php the_sub_field('link'); ?>" class="button">View Wine</a>
+          <h2 class="subtitle"><?php echo $title; ?></h2>
+          <?php if ($subtitle) { ?><h3 class="subtitle2"><?php echo $subtitle; ?></h3><?php } ?>
+          <p><?php echo $text; ?></p>
+          <a href="<?php echo $link; ?>" class="button">View Wine</a>
         </div>
-        <div class="feature-img" style="background-image: url('<?php the_sub_field('image'); ?>');"></div>
+        <div class="feature-img" style="background-image: url('<?php echo $image; ?>');"></div>
       </div>
 
       <?php } ?>
