@@ -12,9 +12,6 @@
     <h1>
       <?php include('inc/product-title.php'); ?>
     </h1>
-    <h2>
-      <?php include('inc/product-subtitle.php'); ?>
-    </h2>
 
     <div class="product-cart">
       <?php include('inc/product-cart.php'); ?>
@@ -28,16 +25,12 @@
       <div class="product-specs">
         <?php include('inc/product-specs.php'); ?>
       </div>
-
-      <div class="v65-product-photos">
-        <?php include('inc/product-photos.php'); ?>
-      </div>
     
     </div>
     
   </div>
 
-</div> <!-- /.product-drilldown -->
+</div>
 
 
 

@@ -5,7 +5,7 @@
 
 // Options
 @mixin wd-title1 {
-  @include title1;
+  @include title2;
 }
 
 @mixin wd-title2 {
@@ -22,10 +22,10 @@
 
 @mixin wd-text {
   @include text;
-  color: #000;
+  color: #333;
 }
 
-$wd-background-color: $light-grey-bg;
+$wd-background-color: $white;
 
 $wd-color-dark: #333;
 
@@ -253,23 +253,40 @@ $border: transparentize($black, .9) solid 1px;
   background-color: $wd-background-color;
 
   &-wrapper {
-    padding: 200px calc(50% - 500px);
-
-    @include bp(l) {
-      padding: 200px 100px;
-    }
+    // padding: 200px calc(50% - 500px);
+    width: 100%;
+    max-width: 1280px;
+    padding: 60px 80px 100px;
+    margin: 0 auto;
 
     @include bp(m) {
-      padding: 150px 50px;
+      padding: 60px 60px 100px;
     }
 
     @include bp(s) {
-      padding: 100px 40px;
+      padding: 40px 40px 100px;
     }
 
     @include bp(xs) {
-      padding: 100px 25px;
+      padding-right: 20px;
+      padding-left: 20px;
     }
+
+    // @include bp(l) {
+    //   padding: 200px 100px;
+    // }
+
+    // @include bp(m) {
+    //   padding: 150px 50px;
+    // }
+
+    // @include bp(s) {
+    //   padding: 100px 40px;
+    // }
+
+    // @include bp(xs) {
+    //   padding: 100px 25px;
+    // }
 
     h1 {
       @include wd-title1;

@@ -5,7 +5,7 @@
 .product {
 
   &-drilldown {
-    padding: 200px calc(50% - 600px);
+    padding: 100px calc(50% - 600px);
     display: flex;
     flex-flow: row wrap;
 
@@ -27,8 +27,8 @@
   }
 
   &-img {
-    width: 50%;
-    padding-right: 60px;
+    width: 45%;
+    padding-right: 40px;
 
     @include bp(l) {
       padding-right: 40px;
@@ -47,20 +47,17 @@
 
       img {
         display: block;
+        max-height: 600px;
         max-width: 100%;
-        max-height: 900px;
         margin: 0 auto;
 
-        @include bp(l) {
-          max-height: 700px;
-        }
-
-        @include bp(m) {
-          max-height: 600px;
-        }
-
         @include bp(s) {
-          max-height: 300px;
+          height: 400px;
+          margin: 0 auto;
+        }
+
+        @include bp(xs) {
+          height: 300px;
         }
       }
     }
@@ -176,11 +173,11 @@
   }
 
   &-content {
-    width: 50%;
+    width: 55%;
 
     @include bp(s) {
       width: 100%;
-      margin-top: 40px;
+      padding-top: 40px;
     }
 
     h1 {
