@@ -85,34 +85,33 @@
     flex-flow: row nowrap;
     align-items: center;
   }
-
-  .vs2-productList-price {
+  
+  legend,
+  .v65-widgetProduct-addToCart-priceWrapper {
     display: none;
   }
 
-  .vs2-productList-quantity-dropdown {
+  .v65-widgetProduct-addToCart-quantity {
+    float: left;
+    width: 50px;
     margin-right: 20px;
   }
 
-  .vs2-productList-soldOut {
-    @include text;
+  // .vs2-productList-soldOut {
+  //   @include text;
+  // }
+
+  .v65-widgetProduct-addToCart-button {
+    float: left;
   }
 
-  .vs2-productList-addToCart {
+  // .vs2-productList-notAvailable {
+  //   max-width: 200px;
 
-    button {
-      @include button;
-      margin-left: 20px;
-    }
-  }
-
-  .vs2-productList-notAvailable {
-    max-width: 200px;
-
-    span {
-      font: 300 normal 14px/1.4 $monospace;
-      letter-spacing: .02em;
-      color: $charcoal;
-    }
-  }
+  //   span {
+  //     font: 300 normal 14px/1.4 $monospace;
+  //     letter-spacing: .02em;
+  //     color: $charcoal;
+  //   }
+  // }
 }

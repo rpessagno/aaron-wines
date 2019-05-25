@@ -2,11 +2,14 @@
 // Modal Cart
 //==============================
 
-#v65-modalCart {
+#v65-modalCart,
+.v65-widgetModalCart-dropdown {
   position: fixed;
-  top: 80px;
-  right: 29px;
-  z-index: 10;
+  // top: 80px;
+  // right: 29px;
+  top: 20px;
+  right: 20px;
+  z-index: 200;
   width: 500px;
 
   @include bp(s) {
@@ -16,31 +19,46 @@
   }
 }
 
-#v65-toggleModalCart {
+[v65remotejs="modalCart"] {
+  position: relative;
+  z-index: 200;
+}
+
+#v65-toggleModalCart,
+.v65-widgetModalCart-status {
   display: none;
 }
 
 #v65-modalCartDropdown {
-  padding: 70px 40px 30px;
-  background: $wd-background-color;
-  box-shadow: 0 0 30px rgba(0,0,0,.3);
-  display: none;
   width: 100%;
+}
+
+#v65-modalCartDropdown,
+.v65-widgetModalCart-dropdown {
+  padding: 70px 40px 30px;
+  background: #f5f5f5;
+  box-shadow: 0 0 40px rgba(0,0,0,.2);
+  display: none;
 
   @include bp(s) {
     padding: 60px 25px 15px;
   }
 }
 
-#v65-modalCartBody {
+#v65-modalCartBody,
+.v65-widgetModalCart-dropdown {
     
   // close button
-  > p:first-child .modalLinkAltBtn {
+  > p:first-child .modalLinkAltBtn,
+  .v65-widgetModalCart-closeButton a {
     @include wd-close-button;
   }
 
-  .v65-additionalItemsMessage {
+  .v65-additionalItemsMessage,
+  .v65-widgetModalCart-itemMessage,
+  .v65-widgetModalCart-itemMessageBottom {
     @include wd-text;
+    color: $black;
     text-align: center;
     margin-bottom: 20px;
     font-size: 13px;
@@ -51,25 +69,36 @@
 
     a {
       color: inherit;
-      text-decoration: underline;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
 
-  > p:last-child {
+  > p:last-child,
+  .v65-widgetModalCart-BottomButtons {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     
     .modalLinkAltBtn,
-    .modalLinkBtn {
-      @include wd-button;
+    .modalLinkBtn,
+    .v65-widgetModalCart-viewCartButton a,
+    .v65-widgetModalCart-checkOutButton a {
+      @include button;
       margin: 0 5px;
+      height: auto;
     }
   }
 }
 
-#v65-itemAddedText {
+#v65-itemAddedText,
+.v65-widgetModalCart-itemMessage {
   @include wd-text;
+  color: $black;
   @include wd-darken-bg;
   padding: 10px 20px;
   margin-bottom: 20px;
@@ -81,25 +110,30 @@
   }
 }
 
-#v65-modalCartTable {
+#v65-modalCartTable,
+.v65-widgetModalCart-itemSummary {
   width: 100%;
 
-  th {
+  th,
+  .v65-widgetModalCart-itemSummaryHeader {
     display: none;
   }
 
-  tr:nth-child(2) {
+  tr:nth-child(2),
+  .v65-widgetModalCart-items {
     display: flex;
     flex-flow: column wrap;
     width: 100%;
 
-    td {
+    td,
+    > div {
       text-align: center;
       display: block;
 
       // Qty
       &:nth-child(1) {
         @include wd-text;
+        color: $black;
         order: 3;
 
         &:before {
@@ -124,6 +158,7 @@
       // Title
       &:nth-child(3) {
         @include wd-title3;
+        color: $black;
         order: 2;
         padding-bottom: 10px;
 
@@ -146,11 +181,13 @@
       &:nth-child(5) {
         order: 4;
         @include wd-text;
+        color: $black;
       }
     }
   }
 
-  #v65-modalCartTableSubtotal {
+  #v65-modalCartTableSubtotal,
+  .v65-widgetModalCart-itemSummarySubTotal {
     display: flex;
     flex-flow: row nowrap;
 
@@ -161,6 +198,7 @@
       padding-bottom: 20px;
       margin-top: 20px;
       @include wd-text;
+      color: $black;
       font-weight: 700;
       display: block;
 
@@ -184,5 +222,33 @@
         text-align: left;
       }
     }
+    
+    .v65-widgetModalCart-itemSummarySubTotalLabel,
+    .v65-widgetModalCart-itemSummarySubTotalValue {
+      width: 50%;
+      @include wd-border(top);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 20px;
+      @include wd-text;
+      color: $black;
+      font-weight: 500;
+      display: block;
+      background-color: transparent;
+    }
+
+    .v65-widgetModalCart-itemSummarySubTotalLabel {
+      text-align: right;
+      padding-right: 5px;
+
+      &:after {
+        content: ':';
+      }
+    }
+
+    .v65-widgetModalCart-itemSummarySubTotalValue {
+      text-align: left;
+    }
   }
 }
+
