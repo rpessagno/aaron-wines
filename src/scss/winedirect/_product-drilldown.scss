@@ -122,6 +122,7 @@
 
       .v65-product-addToCart-price {
         margin-bottom: 10px;
+        margin-right: 0.4em;
       }
     }
 
@@ -209,7 +210,9 @@
   }
 
   &-description {
-    margin-top: 40px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: #e5e5e5 solid 1px;
 
     .v65-product-photos {
       margin-top: 40px;
