@@ -57,9 +57,9 @@
 
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
 <script type="text/javascript" src="https://assetss3.vin65.com/js/vin65remotetools.1.1.js"></script>
-<script type="text/javascript">vin65remote.cart.modalCart('https://aaronwines.uswest2.vin65dev.com',0);</script>
-<script type="text/javascript">vin65remote.cart.addToCart('https://aaronwines.uswest2.vin65dev.com');</script>
-<script type="text/javascript">vin65remote.product.addToCartForm('https://aaronwines.uswest2.vin65dev.com');</script>
+<script type="text/javascript">vin65remote.cart.modalCart('https://shop.aaronwines.com',0);</script>
+<script type="text/javascript">vin65remote.cart.addToCart('https://shop.aaronwines.com');</script>
+<script type="text/javascript">vin65remote.product.addToCartForm('https://shop.aaronwines.com');</script>
 
 
 </body>

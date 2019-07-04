@@ -87,8 +87,15 @@
   }
   
   legend,
-  .v65-widgetProduct-addToCart-priceWrapper {
+  .v65-widgetProduct-addToCart-priceWrapper,
+  .v65-widgetProduct-addToCart-unitDescription,
+  .v65-widgetProduct-addToCart-price {
     display: none;
+  }
+
+  .v65-widgetProduct-addToCart-outOfStockMessage {
+    @include text;
+    margin-bottom: 10px;
   }
 
   .v65-widgetProduct-addToCart-quantity {
