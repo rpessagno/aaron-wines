@@ -15,20 +15,21 @@ get_header();
 
 
 <div class="feature-wrap">
-  <div class="feature">
-    <div class="feature-content">
-      <h3 class="subtitle"><?php the_field('intro_title'); ?></h3>
-      <p><?php the_field('intro_text'); ?></p>
+
+  <?php if( have_rows('details') ) { ?>
+  <?php while ( have_rows('details') ) { the_row(); ?>
+
+    <div class="feature">
+      <div class="feature-content">
+        <h3 class="subtitle"><?php the_sub_field('title'); ?></h3>
+        <p><?php the_sub_field('text'); ?></p>
+      </div>
+      <div class="feature-img" style="background-image: url('<?php the_sub_field('image'); ?>');"></div>
     </div>
-    <div class="feature-img" style="background-image: url('<?php the_field('intro_image'); ?>');"></div>
-  </div>
-  <div class="feature">
-    <div class="feature-content">
-      <h3 class="subtitle"><?php the_field('details_title'); ?></h3>
-      <p><?php the_field('details_text'); ?></p>
-    </div>
-    <div class="feature-img" style="background-image: url('<?php the_field('detail_image'); ?>');"></div>
-  </div>
+
+  <?php } ?>
+  <?php } ?>
+
 </div>
 
 
