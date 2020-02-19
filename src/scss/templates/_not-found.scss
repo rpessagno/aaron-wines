@@ -3,9 +3,15 @@
 //==============================
 
 .not-found {
+  text-align: center;
 
   &-hero {
     background-image: url('https://aaronwines.com/wp-content/uploads/2017/09/Aaron-Wines-Tasting-Room-BW.jpg');
     background-position: center center;
+  }
+
+  .button {
+    color: $white !important;
+    text-decoration: none;
   }
 }

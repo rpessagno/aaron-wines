@@ -5,7 +5,7 @@
 .product {
 
   &-drilldown {
-    padding: 100px calc(50% - 600px);
+    padding: 100px calc(50% - 560px);
     display: flex;
     flex-flow: row wrap;
 
@@ -64,12 +64,11 @@
   }
 
   &-cart {
-    margin-top: 20px;
 
     .v65-addToCart {
 
       + .v65-addToCart {
-        margin-top: 25px;
+        margin-top: 20px;
       }
 
       &.v65-addToCartCase {
@@ -87,14 +86,21 @@
       }
 
       .v65-product-addToCart-price,
-      .v65-product-addToCart-caseQuantity {
-        @include wd-title3;
-        display: inline-block;
-      }
-
+      .v65-product-addToCart-caseQuantity,
       .v65-product-addToCart-unitDescription {
-        @include wd-title3;
+        margin: .5em 0;
+        font: 400 normal 24px/1.5 $monospace;
+        color: $charcoal;
+        text-transform: uppercase;
         display: inline-block;
+
+        @include bp(m) {
+          font-size: 20px;
+        }
+
+        @include bp(s) {
+          font-size: 18px;
+        }
       }
 
       .v65-product-addToCart-securityMessage,
@@ -116,6 +122,7 @@
 
       .v65-product-addToCart-price {
         margin-bottom: 10px;
+        margin-right: 0.4em;
       }
     }
 
@@ -134,6 +141,7 @@
         width: 50px !important;
         height: 40px;
         border-radius: 2px 0 0 2px;
+        margin-right: 20px;
       }
     }
 
@@ -141,24 +149,28 @@
       float: left;
       
       button {
-        @include input-reset;
-        @include wd-text;
-        background: transparent;
+        @include input-reset;        
+        font: 500 normal 13px/1 $serif;
+        letter-spacing: .15em;
+        background-color: $blue;
         padding: 0 1.5em;
-        color: $black;
-        border: $black solid 1px;
+        color: $white;
+        border: 0;
+        display: inline-block;
+        text-decoration: none;
         text-transform: uppercase;
-        letter-spacing: .04em;
-        height: 40px;
         transition: background-color .2s, color .2s;
-        border-radius: 0 2px 2px 0;
+        height: 40px;
+        text-align: center;
+        border-radius: 3px;
+
+        @include bp(xs) {
+          font-size: 11px;
+        }
 
         &:hover,
         &:focus {
-          color: $white;
-          background-color: $black;
-          cursor: pointer;
-          outline: 0;
+          background-color: darken($blue, 10%);
         }
 
         span {
@@ -181,11 +193,11 @@
     }
 
     h1 {
-      @include wd-title1;
+      @include wd-title3;
     }
 
     h2 {
-      @include wd-title2;
+      @include wd-title3;
     }
 
     p {
@@ -198,7 +210,9 @@
   }
 
   &-description {
-    margin-top: 40px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: #e5e5e5 solid 1px;
 
     .v65-product-photos {
       margin-top: 40px;

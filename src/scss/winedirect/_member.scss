@@ -47,7 +47,8 @@
       padding: .25em;
 
       &:hover,
-      &:focus {
+      &:focus,
+      &.v65-leftSelected {
         text-decoration: underline;
       }
     }

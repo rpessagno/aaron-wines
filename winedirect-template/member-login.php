@@ -16,25 +16,23 @@
           <input type="hidden" name="referrerQueryString" value="method=memberEditAccount.editProfile">
           
           <fieldset>  
-            
+      
             <legend>Log In</legend>
             
             <div>
-            <label for="username">Username or Email</label>
-            <input type="text" name="username" value="" style="width: 175px;">
+            <label for="username">*Username or Email</label>
+            <input type="text" id="username" name="username" value="" aria-required="true" aria-describedby="error" style="width: 175px;">
             </div>
             
             <div>
-            <label for="password">Password</label>
-            <input type="Password" name="password" value="" style="width: 175px;">
+            <label for="password">*Password</label>
+            <input type="Password" id="password" name="password" aria-required="true" value="" style="width: 175px;">
             </div>
             
             
             <div>
-            <input type="checkbox" name="rememberMe" id="rememberMe" value="1">
               
-                <label for="rememberMe">Remember Me</label>
-              
+              <input type="checkbox" name="rememberMe" id="rememberMe" value="1" aria-label="Remember Me"> Remember Me
             </div>
                   
             
