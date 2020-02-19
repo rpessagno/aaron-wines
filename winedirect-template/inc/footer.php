@@ -2,25 +2,41 @@
 <div class="newsletter">
   <h1 class="subtitle">Join Our Mailing List</h1>
 
-   <!-- Begin MailChimp Signup Form -->
-  <div id="mc_embed_signup">
-    <form action="https://aaronwines.us3.list-manage.com/subscribe/post?u=bc551c70f09510adff5329851&amp;id=6716f10d01" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+   <!-- WineDirect generated code -->
+   <div v65remotejs="form">
+        <div id="FormB5B51374-F812-B1F6-8CAA-06F667F2D34D" class="v65-widgetFormWrapper">
+        <form method="post" class="v65-widgetForm" name="v65-widgetForm" action="">
       
-      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-      
-      <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
+        <fieldset>
+        <input type="hidden" name="FormID" value="B5B51374-F812-B1F6-8CAA-06F667F2D34D">
+        <input type="hidden" name="FormDivID" value="FormB5B51374-F812-B1F6-8CAA-06F667F2D34D">
+        
+        <legend>Newsletter Signup</legend>
+        
+            <div class="">
+              <label for="Email"> 
+                *Email
+              </label>
+              <input type="text" name="Email" id="Email" aria-required="true" aria-describedby="InvalidEmailFormat" value="" placeholder="Email Address" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$"><br>
+            </div>
+            
+            
+          <div style="display:none;">Leave this field blank:  <input type="text" aria-label="If you are a human, do not fill in this field" name="honeyPot" value=""></div>
+          
+          
+          <div>
+            <button type="submit" value="submit" class="defaultBtn"><span>Submit</span></button>
+          </div> 
+        
+                
+        </fieldset> 
+        
+      </form>
       </div>
+      
 
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bc551c70f09510adff5329851_6716f10d01" tabindex="-1" value=""></div>
-    
-      <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="button">
-   
-    </form>
-  </div>
-  <!-- / MailChimp Signup Form-->
+    </div>
+    <!-- / WineDirect generated code from -->
 
 </div>
 

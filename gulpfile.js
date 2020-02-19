@@ -33,9 +33,7 @@ var theme        = 'aaron-wines';
 gulp.task('styles', function () {
   return gulp.src('src/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 5 versions']
-    }))
+    .pipe(autoprefixer())
     .pipe(cssnano({
       zindex: false
     }))
@@ -70,7 +68,6 @@ gulp.task('styles-wd', function () {
 // Concat
 gulp.task('scripts', function () {
   return gulp.src([
-    './src/js/lib/jquery.js',
     './src/js/lib/*.js',
     './src/js/src/global.js',
     './src/js/src/*.js'

@@ -4,11 +4,13 @@
 
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title><v65:pageTitle></v65:pageTitle> | Company Name</title>
+<title><v65:pageTitle></v65:pageTitle> | Aaron Wines</title>
 
 <!-- <v65:customFile file="/v65html/_head.html"></v65:customFile> -->
 
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
 <v65:css files="/assets/custom/winedirect.css"></v65:css>
 
 
@@ -17,7 +19,7 @@
 <!--//Vin65 QuickLaunch//-->
 
 <!-- jQuery is required here for WineDirect remote widgets to work -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -28,7 +30,12 @@
 
 
 <v65:contentBlock group="Header"></v65:contentBlock>
+
 <v65:modalCart></v65:modalCart> 
+
+
+
+
 
 <div class="product-drilldown">
 
@@ -36,52 +43,29 @@
     <v65:product:photo showPhoto="1"></v65:product:photo>
   </div>
 
-  <div class="product-hero">
-    <div class="product-hero-content">
-
-      <h1 class="title">
-        <v65:product:title></v65:product:title>
-      </h1>
-      <h2 class="subtitle3"><v65:product:subtitle></v65:product:subtitle></h2>
-
-      <div class="product-cart">
-        <v65:product:actionMessage></v65:product:actionMessage>
-        <v65:product:inCompliantStateMessage></v65:product:inCompliantStateMessage>
-        <v65:product:availability></v65:product:availability>
-        <v65:product:addToCart></v65:product:addToCart>
-      </div>
-
-    </div>
-
-  </div>
-
-
   <div class="product-content">
 
+    <h1>
+      <v65:product:title></v65:product:title>
+    </h1>
+
+    <div class="product-cart">
+      <v65:product:actionMessage></v65:product:actionMessage>
+      <v65:product:inCompliantStateMessage></v65:product:inCompliantStateMessage>
+      <v65:product:availability></v65:product:availability>
+      <v65:product:addToCart></v65:product:addToCart>
+    </div>
+
     <div class="product-description">
+
       <v65:product:description></v65:product:description>
       <v65:wine:tastingNotes></v65:wine:tastingNotes>
-      
-      <div class="product-specs">
-        <v65:wine:harvestDate></v65:wine:harvestDate>
-        <v65:wine:alcohol></v65:wine:alcohol>
-        <v65:wine:acid></v65:wine:acid>
-        <v65:wine:ph></v65:wine:ph>
-        <v65:wine:aging></v65:wine:aging>
-        <v65:wine:fermentation></v65:wine:fermentation>
-        <v65:wine:bottlingDate></v65:wine:bottlingDate>
-        <v65:wine:residualSugar></v65:wine:residualSugar>
-        <v65:wine:tannin></v65:wine:tannin>
-      </div>
-    
+          
     </div>
     
   </div>
 
 </div> <!-- /.product-drilldown -->
-
-
-
 
 
 
@@ -97,6 +81,8 @@
 <!--//Vin65 QuickLaunchFooter//-->
 <!-- https://documentation.vin65.com/Designer-Launch/Vin65-Remote-Widgets -->
 <v65:js files="/assets/js/scripts.js,/assets/custom/main.js"></v65:js>
+<script type="text/javascript" src="https://assetss3.vin65.com/js/vin65remotetools.1.1.js"></script>
+<script type="text/javascript">vin65remote.form.form('https://shop.aaronwines.com','Newsletter Signup');</script>
 
 
 </body>

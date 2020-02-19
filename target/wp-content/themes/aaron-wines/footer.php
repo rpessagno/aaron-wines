@@ -3,25 +3,7 @@
 <div class="newsletter">
   <h1 class="subtitle">Join Our Mailing List</h1>
 
-   <!-- Begin MailChimp Signup Form -->
-  <div id="mc_embed_signup">
-    <form action="https://aaronwines.us3.list-manage.com/subscribe/post?u=bc551c70f09510adff5329851&amp;id=6716f10d01" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      
-      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-      
-      <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>
-
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bc551c70f09510adff5329851_6716f10d01" tabindex="-1" value=""></div>
-    
-      <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="button">
-   
-    </form>
-  </div>
-  <!-- / MailChimp Signup Form-->
+  <div v65remotejs="form"></div>
 
 </div>
 
@@ -45,8 +27,8 @@
 
 <div class="footer-section club">
   <h3 class="subtitle footer-title">Member Login</h3>
-  <p class="text">Not a member yet? <a href="<?php echo the_permalink('28'); ?>" class="underline">Join now!</a></p>
-  <a href="/account" class="button">Sign In</a>
+  <p class="text">Not a member yet? <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="underline">Join now!</a></p>
+  <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button">Sign In</a>
 </div>
 
 
@@ -55,8 +37,13 @@
 
 <?php wp_footer(); ?>
 
-<script type="text/javascript" src="https://platform.vinespring.com/scripts/2.0/all.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
+<script type="text/javascript" src="https://assetss3.vin65.com/js/vin65remotetools.1.1.js"></script>
+<script type="text/javascript">vin65remote.cart.modalCart('https://shop.aaronwines.com',0);</script>
+<script type="text/javascript">vin65remote.cart.addToCart('https://shop.aaronwines.com');</script>
+<script type="text/javascript">vin65remote.product.addToCartForm('https://shop.aaronwines.com');</script>
+<script type="text/javascript">vin65remote.form.form('https://shop.aaronwines.com','Newsletter Signup');</script>
+
 
 </body>
 </html>

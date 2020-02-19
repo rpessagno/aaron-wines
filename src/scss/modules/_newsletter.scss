@@ -7,13 +7,16 @@
   background: #f2f2ee url('assets/images/global/newsletter.jpg') center center / cover no-repeat;
   text-align: center;
   padding: 150px 0;
+  min-height: 440px;
 
   @include bp(m) {
     padding: 120px 0;
+    min-height: 360px;
   }
 
   @include bp(s) {
     padding: 80px 30px;
+    min-height: 280px;
   }
 
    @include bp(xs) {
@@ -26,28 +29,53 @@
   }
 
   form {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-    margin-top: 30px;
+    margin: 30px auto 0;
+    width: 100%;
+    max-width: 510px;
   }
 
-  input[type="email"] {
-    @include input-reset;
-    font: 400 normal 14px/1 $monospace;
-    background-color: $white;
-    width: calc(100% - 170px);
-    max-width: 400px;
-    border: 0 !important;
+  legend,
+  label,
+  br {
+    display: none;
+  }
 
-    @include bp(m) {
-      width: calc(100% - 110px) !important;
+  fieldset {
+
+    > div {
+      float: left;
+    
+      // div with email field
+      &:nth-child(4) {
+        width: calc(100% - 110px) !important;
+        max-width: 400px !important;
+      }
+      
+      // div with submit button
+      &:nth-child(6) {
+        width: 110px;
+      }
     }
   }
 
-  input[type="submit"] {
+  input#Email {
+    @include input-reset;
+    font: 400 normal 14px/1 $monospace;
+    background-color: $white;
+    border: 0 !important;
+    width: 100%;
+    height: 45px;
+  }
+
+  button[type="submit"] {
     border-radius: 0;
-    width: 110px;
+    width: 100%;
+    height: 45px;
+  }
+
+  p {
+    color: $white;
+    margin-top: 30px;
+    min-height: 45px;
   }
 }

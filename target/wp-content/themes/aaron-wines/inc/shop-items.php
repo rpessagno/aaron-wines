@@ -1,19 +1,32 @@
-<div class="shop" data-vsPlugin="productList" id="shop">
+<div class="shop">
 
-  <script type="text/html" id="shop-custom">
-    <div data-bind="foreach: parentProducts" class="shop-items">
+    <div class="shop-items">
+
+      <?php if( have_rows('current_releases', $pageID) ) { ?>
+      <?php while ( have_rows('current_releases', $pageID) ) { the_row(); ?>
+
+      <?php
+        $title = get_sub_field('title');
+        $subtitle = get_sub_field('subtitle');
+        $price = get_sub_field('price');
+        $link = get_sub_field('link');
+        $detail_image = get_sub_field('detail_image');
+        $sku = get_sub_field('sku');
+      ?>
       
-      <!-- ko if: Custom1 == '<?php echo $filter; ?>' -->
       <div class="shop-item">
-        <a data-bind="attr: { href: '/shop/product/?item=' + Tag }"><img data-bind="attr: { alt: Title, src: DetailImageUrl }" class="shop-item-img"></a>
-        <h2 class="shop-item-title text"><a data-bind="text: Custom2, attr: { href: '/shop/product/?item=' + Tag }"></a></h2>
-        <h3 class="shop-item-subtitle text" data-bind="text: Custom3"></h3>
-        <p class="shop-item-price text" data-bind="text: '$' + Price"></p>
-        <div class="cart" data-bind="template: 'vs2-productList-addToCart-default'"></div>
+        <a href="<?php echo $link; ?>"><img src="<?php echo $detail_image; ?>" class="shop-item-img"></a>
+        <h2 class="shop-item-title text"><a href="<?php echo $link; ?>"><?php echo $title; ?></a></h2>
+        <?php if ($subtitle) { ?><h3 class="shop-item-subtitle text"><?php echo $subtitle; ?></h3><?php } ?>
+        <p class="shop-item-price text"><?php echo $price; ?></p>
+        <div class="cart">
+          <div v65remotejs="addToCartForm" productsku="<?php echo $sku; ?>"></div>
+        </div>
       </div>
-      <!-- /ko -->
+
+      <?php } ?>
+      <?php } ?>
 
     </div>
-  </script>
   
 </div>

@@ -17,6 +17,7 @@
   fieldset {
 
     > div {
+      @include wd-label;
 
       + div {
         margin-top: 20px;
@@ -30,7 +31,7 @@
   }
 
   label {
-    @include wd-label;
+    // @include wd-label;
   }
 
   input[type="text"],
@@ -50,6 +51,7 @@
   }
 
   + p + p a {
+    background: none;
     font: inherit;
     letter-spacing: inherit;
     text-transform: inherit;

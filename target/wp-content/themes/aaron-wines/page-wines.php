@@ -54,28 +54,35 @@ get_header();
 
 <?php $brand = strtolower(get_the_title()); ?>
 
-<div class="wines" data-vsPlugin="productList" id="wines">
+<div class="wines">
 
-  <script type="text/html" id="wines-custom">
-    <div data-bind="foreach: parentProducts" class="feature-wrap alt">
-      
-      <!-- ko if: Custom1 == '<?php echo $brand; ?>' -->
+    <div class="feature-wrap alt">
+
+      <?php if( have_rows('current_releases') ) { ?>
+      <?php while ( have_rows('current_releases') ) { the_row(); ?>
+
+      <?php
+        $title = get_sub_field('title');
+        $subtitle = get_sub_field('subtitle');
+        $text = get_sub_field('text');
+        $link = get_sub_field('link');
+        $image = get_sub_field('image');
+      ?>
 
       <div class="feature">
         <div class="feature-content">
-          <h2 class="subtitle" data-bind="text: Custom2"></h2>
-          <h3 class="subtitle2" data-bind="text: Custom3"></h3>
-          <p data-bind="text: Teaser"></p>
-          <a data-bind="attr: { href: '/shop/product/?item=' + Tag }" class="button">View Wine</a>
+          <h2 class="subtitle"><?php echo $title; ?></h2>
+          <?php if ($subtitle) { ?><h3 class="subtitle2"><?php echo $subtitle; ?></h3><?php } ?>
+          <p><?php echo $text; ?></p>
+          <a href="<?php echo $link; ?>" class="button">View Wine</a>
         </div>
-        <div class="feature-img" data-bind="attr: { style: 'background-image: url(' + ListImageUrl + ');' }"></div>
+        <div class="feature-img" style="background-image: url('<?php echo $image; ?>');"></div>
       </div>
 
-
-      <!-- /ko -->
+      <?php } ?>
+      <?php } ?>
 
     </div>
-  </script>
   
 </div>
 
