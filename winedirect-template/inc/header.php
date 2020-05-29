@@ -7,6 +7,8 @@
 <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="winedirect.css" />
 
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
 <!-- jQuery is required here for WineDirect remote widgets to work -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 

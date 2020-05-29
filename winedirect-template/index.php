@@ -40,6 +40,7 @@
   <li><a href="/member-club-list.php">Club List</a></li>
   <li><a href="/member-order-detail.php">Order Detail</a></li>
   <li><a href="/member-order-history.php">Order History</a></li>
+  <li><a href="/member-shipment-tracking.php">Shipment Tracking</a></li>
 </ul>
 
 <h2>Other</h2>

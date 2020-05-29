@@ -49,9 +49,7 @@ gulp.task('styles', function () {
 gulp.task('styles-wd', function () {
   return gulp.src('src/scss/winedirect.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 5 versions']
-    }))
+    .pipe(autoprefixer())
     .pipe(cssnano({
       zindex: false
     }))

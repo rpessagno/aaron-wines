@@ -1,0 +1,63 @@
+//==============================
+// Shipment Tracking
+//==============================
+
+.v65-shipTracking-wrapper {
+
+  .v65-shipTracking-deliveryHeader-heading {
+    @include wd-text;
+    font-weight: bold;
+  }
+
+  .v65-shipTracking-deliveryHeader-icon {
+    @include wd-title4;
+  }
+
+  .v65-shipTracking-progress {
+    display: none;
+  }
+
+  .v65-shipTracking-progressTable {
+    margin-top: 60px;
+
+    h4 {
+      @include wd-title3;
+      padding-bottom: 10px;
+    }
+
+    th,
+    td {
+      line-height: 1.3;
+      width: calc(100% / 3);
+      padding-right: 20px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .v65-shipTracking-info {
+    margin-top: 60px;
+
+    h4 {
+      @include wd-title3;
+      padding-bottom: 10px;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+
+  .v65-shipTracking-info-map {
+    display: none;
+  }
+
+  + h2 {
+    @include wd-title3;
+    padding-bottom: 10px;
+    margin-top: 60px;
+
+    + p {
+      text-align: left;
+    }
+  }
+}
