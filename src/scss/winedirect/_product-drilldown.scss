@@ -116,7 +116,8 @@
     .v65-product-addToCart {
 
       legend,
-      .v65-product-addToCart-productSKU {
+      .v65-product-addToCart-productSKU,
+      .v65-quantity-label {
         display: none;
       }
 

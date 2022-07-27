@@ -1,0 +1,39 @@
+//==============================
+// Tock
+//==============================
+
+.tock-widget {
+  margin-top: 60px;
+
+  .TockLogo-container {
+    @include hide;
+  }
+
+  div#Tock_widget_container > div.TockWidgetWrapper .TockButton-blue {
+    
+    letter-spacing: .15em !important;
+    background-color: $blue !important;
+    padding: 1.3em 1.8em 1.1em !important;
+    // color: $white !important;
+    // border: 0 !important;
+    display: inline-block !important;
+    // text-decoration: none !important;
+    text-transform: uppercase;
+    transition: background-color .2s, color .2s !important;
+    border-radius: 3px !important;
+
+    @include bp(xs) {
+      font-size: 11px !important;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 10%) !important;
+    }
+  }
+
+  div#Tock_widget_container>div.TockWidgetWrapper .TockWidget-B2 {
+    font: 500 normal 13px/1 $serif !important;
+    display: block;
+  }
+}

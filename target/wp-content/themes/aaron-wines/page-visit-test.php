@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Visit
+Template Name: Visit Test
 */
 
 get_header();
@@ -22,16 +22,6 @@ get_header();
       <div class="feature-content">
         <h3 class="subtitle"><?php the_sub_field('title'); ?></h3>
         <p><?php the_sub_field('text'); ?></p>
-        
-        <?php if( have_rows('links') ) { ?>
-        <div class="button-group">
-          <?php while ( have_rows('links') ) { the_row(); ?>
-          <?php $link = get_sub_field('link'); ?>
-          <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button"><?php echo $link['title']; ?></a>
-          <?php } ?>
-        </div>
-        <?php } ?>
-        
       </div>
       <div class="feature-img" style="background-image: url('<?php the_sub_field('image'); ?>');"></div>
     </div>
@@ -42,12 +32,12 @@ get_header();
 </div>
 
 
-<!-- <div class="intro">
+<div class="intro">
   <h2 class="title">Request a Tasting Appointment</h2>
   <p class="text"><?php the_field('contact_intro'); ?></p>
-  <div class="contact-form">
-    <?php echo do_shortcode('[contact-form-7 id="51"]'); ?>
+  <div class="tock-widget">
+    <?php the_content(); ?>
   </div>
-</div> -->
+</div>
 
 <?php get_footer(); ?>

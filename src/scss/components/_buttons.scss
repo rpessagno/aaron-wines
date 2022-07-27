@@ -2,6 +2,10 @@
 // Button
 //==============================
 
+.button-group {
+  margin-top: 20px;
+}
+
 .button {
   @include button;
 }

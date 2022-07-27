@@ -15,6 +15,7 @@
         <div class="v65-product-addToCart-productSKU">SKU: 2018Product</div>
         <div class="v65-product-addToCart-outOfStockMessage">Sorry! This item is sold out.</div>
       </div>
+      <label class="v65-quantity-label" for="19PS-quantity-box">Quantity:</label>
       <div class="v65-product-addToCart-quantity"><input type="text" name="Quantity" value="1" style="width: 20px; text-align: center;" /></div>
       <div class="v65-product-addToCart-button"><button type="submit" value="submit" class="defaultBtn add-to-cart"><span>Add To Cart</span></button></div>
     </fieldset>

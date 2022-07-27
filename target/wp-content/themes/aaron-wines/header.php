@@ -9,7 +9,11 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-48585744-1');
+  gtag('config', 'UA-48585744-1', {
+    'linker': {
+      'domains': ['aaronwines.com', 'shop.aaronwines.com']
+    }
+  });
 </script>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
