@@ -8,7 +8,4 @@
 !/target/wp-content/themes/aaron-wines
 /target/wp-content/themes/aaron-wines/**/.DS_Store
 
-wp-config-staging.php
-wp-config-live.php
-
 node_modules

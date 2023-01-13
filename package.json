@@ -1,16 +1,17 @@
 {
   "name": "aaron-wines",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "devDependencies": {
-    "browser-sync": "2.26.7",
+    "sass": "1.57.1",
     "gulp": "4.0.2",
-    "gulp-autoprefixer": "7.0.0",
+    "gulp-autoprefixer": "8.0.0",
     "gulp-concat": "2.6.1",
     "gulp-cssnano": "2.1.3",
     "gulp-jshint": "2.1.0",
-    "gulp-sass": "4.0.2",
+    "gulp-sass": "5.1.0",
     "gulp-uglify": "3.0.2",
-    "jshint": "2.10.2",
-    "jshint-stylish": "2.2.1"
+    "jshint": "2.13.6",
+    "jshint-stylish": "2.2.1",
+    "browser-sync": "2.27.11"
   }
 }

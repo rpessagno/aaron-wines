@@ -3,92 +3,61 @@
 //==============================
 
 .header {
-  margin: 0 auto;
-  width: calc(100% - 80px);
-  max-width: 1200px;
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
   z-index: 3;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: width $header-transition-time, background-color $header-transition-time, transform $header-transition-time, box-shadow $header-transition-time;
 
   @include bp(m) {
-    width: calc(100% - 40px);
   }
 
-  &.light {
-    border-bottom: transparentize($black, .9) solid 1px;
+  &.scroll {
+    background-color: $white;
+    width: calc(100% - 100px);
+    transform: translate(-50%, 20px);
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
 
-    .header-nav-logo img.light {
-      display: none;
-    }
+    .header-logo {
 
-    .header-nav-logo img.dark {
-      display: block;
-    }
-
-    .header-nav-item a {
-      color: $black;
-
-      &:after {
-        border-bottom: $charcoal solid 1px;
+      .aaron-logo-white {
+        fill: $black;
       }
     }
 
-    .header-nav-button span {
-      background: $charcoal;
-    }
+    .header-nav-item {
 
-    .header-utility-items {
-      border-color: #ccc;
+      a {
+        color: $charcoal;
+      }
     }
 
     .header-utility-item {
-      a svg {
-        fill: $charcoal;
-      }
 
-      .cart-count {
-        background: $charcoal;
-        color: $white;
+      svg {
+        fill: $charcoal;
       }
     }
   }
 
-  &.dark {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-bottom: transparentize($white, .7) solid 1px;
+  &-logo {
+    width: 140px;
+    margin: 0 0 3px 30px;
 
-    @include bp(m) {
-      transform: none;
-      left: 20px;
-    }
-
-    .header-nav-logo img.light {
+    svg {
       display: block;
-    }
+      width: 100%;
+      height: auto;
 
-    .header-nav-logo img.dark {
-      display: none;
-    }
-
-    .header-nav-item a {
-      color: $white;
-
-      @include bp(m) {
-        color: $charcoal;
+      .aaron-logo-white {
+        transition: fill $header-transition-time;
       }
-
-      &:after {
-        border-bottom: $white solid 1px;
-      }
-    }
-
-    .header-nav-button span {
-      background: $white;
-    }
-
-    .header-utility-items {
-      border-color: $white;
     }
   }
 
@@ -98,6 +67,7 @@
     justify-content: space-between;
     align-items: center;
     min-height: 50px;
+    margin-left: auto;
 
     &-logo {
       margin-left: 5px;
@@ -153,6 +123,7 @@
         letter-spacing: .15em;
         text-transform: uppercase;
         text-decoration: none;
+        color: $white;
         transition: color .2s;
 
         @include bp(m) {
@@ -291,8 +262,7 @@
     &-items {
       display: flex;
       flex-flow: row nowrap;
-      margin-left: 10px;
-      padding-left: 10px;
+      margin-right: 20px;
 
       @include bp(m) {
         border-left: none;
@@ -305,8 +275,8 @@
 
       a {
         display: block;
-        height: 30px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
         position: relative;
         text-decoration: none;
 
@@ -328,6 +298,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
         transition: opacity .3s;
+        transition: fill $header-transition-time;
       }
 
       .cart-count {

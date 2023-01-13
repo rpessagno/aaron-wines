@@ -16,7 +16,8 @@ get_header();
 </div>
 
 <div class="feature-wrap home-features">
-  <div class="feature feature-wide home-aaron">
+
+  <div class="feature home-aaron">
     <div class="feature-content">
       <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="feature-logo">
       <p><?php the_field('aaron_text'); ?></p>
@@ -24,7 +25,8 @@ get_header();
     </div>
     <div class="feature-img" style="background-image: url('<?php the_field('aaron_image'); ?>');"></div>
   </div>
-  <div class="feature feature-wide home-aequorea">
+
+  <div class="feature home-aequorea">
     <div class="feature-content">
       <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-black.svg" alt="Aequorea" class="feature-logo">
       <p><?php the_field('aequorea_text'); ?></p>
@@ -32,7 +34,8 @@ get_header();
     </div>
     <div class="feature-img" style="background-image: url('<?php the_field('aequorea_image'); ?>');"></div>
   </div>
-  <div class="feature feature-wide home-visit">
+
+  <div class="feature home-visit">
     <div class="feature-content">
       <h3 class="title"><?php the_field('visit_title'); ?></h3>
       <p><?php the_field('visit_text'); ?></p>
@@ -40,7 +43,8 @@ get_header();
     </div>
     <div class="feature-img" style="background-image: url('<?php the_field('visit_image'); ?>');"></div>
   </div>
-  <div class="feature feature-wide home-club">
+
+  <div class="feature home-club">
     <div class="feature-content">
       <h3 class="title"><?php the_field('club_title'); ?></h3>
       <p><?php the_field('club_text'); ?></p>
@@ -48,6 +52,7 @@ get_header();
     </div>
     <div class="feature-img" style="background-image: url('<?php the_field('club_image'); ?>');"></div>
   </div>
+
 </div>
 
 <?php get_footer(); ?>

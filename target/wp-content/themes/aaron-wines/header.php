@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-
+	
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48585744-1"></script>
 <script>
@@ -68,7 +68,10 @@ $page_id = get_the_ID();
 $header_style = get_field('header_style', $page_id);
 ?>
 
-<header class="header <?php echo $header_style == '1' ? 'light' : 'dark'; ?>">
+<header class="header">
+  <a href="#" class="header-logo">
+    <?php echo file_get_contents(get_template_directory() . '/assets/images/global/aaron-logo-white.svg'); ?>
+  </a>
   <nav class="header-nav">
     <button class="header-nav-button">
       <span class="top"></span>

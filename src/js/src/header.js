@@ -2,12 +2,60 @@
 // Header
 //==============================
 
-$('.header-nav-button').click(function() {
-  $('.header-nav-items').addClass('open');
-  $('.header-nav-close').addClass('open');
+// $('.header-nav-button').click(function() {
+//   $('.header-nav-items').addClass('open');
+//   $('.header-nav-close').addClass('open');
+// });
+
+// $('.header-nav-close').click(function() {
+//   $('.header-nav-items').removeClass('open');
+//   $('.header-nav-close').removeClass('open');
+// });
+
+
+var header = $('.header');
+var button = $('.header-button');
+var nav = $('.header-nav');
+
+// button
+$('.header-button').click(function() {
+  button.toggleClass('open');
+  nav.toggleClass('open');
 });
 
-$('.header-nav-close').click(function() {
-  $('.header-nav-items').removeClass('open');
-  $('.header-nav-close').removeClass('open');
+// scroll
+function headerNotTop() {
+  header.addClass('scroll');
+}
+function headerAtTop() {
+  header.removeClass('scroll');
+}
+function headerScroll() {
+  var scrollPos = $(window).scrollTop();
+  if (scrollPos<=1) {
+    headerAtTop();
+  }
+  else {
+    headerNotTop();
+  }
+}
+
+headerScroll();
+
+$(window).scroll(function() {
+  headerScroll();
 });
+
+// hide header on scroll
+// http://www.jquerybyexample.net/2013/07/jquery-detect-scroll-position-up-down.html
+var scrollPos = 0;
+$(window).scroll(function () {
+  var currentScrollPos = $(this).scrollTop();
+  if (currentScrollPos > scrollPos && currentScrollPos > 150 && header.is(':hover') == false) {
+    header.addClass('hidden');
+  } else {
+    header.removeClass('hidden');
+  }
+  scrollPos = currentScrollPos;
+});
+

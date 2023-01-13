@@ -1,22 +1,21 @@
- //========================================
+//========================================
 // Gulpfile
 //========================================
 
+const { src, dest, watch, series } = require('gulp');
 
 //----------------------------------------
 // Plugins
 //----------------------------------------
 
-var gulp          = require('gulp');
-var sass          = require('gulp-sass');
-var autoprefixer  = require('gulp-autoprefixer');
-var cssnano       = require('gulp-cssnano');
-var jshint        = require('gulp-jshint');
-var stylish       = require('jshint-stylish');
-var uglify        = require('gulp-uglify');
-var concat        = require('gulp-concat');
-var browserSync   = require('browser-sync').create();
-
+const sass = require('gulp-sass')(require('sass'))
+const autoprefixer  = require('gulp-autoprefixer');
+const cssnano = require('gulp-cssnano');
+const jshint = require('gulp-jshint');
+const stylish = require('jshint-stylish');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const browsersync = require('browser-sync').create();
 
 //----------------------------------------
 // Variables
@@ -24,90 +23,46 @@ var browserSync   = require('browser-sync').create();
 
 var domainName   = 'aaronwines';
 var domainNameWD = 'aaronwines-wd';
-var theme        = 'aaron-wines';
+var themeFolder = './target/wp-content/themes/aaron-wines/';
 
 //----------------------------------------
 // CSS
 //----------------------------------------
 
-gulp.task('styles', function () {
-  return gulp.src('src/scss/style.scss')
-    .pipe(sass().on('error', sass.logError))
+function styles() {
+  return src('src/scss/style.scss', { sourcemaps: true })
+    .pipe(sass())
     .pipe(autoprefixer())
     .pipe(cssnano({
       zindex: false
     }))
-    .pipe(gulp.dest('target/wp-content/themes/' + theme + '/'))
-    .pipe(browserSync.stream());
-});
-
-
-//----------------------------------------
-// CSS | WineDirect
-//----------------------------------------
-
-gulp.task('styles-wd', function () {
-  return gulp.src('src/scss/winedirect.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(cssnano({
-      zindex: false
-    }))
-    .pipe(gulp.dest('winedirect-template'))
-    .pipe(gulp.dest('winedirect/assets/custom'))
-    .pipe(browserSync.stream());
-});
-
+    .pipe(dest(themeFolder, { sourcemaps: '.' } ));
+}
 
 //----------------------------------------
 // JS
 //----------------------------------------
 
-// Concat
-gulp.task('scripts', function () {
-  return gulp.src([
-    './src/js/lib/*.js',
-    './src/js/src/global.js',
-    './src/js/src/*.js'
-  ])
+function jsConcat() {
+  return src([ './src/js/lib/*.js', './src/js/src/global.js', './src/js/src/*.js' ], { sourcemaps: true })
     .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('target/wp-content/themes/' + theme + '/assets/js'))
-    .pipe(gulp.dest('winedirect-template'))
-    .pipe(gulp.dest('winedirect/assets/custom'))
-    .pipe(browserSync.stream());
-});
+    .pipe(dest(themeFolder + 'assets/js', { sourcemaps: '.' } ));
+}
 
-// Lint
-gulp.task('scripts-lint', function () {
-  return gulp.src([
-    './src/js/src/*.js',
-  ])
+function jsLint() {
+  return src('./src/js/src/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
-});
-
-
-//---------------------------------------------------
-// Copy assets
-//---------------------------------------------------
-
-gulp.task('assets', function () {
-  return gulp.src('./target/wp-content/themes/' + theme + '/assets/images/global/**/*')
-  .pipe(gulp.dest('./winedirect-template/assets/images/global/'))
-  .pipe(gulp.dest('./winedirect/assets/custom/assets/images/global/'));
-  return gulp.src('./target/wp-content/themes/' + theme + '/assets/fonts/**/*')
-  .pipe(gulp.dest('./winedirect-template/assets/fonts/'))
-  .pipe(gulp.dest('./winedirect/assets/custom/assets/fonts/'));
-});
+}
 
 
 //----------------------------------------
-// Watch
+// Browsersync
 //----------------------------------------
 
-gulp.task('watch', function() {
-  browserSync.init({
+function browsersyncServe(cb) {
+  browsersync.init({
     // MAMP
     proxy: 'local.' + domainName + '.com'
     // No MAMP
@@ -115,39 +70,32 @@ gulp.task('watch', function() {
     //   baseDir: 'target'
     // }
   });
-  gulp.watch('./target/wp-content/themes/' + theme + '/**/*')
-    .on('change', browserSync.reload);
-  gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));
-  gulp.watch('src/js/**/*.js', gulp.parallel('scripts', 'scripts-lint'));
-});
+  cb();
+}
 
-
-//----------------------------------------
-// Watch | WineDirect
-//----------------------------------------
-
-gulp.task('watch-wd', function () {
-  browserSync.init({
-    proxy: 'local.' + domainNameWD + '.com'
-  });
-  gulp.watch('./winedirect-template/**/*')
-    .on('change', browserSync.reload);
-  gulp.watch('src/scss/**/*.scss', gulp.parallel('styles-wd'));
-  gulp.watch('src/js/**/*.js', gulp.parallel('scripts', 'scripts-lint'));
-});
-
+function browersyncReload(cb) {
+  browsersync.reload();
+  cb();
+}
 
 //----------------------------------------
-// Default Task
+// Watch
 //----------------------------------------
 
-gulp.task('default', gulp.parallel('styles', 'scripts', 'scripts-lint'));
-
+function watchTask() {
+  watch(themeFolder + '**/*.php', browersyncReload);
+  watch('src/scss/**/*.scss', series(styles, browersyncReload));
+  watch('src/js/**/*.js', series(jsConcat, jsLint, browersyncReload));
+}
 
 //----------------------------------------
-// Dev Task
+// Tasks
 //----------------------------------------
 
-gulp.task('dev', gulp.parallel('styles', 'scripts', 'scripts-lint', 'watch'));
-gulp.task('wd', gulp.parallel('styles-wd', 'scripts', 'scripts-lint', 'watch-wd'));
-
+exports.default = series(
+  styles,
+  jsConcat,
+  jsLint,
+  browsersyncServe,
+  watchTask
+);

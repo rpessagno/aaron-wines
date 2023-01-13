@@ -1,7 +1,7 @@
 /*!
 Theme Name: Aaron Wines
-Author: Makers & Allies
-Version: 1.0
+Author: Robert Pessagno
+Version: 2.0
 */
 
 //==============================
@@ -25,6 +25,18 @@ Version: 1.0
 @import 'components/typography';
 @import 'components/forms';
 @import 'components/buttons';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/newsletter';
+@import 'components/hero';
+@import 'components/intro';
+@import 'components/section-header';
+@import 'components/feature';
+@import 'components/section-header';
+@import 'components/social';
+@import 'components/contact-form';
+@import 'components/map';
+@import 'components/tock';
 
 
 // Libraries
@@ -33,23 +45,6 @@ Version: 1.0
 @import 'lib/contact-form-7';
 @import 'lib/jquery-ui';
 @import 'lib/slick';
-
-
-// Modules
-//------------------------------
-
-@import 'modules/header';
-@import 'modules/footer';
-@import 'modules/newsletter';
-@import 'modules/hero';
-@import 'modules/intro';
-@import 'modules/section-header';
-@import 'modules/feature';
-@import 'modules/section-header';
-@import 'modules/social';
-@import 'modules/contact-form';
-@import 'modules/map';
-@import 'modules/tock';
 
 
 // WineDirect
