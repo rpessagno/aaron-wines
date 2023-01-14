@@ -3,91 +3,169 @@
 //==============================
 
 .footer {
-  background: $white;
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  position: relative;
+  background: #ad9d8b;
+  padding: 100px 0;
 
-  &-section {
-    width: 50%;
-    position: relative;
-    padding: 7vw 0;
+  &-items {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    width: calc(100% - 80px);
+    max-width: 1200px;
+  }
 
-    @include bp(s) {
-      width: 100%;
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-    
-    // divider line
-    &:after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: 0;
+  &-item {
+    // width: calc(100% / 3);
 
-      @include bp(s) {
-        border-right: 0;
-        width: 70%;
-        height: 0;
-        top: auto;
-        right: auto;
-        left: 50%;          
-        bottom: 0;
-        transform: translateX(-50%);
-        max-width: 300px;
-      }
+    // &.footer-logo {
+    //   width: 100%;
+    //   margin-bottom: 60px;
 
-      @include bp(xs) {
-        width: calc(100% - 40px);
-      }
-    }
+    //   svg {
+    //     display: block;
+    //     width: 200px;
+    //     height: auto;
+    //     opacity: .5;
+    //   }
+    // }
 
-    &.follow {
-
-      .social {
-        margin-top: 1em;
-      }
+    &.newsletter {
+      width: 80%;
+      margin: 0 0 60px;
+      // padding: 80px;
+      // background-color: $white;
+      // background: $white url('assets/images/home/wave.jpg') center center / cover no-repeat;
+      // box-shadow: 0 30px 20px -15px rgba(0,0,0,.08);
+      // position: relative;
+      // top: -40px;
+      // text-align: center;
     }
 
     &.contact {
-      background-color: #2d2d2d;
+      width: calc(100% / 3);
+    }
+
+    &.location {
+      width: calc(100% / 3);
     }
 
     &.club {
-      background-color: #262626;
-
-      @include bp(s) {
-        padding-bottom: 100px;
-      }
-
-      .button {
-        margin-top: 20px;
-      }
-
-      &:after {
-        display: none;
-      }
+      width: calc(100% / 3);
     }
-    
-    .text {
-      color: $white;
+
+    &.footer-social { // CHANGE THIS CLASS NAME
+      width: calc(100% / 3);
     }
   }
 
   &-title {
-    color: $white;
+    @include title4;
+    margin-bottom: 5px;
   }
 
-  &-subtitle {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: $blue !important;
+  &-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    // background-color: $;
+    border-top: $blue solid 2px;
+    padding: 20px 0;
+    margin: 40px auto 0;
+    width: calc(100% - 80px);
+    max-width: 1200px;
   }
+
+  &-copyright {
+    display: flex;
+    flex-flow: row wrap;
+
+    li {
+      list-style-type: none;
+
+      + li {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  // &-section {
+  //   width: 50%;
+  //   position: relative;
+  //   padding: 7vw 0;
+
+  //   @include bp(s) {
+  //     width: 100%;
+  //     padding-top: 60px;
+  //     padding-bottom: 60px;
+  //   }
+    
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   right: 0;
+    //   top: 0;
+    //   height: 100%;
+    //   width: 0;
+
+    //   @include bp(s) {
+    //     border-right: 0;
+    //     width: 70%;
+    //     height: 0;
+    //     top: auto;
+    //     right: auto;
+    //     left: 50%;          
+    //     bottom: 0;
+    //     transform: translateX(-50%);
+    //     max-width: 300px;
+    //   }
+
+    //   @include bp(xs) {
+    //     width: calc(100% - 40px);
+    //   }
+    // }
+
+  //   &.follow {
+
+  //     .social {
+  //       margin-top: 1em;
+  //     }
+  //   }
+
+  //   &.contact {
+  //     background-color: #2d2d2d;
+  //   }
+
+  //   &.club {
+  //     background-color: #262626;
+
+  //     @include bp(s) {
+  //       padding-bottom: 100px;
+  //     }
+
+  //     .button {
+  //       margin-top: 20px;
+  //     }
+
+  //     &:after {
+  //       display: none;
+  //     }
+  //   }
+    
+  //   .text {
+  //     color: $white;
+  //   }
+  // }
+
+  // &-title {
+  //   color: $white;
+  // }
+
+  // &-subtitle {
+  //   margin-top: 20px;
+  //   margin-bottom: 10px;
+  //   text-transform: uppercase;
+  //   color: $blue !important;
+  // }
 
   // &-copyright {
   //   width: 100%;

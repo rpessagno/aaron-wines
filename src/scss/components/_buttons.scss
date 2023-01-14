@@ -2,10 +2,65 @@
 // Button
 //==============================
 
+// REDO THIS CSS
+
 .button-group {
   margin-top: 20px;
 }
 
 .button {
   @include button;
+}
+
+.button-outline {
+  font: 700 normal 14px/1 $sans-serif;
+  letter-spacing: .1em;
+  background-color: transparent;
+  padding: .8em 1em;
+  color: $blue;
+  border: $blue solid 2px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .2s, color .2s;
+  min-width: 110px;
+  text-align: center;
+  margin: 0 5px 10px 0;
+
+  @include bp(xs) {
+    font-size: 11px;
+    min-width: 100px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+.button-secondary {
+  font: 700 normal 16px/1 $sans-serif;
+  letter-spacing: .15em;
+  background-color: transparent;
+  padding: .5em 0;
+  color: $blue;
+  border: 0;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .2s;
+  text-align: center;
+  margin: 0 5px 10px 0;
+
+  @include bp(xs) {
+    font-size: 11px;
+    min-width: 100px;
+  }
+
+  &:hover,
+  &:focus {
+    color: darken($blue, 10%);
+  }
 }

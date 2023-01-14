@@ -5,28 +5,10 @@
 .feature {
   display: flex;
   flex-flow: row wrap;
-  align-items: stretch;
+  align-items: flex-end;
   position: relative;
-  padding: 100px;
-
-  &-wrap {
-
-    .feature {
-
-      &:nth-child(even) .feature-img {
-        order: -1;
-      }
-    }
-
-    &.alt {
-      background-color: $light-grey-bg;
-      padding: 0 5vw 5vw;
-
-      .feature-content {
-        background-color: $white;
-      }
-    }
-  }
+  padding: 0 10%;
+  min-height: 100vh;
 
   &-img {
     width: 100%;
@@ -35,6 +17,8 @@
     left: 0;
     top: 0;
     z-index: 1;
+    background-size: cover;
+    background-position: center center;
 
     @include bp(s) {
       width: 100%;
@@ -42,24 +26,24 @@
       order: -1;
     }
 
-    &-slide {
-      height: 100%;
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+    // &-slide {
+    //   height: 100%;
+    //   display: flex !important;
+    //   justify-content: center;
+    //   align-items: center;
+    //   background-position: center center;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    // }
 
-    .slick-list,
-    .slick-track {
-      height: 100%;
-    }
+    // .slick-list,
+    // .slick-track {
+    //   height: 100%;
+    // }
   }
 
   &-content {
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -68,58 +52,64 @@
     z-index: 2;
     background-color: $white;
     padding: 100px;
+    bottom: -80px;
+    box-shadow: 0 30px 20px -15px rgba(0,0,0,.08);
 
     @include bp(s) {
       width: 100%;
     }
 
-    .slick-slider {
-      width: 100%;
-      display: flex;
-      flex-flow: column nowrap;
+    &.alt {
+      margin-left: auto;
     }
 
-    .slick-dots {
-      order: -1;
-      display: flex;
-      flex-flow: row nowrap;
-      margin-bottom: 40px;
+    // .slick-slider {
+    //   width: 100%;
+    //   display: flex;
+    //   flex-flow: column nowrap;
+    // }
 
-      li {
-        list-style-type: none;
-        margin-right: 10px;
+    // .slick-dots {
+    //   order: -1;
+    //   display: flex;
+    //   flex-flow: row nowrap;
+    //   margin-bottom: 40px;
 
-        &.slick-active {
+    //   li {
+    //     list-style-type: none;
+    //     margin-right: 10px;
+
+    //     &.slick-active {
           
-          button {
-            background-color: $blue;
-            color: $white;
-            border-color: $blue;
-          }
-        }
-      }
+    //       button {
+    //         background-color: $blue;
+    //         color: $white;
+    //         border-color: $blue;
+    //       }
+    //     }
+    //   }
 
-      button {
-        @include input-reset;
-        font: 500 normal 13px/1.2 $monospace;
-        background-color: transparent;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: #ccc solid 1px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color .3s, color .3s, border-color .3s;
-        color: $charcoal;
+    //   button {
+    //     @include input-reset;
+    //     font: 500 normal 13px/1.2 $monospace;
+    //     background-color: transparent;
+    //     width: 40px;
+    //     height: 40px;
+    //     border-radius: 50%;
+    //     border: #ccc solid 1px;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     transition: background-color .3s, color .3s, border-color .3s;
+    //     color: $charcoal;
 
-        &:hover,
-        &:focus {
-          cursor: pointer;
-          outline: 0;
-        }
-      }
-    }
+    //     &:hover,
+    //     &:focus {
+    //       cursor: pointer;
+    //       outline: 0;
+    //     }
+    //   }
+    // }
 
     p a {
       border-bottom: #bbb solid 1px;

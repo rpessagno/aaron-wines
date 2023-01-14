@@ -1,36 +1,59 @@
 
 
-<div class="newsletter">
-  <h1 class="subtitle">Join Our Mailing List</h1>
-
-  <div v65remotejs="form"></div>
-
-</div>
 
 
 
 <footer class="footer">
 
-<div class="footer-section contact">
-  <h3 class="subtitle footer-title">Contact</h3>
-  <p class="text">
-    <a href="tel:805.369.2037" class="no-underline">805.369.2037</a><br>
-    <a href="mailto:info@aaronwines.com" class="no-underline">info@aaronwines.com</a>
-  </p>
-  <h4 class="text footer-subtitle">Follow Along</h4>
-  <ul class="social">
-    <li><a href="https://www.facebook.com/AaronPetiteSirah/" target="_blank" class="facebook"></a></li>
-    <li><a href="https://www.instagram.com/aaronwines/" target="_blank" class="instagram"></a></li>
-    <li><a href="https://twitter.com/aaronwines" target="_blank" class="twitter"></a></li>
-  </ul>
-</div>
+  <div class="footer-items">
 
-<div class="footer-section club">
-  <h3 class="subtitle footer-title">Member Login</h3>
-  <p class="text">Not a member yet? <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="underline">Join now!</a></p>
-  <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button">Sign In</a>
-</div>
+    <div class="footer-item newsletter">
+      <h1 class="footer-title">Join Our Mailing List</h1>
+      <div v65remotejs="form"></div>
+    </div>
 
+    <div class="footer-item contact">
+      <h1 class="footer-title">Contact Us</h1>
+      <p class="text">
+        <a href="tel:805.369.2037" class="no-underline">805.369.2037</a><br>
+        <a href="mailto:info@aaronwines.com" class="no-underline">info@aaronwines.com</a>
+      </p>
+    </div>
+
+    <div class="footer-item location">
+      <h1 class="footer-title">Visit Us</h1>
+      <p class="text">
+        3050 Limestone Way <br>
+        Paso Robles, CA 93446
+      </p>
+    </div>
+
+    <div class="footer-item club">
+      <h1 class="footer-title">Members</h1>
+      <p class="text">
+        <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button-outline">Sign In</a>
+        <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="button-outline">Join</a></p>
+    </div>
+
+<!--     <div class="footer-item footer-social">
+      
+    </div> -->
+
+  </div>
+
+  <div class="footer-links">
+
+    <ul class="footer-copyright">
+      <li>&copy <?php echo date('Y'); ?> Aaron Wines</li>
+      <li>Privacy Policy</li>
+      <li>Terms</li>
+    </ul>
+    
+    <ul class="social">
+      <li><a href="https://www.facebook.com/AaronPetiteSirah/" target="_blank" class="facebook"></a></li>
+      <li><a href="https://www.instagram.com/aaronwines/" target="_blank" class="instagram"></a></li>
+    </ul>
+  </div>
 
 </footer>
 
