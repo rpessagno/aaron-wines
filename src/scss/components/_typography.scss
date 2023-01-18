@@ -7,11 +7,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   padding: 0;
 }
 
-@mixin title1 {
-  font: 700 normal 64px/1.1 $serif;
+@mixin h1 {
+  font: 400 normal 60px/1.1 $serif;
   // text-transform: uppercase;
   // letter-spacing: .05em;
-  color: $charcoal;
+  color: #b18a5e;
 
   @include bp(l) {
     font-size: 44px;
@@ -26,8 +26,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   }
 }
 
-.headline {
-  @include title1;
+.h1 {
+  @include h1;
   margin: auto;
   // max-width: 750px;
   position: relative;
@@ -45,14 +45,15 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   // }
 
   + p {
-    margin-top: 1.5em;
+    margin-top: 2em;
   }
 }
 
-@mixin title2 {
-  font: 600 normal 50px/1.2 $serif;
-  color: $charcoal;
+@mixin h2 {
+  font: 400 normal 48px/1.2 $serif;
+  color: #b18a5e;
   // text-transform: uppercase;
+  // letter-spacing: .05em;
 
   @include bp(m) {
     font-size: 30px;
@@ -63,15 +64,15 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   }
 }
 
-.title {
-  @include title2;
+.h2 {
+  @include h2;
 
   + p {
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
 }
 
-@mixin title3 {
+@mixin h3 {
   font: 600 normal 44px/1.2 $sans-serif;
   color: $charcoal;
   // text-transform: uppercase;
@@ -86,7 +87,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .subtitle {
-  @include title3;
+  @include h3;
 
   + p,
   + ul {
@@ -105,8 +106,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   }
 }
 
-@mixin title4 {
-  font: 600 normal 24px/1.3 $sans-serif;
+@mixin h4 {
+  font: 400 normal 24px/1.3 $sans-serif;
   color: $charcoal;
   // letter-spacing: .02em;
   // text-transform: uppercase;
@@ -121,15 +122,15 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 .subtitle2 {
-  @include title4;
+  @include h4;
 
   + p {
     margin-top: 1em;
   }
 }
 
-@mixin text {
-  font: 400 normal 18px/1.7 $sans-serif;
+@mixin p1 {
+  font: 300 normal 17px/1.7 $sans-serif;
   letter-spacing: .02em;
   color: $charcoal;
 
@@ -148,7 +149,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 
 p,
 ul {
-  @include text;
+  @include p1;
 
   + .button {
     margin-top: 3em;
@@ -163,15 +164,15 @@ ul {
   }
 }
 
-.text {
-  @include text;
+.p1 {
+  @include p1;
 
-  + ul.text {
+  + ul.p1 {
     margin-top: 1em;
   }
 }
 
-ul.text {
+ul.p1 {
   margin-left: 1em;
 }
 

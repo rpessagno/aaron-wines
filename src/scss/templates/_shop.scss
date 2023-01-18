@@ -94,7 +94,7 @@
   }
 
   .v65-widgetProduct-addToCart-outOfStockMessage {
-    @include text;
+    @include p1;
     margin-bottom: 10px;
   }
 
@@ -105,7 +105,7 @@
   }
 
   // .vs2-productList-soldOut {
-  //   @include text;
+  //   @include p1;
   // }
 
   .v65-widgetProduct-addToCart-button {

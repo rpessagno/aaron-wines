@@ -31,8 +31,8 @@
     <div class="footer-item club">
       <h1 class="footer-title">Members</h1>
       <p class="text">
-        <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button-outline">Sign In</a>
-        <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="button-outline">Join</a></p>
+        <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button-outline button-dark">Sign In</a>
+        <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="button-outline button-dark">Join</a></p>
     </div>
 
 <!--     <div class="footer-item footer-social">

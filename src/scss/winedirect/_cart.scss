@@ -35,7 +35,7 @@
 
     #v65-CouponCode {
       @include input-reset;
-      @include text;
+      @include p1;
       padding: .3em .7em;
 
       @include bp(xxs) {
