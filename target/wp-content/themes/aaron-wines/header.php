@@ -80,8 +80,6 @@ $header_style = get_field('header_style', $page_id);
     </button>
     <ul class="header-nav-items">
       <li class="header-nav-item"><a href="/">Home</a></li>
-      <li class="header-nav-item"><a href="<?php echo the_permalink('5'); ?>"<?php if ($page_id == '5') { echo ' class="active"'; } ?>>Aaron</a></li>
-      <li class="header-nav-item"><a href="<?php echo the_permalink('7'); ?>"<?php if ($page_id == '7') { echo ' class="active"'; } ?>>Aequorea</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('24'); ?>"<?php if ($page_id == '24') { echo ' class="active"'; } ?>>Wines</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('28'); ?>"<?php if ($page_id == '28') { echo ' class="active"'; } ?>>Club</a></li>
       <li class="header-nav-item"><a href="<?php echo the_permalink('30'); ?>"<?php if ($page_id == '30') { echo ' class="active"'; } ?>>Visit</a></li>

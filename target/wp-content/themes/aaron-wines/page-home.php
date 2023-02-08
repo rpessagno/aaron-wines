@@ -14,7 +14,7 @@ get_header();
 
   <div class="intro">
     <div class="intro-content">
-      <h1 class="h1"><?php the_field('intro_headline'); ?></h1>
+      <h1 class="home-intro-title"><?php the_field('intro_headline'); ?></h1>
       <p class="intro-text"><?php the_field('intro_text'); ?></p>
     </div>
   </div>
@@ -31,8 +31,20 @@ get_header();
       <img src="https://aaronwines.com/wp-content/uploads/2019/05/Aequorea-Bottle-Shot-Pinot-Noir-Seafarer-Detail.png">
       <img src="https://shop.aaronwines.com/assets/images/products/pictures/Aequorea-Bottle-Shot-Pinot-Gris-Detail-IUEEGM.png">
     </div>
-    <div class="home-shop-link">
-      <a href="#">Explore Our Collection</a>
+    <div class="home-shop-content">
+      <div class="home-shop-content-items">
+        <div class="home-shop-content-item">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-white.svg" alt="Aaron">
+          <p>Aeromatic whites and Pinot Noirs <br>
+          SLO Coast AVA</p>
+        </div>
+        <div class="home-shop-content-item">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-white.svg" alt="Aequorea">
+          <p>Petite Syrah and Rhone blends <br>
+          Paso Robles AVA</p>
+        </div>
+        <a href="#" class="home-shop-content-link">Shop <br> Wines</a>
+      </div>
     </div>
   </div>
 

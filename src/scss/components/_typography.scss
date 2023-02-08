@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 @mixin h1 {
-  font: 400 normal 60px/1.1 $serif;
+  font: 300 normal 70px/1 $serif;
   // text-transform: uppercase;
   // letter-spacing: .05em;
   color: #b18a5e;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 @mixin h2 {
-  font: 400 normal 48px/1.2 $serif;
+  font: 300 normal 54px/1.1 $serif;
   color: #b18a5e;
   // text-transform: uppercase;
   // letter-spacing: .05em;

@@ -8,19 +8,24 @@
 
 $selection: #b3d4fc;
 
-$white: #fff;
+$white: #f2f1ed;
 $black: #000;
 $charcoal: #333;
 // $blue: #7b8286;
-$blue: #2c3940;
+// $blue: #2c3940;
+$blue: #3c4751;
 $brown: #7F644A;
 $light-grey-bg: #e7eaea;
 $light-grey-border: #eee;
 
 $header-transition-time: .4s;
 
-// $serif:  'matrix-ii', 'turnip', Georgia, Times New Roman, Times, serif;
-$serif: 'ivyora-display', 'turnip', Georgia, Times New Roman, Times, serif;
+$serif: 'adobe-jenson-pro', Times New Roman, Times, Georgia, serif;
+$serif-display: 'adobe-jenson-pro-display', Times New Roman, Times, Georgia, serif;
+$serif-caption: 'adobe-jenson-pro-caption', Times New Roman, Times, Georgia, serif;
+$serif-subhead: 'adobe-jenson-pro-subhead', Times New Roman, Times, Georgia, serif;
 $monospace: 'Courier', monospace;
 $sans-serif: 'europa', Helvetica, Arial, sans-serif;
 $italic: 'bely', serif;
+
+$easing: cubic-bezier(.16,.61,.45,1.4);
