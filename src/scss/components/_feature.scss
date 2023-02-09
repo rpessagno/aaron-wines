@@ -34,8 +34,9 @@
     align-items: flex-start;
     position: relative;
     z-index: 2;
-    background-color: #F2F1ED;
-    padding: 100px 12% 100px 100px;
+    // background-color: #F2F1ED;
+    background: transparent url('assets/images/global/card-4.svg') center center / 100% 100% no-repeat;
+    padding: 100px 10% 100px 120px;
     margin-left: auto;
 
     @include bp(s) {

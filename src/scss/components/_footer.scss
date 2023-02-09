@@ -3,15 +3,15 @@
 //==============================
 
 .footer {
-  background: #d4d0b4;
-  padding: 100px 0;
+  background: $blue;
+  padding: 60px 0;
 
   &-items {
     display: flex;
     flex-flow: row wrap;
     margin: 0 auto;
     width: calc(100% - 80px);
-    max-width: 1200px;
+    max-width: 1600px;
   }
 
   &-item {
@@ -30,30 +30,48 @@
     // }
 
     &.newsletter {
-      width: 80%;
-      margin: 0 0 60px;
+      width: 100%;
+      // margin: 0 0 60px;
+      margin: 0;
       // padding: 80px;
       // background-color: $white;
       // background: $white url('assets/images/home/wave.jpg') center center / cover no-repeat;
       // box-shadow: 0 30px 20px -15px rgba(0,0,0,.08);
       // position: relative;
       // top: -40px;
-      // text-align: center;
+      text-align: center;
     }
 
     &.contact {
-      width: calc(100% / 3);
+      width: calc(100% / 4);
+      // border-right: 1px dashed $white;
+      padding: 40px 40px 40px 0;
     }
 
     &.location {
-      width: calc(100% / 3);
+      width: calc(100% / 4);
+      // border-right: 1px dashed $white;
+      padding: 40px 60px;
     }
 
     &.club {
-      width: calc(100% / 3);
+      width: calc(100% / 4);
+      padding: 40px 60px;
 
       .button-outline {
         margin-top: 0;
+      }
+    }
+
+    &.planet {
+      width: calc(100% / 4);
+      padding: 40px 60px;
+
+      img {
+        display: flex;
+        width: 80px;
+        margin: 0 auto;
+        opacity: .5;
       }
     }
 
@@ -65,6 +83,11 @@
   &-title {
     @include h4;
     margin-bottom: 5px;
+    color: #aaa;
+  }
+
+  .text {
+    color: $white;
   }
 
   &-links {
@@ -72,11 +95,11 @@
     flex-flow: row wrap;
     justify-content: space-between;
     // background-color: $;
-    border-top: $blue solid 2px;
+    border-top: $white solid 2px;
     padding: 20px 0;
-    margin: 40px auto 0;
+    margin: 0 auto;
     width: calc(100% - 80px);
-    max-width: 1200px;
+    max-width: 1600px;
   }
 
   &-copyright {
@@ -85,6 +108,8 @@
 
     li {
       list-style-type: none;
+      color: $white;
+      font-size: 16px;
 
       + li {
         margin-left: 20px;

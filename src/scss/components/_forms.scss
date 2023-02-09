@@ -52,7 +52,7 @@ select,
 textarea {
   @include input-reset;
   width: 100% !important;
-  background: #fff;
+  background: $white;
   border: #ddd solid 1px !important;
   padding: .8em 1em !important;
   font: 400 normal 15px/1.2 $sans-serif;
@@ -62,10 +62,9 @@ textarea {
 input[type="submit"],
 button[type="submit"] {
   @include input-reset;
-  @include button;
+  @include button;  
 
-  &:hover,
-  &:focus {
+  &:hover {
     cursor: pointer;
     background-color: darken($blue, 10%);
     color: $white;

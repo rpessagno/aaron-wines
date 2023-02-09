@@ -17,7 +17,8 @@
   }
 
   &-content {
-    background-color: $white;
+    // background-color: $white;
+    background: transparent url('assets/images/global/intro-2.svg') center center / 100% 100% no-repeat;
     padding: 80px 60px;
     margin: 0 auto;
     max-width: 1000px;

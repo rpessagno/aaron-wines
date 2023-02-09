@@ -117,8 +117,8 @@ get_header();
         <img src="<?php bloginfo('template_directory'); ?>/assets/images/home/aaron-surfboard.jpg" alt="Aaron with surfboard">
       </div>
       <blockquote class="home-winemaker-content">
-        <p>&ldquo;My wines are like my love letters to the Central Coast.</p>
-        <p>Everytime I create one, it’s me feeling prideful and honoring the place where I grew up.&rdquo;</p>
+        <p>My wines are like my love letters to the Central Coast.</p>
+        <p>Everytime I create one, it’s me feeling prideful and honoring the place where I grew up.</p>
         <cite><span>Aaron Jackson</span> <br> Owner / Winemaker</cite>
       </blockquote>
     </div>

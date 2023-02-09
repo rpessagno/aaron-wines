@@ -105,8 +105,7 @@
     min-width: 100px;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: darken($blue, 10%);
   }
 }

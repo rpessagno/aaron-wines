@@ -9,6 +9,7 @@
 
     <div class="footer-item newsletter">
       <h1 class="footer-title">Join Our Mailing List</h1>
+      <p class="text">Sign up for our monthly emails for special access to our limited releases.</p>
       <div v65remotejs="form"></div>
     </div>
 
@@ -31,13 +32,13 @@
     <div class="footer-item club">
       <h1 class="footer-title">Members</h1>
       <p class="text">
-        <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button-outline button-dark">Sign In</a>
-        <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="button-outline button-dark">Join</a></p>
+        <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button-outline button-light">Sign In</a>
+        <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="button-outline button-light">Join</a></p>
     </div>
 
-<!--     <div class="footer-item footer-social">
-      
-    </div> -->
+    <div class="footer-item planet">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/1-percent-for-the-planet.svg" alt="1% For the Planet">
+    </div>
 
   </div>
 
