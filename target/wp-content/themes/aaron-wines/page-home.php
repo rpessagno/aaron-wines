@@ -74,7 +74,7 @@ get_header();
     <div class="feature-content">
       <h2 class="h2">Visit Our <br> Tasting Room</h2>
       <p><?php the_field('visit_text'); ?></p>
-      <a href="<?php echo the_permalink('30'); ?>" class="button-outline button-dark">Visit Us</a>
+      <a href="<?php echo the_permalink('30'); ?>" class="button button-medium button-outline button-dark">Visit Us</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/visit.jpg');"></div>
   </div>
@@ -94,7 +94,7 @@ get_header();
   <div class="home-map-content">
     <h2 class="h1">In the Heart <br> of Tin City</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum et vitae eveniet necessitatibus, nesciunt, consequatur, aspernatur error iusto quis atque, architecto veritatis harum molestias sit. Cumque debitis molestias, voluptates quibusdam.</p>
-    <a href="#" class="button-outline button-light">Learn More</a>
+    <a href="#" class="button button-medium button-outline button-light">Learn More</a>
   </div>
 </div>
 
@@ -105,7 +105,7 @@ get_header();
     <div class="feature-content alt">
       <h2 class="h2">Join Our <br> Wine Club</h2>
       <p>If you love our wines as much as we do, we invite you to join our wine club and become a part of our family. Every six months, you’ll receive a shipment of our new wines, before they are released to the public.</p>
-      <a href="<?php echo the_permalink('28'); ?>" class="button-outline button-dark">Join Now</a>
+      <a href="<?php echo the_permalink('28'); ?>" class="button button-medium button-outline button-dark">Join Now</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/club.jpg');"></div>
   </div>

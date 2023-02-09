@@ -11,10 +11,11 @@
     flex-flow: row wrap;
     margin: 0 auto;
     width: calc(100% - 80px);
-    max-width: 1600px;
+    max-width: 1300px;
   }
 
   &-item {
+    padding-bottom: 40px;
     // width: calc(100% / 3);
 
     // &.footer-logo {
@@ -43,20 +44,15 @@
     }
 
     &.contact {
-      width: calc(100% / 4);
-      // border-right: 1px dashed $white;
-      padding: 40px 40px 40px 0;
+      width: 30%;
     }
 
     &.location {
-      width: calc(100% / 4);
-      // border-right: 1px dashed $white;
-      padding: 40px 60px;
+      width: 30%;
     }
 
     &.club {
-      width: calc(100% / 4);
-      padding: 40px 60px;
+      width: 30%;
 
       .button-outline {
         margin-top: 0;
@@ -64,13 +60,14 @@
     }
 
     &.planet {
-      width: calc(100% / 4);
-      padding: 40px 60px;
+      width: 10%;
 
       img {
-        display: flex;
-        width: 80px;
-        margin: 0 auto;
+        display: block;
+        width: 100%;
+        max-width: 80px;
+        height: auto;
+        margin-left: auto;
         opacity: .5;
       }
     }
@@ -99,7 +96,7 @@
     padding: 20px 0;
     margin: 0 auto;
     width: calc(100% - 80px);
-    max-width: 1600px;
+    max-width: 1300px;
   }
 
   &-copyright {

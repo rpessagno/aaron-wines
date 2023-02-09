@@ -4,71 +4,112 @@
 
 // REDO THIS CSS
 
-.button-group {
-  margin-top: 20px;
-}
+// .button-group {
+//   margin-top: 20px;
+// }
+
+// .button {
+//   @include button;
+// }
+
+// .button-outline {
+//   font: 600 normal 15px/1 $sans-serif;
+//   letter-spacing: .15em;
+//   background-color: transparent;
+//   padding: 1em 2em;
+//   display: inline-block;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   transition: background-color .2s, color .2s;
+//   min-width: 110px;
+//   text-align: center;
+//   margin: 0 5px 10px 0;
+//   margin-top: 2em;
+
+//   &.button-dark {
+//     color: $blue;
+//     border: $blue solid 2px;
+//   }
+
+//   &.button-light {
+//     color: $white;
+//     border: $white solid 2px;
+//   }
+
+//   @include bp(xs) {
+//     font-size: 11px;
+//     min-width: 100px;
+//   }
+// }
+
+// .button-secondary {
+//   font: 700 normal 16px/1 $sans-serif;
+//   letter-spacing: .15em;
+//   background-color: transparent;
+//   padding: .5em 0;
+//   color: $blue;
+//   border: 0;
+//   border-bottom: 2px solid currentColor;
+//   display: inline-block;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   transition: color .2s;
+//   text-align: center;
+//   margin: 0 5px 10px 0;
+
+//   @include bp(xs) {
+//     font-size: 11px;
+//     min-width: 100px;
+//   }
+
+//   &:hover {
+//     color: darken($blue, 10%);
+//   }
+// }
+
 
 .button {
   @include button;
-}
 
-.button-outline {
-  font: 600 normal 15px/1 $sans-serif;
-  letter-spacing: .15em;
-  background-color: transparent;
-  padding: 1em 2em;
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color .2s, color .2s;
-  min-width: 110px;
-  text-align: center;
-  margin: 0 5px 10px 0;
-  margin-top: 2em;
-
-  &.button-dark {
-    color: $blue;
-    border: $blue solid 2px;
+  &-small {
+    font-size: 14px;
+    padding: .8em 1.4em;
   }
 
-  &.button-light {
-    color: $white;
-    border: $white solid 2px;
+  &-medium {
+    font-size: 15px;
+    padding: 1em 2em;
   }
 
-  @include bp(xs) {
-    font-size: 11px;
-    min-width: 100px;
+  &-large {
+    font-size: 17px;
+    padding: 1.2em 2.4em;
   }
 
-  // &:hover,
-  // &:focus {
-  //   background-color: $blue;
-  //   color: $white;
-  // }
-}
+  &-outline {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
 
-.button-secondary {
-  font: 700 normal 16px/1 $sans-serif;
-  letter-spacing: .15em;
-  background-color: transparent;
-  padding: .5em 0;
-  color: $blue;
-  border: 0;
-  border-bottom: 2px solid currentColor;
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color .2s;
-  text-align: center;
-  margin: 0 5px 10px 0;
+    &.button-light {
+      color: $white;
+      border-color: $white;
 
-  @include bp(xs) {
-    font-size: 11px;
-    min-width: 100px;
-  }
+      &:hover {
+        background-color: $white;
+        color: $blue;
+      }
+    }
 
-  &:hover {
-    color: darken($blue, 10%);
+    &.button-dark {
+      color: $blue;
+      border-color: $blue;
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+    }
   }
 }
+
