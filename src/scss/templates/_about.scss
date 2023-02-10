@@ -1,0 +1,94 @@
+//==============================
+// About
+//==============================
+
+.about {
+
+  &-winemaker {
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: $light-grey-bg url('assets/images/about/winemaker.jpg') right center / cover no-repeat;
+    position: relative;
+
+    &-content {
+      max-width: 500px;
+      position: relative;
+      z-index: 2;
+      margin-left: 15%;
+
+      // .h1 {
+      //   color: #a9a587;
+      // }
+
+      // p {
+      //   color: $white;
+      // }
+    }
+  }
+
+  &-team {
+
+    &-header {
+      text-align: center;
+      padding: 100px 0 40px;
+    }
+
+    &-items {
+      display: flex;
+      flex-flow: row wrap;
+      padding: 0 100px;
+    }
+
+    &-item {
+      width: calc((100% / 3) - 40px);
+      margin: 0 40px 60px 0;
+
+      &-img {
+        overflow: hidden;
+        height: 30vw;
+        margin-bottom: 20px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &-labels {
+
+    &-header {
+      text-align: center;
+      padding: 100px 0 40px;
+    }
+
+    &-items {
+      display: flex;
+      flex-flow: row wrap;
+      padding: 0 100px;
+    }
+
+    &-item {
+      width: calc((100% / 3) - 40px);
+      margin: 0 40px 60px 0;
+
+      &-img {
+        overflow: hidden;
+        height: 30vw;
+        margin-bottom: 20px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

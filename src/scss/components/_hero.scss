@@ -40,17 +40,22 @@
     }
   }
 
-  &-secondary {
-    height: 500px;
-    min-height: 0;
-    background: transparent center bottom / cover no-repeat;
+  // &-secondary {
+  //   height: 500px;
+  //   min-height: 0;
+  //   background: transparent center bottom / cover no-repeat;
 
-    @include bp(m) {
-      height: 400px;
-    }
+  //   @include bp(m) {
+  //     height: 400px;
+  //   }
 
-    @include bp(s) {
-      height: 300px;
-    }
-  }
+  //   @include bp(s) {
+  //     height: 300px;
+  //   }
+  // }
+}
+
+.page-hero {
+  height: 60vh;
+  min-height: 0;
 }
