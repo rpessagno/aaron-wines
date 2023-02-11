@@ -17,33 +17,123 @@
       position: relative;
       z-index: 2;
       margin-left: 15%;
+    }
+  }
 
-      // .h1 {
-      //   color: #a9a587;
-      // }
+  &-winemaker-2 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white url('assets/images/about/winemaker-bg.jpg') center top / 100% 100% no-repeat;
+    position: relative;
 
-      // p {
-      //   color: $white;
-      // }
+    &-content {
+      max-width: 500px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &-img {
+      -webkit-mask-image: url('assets/images/about/team/team-mask-4.svg');
+      mask-image: url('assets/images/about/team/team-mask-4.svg');
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      width: 40%;
+      height: 100%;
+      position: relative;
+      margin-left: 5%;
+      top: -100px;
+      right: -100px;
+      overflow: hidden;
+
+      img {
+        @include centered;
+        height: 100%;
+      }
     }
   }
 
   &-team {
+    background: $white;
 
     &-header {
-      text-align: center;
-      padding: 100px 0 40px;
+      padding: 100px 0 20px;
+      width: calc(100% - 80px);
+      max-width: 1400px;
+      margin: 0 auto;
+
+      h1 {
+        font: 300 normal 120px/1 $serif-display;
+        color: #b18a5e;
+        position: relative;
+        // top: 50px;
+        z-index: 2;
+      }
     }
 
     &-items {
       display: flex;
       flex-flow: row wrap;
-      padding: 0 100px;
+      width: calc(100% - 80px);
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     &-item {
       width: calc((100% / 3) - 40px);
       margin: 0 40px 60px 0;
+      text-align: center;
+
+      &:nth-child(1) {
+
+        img {
+          -webkit-mask-image: url('assets/images/about/team/team-mask-1.svg');
+          mask-image: url('assets/images/about/team/team-mask-1.svg');
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+        }
+      }
+
+      &:nth-child(2) {
+
+        img {
+          -webkit-mask-image: url('assets/images/about/team/team-mask-2.svg');
+          mask-image: url('assets/images/about/team/team-mask-2.svg');
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+        }
+      }
+
+      &:nth-child(3) {
+
+        img {
+          -webkit-mask-image: url('assets/images/about/team/team-mask-3.svg');
+          mask-image: url('assets/images/about/team/team-mask-3.svg');
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+        }
+      }
+
+      &:nth-child(4) {
+
+        img {
+          -webkit-mask-image: url('assets/images/about/team/team-mask-4.svg');
+          mask-image: url('assets/images/about/team/team-mask-4.svg');
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+        }
+      }
+
+      &:nth-child(5) {
+
+        img {
+          -webkit-mask-image: url('assets/images/about/team/team-mask-5.svg');
+          mask-image: url('assets/images/about/team/team-mask-5.svg');
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+        }
+      }
 
       &-img {
         overflow: hidden;
@@ -57,37 +147,189 @@
           object-fit: cover;
         }
       }
+
+      .h3 {
+        color: $gold;
+      }
+
+      p {
+        color: $blue;
+      }
+    }
+
+    &-group {
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
   &-labels {
+    background: $blue;
+    background: $blue url('assets/images/about/labels/labels-bg.jpg') center top / cover no-repeat;
+    padding-bottom: 150px;
 
     &-header {
-      text-align: center;
-      padding: 100px 0 40px;
+      padding: 140px 0 40px;
+      width: calc(100% - 80px);
+      max-width: 1500px;
+      margin: 0 auto;
+
+      h1 {
+        font: 300 normal 120px/1 $serif-display;
+        color: $beige;
+        position: relative;
+        z-index: 2;
+      }
     }
 
     &-items {
       display: flex;
       flex-flow: row wrap;
-      padding: 0 100px;
+      // max-width: 1400px;
+      margin: 0 auto;
+
+      .slick {
+
+        &-track {
+          display: flex !important;
+          flex-flow: row nowrap;
+          align-items: stretch;
+        }
+
+        &-slide {
+          height: auto !important;
+        }
+
+        &-active,
+        &-current {
+          transform: scale(1);
+          filter: blur(0);
+        }
+
+        &-arrow {
+          position: absolute;
+          top: -40px;
+          width: 60px;
+          height: 60px;
+          border: $white solid 2px;
+          background-color: transparent;
+          border-radius: 30px;
+          color: $white;
+          font: 400 normal 24px/1 $sans-serif;
+          z-index: 2;
+          transition: transform .2s $easing, opacity .2s;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          &.slick-disabled {
+            opacity: .3;
+          }
+        }
+
+        &-next {
+          right: 130px;
+          content: '\2192';
+        }
+
+        &-prev {
+          right: 210px;
+        }
+      }
     }
 
     &-item {
-      width: calc((100% / 3) - 40px);
-      margin: 0 40px 60px 0;
+      // width: calc((100% / 3) - 40px);
+      // margin: 0 40px 60px 0;
+      display: flex !important;
+      flex-flow: row nowrap;
+      align-items: center;
+      padding: 0 0 0 40px;
+
+      // filter: blur(.5rem);
+      // transform: scale(.8);
+      transition: transform .5s, filter .5s;
 
       &-img {
         overflow: hidden;
-        height: 30vw;
-        margin-bottom: 20px;
+        width: 60%;
+        position: relative;
+        height: 80vh;
+
+        -webkit-mask-image: url('assets/images/about/labels/label-mask.svg');
+        mask-image: url('assets/images/about/labels/label-mask.svg');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
 
         img {
-          display: block;
-          width: 100%;
+          position: absolute;
           height: 100%;
+          width: 100%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
           object-fit: cover;
         }
+      }
+
+      &-content {
+        width: 40%;
+        padding: 80px 260px 80px 80px;
+        // background-color: $white;
+        // background: transparent url('assets/images/global/card-3.svg') center center / 100% 100% no-repeat;
+        // position: relative;
+        // left: -200px;
+
+        p {
+          color: $white;
+        }
+      }
+
+      &-logo {
+        display: block;
+        width: 240px;
+        height: auto;
+        margin-bottom: 40px;
+      }
+    }
+
+    &-gallery {
+      
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &-planet {
+    height: 175vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: $light-grey-bg url('assets/images/about/1-percent-planet.jpg') right top / cover no-repeat;
+    position: relative;
+    padding-top: 160px;
+
+    &-content {
+      max-width: 500px;
+      position: relative;
+      z-index: 2;
+      margin-left: 15%;
+
+      .h1 {
+        color: #a9a587;
+      }
+
+      p {
+        color: $blue;
       }
     }
   }
