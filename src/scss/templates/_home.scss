@@ -44,11 +44,11 @@
         content: '';
         position: absolute;
         width: 100%;
-        height: 10vw;
+        height: 8vw;
         left: 0;
         bottom: 100%;
         z-index: 1;
-        background: transparent url('assets/images/global/edge-2.svg') center bottom / 100% 100% no-repeat;
+        background: transparent url('assets/images/home/shop-wave.svg') center bottom / 100% 100% no-repeat;
       }
 
       &-items {
@@ -141,7 +141,7 @@
         color: #a9a587;
       }
 
-      p {
+      p, ul {
         color: $white;
       }
     }
@@ -160,7 +160,7 @@
   &-winemaker {
     // background-color: #f3f3f4;
     padding: 200px 0 0;
-    background: transparent url('assets/images/home/quote-bg.svg') center 70% / 50% 80% no-repeat;
+    // background: transparent url('assets/images/home/quote-bg.svg') center 70% / 50% 80% no-repeat;
 
     &-wrap {
       margin: 0 auto;
@@ -173,6 +173,10 @@
 
     &-img {
       width: 50%;
+      -webkit-mask-image: url('assets/images/about/team/team-mask-7.svg');
+      mask-image: url('assets/images/about/team/team-mask-7.svg');
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
 
       img {
         display: block;

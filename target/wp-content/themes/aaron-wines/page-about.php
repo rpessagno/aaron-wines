@@ -77,11 +77,6 @@ get_header();
       <p>Director of Sales</p>
     </div>
     <div class="about-team-item">
-      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/team/nataly.png" alt=""></div>
-      <h3 class="h3">Nataly Weir</h3>
-      <p>Swiss Army Knife</p>
-    </div>
-    <div class="about-team-item">
       <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/team/amber.png" alt=""></div>
       <h3 class="h3">Amber Sandoval</h3>
       <p>Quesadillas</p>
@@ -104,33 +99,33 @@ get_header();
     <div class="about-labels-item">
       <div class="about-labels-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels/aaron.jpg" alt=""></div>      
       <div class="about-labels-item-content">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-white.svg" alt="Aaron" class="about-labels-item-logo">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="about-labels-item-logo">
         <p>Aaron began in 2002 with a focus on producing powerful, age-worthy wines from the rugged hillsides of westside Paso Robles, California. Always seeking to veer from the norm, we found inspiration in creating blends that centered around one of California's most historic grapes — Petite Sirah. We source intense, yet balanced fruit from the Willow Creek, Adelaida, and Templeton Gap districts. From these sites we coax this massively structured varietal into a portfolio of unique blends that evoke our best expression of west side Paso Robles terroir.</p>
-        <a href="#"class="button button-outline button-medium button-light">Shop Aaron</a>
+        <a href="#"class="button button-outline button-medium button-dark">Shop Aaron</a>
       </div>
     </div>
     <div class="about-labels-item">
       <div class="about-labels-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels/aequorea.jpg" alt=""></div>
       <div class="about-labels-item-content">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-white.svg" alt="Aaron" class="about-labels-item-logo">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-black.svg" alt="Aaron" class="about-labels-item-logo">
         <p>Latin for “Of The Sea,” Aequorea is a study in extreme coastal winegrowing, focused specifically on Pinot Noir and aromatic white wines. Our devotion to working with vineyards west of the Santa Lucia Mountains, closer to the ocean than most anywhere else in California, led to us spearheading the creation of the San Luis Obispo Coast (SLO Coast) AVA. From these foggy, windswept sites we work with dedicated growers to craft a portfolio of expressive wines that showcase truly coastal terroir, each vineyard being no more than 6 miles from the Pacific.</p>
-        <a href="#"class="button button-outline button-medium button-light">Shop Aequorea</a>
+        <a href="#"class="button button-outline button-medium button-dark">Shop Aequorea</a>
       </div>
     </div>
     <div class="about-labels-item">
       <div class="about-labels-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels/nature-boy.jpg" alt=""></div>
         <div class="about-labels-item-content">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-white.svg" alt="Aaron" class="about-labels-item-logo">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="about-labels-item-logo">
         <p>A wine originally made for ourselves and industry friends, we realized it was too good not to share with all of you. Nature Boy is a 100% whole cluster, 100% carbonic maceration Grenache sourced from our favorite vineyards in the Willow Creek District in west Paso Robles. Light in body, moderate in alcohol, and packed full of aromatics and bright fruit- it is an absolute joy to drink.</p>
-        <a href="#"class="button button-outline button-medium button-light">Shop Nature Boy</a>
+        <a href="#"class="button button-outline button-medium button-dark">Shop Nature Boy</a>
       </div>
     </div>
     <div class="about-labels-item">
       <div class="about-labels-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels/keola.jpg" alt=""></div>
       <div class="about-labels-item-content">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-white.svg" alt="Aaron" class="about-labels-item-logo">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-black.svg" alt="Aaron" class="about-labels-item-logo">
         <p>“Keola,” which is Aaron Jackson’s Hawaiian middle name, are wines comprised of grapes from the same vineyards that make up our top-tier wines. We don’t purchase inexpensive or lower quality fruit for these bends, rather it is comprised of extra juice that simply don’t find their way into our Aaron or Aequorea wines. This means that these wines always massively overdeliver for their price, with a similar pedigree and attention to detail as our flagship wines, but at a more approachable price point for everyday drinking.</p>
-        <a href="#"class="button button-outline button-medium button-light">Shop Keola</a>
+        <a href="#"class="button button-outline button-medium button-dark">Shop Keola</a>
       </div>
     </div>
   </div>

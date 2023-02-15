@@ -35,8 +35,8 @@
     }
 
     &-img {
-      -webkit-mask-image: url('assets/images/about/team/team-mask-4.svg');
-      mask-image: url('assets/images/about/team/team-mask-4.svg');
+      -webkit-mask-image: url('assets/images/about/team/team-mask-7.svg');
+      mask-image: url('assets/images/about/team/team-mask-7.svg');
       -webkit-mask-repeat: no-repeat;
       mask-repeat: no-repeat;
       width: 40%;
@@ -58,13 +58,14 @@
     background: $white;
 
     &-header {
-      padding: 100px 0 20px;
+      padding: 100px 0 40px;
       width: calc(100% - 80px);
-      max-width: 1400px;
+      max-width: 1600px;
       margin: 0 auto;
+      text-align: center;
 
       h1 {
-        font: 300 normal 120px/1 $serif-display;
+        font: 300 normal 80px/1 $serif;
         color: #b18a5e;
         position: relative;
         // top: 50px;
@@ -76,12 +77,12 @@
       display: flex;
       flex-flow: row wrap;
       width: calc(100% - 80px);
-      max-width: 1400px;
+      max-width: 1600px;
       margin: 0 auto;
     }
 
     &-item {
-      width: calc((100% / 3) - 40px);
+      width: calc((100% / 4) - 40px);
       margin: 0 40px 60px 0;
       text-align: center;
 
@@ -137,7 +138,7 @@
 
       &-img {
         overflow: hidden;
-        height: 30vw;
+        height: 25vw;
         margin-bottom: 20px;
 
         img {
@@ -169,17 +170,19 @@
 
   &-labels {
     background: $blue;
-    background: $blue url('assets/images/about/labels/labels-bg.jpg') center top / cover no-repeat;
-    padding-bottom: 150px;
+    // background: $blue url('assets/images/about/labels/labels-bg.jpg') center top / cover no-repeat;
+    padding-bottom: 240px;
 
     &-header {
-      padding: 140px 0 40px;
+      padding: 200px 0 40px;
       width: calc(100% - 80px);
       max-width: 1500px;
       margin: 0 auto;
+      text-align: center;
 
       h1 {
-        font: 300 normal 120px/1 $serif-display;
+        // font: 300 normal 120px/1 $serif-display;
+        font: 300 normal 80px/1 $serif;
         color: $beige;
         position: relative;
         z-index: 2;
@@ -198,6 +201,7 @@
           display: flex !important;
           flex-flow: row nowrap;
           align-items: stretch;
+          padding-bottom: 50px;
         }
 
         &-slide {
@@ -212,7 +216,7 @@
 
         &-arrow {
           position: absolute;
-          top: -40px;
+          top: 45%;
           width: 60px;
           height: 60px;
           border: $white solid 2px;
@@ -234,12 +238,12 @@
         }
 
         &-next {
-          right: 130px;
+          right: 40px;
           content: '\2192';
         }
 
         &-prev {
-          right: 210px;
+          left: 40px;
         }
       }
     }
@@ -249,8 +253,8 @@
       // margin: 0 40px 60px 0;
       display: flex !important;
       flex-flow: row nowrap;
-      align-items: center;
-      padding: 0 0 0 40px;
+      align-items: flex-end;
+      padding: 0 3%;
 
       // filter: blur(.5rem);
       // transform: scale(.8);
@@ -260,10 +264,10 @@
         overflow: hidden;
         width: 60%;
         position: relative;
-        height: 80vh;
+        height: 70vh;
 
-        -webkit-mask-image: url('assets/images/about/labels/label-mask.svg');
-        mask-image: url('assets/images/about/labels/label-mask.svg');
+        -webkit-mask-image: url('assets/images/global/card-9.svg');
+        mask-image: url('assets/images/global/card-9.svg');
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
 
@@ -280,20 +284,21 @@
 
       &-content {
         width: 40%;
-        padding: 80px 260px 80px 80px;
-        // background-color: $white;
-        // background: transparent url('assets/images/global/card-3.svg') center center / 100% 100% no-repeat;
-        // position: relative;
-        // left: -200px;
+        padding: 80px 80px 80px 80px;
+        background-color: $white;
+        background: transparent url('assets/images/global/card-9.svg') center center / 100% 100% no-repeat;
+        position: relative;
+        left: -50px;
+        top: 50px;
 
         p {
-          color: $white;
+          // color: $white;
         }
       }
 
       &-logo {
         display: block;
-        width: 240px;
+        width: 200px;
         height: auto;
         margin-bottom: 40px;
       }

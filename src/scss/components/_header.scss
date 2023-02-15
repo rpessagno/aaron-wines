@@ -33,10 +33,14 @@
       }
     }
 
-    .header-nav-item {
+    #menu-main {
 
-      a {
-        color: $charcoal;
+      .menu-item {
+        color: $blue;
+
+        &:after {
+          border-color: $blue;
+        }
       }
     }
 
@@ -84,7 +88,7 @@
       }
     }
     
-    &-items {
+    #menu-main {
       display: flex;
       flex-flow: row nowrap;
 
@@ -111,60 +115,81 @@
           visibility: visible;
         }
       }
-    }
 
-    &-item {
-      list-style-type: none;
-
-      a {
-        padding: 30px 15px;
-        display: block;
-        text-align: center;
+      .menu-item {
+        list-style-type: none;
         position: relative;
+        color: $white;
         font: 700 normal 15px/1.5 $sans-serif;
         letter-spacing: .15em;
         text-transform: uppercase;
-        text-decoration: none;
-        color: $white;
-        transition: color .2s;
-
-        @include bp(m) {
-          padding: .5em;
-          font-size: 25px;
-        }
-
-        @include bp(xs) {
-          font-size: 20px;
-        }
 
         &:after {
           content: '';
           position: absolute;
-          left: 0;
-          bottom: -1px;
-          width: 100%;
-          opacity: 0;
-          transition: opacity .2s;
+          left: 50%;
+          top: calc(50% + 1em);
+          width: 0;
+          border-bottom: $white solid 2px;
+          transform: translate(-50%, -50%);
+          transition: width .2s, border-color $header-transition-time;
+        }
+
+        a {
+          padding: 30px 1em;
+          display: block;
+          text-align: center;
+          position: relative;
+          text-decoration: none;
+          color: inherit;
+          transition: color .2s;
 
           @include bp(m) {
-            display: none;
+            padding: .5em;
+            font-size: 25px;
           }
-        }
 
-        &:hover,
-        &.active {
+          @include bp(xs) {
+            font-size: 20px;
+          }
 
           &:after {
-            opacity: 1;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 100%;
+            opacity: 0;
+            transition: opacity .2s;
+
+            @include bp(m) {
+              display: none;
+            }
+          }
+
+          &:hover,
+          &.active {
+
+            &:after {
+              opacity: 1;
+            }
           }
         }
-      }
 
-      &.login {
-        display: none;
+        &.login {
+          display: none;
 
-        @include bp(m) {
-          display: block;
+          @include bp(m) {
+            display: block;
+          }
+        }
+
+        &.current-menu-item,
+        &:hover {
+
+          &:after {
+            width: calc(100% - 2em);
+          }
         }
       }
     }
