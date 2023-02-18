@@ -35,8 +35,8 @@
     }
 
     &-img {
-      -webkit-mask-image: url('assets/images/about/team/team-mask-7.svg');
-      mask-image: url('assets/images/about/team/team-mask-7.svg');
+      -webkit-mask-image: url('assets/images/about/team/team-mask-9.svg');
+      mask-image: url('assets/images/about/team/team-mask-9.svg');
       -webkit-mask-repeat: no-repeat;
       mask-repeat: no-repeat;
       width: 40%;
@@ -305,11 +305,16 @@
     }
 
     &-gallery {
+      background-color: #fefce9;
       
       img {
         display: block;
         width: 100%;
         height: auto;
+        -webkit-mask-image: url('assets/images/global/large-image-mask-1.svg');
+        mask-image: url('assets/images/global/large-image-mask-1.svg');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
       }
     }
   }

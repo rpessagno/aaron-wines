@@ -73,9 +73,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 @mixin h3 {
-  font: 600 normal 32px/1.2 $serif;
-  color: $charcoal;
-  // text-transform: uppercase;
+  font: 600 normal 18px/1.2 $sans-serif;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: $brown;
 
   @include bp(m) {
     font-size: 24px;

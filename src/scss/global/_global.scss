@@ -12,6 +12,10 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  background: $white;
+}
+
 ::-moz-selection {
   background: $selection;
   text-shadow: none;

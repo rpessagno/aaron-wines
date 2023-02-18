@@ -90,6 +90,17 @@ get_header();
 
 
 
+<div class="about-labels-2">
+  <div class="about-labels-header">
+    <h1 class="">Our Labels</h1>
+  </div>
+  <div class="about-labels-main">
+    .about-labels-main-
+  </div>
+</div>
+
+
+<!-- 
 
 <div class="about-labels">
   <div class="about-labels-header">
@@ -129,10 +140,10 @@ get_header();
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
-<div class="about-labels-gallery"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels-gallery.jpg" alt=""></div>
+<div class="about-labels-gallery"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels-gallery-2.jpg" alt=""></div>
 
 
 

@@ -1,0 +1,85 @@
+//==============================
+// Club
+//==============================
+
+.club {
+
+  &-intro {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white url('assets/images/about/labels/labels-bg.jpg') center top / 100% 100% no-repeat;
+    position: relative;
+    margin-bottom: 200px;
+
+    &-content {
+      max-width: 500px;
+      position: relative;
+      z-index: 2;
+
+      .h1 {
+        color: $beige;
+      }
+
+      p {
+        color: $white;
+      }
+    }
+
+    &-img {
+      -webkit-mask-image: url('assets/images/global/card-9.svg');
+      mask-image: url('assets/images/global/card-9.svg');
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      width: 40%;
+      height: 100%;
+      position: relative;
+      margin-left: 5%;
+      top: -100px;
+      right: -100px;
+      overflow: hidden;
+
+      img {
+        @include centered;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &-benefits {
+    background-color: $white;
+
+    .feature-content {
+      background: $blue;
+
+      ul {
+        color: $white;
+      }
+    }
+  }
+
+  &-benefits-2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+
+    &-img {
+      width: 40%;
+      // -webkit-mask-image: url('assets/images/global/card-9.svg');
+      // mask-image: url('assets/images/global/card-9.svg');
+      // -webkit-mask-repeat: no-repeat;
+      // mask-repeat: no-repeat;
+    }
+
+    &-content {
+      width: 40%;
+      padding: 200px 80px 200px 80px;
+
+      li {
+      }
+    }
+  }
+}

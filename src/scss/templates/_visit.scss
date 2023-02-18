@@ -1,0 +1,75 @@
+//==============================
+// Visit
+//==============================
+
+.visit {
+
+  &-intro {
+  }
+
+  &-tastings {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: calc(100% - 80px);
+    max-width: 1600px;
+    margin: 0 auto;
+
+    &-item {
+      width: calc(50% - 80px);
+
+      &-img {
+        height: 500px;
+
+        img {
+          @include img-cover;
+        }
+      }
+
+      &-content {
+        text-align: center;
+        padding: 80px 100px 0;
+      }
+
+      &-subtitle {
+        font: 400 italic 30px/1 $serif;
+        margin-top: 1em;
+        color: $brown;
+      }
+    }
+  }
+
+  &-ohana {
+    background: darken($white, 5%) url('assets/images/visit/ohana-bg.svg') center top / 100% 200px no-repeat;
+    padding: 100px 0 0 0;
+    margin-top: 100px;
+
+    &-intro {
+      width: calc(100% - 80px);
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+
+      img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .h1 {
+        margin-bottom: .1em;
+      }
+
+      .h3 {
+        margin-bottom: 1em;
+      }
+    }
+
+    &-gallery {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 80px;
+    }
+  }
+}
