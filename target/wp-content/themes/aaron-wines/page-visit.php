@@ -13,14 +13,14 @@ get_header();
 <div class="hero page-hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
 
 
-<div class="club-intro visit-intro">
-  <div class="club-intro-content">
-       <h1 class="h1">Visit Us</h1>
-     <p class="intro-text">Our Tasting Room is currently open Thursday through Monday from 11:00am-5:30pm.</p>
-      <p class="intro-text">Due to limited space, we recommend scheduling an appointment for your tasting, however we do accept walk-ins based on availability.</p>
-      <p class="intro-text">For groups larger than 6 guests, please contact us to make arrangements for your group - taste@aaronwines.com</p>
+<div class="intro intro-dark">
+  <div class="intro-content">
+    <h1 class="h1">Visit Us</h1>
+    <p>Our Tasting Room is currently open Thursday through Monday from 11:00am-5:30pm.</p>
+    <p>Due to limited space, we recommend scheduling an appointment for your tasting, however we do accept walk-ins based on availability.</p>
+    <p>For groups larger than 6 guests, please contact us to make arrangements for your group - taste@aaronwines.com</p>
   </div>
-  <div class="club-intro-img">
+  <div class="intro-img">
     <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/building.jpg" alt="">
   </div>
 </div>
@@ -48,7 +48,7 @@ get_header();
       <p>Enjoy a 60 minute tasting on our renovated outdoor patio while sipping on our current releases of Aequorea and Aaron Wines.</p>
       <p class="visit-tastings-item-subtitle">$20 per person</p>
       <p>Waived with a 3 bottle purchase</p>
-      <a href="#"class="button button-outline button-medium button-dark">Book Indoor Tasting</a>
+      <a href="#"class="button button-outline button-medium button-dark">Book Outdoor Tasting</a>
     </div>
   </div>
 </div>

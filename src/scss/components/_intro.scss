@@ -2,6 +2,79 @@
 // Intro
 //==============================
 
+
+.intro {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  padding: 0 60px 0;
+
+  @include bp(s) {
+    padding: 0 30px;
+  }
+
+  &-content {
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+    padding: 200px 5% 200px 0;
+
+    @include bp(m) {
+      width: 100%;
+      padding: 60px 0 20px;
+    }
+  }
+
+  &-img {
+    -webkit-mask-image: url('assets/images/global/card-9.svg');
+    mask-image: url('assets/images/global/card-9.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    width: 50%;
+    max-width: 700px;
+    position: relative;
+    margin-left: 5%;
+    top: -100px;
+    overflow: hidden;
+
+    @include bp(xl) {
+      margin-left: 0;
+    }
+
+    @include bp(m) {
+      width: 100%;
+      height: 90vw;
+      top: 40px;
+      margin-left: 0;
+    }
+
+    img {
+      @include centered;
+      @include img-cover;
+    }
+  }
+
+  &-light {
+    background: $white url('assets/images/about/winemaker-bg.jpg') center center / cover no-repeat;
+  }
+
+  &-dark {
+    background: $blue url('assets/images/global/texture-1.jpg') center center / cover no-repeat;
+
+    .h1 {
+      color: $beige;
+    }
+
+    p {
+      color: $white;
+    }
+  }
+}
+
+/*
 .intro {
   text-align: center;
   // background-color: $light-grey-bg;
@@ -88,3 +161,5 @@
   margin: 0 auto;
   padding: 200px 0;
 }
+
+*/

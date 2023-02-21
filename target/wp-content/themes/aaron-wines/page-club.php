@@ -21,12 +21,12 @@ get_header();
   </div>
  -->
 
-<div class="club-intro">
-  <div class="club-intro-content">
+<div class="intro intro-dark">
+  <div class="intro-content">
        <h1 class="h1">Wine Club</h1>
       <p class="intro-text">Our small (often very small) production wines are released twice per year, in April and November. We produce a variety of blends based around Petite Sirah and Rhone varietals from westside Paso Robles, as well as single vineyard Pinot Noirs and aromatic whites from the SLO Coast. Members receive priority access to these wines as well as the following benefits listed below:</p>
   </div>
-  <div class="club-intro-img">
+  <div class="intro-img">
     <img src="//localhost:3000/wp-content/uploads/2017/09/shop.jpg" alt="">
   </div>
 </div>

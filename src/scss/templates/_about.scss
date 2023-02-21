@@ -89,8 +89,8 @@
       &:nth-child(1) {
 
         img {
-          -webkit-mask-image: url('assets/images/about/team/team-mask-1.svg');
-          mask-image: url('assets/images/about/team/team-mask-1.svg');
+          -webkit-mask-image: url('assets/images/about/team-member-mask-1.svg');
+          mask-image: url('assets/images/about/team-member-mask-1.svg');
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
         }
@@ -99,8 +99,8 @@
       &:nth-child(2) {
 
         img {
-          -webkit-mask-image: url('assets/images/about/team/team-mask-2.svg');
-          mask-image: url('assets/images/about/team/team-mask-2.svg');
+          -webkit-mask-image: url('assets/images/about/team-member-mask-2.svg');
+          mask-image: url('assets/images/about/team-member-mask-2.svg');
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
         }
@@ -109,8 +109,8 @@
       &:nth-child(3) {
 
         img {
-          -webkit-mask-image: url('assets/images/about/team/team-mask-3.svg');
-          mask-image: url('assets/images/about/team/team-mask-3.svg');
+          -webkit-mask-image: url('assets/images/about/team-member-mask-3.svg');
+          mask-image: url('assets/images/about/team-member-mask-3.svg');
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
         }
@@ -119,18 +119,8 @@
       &:nth-child(4) {
 
         img {
-          -webkit-mask-image: url('assets/images/about/team/team-mask-4.svg');
-          mask-image: url('assets/images/about/team/team-mask-4.svg');
-          -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-        }
-      }
-
-      &:nth-child(5) {
-
-        img {
-          -webkit-mask-image: url('assets/images/about/team/team-mask-5.svg');
-          mask-image: url('assets/images/about/team/team-mask-5.svg');
+          -webkit-mask-image: url('assets/images/about/team-member-mask-4.svg');
+          mask-image: url('assets/images/about/team-member-mask-4.svg');
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
         }

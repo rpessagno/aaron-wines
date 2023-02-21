@@ -12,46 +12,24 @@ get_header();
 
 
 
-<div class="hero page-hero" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/about/hero.jpeg');">
-  <h1 class="hero-title">About</h1>
-</div>
+<div class="hero page-hero" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/about/hero.jpeg');"></div>
 
 
-<!-- <div class="about-winemaker">
-  <div class="about-winemaker-content">
+
+
+
+
+<div class="intro intro-light">
+  <div class="intro-content">
       <h1 class="eyebrow">The Winemaker</h1>
       <h1 class="h1">Aaron Jackson</h1>
       <p>A Central Coast native, Aaron Jackson began his winemaking career in vineyards and cellars near his hometown of Cayucos during the 2000 vintage. In 2002, while studying wine at Cal Poly in San Luis Obispo, he pooled together the pennies from his weekend job and launched his eponymous label with the first vintage Aaron Petite Sirah. His early career was spent working with and mentoring from several wineries around Paso Robles (Saxum, Four Vines, ONX, and others) along with earning his Master’s degree in Oenology from the University of Adelaide in South Australia.</p>
       <p>Now over 20 years in, Aaron continues to focus on bringing pride to his homeland through his two brands, both of which are driven by authenticity and devotion to unearthing the potential of Paso Robles and the San Luis Obispo Coast.</p>
   </div>
-</div> -->
-
-
-<div class="about-winemaker-2">
-  <div class="about-winemaker-2-content">
-      <h1 class="eyebrow">The Winemaker</h1>
-      <h1 class="h1">Aaron Jackson</h1>
-      <p>A Central Coast native, Aaron Jackson began his winemaking career in vineyards and cellars near his hometown of Cayucos during the 2000 vintage. In 2002, while studying wine at Cal Poly in San Luis Obispo, he pooled together the pennies from his weekend job and launched his eponymous label with the first vintage Aaron Petite Sirah. His early career was spent working with and mentoring from several wineries around Paso Robles (Saxum, Four Vines, ONX, and others) along with earning his Master’s degree in Oenology from the University of Adelaide in South Australia.</p>
-      <p>Now over 20 years in, Aaron continues to focus on bringing pride to his homeland through his two brands, both of which are driven by authenticity and devotion to unearthing the potential of Paso Robles and the San Luis Obispo Coast.</p>
-  </div>
-  <div class="about-winemaker-2-img">
+  <div class="intro-img">
     <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/winemaker-2.jpg" alt="">
   </div>
 </div>
-
-
-<!-- <div class="home-intro">
-
-  <div class="intro">
-    <div class="intro-content">
-      <h1 class="eyebrow">The Winemaker</h1>
-      <h1 class="h1">Aaron Jackson</h1>
-      <p class="p1">A Central Coast native, Aaron Jackson began his winemaking career in vineyards and cellars near his hometown of Cayucos during the 2000 vintage. In 2002, while studying wine at Cal Poly in San Luis Obispo, he pooled together the pennies from his weekend job and launched his eponymous label with the first vintage Aaron Petite Sirah. His early career was spent working with and mentoring from several wineries around Paso Robles (Saxum, Four Vines, ONX, and others) along with earning his Master’s degree in Oenology from the University of Adelaide in South Australia.</p>
-      <p class="p1">Now over 20 years in, Aaron continues to focus on bringing pride to his homeland through his two brands, both of which are driven by authenticity and devotion to unearthing the potential of Paso Robles and the San Luis Obispo Coast.</p>
-    </div>
-  </div>
-
-</div> -->
 
 
 

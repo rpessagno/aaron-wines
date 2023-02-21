@@ -79,6 +79,10 @@
   &-medium {
     font-size: 15px;
     padding: 1em 2em;
+
+    @include bp(s) {
+      font-size: 13px;
+    }
   }
 
   &-large {
