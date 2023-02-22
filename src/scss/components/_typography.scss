@@ -71,11 +71,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   color: $brown;
 
   @include bp(m) {
-    font-size: 24px;
+    font-size: 17px;
   }
 
   @include bp(s) {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 
@@ -141,7 +141,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 p,
-ul {
+ul,
+ol {
   @include p1;
 
   + .button {
@@ -167,6 +168,24 @@ ul {
 
 ul.p1 {
   margin-left: 1em;
+}
+
+@mixin meta {
+  font: 400 normal 15px/1.6 $sans-serif;
+  letter-spacing: .04em;
+  color: $charcoal;
+
+  @include bp(l) {
+    font-size: 15px;
+  }
+
+  @include bp(s) {
+    font-size: 14px;
+  }
+}
+
+.meta {
+  @include meta;
 }
 
 @mixin eyebrow {
