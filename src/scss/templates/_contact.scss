@@ -1,0 +1,81 @@
+//==============================
+// Contact
+//==============================
+
+.contact {
+
+  &-intro {
+    text-align: center;
+    width: calc(100% - 80px);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 0 0;
+  }
+
+  &-form {
+    width: calc(100% - 80px);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0 100px;
+
+    .wpforms {
+
+      &-field-container {
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      &-field {
+        margin-bottom: $form-gutter !important;
+        padding: 0 !important;
+
+        &.one-half {
+          width: calc(50% - (#{$form-gutter} / 2));
+          margin-right: $form-gutter !important;
+
+          &:nth-child(2n) {
+            margin-right: 0 !important;
+          }
+
+          @include bp(s) {
+            width: 100%;
+          }
+        }
+
+        &.full {
+          width: 100% !important;
+        }
+      }
+
+      &-submit {
+        font-family: $sans-serif !important;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        font-size: 15px !important;
+        line-height: 1 !important;
+        letter-spacing: .15em !important;
+        border: 0 !important;
+        display: inline-block !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+        transition: background-color .2s, color .2s !important;
+        text-align: center !important;
+        padding: 1em 2em !important;
+        background-color: transparent !important;
+        border-style: solid !important;
+        border-width: 2px !important;
+        color: $blue !important;
+        border-color: $blue !important;
+
+        &:hover {
+          background-color: $blue !important;
+          color: $white !important;
+        }
+
+        &-container {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

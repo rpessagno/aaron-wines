@@ -20,8 +20,6 @@ $beige: #fdfce9;
 $light-grey-bg: #e7eaea;
 $light-grey-border: #eee;
 
-$header-transition-time: .4s;
-
 $serif: 'adobe-jenson-pro', Times New Roman, Times, Georgia, serif;
 $serif-display: 'adobe-jenson-pro-display', Times New Roman, Times, Georgia, serif;
 $serif-caption: 'adobe-jenson-pro-caption', Times New Roman, Times, Georgia, serif;
@@ -30,4 +28,8 @@ $monospace: 'Courier', monospace;
 $sans-serif: 'europa', Helvetica, Arial, sans-serif;
 $quote-marks: 'bookman-jf-pro', serif;
 
+$header-transition-time: .4s;
+
 $easing: cubic-bezier(.16,.61,.45,1.4);
+
+$form-gutter: 10px;

@@ -51,12 +51,26 @@ input[type="number"],
 select,
 textarea {
   @include input-reset;
+  font: 400 normal 17px/1.7 $sans-serif !important;
+  color: $charcoal;
   width: 100% !important;
   background: $white;
-  border: #ddd solid 1px !important;
-  padding: .8em 1em !important;
-  font: 400 normal 15px/1.2 $sans-serif;
-  color: $black;
+  border: 0 !important;
+  padding: .8em 1.3em !important;
+  color: $charcoal !important;
+  height: auto !important;
+
+  @include bp(l) {
+    font-size: 16px;
+  }
+
+  @include bp(s) {
+    line-height: 1.8;
+  }
+
+  @include bp(s) {
+    font-size: 15px;
+  }
 }
 
 input[type="submit"],
@@ -79,4 +93,5 @@ select {
 
 textarea {
   resize: none;
+  height: 170px !important;
 }
