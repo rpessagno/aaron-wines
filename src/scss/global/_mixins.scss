@@ -4,11 +4,11 @@
 
 // Breakpoints
 @mixin bp($bp) {
-  @if $bp == xxl {
-    @media only screen and (min-width: 1501px) { @content; }
-  }
+  // @if $bp == xxl {
+  //   @media only screen and (min-width: 1501px) { @content; }
+  // }
   @if $bp == xl {
-    @media only screen and (max-width: 1500px) { @content; }
+    @media only screen and (max-width: 1600px) { @content; }
   }
   @if $bp == l {
     @media only screen and (max-width: 1200px) { @content; }

@@ -8,14 +8,23 @@ get_header();
 
 ?>
 
-<div class="hero home-hero" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/hero-2.jpg');"></div>
+<div class="hero page-hero" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/hero-2.jpg');"></div>
 
-<div class="home-intro">
+<div class="home-overview">
 
-  <div class="intro">
-    <div class="intro-content">
+  <div class="home-intro">
+    <div class="home-intro-content">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/shaka.svg" alt="" class="home-intro-icon">
       <h1 class="home-intro-title"><?php the_field('intro_headline'); ?></h1>
-      <p class="intro-text"><?php the_field('intro_text'); ?></p>
+      
+      <p>Celebrating 20 years of bringing you fearless wines handcrafted from homegrown vineyards that scatter our backyard. Fearless Petite Sirah blends in the Aaron wines from Westside Paso Robles, and single vineyard Pinot Noirs born from small vineyards that you’ve never heard of in the SLO Coast AVA.</p>
+
+      <p>It's our pleasure to share with you these wines made from the heart in the place where we grew up and live today.</p>
+
+      <p>Cheers,<br>
+        <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-jackson-signature.png" alt="Aaron Jackson" class="home-intro-signature">
+      </p>
+
     </div>
   </div>
 

@@ -5,53 +5,7 @@
 .about {
 
   &-winemaker {
-    height: 80vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: $light-grey-bg url('assets/images/about/winemaker.jpg') right center / cover no-repeat;
-    position: relative;
-
-    &-content {
-      max-width: 500px;
-      position: relative;
-      z-index: 2;
-      margin-left: 15%;
-    }
-  }
-
-  &-winemaker-2 {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $white url('assets/images/about/winemaker-bg.jpg') center top / 100% 100% no-repeat;
-    position: relative;
-
-    &-content {
-      max-width: 500px;
-      position: relative;
-      z-index: 2;
-    }
-
-    &-img {
-      -webkit-mask-image: url('assets/images/about/team/team-mask-9.svg');
-      mask-image: url('assets/images/about/team/team-mask-9.svg');
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      width: 40%;
-      height: 100%;
-      position: relative;
-      margin-left: 5%;
-      top: -100px;
-      right: -100px;
-      overflow: hidden;
-
-      img {
-        @include centered;
-        height: 100%;
-      }
-    }
+    background: $light-grey-bg url('assets/images/global/rough-texture.jpg') center bottom / cover no-repeat;
   }
 
   &-team {
@@ -159,9 +113,6 @@
   }
 
   &-labels {
-    background: $blue;
-    // background: $blue url('assets/images/about/labels/labels-bg.jpg') center top / cover no-repeat;
-    padding-bottom: 240px;
 
     &-header {
       padding: 200px 0 40px;
@@ -179,119 +130,80 @@
       }
     }
 
-    &-items {
-      display: flex;
-      flex-flow: row wrap;
-      // max-width: 1400px;
-      margin: 0 auto;
+    &-main {
+      background: $blue url('assets/images/global/leaf-texture-2.jpg') center center / cover no-repeat;
+      padding-bottom: 100px;
+      
+      &-wrap {
+        width: calc(100% - 80px);
+        max-width: 1600px;
+        margin: 0 auto;
+      }
 
-      .slick {
+      &-items {
+        display: flex;
+        flex-flow: row wrap;
+      }
 
-        &-track {
-          display: flex !important;
-          flex-flow: row nowrap;
-          align-items: stretch;
-          padding-bottom: 50px;
+      &-img {
+        height: 600px;
+        overflow: hidden;
+
+        img {
+          @include img-cover;
         }
+      }
 
-        &-slide {
-          height: auto !important;
-        }
+      &-item {
+        width: 50%;
+        padding: 80px;
 
-        &-active,
-        &-current {
-          transform: scale(1);
-          filter: blur(0);
-        }
-
-        &-arrow {
-          position: absolute;
-          top: 45%;
-          width: 60px;
-          height: 60px;
-          border: $white solid 2px;
-          background-color: transparent;
-          border-radius: 30px;
+        p {
           color: $white;
-          font: 400 normal 24px/1 $sans-serif;
-          z-index: 2;
-          transition: transform .2s $easing, opacity .2s;
-          cursor: pointer;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-
-          &.slick-disabled {
-            opacity: .3;
-          }
-        }
-
-        &-next {
-          right: 40px;
-          content: '\2192';
-        }
-
-        &-prev {
-          left: 40px;
         }
       }
     }
 
-    &-item {
-      // width: calc((100% / 3) - 40px);
-      // margin: 0 40px 60px 0;
-      display: flex !important;
-      flex-flow: row nowrap;
-      align-items: flex-end;
-      padding: 0 3%;
+    &-sub {
+      width: calc(100% - 80px);
+      background: $white;
+      position: relative;
+      padding: 100px 0 200px;
 
-      // filter: blur(.5rem);
-      // transform: scale(.8);
-      transition: transform .5s, filter .5s;
+      &-item {
+        width: calc(100% - 80px);
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+        // top: -60px;
+
+        + .about-labels-sub-item {
+          margin-top: 80px;
+        }
+      }
 
       &-img {
+        width: 50%;
         overflow: hidden;
-        width: 60%;
-        position: relative;
-        height: 70vh;
-
-        -webkit-mask-image: url('assets/images/global/card-9.svg');
-        mask-image: url('assets/images/global/card-9.svg');
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
 
         img {
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          object-fit: cover;
+          @include img-cover;
         }
       }
 
       &-content {
-        width: 40%;
-        padding: 80px 80px 80px 80px;
-        background-color: $white;
-        background: transparent url('assets/images/global/card-9.svg') center center / 100% 100% no-repeat;
-        position: relative;
-        left: -50px;
-        top: 50px;
-
-        p {
-          // color: $white;
-        }
+        width: 50%;
+        padding: 80px 0 80px 80px;
       }
+    }
 
-      &-logo {
-        display: block;
-        width: 200px;
-        height: auto;
-        margin-bottom: 40px;
-      }
+    &-logo {
+      display: block;
+      height: 60px;
+      width: auto;
+      margin-bottom: 20px;
     }
 
     &-gallery {
@@ -310,27 +222,56 @@
   }
 
   &-planet {
-    height: 175vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background: $light-grey-bg url('assets/images/about/1-percent-planet.jpg') right top / cover no-repeat;
-    position: relative;
-    padding-top: 160px;
+    background: #fefce9;
 
-    &-content {
-      max-width: 500px;
-      position: relative;
-      z-index: 2;
-      margin-left: 15%;
+    &-intro {
 
-      .h1 {
-        color: #a9a587;
+      .intro-content {
+        padding-top: 100px;
+        padding-bottom: 0;
+
+        @include bp(m) {
+          padding-top: 60px;
+          padding-bottom: 40px;
+        }
       }
 
-      p {
-        color: $blue;
+      &-img {
+        width: 50%;
+        max-width: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include bp(m) {
+          order: -1;
+          padding-top: 60px;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          max-width: 350px;
+
+          @include bp(l) {
+            max-width: 300px;
+          }
+
+          @include bp(m) {
+            max-width: 250px;
+          }
+
+          @include bp(s) {
+            max-width: 200px;
+          }
+        }
       }
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
   }
 }

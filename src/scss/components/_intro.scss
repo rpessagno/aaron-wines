@@ -17,7 +17,7 @@
 
   &-content {
     width: 50%;
-    max-width: 500px;
+    max-width: 600px;
     position: relative;
     z-index: 2;
     padding: 200px 5% 200px 0;
@@ -34,7 +34,7 @@
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     width: 50%;
-    max-width: 700px;
+    max-width: 600px;
     position: relative;
     margin-left: 5%;
     top: -100px;
@@ -58,11 +58,11 @@
   }
 
   &-light {
-    background: $white url('assets/images/about/winemaker-bg.jpg') center center / cover no-repeat;
+    // background: $white url('assets/images/about/winemaker-bg.jpg') center center / cover no-repeat;
   }
 
   &-dark {
-    background: $blue url('assets/images/global/texture-1.jpg') center center / cover no-repeat;
+    // background: $blue url('assets/images/global/texture-1.jpg') center center / cover no-repeat;
 
     .h1 {
       color: $beige;

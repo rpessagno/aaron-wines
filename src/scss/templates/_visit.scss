@@ -5,6 +5,7 @@
 .visit {
 
   &-intro {
+    background: $blue url('assets/images/club/intro-bg.jpg') center center / cover no-repeat;
   }
 
   &-tastings {
@@ -61,7 +62,7 @@
 
       &-content {
         text-align: center;
-        padding-top: 80px;
+        padding-top: 60px;
         max-width: 500px;
         margin: 0 auto;
         display: flex;

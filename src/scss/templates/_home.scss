@@ -4,20 +4,75 @@
 
 .home {
 
+  &-hero {
+    text-align: center;
+  }
+
+  &-overview {
+    // background: $light-grey-bg url('assets/images/home/metal-texture-2.jpg') center top / cover no-repeat;
+    background: $light-grey-bg url('assets/images/global/leaf-texture.jpg') center center / cover no-repeat;
+  }
+
   &-intro {
-    background: $light-grey-bg url('assets/images/home/metal-texture-2.jpg') center top / cover no-repeat;
+    background-color: $white;
+    padding: 60px 120px 80px;
+    margin: 0 auto;
+    width: calc(100% - 80px);
+    max-width: 1000px;
+    text-align: center;
+    position: relative;
+    top: -60px;
+
+    @include bp(s) {
+      width: calc(100% - 40px);
+      padding: 30px 40px 40px;
+    }
 
     &-title {
       font: 600 normal 36px/1.1 $serif-caption;
       text-transform: uppercase;
       letter-spacing: .09em;
       color: $brown;
+      margin-bottom: .5em;
+
+      @include bp(l) {
+        font-size: 32px;
+      }
+
+      @include bp(m) {
+        font-size: 30px;
+      }
+
+      @include bp(s) {
+        font-size: 26px;
+      }
+
+      br {
+
+        @include bp(l) {
+          display: none;
+        }
+      }
     }
+
+    &-icon {
+      width: 100px;
+      margin-bottom: 20px;
+
+      @include bp(s) {
+        width: 60px;
+      }
+    }
+
+    &-signature {
+      width: 220px;
+     }
   }
 
   &-shop {
     overflow: hidden;
     position: relative;
+    margin-top: 100px;
 
     &-items {
       display: flex;
@@ -82,7 +137,7 @@
         img {
           display: block;
           margin: 0 auto 20px;
-          height: 35px;
+          height: 50px;
           width: auto;
         }
 
@@ -124,18 +179,33 @@
   }
 
   &-map {
-    height: 80vh;
+    min-height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background: $light-grey-bg url('assets/images/home/map-2.jpg') right bottom / cover no-repeat;
+    background: $blue url('assets/images/home/map-3.jpg') right bottom / auto 100% no-repeat;
     position: relative;
+
+    @include bp(xl) {
+      min-height: 0;
+    }
+
+    @include bp(m) {
+      padding-bottom: 60vw;
+      background: $blue url('assets/images/home/map-3-mobile.jpg') right bottom / 100% auto no-repeat;
+    }
 
     &-content {
       max-width: 500px;
+      padding: 150px 0 200px;
       position: relative;
       z-index: 2;
       margin-left: 15%;
+
+      @include bp(m) {
+        margin: 0;
+        padding: 60px 40px 0;
+      }
 
       .h1 {
         color: #a9a587;

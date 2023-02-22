@@ -39,6 +39,14 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   font: 300 normal 54px/1.1 $serif;
   color: #b18a5e;
 
+  @include bp(xl) {
+    font-size: 50px;
+  }
+
+  @include bp(l) {
+    font-size: 44px;
+  }
+
   @include bp(m) {
     font-size: 44px;
   }

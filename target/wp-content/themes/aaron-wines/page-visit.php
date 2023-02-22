@@ -13,7 +13,7 @@ get_header();
 <div class="hero page-hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
 
 
-<div class="intro intro-dark">
+<div class="intro intro-dark visit-intro">
   <div class="intro-content">
     <h1 class="h1">Visit Us</h1>
     <p>Our Tasting Room is currently open Thursday through Monday from 11:00am-5:30pm.</p>
