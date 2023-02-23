@@ -8,8 +8,8 @@
   <div class="footer-items">
 
     <div class="footer-item newsletter">
-      <h1 class="footer-title">Join Our Mailing List</h1>
-      <p class="text">Sign up for our monthly emails for special access to our limited releases.</p>
+      <h1 class="newsletter-title">Stay Connected</h1>
+      <p class="p1">Subscribe to our mailing list to hear about our new releases, updates from the winery and special events. No spam, just good news and even better wine.</p>
       <div v65remotejs="form"></div>
     </div>
 

@@ -107,16 +107,16 @@
       }
 
       &-items {
-        // border-top: $white dashed 1px;
-        // border-bottom: $white dashed 1px;
-        border: $white solid 1px;
+        border-top: $white dashed 1px;
+        border-bottom: $white dashed 1px;
+        // border: $white solid 1px;
         position: relative;
         display: flex;
         flex-flow: row wrap;
         width: calc(100% - 80px);
         max-width: 1000px;
         margin: 0 auto;
-        background-color: darken($blue, 3%);
+        // background-color: darken($blue, 3%);
         // position: relative;
         // z-index: 2;
         // top: -140px;

@@ -3,37 +3,27 @@
 //==============================
 
 .newsletter {
-  // border-bottom: 1px dashed $white;
   padding-bottom: 60px;
-//   width: 100%;
-//   background: #f2f2ee url('assets/images/global/newsletter.jpg') center center / cover no-repeat;
-//   text-align: center;
-//   padding: 150px 0;
-//   min-height: 440px;
 
-//   @include bp(m) {
-//     padding: 120px 0;
-//     min-height: 360px;
-//   }
+  &-title {
+    font: 400 italic 44px/1 $serif;
+    color: $white;
+    text-align: center;
+    margin-bottom: 5px;
+  }
 
-//   @include bp(s) {
-//     padding: 80px 30px;
-//     min-height: 280px;
-//   }
-
-//    @include bp(xs) {
-//     padding-left: 30px;
-//     padding-right: 30px;
-//   }
-
-//   .subtitle {
-//     color: $white;
-//   }
+  .p1 {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: $white;
+    line-height: 1.4;
+  }
 
   form {
     margin: 10px auto 0;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
   }
 
   legend,
@@ -63,18 +53,19 @@
 
   input#Email {
     @include input-reset;
-    // font: 400 normal 14px/1 $sans-serif;
+    font: 400 normal 14px/1 $sans-serif;
     background-color: $white !important;
     border: 0 !important;
     width: 100%;
     height: 60px;
-    // padding: 1em 0 !important;
+    padding: 1em !important;
     font-size: 20px;
-    // border: 2px solid $brown !important;
     color: $brown !important;
   }
 
   button[type="submit"] {
+    @include input-reset;
+    @include button;
     border-radius: 0;
     width: 100%;
     height: 60px;
@@ -82,6 +73,11 @@
     color: $blue;
     padding: 0 !important;
     margin: 0;
+
+    &:hover {
+      background-color: darken($white, 10%) !important;
+      cursor: pointer;
+    }
 
     span {
       display: block;

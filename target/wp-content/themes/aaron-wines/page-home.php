@@ -17,9 +17,9 @@ get_header();
       <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/shaka.svg" alt="" class="home-intro-icon">
       <h1 class="home-intro-title"><?php the_field('intro_headline'); ?></h1>
       
-      <p>Celebrating 20 years of bringing you fearless wines handcrafted from homegrown vineyards that scatter our backyard. Fearless Petite Sirah blends in the Aaron wines from Westside Paso Robles, and single vineyard Pinot Noirs born from small vineyards that you’ve never heard of in the SLO Coast AVA.</p>
+      <p>The Central Coast is our home. It was the waters of the Pacific Ocean and the forests of the Santa Lucia Mountains that nurtured our spirit and drove us to create wines from our backyard. We’ve always sought inspiration in unlikely places, which has led us to produce wines that break from conventionality. Petite Sirah-driven wines from the steep hillsides of west Paso Robles, and single vineyard Pinot Noirs from the extremes of the San Luis Obispo Coast.</p>
 
-      <p>It's our pleasure to share with you these wines made from the heart in the place where we grew up and live today.</p>
+      <p>Today we celebrate over 20 years of doing what we love in the place we’ve always called home, and sharing with others. We wouldn’t have it any other way.</p>
 
       <p>Cheers,<br>
         <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-jackson-signature.png" alt="Aaron Jackson" class="home-intro-signature">
@@ -84,7 +84,7 @@ get_header();
   <div class="feature home-visit">
     <div class="feature-content">
       <h2 class="h2">Visit Our <br> Tasting Room</h2>
-      <p><?php the_field('visit_text'); ?></p>
+      <p>Visit our winery & tasting room to experience our current release wines. We are open for walk-ins and reservations Thursday through Monday.</p>
       <a href="<?php echo the_permalink('30'); ?>" class="button button-medium button-outline button-dark">Visit Us</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/visit.jpg');"></div>
@@ -104,7 +104,7 @@ get_header();
 <div class="home-map">
   <div class="home-map-content">
     <h2 class="h1">In the Heart <br> of Tin City</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum et vitae eveniet necessitatibus, nesciunt, consequatur, aspernatur error iusto quis atque, architecto veritatis harum molestias sit. Cumque debitis molestias, voluptates quibusdam.</p>
+    <p>Tin City is  just a few minutes from downtown Paso Robles. You’ll get to meet our small team (there’s just 4 of us!) and experience our wines just a few steps from where they are produced. Afterward, you can wander through the Tin City community to meet other artisans making some of the most delicious things on the Central Coast.</p>
     <a href="#" class="button button-medium button-outline button-light">Learn More</a>
   </div>
 </div>
@@ -115,7 +115,7 @@ get_header();
   <div class="feature home-club">
     <div class="feature-content alt">
       <h2 class="h2">Join Our <br> Wine Club</h2>
-      <p>If you love our wines as much as we do, we invite you to join our wine club and become a part of our family. Every six months, you’ll receive a shipment of our new wines, before they are released to the public.</p>
+      <p>If you love our wines as much as we do, we invite you to join our wine club and become a part of our family. Every Fall and Spring, you will receive a shipment of our newest wines, before they are released to the public.</p>
       <a href="<?php echo the_permalink('28'); ?>" class="button button-medium button-outline button-dark">Join Now</a>
     </div>
     <div class="feature-img" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/club.jpg');"></div>
@@ -130,7 +130,7 @@ get_header();
       <blockquote class="home-winemaker-content">
         <p>My wines are like my love letters to the Central Coast.</p>
         <p>Everytime I create one, it’s me feeling prideful and honoring the place where I grew up.</p>
-        <cite><span>Aaron Jackson</span> <br> Owner / Winemaker</cite>
+        <cite><span>Aaron Jackson</span> <br> Owner & Winemaker</cite>
       </blockquote>
     </div>
   </div>
