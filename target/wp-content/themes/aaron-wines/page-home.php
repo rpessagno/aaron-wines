@@ -8,7 +8,7 @@ get_header();
 
 ?>
 
-<div class="hero page-hero" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/hero-2.jpg');"></div>
+<div class="hero" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/hero-2.jpg');"></div>
 
 <div class="home-overview">
 
@@ -44,13 +44,15 @@ get_header();
       <div class="home-shop-content-items">
         <div class="home-shop-content-item">
           <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-white.svg" alt="Aaron">
-          <p>Aeromatic whites and Pinot Noirs <br>
-          SLO Coast AVA</p>
+          <p>Petite Syrah and Rhone blends <br>
+            + <br>
+          Paso Robles AVA</p>
         </div>
         <div class="home-shop-content-item">
           <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-white.svg" alt="Aequorea">
-          <p>Petite Syrah and Rhone blends <br>
-          Paso Robles AVA</p>
+          <p>Aeromatic whites and Pinot Noirs <br>
+            + <br>
+          SLO Coast AVA</p>
         </div>
         <a href="#" class="home-shop-content-link">Shop <br> Wines</a>
       </div>

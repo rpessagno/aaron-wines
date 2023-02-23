@@ -80,20 +80,24 @@ $header_style = get_field('header_style', $page_id);
     </button>
 
     <?php wp_nav_menu( array( 'menu' => 'main' ) ); ?>
-      <!-- <li class="header-nav-item login"><a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile">Login</a></li> -->
 
-    <ul class="header-utility-items">
-      <li class="header-utility-item">
-        <a href="https://shop.aaronwines.com/index.cfm?method=cartV2.showCart">
-          <?php echo file_get_contents(get_template_directory() . '/assets/images/global/cart.svg') ?>
-        </a>
-      </li>
-      <li class="header-utility-item">
-        <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile">
-          <?php echo file_get_contents(get_template_directory() . '/assets/images/global/account.svg') ?>
-        </a>
-      </li>
-    </ul>
+    <div class="header-shop">
+      <ul class="header-shop-items">
+        <li class="header-shop-item">
+          <a href="https://shop.aaronwines.com/index.cfm?method=cartV2.showCart">
+            <?php echo file_get_contents(get_template_directory() . '/assets/images/global/cart.svg') ?>
+            Cart
+          </a>
+        </li>
+        <li class="header-shop-item">
+          <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile">
+            <?php echo file_get_contents(get_template_directory() . '/assets/images/global/account.svg') ?>
+            Account
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </nav>
   <button class="header-nav-close"></button>
 </header>

@@ -107,14 +107,19 @@
       }
 
       &-items {
-        border-top: $white dashed 1px;
-        border-bottom: $white dashed 1px;
+        // border-top: $white dashed 1px;
+        // border-bottom: $white dashed 1px;
+        border: $white solid 1px;
         position: relative;
         display: flex;
         flex-flow: row wrap;
         width: calc(100% - 80px);
         max-width: 1000px;
         margin: 0 auto;
+        background-color: darken($blue, 3%);
+        // position: relative;
+        // z-index: 2;
+        // top: -140px;
       }
 
       &-item {
@@ -124,7 +129,7 @@
         text-align: center;
 
         &:nth-child(1) {
-          border-right: $white dashed 1px;
+          border-right: $white solid 1px;
           padding-right: 40px;
           // padding-left: 60px;
         }
@@ -218,7 +223,7 @@
   }
 
   &-club-winemaker {
-    background: #f3f3f4 url('assets/images/home/metal-texture-3.jpg') center bottom / cover no-repeat;
+    background: #f3f3f4 url('assets/images/home/club-winemaker-bg.jpg') center bottom / cover no-repeat;
     padding-top: 150px;
   }
 
@@ -232,6 +237,10 @@
     padding: 200px 0 0;
     // background: transparent url('assets/images/home/quote-bg.svg') center 70% / 50% 80% no-repeat;
 
+    @include bp(s) {
+      padding-top: 100px;
+    }
+
     &-wrap {
       margin: 0 auto;
       width: calc(100% - 80px);
@@ -243,10 +252,14 @@
 
     &-img {
       width: 50%;
-      -webkit-mask-image: url('assets/images/about/team/team-mask-7.svg');
-      mask-image: url('assets/images/about/team/team-mask-7.svg');
+      -webkit-mask-image: url('assets/images/about/team-member-mask-3.svg');
+      mask-image: url('assets/images/about/team-member-mask-3.svg');
       -webkit-mask-repeat: no-repeat;
       mask-repeat: no-repeat;
+
+      @include bp(s) {
+        width: 100%;
+      }
 
       img {
         display: block;
@@ -257,13 +270,34 @@
 
     &-content {
       width: 50%;
-      padding: 0 0 0 80px;
+      padding: 0 40px 0 80px;
       margin: 0;
+
+      @include bp(l) {
+        padding: 0 40px 0 40px;
+      }
+
+      @include bp(s) {
+        width: 100%;
+        padding: 40px 0 0 0;
+      }
 
       p {
         font: 300 italic 46px/1.2 $serif;
         letter-spacing: -.01em;
         color: #8c8c8c;
+
+        @include bp(l) {
+          font-size: 40px;
+        }
+
+        @include bp(m) {
+          font-size: 30px;
+        }
+
+        @include bp(s) {
+          font-size: 24px;
+        }
 
         + p {
           margin-top: .5em;
@@ -275,27 +309,12 @@
           &:before {
             content: '\201C';
             position: absolute;
-            // left: -.2em;
-            // top: -.4em;
             top: -.4em;
             left: -.05em;
-            font: 400 normal 200px/1 $quote-marks;
+            font: 400 normal 400%/1 $quote-marks;
             opacity: .4;
           }
         }
-
-        // &:nth-child(2) {
-        //   position: relative;
-
-        //   &:before {
-        //     content: '\201D';
-        //     position: absolute;
-        //     right: 0;
-        //     top: calc(100% - .1em);
-        //     font: 400 normal 160px/1 $quote-marks;
-        //     opacity: .2;
-        //   }
-        // }
       }
 
       cite {
