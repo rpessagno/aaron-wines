@@ -10,9 +10,9 @@ get_header();
 
 
 
-
-
-<div class="hero page-hero" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/about/hero.jpeg');"></div>
+<div class="hero page-hero" data-scrollax-parent="true">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/hero.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+</div>
 
 
 
@@ -24,7 +24,7 @@ get_header();
       <p>Now over 20 years in, Aaron continues to focus on bringing pride to his homeland through his two brands, both of which are driven by authenticity and devotion to unearthing the potential of Paso Robles and the San Luis Obispo Coast.</p>
   </div>
   <div class="intro-img">
-    <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/winemaker-2.jpg" alt="">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/winemaker.jpg" alt="">
   </div>
 </div>
 
@@ -37,22 +37,22 @@ get_header();
   </div>
   <div class="about-team-items">
     <div class="about-team-item">
-      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/team/nick.png" alt=""></div>
+      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/nick.jpg" alt=""></div>
       <h3 class="h3">Nick Pearl</h3>
       <p>GM / Assistant Winemaker</p>
     </div>
     <div class="about-team-item">
-      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/team/justin.jpeg" alt=""></div>
+      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/justin.jpg" alt=""></div>
       <h3 class="h3">Justin Rapolas</h3>
       <p>Marketing & Brand Manager</p>
     </div>
     <div class="about-team-item">
-      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/team/katie.png" alt=""></div>
+      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/katie.jpg" alt=""></div>
       <h3 class="h3">Katie Lewis</h3>
       <p>Director of Sales</p>
     </div>
     <div class="about-team-item">
-      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/team/amber.png" alt=""></div>
+      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/amber.jpg" alt=""></div>
       <h3 class="h3">Amber Sandoval</h3>
       <p>Quesadillas</p>
     </div>
@@ -61,7 +61,9 @@ get_header();
 
 
 
-<div class="about-team-group"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/team/20-years-alt.jpg" alt=""></div>
+<div class="home-skyline">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/20-years.jpg" alt="">
+</div>
 
 
 
@@ -75,7 +77,7 @@ get_header();
     </div>
     <div class="about-labels-main-wrap">
       <div class="about-labels-main-img">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/aaron-aequorea.jpg" alt="">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels-aaron-aequorea.jpg" alt="">
       </div>
       <div class="about-labels-main-items">
         <div class="about-labels-main-item">
@@ -119,7 +121,7 @@ get_header();
 </div>
 
 
-<div class="about-labels-gallery"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels-gallery-2.jpg" alt=""></div>
+<div class="about-labels-gallery"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels-gallery.jpg" alt=""></div>
 
 
 <div class="about-planet">

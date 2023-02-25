@@ -23,14 +23,17 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin: 100px auto 0;
+    margin: 200px auto 0;
     width: calc(100% - 80px);
     max-width: 1600px;
-    background: #dcdcdc;
-    -webkit-mask-image: url('assets/images/club/benefits-mask.svg');
-    mask-image: url('assets/images/club/benefits-mask.svg');
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;    
+    position: relative;
+    z-index: 3;
+    // border-radius: 50px;
+    // overflow: hidden;
+    // -webkit-mask-image: url('assets/images/global/feature-content-center.svg');
+    // mask-image: url('assets/images/global/feature-content-center.svg');
+    // -webkit-mask-repeat: no-repeat;
+    // mask-repeat: no-repeat;    
 
     &-img {
       width: 50%;
@@ -44,9 +47,10 @@
     &-content {
       width: 50%;
       padding: 200px 80px 200px 100px;
+      background: #f3f3f4 url('assets/images/home/club-winemaker-bg.jpg') center top / 200% auto no-repeat;
 
       ul {
-        margin-left: .5em;
+        margin: 1em 0 0 1.5em;
       }
     }
   }

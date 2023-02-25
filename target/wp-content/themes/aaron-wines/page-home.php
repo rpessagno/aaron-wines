@@ -17,7 +17,7 @@ get_header();
 
 
 <!-- Overview -->
-<div class="home-overview">
+<div class="home-overview" data-scrollax-parent="true">
 
   <!-- Intro -->
   <?php
@@ -25,7 +25,7 @@ get_header();
     $intro_title = $intro['title'];
     $intro_text = $intro['text'];
   ?>
-  <div class="home-intro">
+  <div class="home-intro" data-scrollax="properties: { 'translateY': '-10vw' }">
     <div class="home-intro-content">
       <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/shaka.svg" alt="" class="home-intro-icon">
       <h1 class="home-intro-title"><?php echo $intro_title; ?></h1>
@@ -99,8 +99,8 @@ get_header();
     $tin_city_link = $tin_city['link'];
     $tin_city_image = $tin_city['image'];
   ?>
-<div class="home-map">
-  <div class="home-map-content">
+<div class="home-map" data-scrollax-parent="true">
+  <div class="home-map-content" data-scrollax="properties: { 'translateY': '5vw' }">
     <h2 class="h1"><?php echo $tin_city_title; ?></h2>
     <?php echo $tin_city_text; ?>
     <a href="<?php echo $tin_city_link['url']; ?>" target="<?php echo $tin_city_link['target']; ?>" class="button button-medium button-outline button-light"><?php echo $tin_city_link['title']; ?></a>
@@ -108,7 +108,7 @@ get_header();
 </div>
 
 
-<div class="home-club-winemaker">
+<div class="home-club-winemaker" data-scrollax-parent="true">
 
   <!-- Club -->
   <?php
@@ -124,7 +124,7 @@ get_header();
       <?php echo $club_text; ?>
       <a href="<?php echo $club_link['url']; ?>" target="<?php echo $club_link['target']; ?>" class="button button-medium button-outline button-dark"><?php echo $club_link['title']; ?></a>
     </div>
-    <div class="feature-img" data-scrollax-parent="true">
+    <div class="feature-img">
       <img src="<?php echo $club_image['url']; ?>" alt="<?php echo $club_image['alt']; ?>" data-scrollax="properties: { 'translateY': '10vw' }">
     </div>
   </div>
@@ -140,9 +140,9 @@ get_header();
   <div class="home-winemaker">
     <div class="home-winemaker-wrap" data-scrollax-parent="true">
       <div class="home-winemaker-img">
-        <img src="<?php echo $quote_image['url']; ?>" alt="<?php echo $quote_image['alt']; ?>" data-scrollax="properties: { 'translateY': '5vw' }">
+        <img src="<?php echo $quote_image['url']; ?>" alt="<?php echo $quote_image['alt']; ?>">
       </div>
-      <blockquote class="home-winemaker-content"  data-scrollax="properties: { 'translateY': '5vw' }">
+      <blockquote class="home-winemaker-content" data-scrollax="properties: { 'translateY': '5vw' }">
         <?php echo $quote_text; ?>
         <cite><span><?php echo $quote_name; ?></span> <br> <?php echo $quote_title; ?></cite>
       </blockquote>

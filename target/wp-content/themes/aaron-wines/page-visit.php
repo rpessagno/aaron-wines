@@ -10,18 +10,23 @@ get_header();
 
 
 
-<div class="hero page-hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
 
 
-<div class="intro intro-dark visit-intro">
+<div class="hero page-hero" data-scrollax-parent="true">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/hero-2.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+</div>
+
+
+
+<div class="intro intro-dark visit-intro" data-scrollax-parent="true">
   <div class="intro-content">
     <h1 class="h1">Visit Us</h1>
     <p>Our Tasting Room is currently open Thursday through Monday from 11:00am-5:30pm.</p>
     <p>Due to limited space, we recommend scheduling an appointment for your tasting, however we do accept walk-ins based on availability.</p>
     <p>For groups larger than 6 guests, please contact us to make arrangements for your group - taste@aaronwines.com</p>
   </div>
-  <div class="intro-img">
-    <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/building.jpg" alt="">
+  <div class="intro-img" data-scrollax="properties: { 'translateY': '-5vw' }">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/intro.jpg" alt="">
   </div>
 </div>
 

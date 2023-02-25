@@ -9,7 +9,10 @@ get_header();
 ?>
 
 
-<div class="hero page-hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
+
+<div class="hero page-hero" data-scrollax-parent="true">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels-aaron-aequorea.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+</div>
 
 <!-- <div class="section-header shop-aaron">
   <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="shop-logo">

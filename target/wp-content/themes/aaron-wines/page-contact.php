@@ -11,7 +11,9 @@ get_header();
 
 
 
-<div class="hero page-hero" style="background-image: url('<?php the_field('hero_image'); ?>');"></div>
+<div class="hero page-hero" data-scrollax-parent="true">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/contact/hero.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+</div>
 
 <?php
   $contact_form = get_field('contact_form');
