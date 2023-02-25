@@ -27,7 +27,9 @@ get_header();
 
 
 <div class="club-benefits">
-  <div class="club-benefits-img" style="background-image: url('<?php bloginfo('template_directory'); ?>/assets/images/home/visit.jpg');"></div>
+  <div class="club-benefits-img">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/home/visit.jpg" alt="">
+  </div>
   <div class="club-benefits-content">
     <h2 class="h2">Member Benefits</h2>
     <ul style="margin-left: 1em;">
@@ -38,7 +40,7 @@ get_header();
       <li>Complimentary tasting for you and 3 guests at the winery</li>
       <li>Membership is free and can be cancelled at any time</li>
     </ul>
-    <a href="#" class="button button-dark button-outline button-medium">Join The Club</a>
+    <a href="#" class="button button-dark button-solid button-medium">Join The Club</a>
   </div>
 </div>
 

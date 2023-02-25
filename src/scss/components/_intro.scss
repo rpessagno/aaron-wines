@@ -20,7 +20,7 @@
     max-width: 600px;
     position: relative;
     z-index: 2;
-    padding: 200px 5% 200px 0;
+    padding: 200px 5% 300px 0;
 
     @include bp(m) {
       width: 100%;
@@ -39,6 +39,7 @@
     margin-left: 5%;
     top: -100px;
     overflow: hidden;
+    z-index: 2;
 
     @include bp(xl) {
       margin-left: 0;

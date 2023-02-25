@@ -115,5 +115,28 @@
       }
     }
   }
+
+  &-solid {
+
+    // &.button-light {
+    //   color: $white;
+    //   border-color: $white;
+
+    //   &:hover {
+    //     background-color: $white;
+    //     color: $blue;
+    //   }
+    // }
+
+    &.button-dark {
+      color: $white;
+      background-color: $blue;
+
+      &:hover {
+        background-color: $gold;
+        color: $white;
+      }
+    }
+  }
 }
 

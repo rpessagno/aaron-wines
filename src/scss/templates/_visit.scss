@@ -6,6 +6,17 @@
 
   &-intro {
     background: $blue url('assets/images/club/intro-bg.jpg') center center / cover no-repeat;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2vw;
+      background: transparent url('assets/images/global/hero-mask-3.svg') left bottom / 100% auto no-repeat;
+      z-index: 1;
+    }
   }
 
   &-tastings {
