@@ -5,9 +5,34 @@
 .shop {
   padding-bottom: 200px;
 
+  &-hero {
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 10%;
+      background: transparent url('assets/images/shop/shop-hero-mask.svg') center bottom / 100% 100% no-repeat;
+      z-index: 2;
+    }
+  }
+
+  &-section {
+    // padding-bottom: 200px;
+  }
+
   &-header {
     text-align: center;
     padding: 150px 0 60px;
+
+    // background: transparent url('assets/images/global/feature-content-center-white.svg') center center / 100% 100% no-repeat;
+    // max-width: 800px;
+    // padding: 80px;
+    // margin: 0 auto;
+    // position: relative;
+    // top: -80px;
 
     @include bp(s) {
       padding: 100px 0 40px;
@@ -19,6 +44,11 @@
       @include bp(s) {
         width: 150px;
       }
+    }
+
+    p {
+      max-width: 600px;
+      margin: 20px auto 0;
     }
   }
 }

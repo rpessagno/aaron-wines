@@ -10,24 +10,10 @@ get_header();
 
 
 
-<div class="hero page-hero" data-scrollax-parent="true">
+<div class="hero shop-hero" data-scrollax-parent="true">
   <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels-aaron-aequorea.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
 </div>
 
-<!-- <div class="section-header shop-aaron">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-logo-black.svg" alt="Aaron" class="shop-logo">
-</div>
-
-
-<?php $pageID = '5'; include('inc/shop-items.php'); ?>
-
-
-<div class="section-header shop-aequorea">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aequorea-logo-black.svg" alt="Aequorea" class="shop-logo">
-</div>
-
-<?php $pageID = '7'; include('inc/shop-items.php'); ?>
- -->
 
 <div class="shop">
 
@@ -46,6 +32,7 @@ get_header();
 
     <div class="shop-header">
       <h2><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>"></h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eligendi quaerat quasi velit fugit, officiis facere magnam sit! Dolores, tenetur nobis nostrum? Eaque neque ipsam porro aperiam rem nam reiciendis.</p>
     </div>
 
     <div class="products">

@@ -13,8 +13,8 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      height: 2vw;
-      background: transparent url('assets/images/global/hero-mask-3.svg') left bottom / 100% auto no-repeat;
+      height: 5%;
+      background: transparent url('assets/images/club/club-hero-mask.svg') center bottom / 100% 100% no-repeat;
       z-index: 1;
     }
   }
@@ -26,7 +26,7 @@
     width: calc(100% - 160px);
     max-width: 1600px;
     margin: 0 auto;
-    padding: 100px 0 0 0;
+    padding: 200px 0 0 0;
 
     @include bp(xl) {
       width: calc(100% - 120px);
@@ -104,7 +104,7 @@
   &-ohana {
     background: darken($white, 5%) url('assets/images/visit/ohana-bg.svg') center top / 100% 10vw no-repeat;
     padding: 100px 0 0 0;
-    margin-top: 100px;
+    margin-top: 140px;
 
     @include bp(s) {
       margin-top: 0;

@@ -27,7 +27,6 @@ get_header();
   ?>
   <div class="home-intro" data-scrollax="properties: { 'translateY': '-10vw' }">
     <div class="home-intro-content">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/shaka.svg" alt="" class="home-intro-icon">
       <h1 class="home-intro-title"><?php echo $intro_title; ?></h1>
       <?php echo $intro_text; ?>
       <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-jackson-signature.png" alt="Aaron Jackson" class="home-intro-signature">
