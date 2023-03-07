@@ -10,53 +10,65 @@ get_header();
 
 
 
+<!-- Hero -->
+<?php $hero = get_field('hero'); ?>
 <div class="hero page-hero" data-scrollax-parent="true">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/hero.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+  <img src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" data-scrollax="properties: { 'translateY': '10vw' }">
 </div>
 
 
-
+<!-- Intro -->
+<?php
+  $intro = get_field('intro');
+  $intro_eyebrow = $intro['eyebrow'];
+  $intro_title = $intro['title'];
+  $intro_text = $intro['text'];
+  $intro_image = $intro['image'];
+?>
 <div class="intro intro-light about-winemaker">
   <div class="intro-content">
-      <h1 class="eyebrow">The Winemaker</h1>
-      <h1 class="h1">Aaron Jackson</h1>
-      <p>A Central Coast native, Aaron Jackson began his winemaking career in vineyards and cellars near his hometown of Cayucos during the 2000 vintage. In 2002, while studying wine at Cal Poly in San Luis Obispo, he pooled together the pennies from his weekend job and launched his eponymous label with the first vintage Aaron Petite Sirah. His early career was spent working with and mentoring from several wineries around Paso Robles (Saxum, Four Vines, ONX, and others) along with earning his Master’s degree in Oenology from the University of Adelaide in South Australia.</p>
-      <p>Now over 20 years in, Aaron continues to focus on bringing pride to his homeland through his two brands, both of which are driven by authenticity and devotion to unearthing the potential of Paso Robles and the San Luis Obispo Coast.</p>
+      <h1 class="eyebrow"><?php echo $intro_eyebrow; ?></h1>
+      <h2 class="h1"><?php echo $intro_title; ?></h2>
+      <?php echo $intro_text; ?>
   </div>
   <div class="intro-img">
-    <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/winemaker.jpg" alt="">
+    <img src="<?php echo $intro_image['url']; ?>" alt="<?php echo $intro_image['alt']; ?>">
   </div>
 </div>
 
 
 
-
+<!-- Team -->
+<?php
+  $team = get_field('team');
+  $team_eyebrow = $team['eyebrow'];
+  $team_title = $team['title'];
+?>
 <div class="about-team">
   <div class="about-team-header">
-    <p class="eyebrow">Meet the Peeps</p>
-    <h1 class="h1">The Team</h1>
+    <p class="eyebrow"><?php echo $team_eyebrow; ?></p>
+    <h1 class="h1"><?php echo $team_title; ?></h1>
   </div>
   <div class="about-team-items">
+
+    <?php if( have_rows('team_members') ) { ?>
+    <?php while ( have_rows('team_members') ) { the_row(); ?>
+
+    <?php
+      $team_members_name = get_sub_field('name');
+      $team_members_title = get_sub_field('title');
+      $team_members_image = get_sub_field('image');
+    ?>
+
     <div class="about-team-item">
-      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/nick.jpg" alt=""></div>
-      <h3 class="h3">Nick Pearl</h3>
-      <p>GM / Assistant Winemaker</p>
+      <div class="about-team-item-img"><img src="<?php echo $team_members_image['url']; ?>" alt="<?php echo $team_members_image['alt']; ?>"></div>
+      <h3 class="h3"><?php echo $team_members_name; ?></h3>
+      <p><?php echo $team_members_title; ?></p>
     </div>
-    <div class="about-team-item">
-      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/justin.jpg" alt=""></div>
-      <h3 class="h3">Justin Rapolas</h3>
-      <p>Marketing & Brand Manager</p>
-    </div>
-    <div class="about-team-item">
-      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/katie.jpg" alt=""></div>
-      <h3 class="h3">Katie Lewis</h3>
-      <p>Director of Sales</p>
-    </div>
-    <div class="about-team-item">
-      <div class="about-team-item-img"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/amber.jpg" alt=""></div>
-      <h3 class="h3">Amber Sandoval</h3>
-      <p>Quesadillas</p>
-    </div>
+      
+    <?php } ?>
+    <?php } ?>
+
   </div>
 </div>
 
@@ -70,7 +82,86 @@ get_header();
 
 
 
+<!-- Labels -->
+<?php
+  $team = get_field('team');
+  $team_eyebrow = $team['eyebrow'];
+  $team_title = $team['title'];
+?>
 <div class="about-labels">
+
+  <div class="about-labels-header">
+    <p class="eyebrow"><?php echo $labels_eyebrow; ?></p>
+    <h1 class="h1"><?php echo $labels_title; ?></h1>
+  </div>
+
+
+    <?php if( have_rows('primary_labels') ) { ?>
+    <?php while ( have_rows('primary_labels') ) { the_row(); ?>
+
+    <?php
+      $primary_labels_title = get_sub_field('title');
+      $primary_labels_text = get_sub_field('text');
+      $primary_labels_link = get_sub_field('link');
+      $primary_labels_logo = get_sub_field('logo');
+      $primary_labels_image = get_sub_field('image');
+    ?>
+
+    <div class="about-labels-main-item about-labels-main-item-1">
+
+      <div class="about-labels-main-img">
+        <img src="<?php echo $primary_labels_image['url']; ?>" alt="<?php echo $primary_labels_image['alt']; ?>">
+      </div>
+
+      <div class="about-labels-main-content">
+        <img src="<?php echo $primary_labels_logo['url']; ?>" alt="<?php echo $primary_labels_logo['alt']; ?>" class="about-labels-logo">
+        <?php echo $primary_labels_text; ?>
+        <a href="<?php echo $primary_labels_link['url']; ?>" class="button button-solid button-medium button-dark"><?php echo $primary_labels_link['title']; ?></a>
+      </div>
+
+    </div>
+
+    <?php } ?>
+    <?php } ?>
+
+  
+
+ <div class="about-labels-sub">
+
+    <?php if( have_rows('secondary_labels') ) { ?>
+    <?php while ( have_rows('secondary_labels') ) { the_row(); ?>
+
+    <?php
+      $secondary_labels_title = get_sub_field('title');
+      $secondary_labels_text = get_sub_field('text');
+      $secondary_labels_link = get_sub_field('link');
+      $secondary_labels_logo = get_sub_field('logo');
+      $secondary_labels_image = get_sub_field('image');
+    ?>
+
+    <div class="about-labels-sub-item">
+      <div class="about-labels-sub-img">
+        <img src="<?php echo $secondary_labels_image['url']; ?>" alt="<?php echo $secondary_labels_image['alt']; ?>">
+      </div>
+      <div class="about-labels-sub-content">
+        <h2 class="h2"><?php echo $secondary_labels_title; ?></h2>
+        <?php echo $secondary_labels_text; ?>
+        <a href="<?php echo $secondary_labels_link['url']; ?>" class="button button-outline button-small button-dark"><?php echo $secondary_labels_link['title']; ?></a>
+      </div>
+    </div>
+
+    <?php } ?>
+    <?php } ?>
+
+  </div>
+
+</div>
+
+
+
+
+
+<!-- <div class="about-labels">
 
   <div class="about-labels-main">
     <div class="about-labels-header">
@@ -119,29 +210,42 @@ get_header();
     </div>
   </div>
 
+</div> -->
 
+
+
+
+<!-- Gallery -->
+<?php $gallery = get_field('gallery'); ?>
+<div class="about-labels-gallery">
+  <img src="<?php echo $gallery['url']; ?>" alt="<?php echo $gallery['alt']; ?>" data-scrollax="properties: { 'translateY': '10vw' }">
 </div>
 
 
-<div class="about-labels-gallery"><img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels-gallery-3.jpg" alt=""></div>
-
-
+<!-- Giving Back -->
+<?php
+  $giving_back = get_field('giving_back');
+  $giving_back_title = $giving_back['title'];
+  $giving_back_text = $giving_back['text'];
+  $giving_back_link = $giving_back['link'];
+  $giving_back_logo = $giving_back['logo'];
+  $giving_back_image = $giving_back['image'];
+?>
 <div class="about-planet">
 
   <div class="intro about-planet-intro">
     <div class="intro-content">
-        <!-- <h1 class="eyebrow">1% For The Planet</h1> -->
-        <h1 class="h1">Giving Back</h1>
-        <p>Our love for the outdoors has inspired us to join 1% for the Planet, an international organization whose members contribute at least one percent of their annual sales to environmental causes. Through this organization, we support a local nonprofit directly that aligns with our values and brand.</p>
-        <p>Because of our passion for Big Sur, we've partnered with the <a href="https://www.ventanawild.org/" target="_blank">Ventana Wilderness Alliance</a> to protect, preserve, and restore the wilderness and public lands of Big Sur. We've specifically been supporting their amazing efforts at maintaining and rebuilding the extensive network of hiking trails and camps that have been ravaged by recent wildfires.</p>
-        <a href="https://onepercentfortheplanet.org/" target="_blank" class="button button-outline button-medium button-dark">Learn More</a>
+        <h1 class="eyebrow">Lorem Ipsum</h1>
+        <h1 class="h1"><?php echo $giving_back_title; ?></h1>
+        <?php echo $giving_back_text; ?>
+        <a href="<?php echo $giving_back_link['url']; ?>" target="<?php echo $giving_back_link['target']; ?>" class="button button-outline button-medium button-dark"><?php echo $giving_back_link['title']; ?></a>
     </div>
     <div class="about-planet-intro-img">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/1-percent-for-the-planet.svg" alt="">
+      <img src="<?php echo $giving_back_logo['url']; ?>" alt="<?php echo $giving_back_logo['alt']; ?>">
     </div>
   </div>
 
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/1-percent-planet.jpg" alt="" class="about-planet-img">
+  <img src="<?php echo $giving_back_image['url']; ?>" alt="<?php echo $giving_back_image['alt']; ?>" class="about-planet-img">
 
 </div>
 

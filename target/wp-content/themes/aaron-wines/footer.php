@@ -44,11 +44,10 @@
 
   <div class="footer-links">
 
-    <ul class="footer-copyright">
-      <li>&copy <?php echo date('Y'); ?> Aaron Wines</li>
-      <li>Privacy Policy</li>
-      <li>Terms</li>
-    </ul>
+    <nav class="footer-nav">
+      <p>&copy; <?php echo date('Y'); ?> Aaron Wines</p>
+      <?php wp_nav_menu( array( 'menu' => 'footer' ) ); ?>
+    </nav>
     
     <ul class="social">
       <li><a href="https://www.facebook.com/AaronPetiteSirah/" target="_blank" class="facebook"></a></li>

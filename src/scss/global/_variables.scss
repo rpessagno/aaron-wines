@@ -9,6 +9,7 @@
 $selection: #b3d4fc;
 
 $white: #f2f1ed;
+$darken-white: darken(#f2f1ed, 5%);
 $black: #000;
 $charcoal: #333;
 // $blue: #7b8286;
@@ -35,3 +36,5 @@ $easing: cubic-bezier(.16,.61,.45,1.4);
 $form-gutter: 10px;
 
 $grid-gutter: 15px;
+
+$gallery-gutter: 2vw;

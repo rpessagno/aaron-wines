@@ -70,7 +70,32 @@ get_header();
     <p class="visit-tastings-item-subtitle">$30 per person | $20 for members</p>
     <a href="#"class="button button-outline button-medium button-dark">Book Private Tasting</a>
   </div>
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/ohana-gallery.jpg" alt="" class="visit-ohana-gallery">
+</div>
+
+
+<!-- Gallery -->
+<div class="visit-gallery" data-scrollax-parent="true">
+  <div class="visit-gallery-item visit-gallery-item-1" data-scrollax="properties: { 'translateY': '10vw' }">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-1.jpg" alt="">
+  </div>
+  <div class="visit-gallery-item visit-gallery-item-2">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-2.jpg" alt="">
+  </div>
+  <div class="visit-gallery-item visit-gallery-item-5">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-5.jpg" alt="">
+  </div>
+  <div class="visit-gallery-item visit-gallery-item-3">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-3.jpg" alt="">
+  </div>
+  <div class="visit-gallery-item visit-gallery-item-4">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-4.jpg" alt="">
+  </div>
+</div>
+
+
+<!-- Skyline -->
+<div class="visit-skyline">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/skyline-2.jpg" alt="">
 </div>
 
 

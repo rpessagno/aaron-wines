@@ -119,6 +119,7 @@
     }
   }
 
+/*
   &-labels {
 
     &-header {
@@ -259,6 +260,158 @@
       }
     }
   }
+  */
+
+
+
+
+
+  &-labels {
+    background: $blue;
+
+    &-header {
+      padding: 200px 0 40px;
+      width: calc(100% - 80px);
+      max-width: 1500px;
+      margin: 0 auto;
+      text-align: center;
+
+      h1 {
+        // font: 300 normal 120px/1 $serif-display;
+        font: 300 normal 80px/1 $serif;
+        color: $beige;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &-main {
+
+
+      &-img {
+        width: 60%;
+        height: 100vh;
+
+        img {
+          @include img-cover;
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+
+        &-1 {
+          margin-bottom: 200px;
+
+          .about-labels-main-content {
+            left: -100px;
+          }
+
+        }
+
+        &-2 {
+          padding-bottom: 200px;
+
+          .about-labels-main-content {
+            left: 100px;
+          }
+        }
+      }
+
+      &-content {
+        width: 40%;
+        padding: 80px;
+        background-color: #fff;
+        position: relative;
+        z-index: 2;
+        
+      }
+    }
+
+    &-sub {
+      // background: $blue;
+      background: darken($white, 5%);
+      // background: darken($white, 5%) url('assets/images/visit/ohana-bg.svg') center top / 100% 5vw no-repeat;
+      position: relative;
+      padding: 100px 0 300px;
+
+      &-item {
+        width: calc(100% - 80px);
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+
+        + .about-labels-sub-item {
+          margin-top: 80px;
+        }
+
+        // .h2 {
+        //   color: $beige;
+        // }
+
+        // p {
+        //   color: $white;
+        // }
+      }
+
+      &-img {
+        width: 50%;
+        overflow: hidden;
+
+        img {
+          @include img-cover;
+        }
+      }
+
+      &-content {
+        width: 50%;
+        padding: 80px;
+      }
+    }
+
+    &-logo {
+      display: block;
+      height: 50px;
+      width: auto;
+      margin: 0 0 40px;
+    }
+
+    &-gallery {
+      // background-color: #fefce9;
+      background: darken($white, 5%);
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background-color: #fefce9;
+        z-index: 1;
+      }
+      
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        -webkit-mask-image: url('assets/images/global/large-image-mask-2.svg');
+        mask-image: url('assets/images/global/large-image-mask-2.svg');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+  
+
+
 
   &-planet {
     background: #fefce9;

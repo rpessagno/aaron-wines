@@ -36,12 +36,13 @@ get_header();
   <!-- Bottles -->
   <div class="home-shop">
     <div class="home-shop-items">
-      <?php if( have_rows('bottles') ) { ?>
-      <?php while ( have_rows('bottles') ) { the_row(); ?>
-      <?php $image = get_sub_field('image'); ?>
-      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-      <?php } ?>
-      <?php } ?>
+      <?php 
+      $bottles = get_field('bottles');
+      if( $bottles ): ?>
+        <?php foreach( $bottles as $bottle ): ?>
+          <img src="<?php echo $bottle['url']; ?>" alt="<?php echo $bottle['alt']; ?>">
+        <?php endforeach; ?>
+      <?php endif; ?>
     </div>
 
 
@@ -151,8 +152,11 @@ get_header();
 </div>
 
 <!-- Skyline -->
+<?php
+  $skyline = get_field('skyline');
+?>
 <div class="home-skyline">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/home/celebration.jpg" alt="Celebration">
+  <img src="<?php echo $skyline['url']; ?>" alt="<?php echo $skyline['alt']; ?>">
 </div>
 
 <?php get_footer(); ?>
