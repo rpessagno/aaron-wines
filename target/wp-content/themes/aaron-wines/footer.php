@@ -1,6 +1,13 @@
 
 
 
+<?php
+  $contact_info = get_field('contact_info', 32);
+  $email = $contact_info['email'];
+  $phone = $contact_info['phone'];
+  $address = $contact_info['address'];
+  $google_maps_url = $contact_info['google_maps_url'];
+?>
 
 
 <footer class="footer">
@@ -15,25 +22,25 @@
 
     <div class="footer-item contact">
       <h1 class="footer-title">Contact Us</h1>
-      <p class="text">
-        <a href="tel:805.369.2037" class="no-underline">805.369.2037</a><br>
-        <a href="mailto:info@aaronwines.com" class="no-underline">info@aaronwines.com</a>
+      <p class="p1">
+        <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a><br>
+        <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
       </p>
     </div>
 
     <div class="footer-item location">
       <h1 class="footer-title">Visit Us</h1>
-      <p class="text">
-        3050 Limestone Way <br>
-        Paso Robles, CA 93446
+      <p class="p1">
+        <a href="<?php echo $google_maps_url; ?>" target="_blank" class=""><?php echo $address; ?></a>
       </p>
     </div>
 
     <div class="footer-item club">
       <h1 class="footer-title">Members</h1>
-      <p class="text">
+      <div>
         <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button button-small button-outline button-light">Sign In</a>
-        <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="button button-small button-outline button-light">Join</a></p>
+        <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="button button-small button-outline button-light">Join</a>
+      </div>
     </div>
 
     <div class="footer-item planet">

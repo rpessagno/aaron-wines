@@ -63,8 +63,12 @@
     color: #aaa;
   }
 
-  .text {
+  .p1 {
     color: $white;
+
+    a {
+      @include link-underline-on-hover;
+    }
   }
 
   &-links {
@@ -79,17 +83,34 @@
     max-width: 1300px;
   }
 
-  &-copyright {
+  &-nav {
     display: flex;
     flex-flow: row wrap;
 
+    p,
     li {
-      list-style-type: none;
-      color: $white;
       font-size: 16px;
+      color: $white;
+    }
 
-      + li {
-        margin-left: 20px;
+    .menu-footer-container {
+      margin-left: 20px;
+    }
+
+    .menu {
+      display: flex;
+      flex-flow: row wrap;
+
+      li {
+        list-style-type: none;
+
+        + li {
+          margin-left: 20px;
+        }
+
+        a {
+          @include link-underline-on-hover;
+        }
       }
     }
   }
