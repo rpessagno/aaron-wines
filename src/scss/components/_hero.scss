@@ -7,12 +7,9 @@
   min-height: 600px;
   overflow: hidden;
   position: relative;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 
   @include bp(m) {
-    min-height: 0;
+    min-height: 350px;
     height: 55vw;
   }
 
@@ -29,34 +26,6 @@
   img {
     @include img-cover;
   }  
-
-  // h1 {
-  //   position: relative;
-  //   z-index: 2;
-  //   color: $white;
-  //   font: 200 normal 60px/1.2 $serif;
-  //   text-transform: uppercase;
-  //   letter-spacing: .05em;
-  //   text-shadow: 0 0 1.5em $black;
-
-  //   @include bp(l) {
-  //     font-size: 6vw;
-  //   }
-  // }
-
-  // &-secondary {
-  //   height: 500px;
-  //   min-height: 0;
-  //   background: transparent center bottom / cover no-repeat;
-
-  //   @include bp(m) {
-  //     height: 400px;
-  //   }
-
-  //   @include bp(s) {
-  //     height: 300px;
-  //   }
-  // }
 }
 
 .page-hero {

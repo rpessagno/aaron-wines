@@ -4,10 +4,6 @@
 
 .home {
 
-  &-hero {
-    text-align: center;
-  }
-
   &-overview {
     background: $light-grey-bg url('assets/images/home/overview-bg.jpg') center top / cover no-repeat;
   }
@@ -21,15 +17,27 @@
     text-align: center;
     position: relative;
     top: -240px;
-
     -webkit-mask-image: url('assets/images/global/content-card-center-mask.svg');
     mask-image: url('assets/images/global/content-card-center-mask.svg');
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 
+    @include bp(l) {
+      padding: 80px;
+      max-width: 800px;
+      top: -150px;
+    }
+
     @include bp(s) {
       width: calc(100% - 40px);
-      padding: 30px 40px 40px;
+      padding: 80px 40px;
+      max-width: 600px;
+    }
+
+    @include bp(xs) {
+      width: calc(100% - 20px);
+      padding: 60px 30px;
+      top: -100px;
     }
 
     &-title {
@@ -67,29 +75,43 @@
   &-shop {
     overflow: hidden;
     position: relative;
-    // margin-top: 100px;
 
     &-items {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-around;
-      padding: 0 5% 60px;
+      padding: 0 5%;
       width: 120%;
       position: relative;
       left: -10%;
       z-index: 2;
 
       img {
-        width: calc((100% / 9) - 60px);
+        width: calc((100% / 9) - 3%);
         height: auto;
+
+        @include bp(s) {
+          width: calc((100% / 5) - 5%);
+        }
+
+        &:nth-child(1n+6) {
+
+          @include bp(s) {
+            display: none;
+          }
+        }
       }
     }
 
     &-content {
       background-color: $blue;
-      padding: 220px 0 300px;
+      padding: 20vw 0;
       position: relative;
-      margin-top: -140px;
+      margin-top: -10vw;
+
+      @include bp(s) {
+        // margin-top: -20vw;
+      }
 
       &:before {
         content: '';
@@ -103,8 +125,6 @@
       }
 
       &-items {
-        // border-top: $white dashed 1px;
-        // border-bottom: $white dashed 1px;
         border: $white dashed 1px;
         position: relative;
         display: flex;
@@ -112,12 +132,16 @@
         width: calc(100% - 80px);
         max-width: 1000px;
         margin: 0 auto;
-        // background-color: darken($blue, 3%);
-        // position: relative;
-        // z-index: 2;
-        // top: -140px;
-
         border-radius: 20px;
+
+         @include bp(l) {
+          max-width: 800px;
+         }
+
+        @include bp(s) {
+          max-width: 500px;
+          width: calc(100% - 40px);
+        }
       }
 
       &-item {
@@ -126,15 +150,34 @@
         padding-bottom: 60px;
         text-align: center;
 
+        @include bp(m) {
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+
+        @include bp(s) {
+          width: 100%;
+        }
+
         &:nth-child(1) {
           border-right: $white solid 1px;
           padding-right: 40px;
-          // padding-left: 60px;
+
+          @include bp(s) {
+            border-right: 0;
+            border-bottom: $white solid 1px;
+            padding-right: 0;
+            padding-bottom: 100px;
+          }
         }
 
         &:nth-child(2) {
-          // padding-right: 60px;
           padding-left: 40px;
+
+          @include bp(s) {
+            padding-left: 0;
+            padding-top: 100px;
+          }
         }
 
         img {
@@ -142,6 +185,10 @@
           margin: 0 auto 20px;
           height: 50px;
           width: auto;
+
+          @include bp(l) {
+            height: 30px;
+          }
         }
 
         p {
@@ -169,6 +216,11 @@
         background-color: $blue;
         z-index: 1;
         transition: transform .2s $easing;
+
+        @include bp(m) {
+          height: 130px;
+          width: 130px;
+        }
 
         &:hover {
           transform: translate(-50%, -50%) scale(1.1);
@@ -206,7 +258,7 @@
       margin-left: 15%;
 
       @include bp(m) {
-        margin: 0;
+        margin: 0 auto;
         padding: 60px 40px 0;
       }
 
@@ -222,20 +274,17 @@
 
   &-club-winemaker {
     background: #f3f3f4 url('assets/images/home/club-winemaker-bg.jpg') center bottom / cover no-repeat;
-    padding-top: 150px;
-  }
+    padding-top: 15vw;
 
-  &-club {
-    // background-color: #f3f3f4;
-    // background: $light-grey-bg url('assets/images/home/rock-texture-4.jpg') right bottom / cover no-repeat;
+    @include bp(s) {
+      padding-top: 0;
+    }
   }
 
   &-winemaker {
-    // background-color: #f3f3f4;
     padding: 200px 0 0;
     position: relative;
     z-index: 3;
-    // background: transparent url('assets/images/home/quote-bg.svg') center 70% / 50% 80% no-repeat;
 
     &:after {
       content: '';
@@ -261,6 +310,10 @@
       align-items: stretch;
       position: relative;
       z-index: 3;
+
+      @include bp(s) {
+        max-width: 400px;
+      }
     }
 
     &-img {
@@ -276,12 +329,6 @@
 
       img {
         @include img-cover;
-        // display: block;
-        // width: 110%;
-        // height: 110%;
-        // object-fit: cover;
-        // position: relative;
-        // left: -5%;
       }
     }
 
@@ -291,7 +338,7 @@
       margin: 0;
 
       @include bp(l) {
-        padding: 0 40px 0 40px;
+        padding: 100px 40px 80px 40px;
       }
 
       @include bp(s) {
