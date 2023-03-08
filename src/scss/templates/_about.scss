@@ -40,18 +40,11 @@
       margin: 0 40px 60px 0;
       text-align: center;
 
-      // img {
-      //   -webkit-mask-image: url('assets/images/global/card-9.svg');
-      //   mask-image: url('assets/images/global/card-9.svg');
-      //   -webkit-mask-repeat: no-repeat;
-      //   mask-repeat: no-repeat;
-      // }
-
       &:nth-child(1) {
 
         img {
-          -webkit-mask-image: url('assets/images/about/team-member-mask-1.svg');
-          mask-image: url('assets/images/about/team-member-mask-1.svg');
+          -webkit-mask-image: url('assets/images/about/team-mask-1.svg');
+          mask-image: url('assets/images/about/team-mask-1.svg');
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
         }
@@ -60,8 +53,8 @@
       &:nth-child(2) {
 
         img {
-          -webkit-mask-image: url('assets/images/about/team-member-mask-2.svg');
-          mask-image: url('assets/images/about/team-member-mask-2.svg');
+          -webkit-mask-image: url('assets/images/about/team-mask-2.svg');
+          mask-image: url('assets/images/about/team-mask-2.svg');
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
         }
@@ -70,8 +63,8 @@
       &:nth-child(3) {
 
         img {
-          -webkit-mask-image: url('assets/images/about/team-member-mask-3.svg');
-          mask-image: url('assets/images/about/team-member-mask-3.svg');
+          -webkit-mask-image: url('assets/images/about/team-mask-3.svg');
+          mask-image: url('assets/images/about/team-mask-3.svg');
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
         }
@@ -80,8 +73,8 @@
       &:nth-child(4) {
 
         img {
-          -webkit-mask-image: url('assets/images/about/team-member-mask-4.svg');
-          mask-image: url('assets/images/about/team-member-mask-4.svg');
+          -webkit-mask-image: url('assets/images/about/team-mask-4.svg');
+          mask-image: url('assets/images/about/team-mask-4.svg');
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
         }
@@ -119,7 +112,7 @@
     }
   }
 
-/*
+
   &-labels {
 
     &-header {
@@ -139,7 +132,7 @@
     }
 
     &-main {
-      // background: $blue url('assets/images/global/leaf-texture-2.jpg') center center / cover no-repeat;
+      background: $white url('assets/images/about/labels-bg.jpg') center center / cover no-repeat;
       // padding-bottom: 100px;
       
       &-wrap {
@@ -251,8 +244,8 @@
         display: block;
         width: 100%;
         height: auto;
-        -webkit-mask-image: url('assets/images/global/large-image-mask-2.svg');
-        mask-image: url('assets/images/global/large-image-mask-2.svg');
+        -webkit-mask-image: url('assets/images/about/labels-gallery-mask.svg');
+        mask-image: url('assets/images/about/labels-gallery-mask.svg');
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         position: relative;
@@ -260,11 +253,11 @@
       }
     }
   }
-  */
+  
 
 
 
-
+/*
 
   &-labels {
     background: $blue;
@@ -410,7 +403,7 @@
     }
   }
   
-
+*/
 
 
   &-planet {

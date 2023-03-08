@@ -18,9 +18,10 @@
   &-content {
     width: 50%;
     max-width: 600px;
+    min-height: 500px;
     position: relative;
     z-index: 2;
-    padding: 200px 5% 300px 0;
+    padding: 185px 5% 250px 0;
 
     @include bp(m) {
       width: 100%;
@@ -29,12 +30,12 @@
   }
 
   &-img {
-    -webkit-mask-image: url('assets/images/global/card-9.svg');
-    mask-image: url('assets/images/global/card-9.svg');
+    -webkit-mask-image: url('assets/images/global/intro-img-mask.svg');
+    mask-image: url('assets/images/global/intro-img-mask.svg');
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     width: 50%;
-    max-width: 600px;
+    max-width: 650px;
     position: relative;
     margin-left: 5%;
     top: -100px;

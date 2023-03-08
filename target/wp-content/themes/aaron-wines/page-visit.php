@@ -13,7 +13,7 @@ get_header();
 
 
 <div class="hero page-hero" data-scrollax-parent="true">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/hero-2.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/hero.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
 </div>
 
 
@@ -74,20 +74,20 @@ get_header();
 
 
 <!-- Gallery -->
-<div class="visit-gallery" data-scrollax-parent="true">
-  <div class="visit-gallery-item visit-gallery-item-1" data-scrollax="properties: { 'translateY': '10vw' }">
+<div class="visit-gallery">
+  <div class="visit-gallery-item visit-gallery-item-1" data-scrollax="properties: { 'translateY': '-8vw' }">
     <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-1.jpg" alt="">
   </div>
-  <div class="visit-gallery-item visit-gallery-item-2">
+  <div class="visit-gallery-item visit-gallery-item-2" data-scrollax="properties: { 'translateY': '-5vw' }">
     <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-2.jpg" alt="">
   </div>
-  <div class="visit-gallery-item visit-gallery-item-5">
+  <div class="visit-gallery-item visit-gallery-item-5" data-scrollax="properties: { 'translateY': '-7vw' }">
     <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-5.jpg" alt="">
   </div>
-  <div class="visit-gallery-item visit-gallery-item-3">
+  <div class="visit-gallery-item visit-gallery-item-3" data-scrollax="properties: { 'translateY': '-3vw' }">
     <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-3.jpg" alt="">
   </div>
-  <div class="visit-gallery-item visit-gallery-item-4">
+  <div class="visit-gallery-item visit-gallery-item-4" data-scrollax="properties: { 'translateY': '-6vw' }">
     <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/gallery-4.jpg" alt="">
   </div>
 </div>
@@ -95,7 +95,7 @@ get_header();
 
 <!-- Skyline -->
 <div class="visit-skyline">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/skyline-2.jpg" alt="">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/skyline.jpg" alt="">
 </div>
 
 

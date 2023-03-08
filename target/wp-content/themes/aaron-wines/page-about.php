@@ -25,13 +25,13 @@ get_header();
   $intro_text = $intro['text'];
   $intro_image = $intro['image'];
 ?>
-<div class="intro intro-light about-winemaker">
+<div class="intro intro-light about-winemaker" data-scrollax-parent="true">
   <div class="intro-content">
       <h1 class="eyebrow"><?php echo $intro_eyebrow; ?></h1>
       <h2 class="h1"><?php echo $intro_title; ?></h2>
       <?php echo $intro_text; ?>
   </div>
-  <div class="intro-img">
+  <div class="intro-img" data-scrollax="properties: { 'translateY': '-5vw' }">
     <img src="<?php echo $intro_image['url']; ?>" alt="<?php echo $intro_image['alt']; ?>">
   </div>
 </div>
@@ -83,6 +83,7 @@ get_header();
 
 
 <!-- Labels -->
+<!--
 <?php
   $team = get_field('team');
   $team_eyebrow = $team['eyebrow'];
@@ -158,10 +159,10 @@ get_header();
 </div>
 
 
+-->
 
 
-
-<!-- <div class="about-labels">
+ <div class="about-labels">
 
   <div class="about-labels-main">
     <div class="about-labels-header">
@@ -210,7 +211,7 @@ get_header();
     </div>
   </div>
 
-</div> -->
+</div> 
 
 
 

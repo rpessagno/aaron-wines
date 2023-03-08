@@ -14,7 +14,7 @@
       bottom: 0;
       width: 100%;
       height: 5%;
-      background: transparent url('assets/images/club/club-hero-mask.svg') center bottom / 100% 100% no-repeat;
+      background: transparent url('assets/images/visit/visit-intro-mask.svg') center bottom / 100% 100% no-repeat;
       z-index: 1;
     }
   }
@@ -137,7 +137,7 @@
 
   &-gallery {
     @include clearfix;
-    padding: 200px 0;
+    padding: 150px 0 100px;
     background: $darken-white;
 
     &-item {
@@ -156,7 +156,7 @@
         height: 30vw;
         margin-right: $gallery-gutter;
         margin-bottom: $gallery-gutter;
-        margin-top: 10vw;
+        // margin-top: 10vw;
       }
 
       &-3 {
@@ -164,23 +164,23 @@
         width: calc(25% - $gallery-gutter*2);
         height: 30vw;
         margin-left: $gallery-gutter;
-        margin-top: 2vw;
+        // margin-top: 2vw;
       }
 
       &-4 {
         float: left;
         width: calc(35% - $gallery-gutter);
-        height: 35vw;
+        height: 30vw;
         margin-left: $gallery-gutter;
-        margin-top: 5vw;
+        // margin-top: 10vw;
       }
 
       &-5 {
         float: right;
         width: calc(40% - $gallery-gutter);
-        height: 40vw;
+        height: 50vw;
         margin-right: $gallery-gutter;
-        margin-top: 3vw;
+        // margin-top: 3vw;
       }
     }
 
@@ -191,17 +191,6 @@
 
   &-skyline {
     position: relative;
-
-    // &:after {
-    //   content: '';
-    //   position: absolute;
-    //   left: 0;
-    //   top: 0;
-    //   width: 100%;
-    //   height: 30%;
-    //   background: linear-gradient(0deg, rgba(231,229,222,0) 0%, rgba(231,229,222,1) 100%);
-    //   z-index: 2;
-    // }
 
     img {
       display: block;
