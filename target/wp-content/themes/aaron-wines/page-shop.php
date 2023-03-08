@@ -22,6 +22,7 @@ get_header();
   <?php while ( have_rows('section') ) { the_row(); ?>
   <?php
     $title = get_sub_field('title');
+    $description = get_sub_field('description');
     $logo = get_sub_field('logo');
     $find = array(' ', '\'', '&');
     $replace = array('-', '', 'and');
@@ -32,7 +33,7 @@ get_header();
 
     <div class="shop-header">
       <h2><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>"></h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eligendi quaerat quasi velit fugit, officiis facere magnam sit! Dolores, tenetur nobis nostrum? Eaque neque ipsam porro aperiam rem nam reiciendis.</p>
+      <p><?php echo $description; ?></p>
     </div>
 
     <div class="products">

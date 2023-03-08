@@ -3,5 +3,278 @@
 //==============================
 
 .trade {
-  
+
+  &-products {
+    padding: 100px 0;
+
+    h3 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-assets {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    background-color: $white;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    padding: 60px 60px 80px;
+    width: 80%;
+    max-width: 900px;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility .4s, transform .4s;
+
+    @include bp(s) {
+      left: 20px;
+      top: 20px;
+      width: calc(100% - 40px);
+      padding: 60px 40px;
+      transform: scale(.9);
+      flex-direction: column;
+      justify-content: flex-start;
+      max-height: calc(100% - 40px);
+      overflow: auto;
+    }
+
+    @include bp(xxs) {
+      padding: 40px 30px;
+    }
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, -50%) scale(1);
+
+      @include bp(s) {
+        transform: scale(1);
+      }
+    }
+
+    &-header {
+      width: 100%;
+      text-align: center;
+
+      @include bp(s) {
+        margin-bottom: 30px;
+      }
+
+      .text {
+        color: $brown;
+      }
+    }
+
+    &-sections {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &-section {
+      width: 50%;
+      text-align: left;
+      padding-top: 40px;
+      padding-left: 100px;
+      transition: height .4s;
+
+      @include bp(l) {
+        padding-left: 80px;
+      }
+
+      @include bp(m) {
+        padding-left: 40px;
+      }
+
+      @include bp(s-up) {
+        height: auto !important;
+      }
+
+      @include bp(s) {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 20px;
+        overflow: hidden;
+        height: 50px;
+      }
+
+      .h4 {
+        position: relative;
+
+        &:before,
+        &:after {
+          display: none;
+          content: '';
+          position: absolute;
+          width: .6em;
+          border-bottom: currentColor solid 1px;
+          right: 0;
+          bottom: .6em;
+          transition: transform .5s;
+          transform-origin: center center;
+
+          @include bp(s) {
+            display: block;
+          }
+        }
+
+        &:before {
+          transform: rotate(180deg);
+        }
+
+        &:after {
+          transform: rotate(270deg);
+        }
+
+        &.active {
+          
+          &:before,
+          &:after {
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+
+    &-columns {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      columns: 2;
+      column-gap: 80px;
+      padding: 80px 0 0 100px;
+      text-align: left;
+
+      @include bp(l) {
+        padding-left: 80px;
+      }
+
+      @include bp(m) {
+        padding-left: 40px;
+        column-gap: 40px;
+      }
+
+      @include bp(s) {
+        padding-top: 20px;
+        padding-left: 0;
+        columns: 1;
+      }
+    }
+    
+    &-items {
+      margin-top: 5px;
+    }
+
+    &-item {
+      @include p1;
+      list-style-type: none;
+      line-height: 1.4;
+      color: $brown;
+
+      + .trade-assets-item {
+        margin-top: .5em;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .close-button {
+      top: 20px;
+      right: 20px;
+
+      @include bp(l) {
+        top: 10px;
+        right: 10px;
+      }
+
+      &:before,
+      &:after {
+        border-bottom: $black solid 2px;
+      }
+
+      &:hover,
+      &:focus {
+
+        &:before,
+        &:after {
+          border-bottom-color: $gold;
+        }
+      }
+    }
+
+    &-overlay {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparentize($black, .05);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 199;
+      transition: opacity .4s, visibility .4s;
+
+      &.show {
+        opacity: .7;
+        visibility: visible;
+      }
+    }
+  }
+
+  &-brand {
+    display: flex;
+    flex-flow: row wrap;
+    width: calc(100% - 80px);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0;
+
+    @include bp(s) {
+      width: calc(100% - 40px);
+    }
+
+    &-item {
+      width: calc(50% - (#{$grid-gutter} / 2));
+      margin-right: $grid-gutter;
+      margin-bottom: 60px;
+
+      @include bp(s) {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &-img {
+        margin-bottom: 20px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &-content {
+        text-align: center;
+
+        .h3 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
 }

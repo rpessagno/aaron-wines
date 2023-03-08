@@ -1,0 +1,39 @@
+//==============================
+// Close Button
+//==============================
+
+.close-button {
+  @include input-reset;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  transition: opacity .3s;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30px;
+    transition: border-bottom-color .3s;
+
+    @include bp(s) {
+      width: 20px;
+    }
+  }
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
