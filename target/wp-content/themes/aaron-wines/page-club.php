@@ -46,11 +46,11 @@ get_header();
   $benefits_link = $benefits['link'];
   $benefits_image = $benefits['image'];
 ?>
-<div class="club-benefits" data-scrollax-parent="true">
+<div class="club-benefits">
   <div class="club-benefits-img">
     <img src="<?php echo $benefits_image['url']; ?>" alt="<?php echo $benefits_image['alt']; ?>">
   </div>
-  <div class="club-benefits-content" data-scrollax="properties: { 'translateY': '-6vw' }">
+  <div class="club-benefits-content">
     <h2 class="h2"><?php echo $benefits_title; ?></h2>
     <?php echo $benefits_text; ?>
     <a href="<?php echo $benefits_link['url']; ?>" target="<?php echo $benefits_link['target']; ?>" class="button button-dark button-solid button-medium"><?php echo $benefits_link['title']; ?></a>

@@ -25,10 +25,13 @@
 
   &-header {
     text-align: center;
-    padding: 150px 0 60px;
+    padding: 150px 40px 60px;
+    max-width: 600px;
+    margin: 0 auto;
 
     @include bp(s) {
-      padding: 100px 0 40px;
+      max-width: 400px;
+      padding: 100px 20px 40px;
     }
 
     img {
@@ -40,7 +43,6 @@
     }
 
     p {
-      max-width: 600px;
       margin: 20px auto 0;
     }
   }
