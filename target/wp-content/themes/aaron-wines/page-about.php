@@ -63,7 +63,7 @@ get_header();
     <div class="about-team-item">
       <div class="about-team-item-img"><img src="<?php echo $team_members_image['url']; ?>" alt="<?php echo $team_members_image['alt']; ?>"></div>
       <h3 class="h3"><?php echo $team_members_name; ?></h3>
-      <p><?php echo $team_members_title; ?></p>
+      <p class="p1"><?php echo $team_members_title; ?></p>
     </div>
       
     <?php } ?>

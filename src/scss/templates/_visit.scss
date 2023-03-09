@@ -34,6 +34,7 @@
 
      @include bp(m) {
       width: calc(100% - 60px);
+      padding-top: 150px;
     }
 
     &-item {
@@ -107,7 +108,7 @@
     margin-top: 140px;
 
     @include bp(s) {
-      margin-top: 0;
+      margin-top: 40px;
     }
 
     &-intro {
@@ -137,8 +138,12 @@
 
   &-gallery {
     @include clearfix;
-    padding: 150px 0 100px;
+    padding: 150px 0 $gallery-gutter;
     background: $darken-white;
+
+    @include bp(m) {
+      padding-top: 100px;
+    }
 
     &-item {
 
@@ -198,3 +203,65 @@
     }
   }
 }
+
+
+
+#Tock_widget_container {
+  margin-top: 30px;
+
+  .TockButtonWidgetContainer {
+    width: auto !important;
+  }
+
+  .TockButton-buttonContainer {
+    border: 0 !important;
+    border-radius: 0 !important;
+    line-height: 0 !important;
+    width: auto !important;
+  }
+
+  .TockButton {
+    font-family: $sans-serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: .15em !important;
+    border: 0 !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    transition: background-color .2s, color .2s !important;
+    text-align: center !important;
+    font-size: 15px !important;
+    padding: 1em 2em !important;
+    background-color: transparent !important;
+    border-style: solid !important;
+    border-width: 2px !important;
+    color: $blue !important;
+    border-color: $blue !important;
+    border-radius: 0 !important;
+    height: auto !important;
+
+    @include bp(s) {
+      font-size: 13px !important;
+    }
+
+    &:hover {
+      background-color: $blue !important;
+      color: $white !important;
+    }
+  }
+
+  .TockLogo-container {
+    display: none !important;
+  }
+}
+
+div#Tock_widget_container>div.TockWidgetWrapper .TockButton .TockWidget-H1 {
+  font-family: $sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  font-size: 15px !important;
+}
+

@@ -81,6 +81,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 
 .h3 {
   @include h3;
+
+  + .p1 {
+    margin-top: .3em;
+  }
 }
 
 @mixin h4 {

@@ -59,6 +59,18 @@ src="https://www.facebook.com/tr?id=1399755556828091&ev=PageView
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
+<!-- Tock -->
+<script>
+!function(t,o,c,k){if(!t.tock){var e=t.tock=function(){e.callMethod?
+e.callMethod.apply(e,arguments):e.queue.push(arguments)};t._tock||(t._tock=e),
+e.push=e,e.loaded=!0,e.version='1.0',e.queue=[];var f=o.createElement(c);f.async=!0,
+f.src=k;var g=o.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g)}}(
+window,document,'script','https://www.exploretock.com/tock.js');
+
+tock('init', 'aaronwines');
+</script>
+<!-- / Tock -->
+
 </head>
 
 <body <?php body_class(); ?>>
