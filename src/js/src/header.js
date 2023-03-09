@@ -2,23 +2,13 @@
 // Header
 //==============================
 
-// $('.header-nav-button').click(function() {
-//   $('.header-nav-items').addClass('open');
-//   $('.header-nav-close').addClass('open');
-// });
-
-// $('.header-nav-close').click(function() {
-//   $('.header-nav-items').removeClass('open');
-//   $('.header-nav-close').removeClass('open');
-// });
-
-
 var header = $('.header');
-var button = $('.header-button');
+var button = $('.header-nav-button');
 var nav = $('.header-nav');
 
 // button
-$('.header-button').click(function() {
+button.click(function() {
+  header.toggleClass('open');
   button.toggleClass('open');
   nav.toggleClass('open');
 });
@@ -48,14 +38,14 @@ $(window).scroll(function() {
 
 // hide header on scroll
 // http://www.jquerybyexample.net/2013/07/jquery-detect-scroll-position-up-down.html
-var scrollPos = 0;
-$(window).scroll(function () {
-  var currentScrollPos = $(this).scrollTop();
-  if (currentScrollPos > scrollPos && currentScrollPos > 150 && header.is(':hover') == false) {
-    header.addClass('hidden');
-  } else {
-    header.removeClass('hidden');
-  }
-  scrollPos = currentScrollPos;
-});
+// var scrollPos = 0;
+// $(window).scroll(function () {
+//   var currentScrollPos = $(this).scrollTop();
+//   if (currentScrollPos > scrollPos && currentScrollPos > 150 && header.is(':hover') == false) {
+//     header.addClass('hidden');
+//   } else {
+//     header.removeClass('hidden');
+//   }
+//   scrollPos = currentScrollPos;
+// });
 

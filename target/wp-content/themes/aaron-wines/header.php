@@ -73,11 +73,6 @@ $header_style = get_field('header_style', $page_id);
     <?php echo file_get_contents(get_template_directory() . '/assets/images/global/aaron-logo-white.svg'); ?>
   </a>
   <nav class="header-nav">
-    <button class="header-nav-button">
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
-    </button>
 
     <?php wp_nav_menu( array( 'menu' => 'main' ) ); ?>
 
@@ -99,7 +94,11 @@ $header_style = get_field('header_style', $page_id);
     </div>
 
   </nav>
-  <button class="header-nav-close"></button>
+  <button class="header-nav-button">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </button>
 </header>
 
 <div v65remotejs="modalCart"></div>
