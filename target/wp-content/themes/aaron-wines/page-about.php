@@ -166,7 +166,7 @@ get_header();
 
   <div class="about-labels-main">
     <div class="about-labels-header">
-      <p class="eyebrow">Four Distinct Brands</p>
+      <p class="eyebrow">Lorem Ipsum</p>
       <h1 class="h1">Our Labels</h1>
     </div>
     <div class="about-labels-main-wrap">

@@ -12,33 +12,56 @@
     background: $white;
 
     &-header {
-      padding: 100px 0 40px;
+      padding: 0 0 40px;
       width: calc(100% - 80px);
       max-width: 1600px;
       margin: 0 auto;
       text-align: center;
 
-      h1 {
-        font: 300 normal 80px/1 $serif;
-        color: #b18a5e;
-        position: relative;
-        // top: 50px;
-        z-index: 2;
+      @include bp(m) {
+        padding: 80px 0 10px;
+      }
+
+      @include bp(s) {
+        padding: 100px 0 10px;
       }
     }
 
     &-items {
       display: flex;
       flex-flow: row wrap;
-      width: calc(100% - 80px);
+      justify-content: center;
+      width: calc(100% - 120px);
       max-width: 1600px;
       margin: 0 auto;
+
+      @include bp(s) {
+        width: calc(100% - 40px);
+      }
     }
 
     &-item {
-      width: calc((100% / 4) - 40px);
-      margin: 0 40px 60px 0;
+      width: calc((100% / 4) - (#{$team-gutter * 3} / 4));
+      margin-right: $team-gutter;
+      margin-bottom: 60px;
       text-align: center;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(2n) {
+
+        @include bp(m) {
+          margin-right: 0;
+        }
+      }
+
+      @include bp(m) {
+        width: calc(50% - (#{$grid-gutter} / 2));
+        margin-right: $grid-gutter;
+        margin-bottom: 40px;
+      }
 
       &:nth-child(1) {
 
@@ -82,8 +105,16 @@
 
       &-img {
         overflow: hidden;
-        height: 25vw;
+        height: 500px;
         margin-bottom: 20px;
+
+        @include bp(xl) {
+          height: 25vw;
+        }
+
+        @include bp(m) {
+          height: 50vw;
+        }
 
         img {
           display: block;
@@ -118,67 +149,89 @@
     &-header {
       padding: 200px 0 40px;
       width: calc(100% - 80px);
-      max-width: 1500px;
       margin: 0 auto;
       text-align: center;
 
-      h1 {
-        // font: 300 normal 120px/1 $serif-display;
-        font: 300 normal 80px/1 $serif;
-        // color: $beige;
-        position: relative;
-        z-index: 2;
+      @include bp(m) {
+        padding: 100px 0 20px;
       }
     }
 
     &-main {
       background: $white url('assets/images/about/labels-bg.jpg') center center / cover no-repeat;
-      // padding-bottom: 100px;
       
       &-wrap {
         width: calc(100% - 80px);
         max-width: 1600px;
         margin: 0 auto;
-      }
 
-      &-items {
-        display: flex;
-        flex-flow: row wrap;
+        @include bp(m) {
+          width: calc(100% - 40px);
+        }
       }
 
       &-img {
         height: 600px;
         overflow: hidden;
 
+        @include bp(xl) {
+          height: 40vw;
+        }
+
         img {
           @include img-cover;
+        }
+      }
+
+      &-items {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 80px 0;
+
+        @include bp(s) {
+          padding: 0;
+          justify-content: center;
         }
       }
 
       &-item {
         width: 50%;
         padding: 40px 80px;
-        margin: 80px 0;
         text-align: center;
-        // border-left: #aaa dashed 1px;
-        // border-bottom: #aaa dashed 1px;
+
+        @include bp(l) {
+          padding: 20px 40px;
+        }
+
+        @include bp(s) {
+          width: 100%;
+          padding: 60px 10px;
+          max-width: 500px;
+        }
 
         &:first-child {
           border-right: #aaa dashed 1px;
-        }
 
-        p {
-          // color: $white;
+          @include bp(s) {
+            border-right: 0;
+            border-bottom: #aaa dashed 1px;
+          }
         }
       }
     }
 
     &-sub {
-      // background: $blue;
       background: darken($white, 5%);
-      // background: darken($white, 5%) url('assets/images/visit/ohana-bg.svg') center top / 100% 5vw no-repeat;
       position: relative;
       padding: 100px 0 300px;
+
+      @include bp(m) {
+        padding-bottom: 200px;
+      }
+
+      @include bp(s) {
+        padding-bottom: 50px;
+      }
 
       &-item {
         width: calc(100% - 80px);
@@ -187,24 +240,25 @@
         display: flex;
         flex-flow: row wrap;
         position: relative;
-        // top: -60px;
+
+        @include bp(s) {
+          width: calc(100% - 40px);
+          max-width: 500px;
+        }
 
         + .about-labels-sub-item {
           margin-top: 80px;
         }
-
-        // .h2 {
-        //   color: $beige;
-        // }
-
-        // p {
-        //   color: $white;
-        // }
       }
 
       &-img {
         width: 50%;
         overflow: hidden;
+
+        @include bp(s) {
+          width: 100%;
+          order: -1;
+        }
 
         img {
           @include img-cover;
@@ -214,6 +268,15 @@
       &-content {
         width: 50%;
         padding: 80px;
+
+        @include bp(m) {
+          padding: 40px;
+        }
+
+        @include bp(s) {
+          width: 100%;
+          padding: 40px 10px;
+        }
       }
     }
 
@@ -222,10 +285,14 @@
       height: 50px;
       width: auto;
       margin: 0 auto 40px;
+
+      @include bp(m) {
+        height: 30px;
+        margin-bottom: 20px;
+      }
     }
 
     &-gallery {
-      // background-color: #fefce9;
       background: darken($white, 5%);
       position: relative;
 
@@ -409,6 +476,10 @@
   &-planet {
     background: #fefce9;
     padding-top: 80px;
+
+    @include bp(s) {
+      padding-top: 40px;
+    }
 
     &-intro {
 
