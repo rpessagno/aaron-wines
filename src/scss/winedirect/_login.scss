@@ -48,6 +48,7 @@
 
   button {
     @include wd-button;
+    @include wd-button-filled;
   }
 
   + p + p a {

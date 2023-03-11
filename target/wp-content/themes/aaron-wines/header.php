@@ -19,7 +19,6 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!-- <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet"> -->
 <link rel="stylesheet" href="https://use.typekit.net/qwi5ewx.css">
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 

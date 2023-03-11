@@ -26,9 +26,10 @@
 
     li {
       list-style-type: none;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       text-align: center;
-      font-size: 12px;
+      font-size: 13px;
+      font-weight: 400;
 
       @include bp(l) {
         width: 25%;
@@ -263,6 +264,7 @@
         }
         
         &:before {
+
           @include bp(s) {
             content: 'Requested: ';
           }
@@ -273,6 +275,7 @@
 
   .linkBtn {
     @include wd-button;
+    @include wd-button-filled;
   }
 
   .v65-memberAllocationWrapper {
@@ -322,6 +325,7 @@
 
       button {
         @include wd-button;
+        @include wd-button-filled;
       }
     }
   }
@@ -362,7 +366,8 @@
     }
 
     h3 {
-      @include wd-title4;
+      @include wd-text;
+      font-weight: 700;
     }
   }
 
@@ -444,6 +449,7 @@
 
     .defaultBtn {
       @include wd-button;
+      @include wd-button-filled;
     }
 
     textarea[name="Notes"] {

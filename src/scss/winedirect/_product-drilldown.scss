@@ -5,12 +5,12 @@
 .product {
 
   &-drilldown {
-    padding: 100px calc(50% - 560px);
+    padding: 150px calc(50% - 560px);
     display: flex;
     flex-flow: row wrap;
 
     @include bp(xl) {
-      padding: 200px 80px 200px 60px;
+      padding: 180px 80px 200px 60px;
     }
 
     @include bp(m) {
@@ -89,18 +89,9 @@
       .v65-product-addToCart-caseQuantity,
       .v65-product-addToCart-unitDescription {
         margin: .5em 0;
-        font: 400 normal 24px/1.5 $monospace;
-        color: $charcoal;
+        @include wd-title2;
         text-transform: uppercase;
         display: inline-block;
-
-        @include bp(m) {
-          font-size: 20px;
-        }
-
-        @include bp(s) {
-          font-size: 18px;
-        }
       }
 
       .v65-product-addToCart-securityMessage,
@@ -132,17 +123,15 @@
 
       input {
         @include input-reset;
-        @include wd-text;
+        @include button;
         background-color: transparent;
-        border-top: $black solid 1px;
-        border-left: $black solid 1px;
-        border-bottom: $black solid 1px;
+        border: $blue solid 2px;
         padding: 0 .8em;
-        color: $black;
-        width: 50px !important;
-        height: 40px;
-        border-radius: 2px 0 0 2px;
-        margin-right: 20px;
+        color: $blue;
+        width: 70px !important;
+        height: 50px;
+        border-radius: 0 !important;
+        margin-right: 10px;
       }
     }
 
@@ -150,28 +139,21 @@
       float: left;
       
       button {
-        @include input-reset;        
-        font: 500 normal 13px/1 $serif;
-        letter-spacing: .15em;
+        @include input-reset;
+        @include button;
+        font-size: 15px;
+        padding: 0 2em;
+        height: 50px;
         background-color: $blue;
-        padding: 0 1.5em;
+        // border-style: solid;
+        // border-width: 2px;
         color: $white;
-        border: 0;
-        display: inline-block;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: background-color .2s, color .2s;
-        height: 40px;
-        text-align: center;
-        border-radius: 3px;
+        // border-color: $blue;
 
-        @include bp(xs) {
-          font-size: 11px;
-        }
-
-        &:hover,
-        &:focus {
-          background-color: darken($blue, 10%);
+        &:hover {
+          background-color: $gold;
+          color: $white;
+          cursor: pointer;
         }
 
         span {
@@ -194,7 +176,7 @@
     }
 
     h1 {
-      @include wd-title3;
+      @include wd-title1;
     }
 
     h2 {
