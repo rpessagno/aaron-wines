@@ -12,7 +12,7 @@ get_header();
 
 
 <div class="hero page-hero contact-hero" data-scrollax-parent="true">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/contact/hero.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/contact/contact-hero.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
 </div>
 
 

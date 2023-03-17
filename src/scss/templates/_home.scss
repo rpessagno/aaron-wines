@@ -76,29 +76,53 @@
     overflow: hidden;
     position: relative;
 
+    &.animate {
+
+      img {
+        transform: translateY(0);
+
+        @for $i from 1 through 9 {
+          &:nth-child(#{$i}) {
+            transition-delay: 0.1s * $i;
+          }
+        }
+      }
+    }
+
     &-items {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-around;
+      align-items: flex-end;
       padding: 0 5%;
       width: 120%;
       position: relative;
       left: -10%;
       z-index: 2;
 
+      &-desktop {
+
+        @include bp(s) {
+          display: none;
+        }
+      }
+
+      &-mobile {
+        display: none;
+
+        @include bp(s) {
+          display: flex;
+        }
+      }
+
       img {
         width: calc((100% / 9) - 3%);
         height: auto;
+        transform: translateY(10vw);
+        transition: transform 1s;
 
         @include bp(s) {
           width: calc((100% / 5) - 5%);
-        }
-
-        &:nth-child(1n+6) {
-
-          @include bp(s) {
-            display: none;
-          }
         }
       }
     }
@@ -121,7 +145,7 @@
         left: 0;
         bottom: 100%;
         z-index: 1;
-        background: transparent url('assets/images/home/shop-wave.svg') center bottom / 100% 100% no-repeat;
+        background: transparent url('assets/images/home/shop-wave-2.svg') center bottom / 100% 100% no-repeat;
       }
 
       &-items {
@@ -133,10 +157,18 @@
         max-width: 1000px;
         margin: 0 auto;
         border-radius: 20px;
+        transform: scale(.8);
+        opacity: 0;
+        transition: transform .6s, opacity .6s;
+
+        &.animate {
+          transform: scale(1);
+          opacity: 1;
+        }
 
          @include bp(l) {
           max-width: 800px;
-         }
+        }
 
         @include bp(s) {
           max-width: 500px;
@@ -160,12 +192,12 @@
         }
 
         &:nth-child(1) {
-          border-right: $white solid 1px;
+          border-right: $white dashed 1px;
           padding-right: 40px;
 
           @include bp(s) {
             border-right: 0;
-            border-bottom: $white solid 1px;
+            border-bottom: $white dashed 1px;
             padding-right: 0;
             padding-bottom: 100px;
           }
@@ -230,7 +262,7 @@
   }
 
   &-visit {
-    background-color: #354751;
+    background-color: $blue;
   }
 
   &-map {

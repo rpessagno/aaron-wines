@@ -180,13 +180,41 @@
 
         img {
           @include img-cover;
+          position: relative;
+          width: 110%;
+          height: 120%;
+          left: -5%;
         }
       }
 
       &-items {
         display: flex;
         flex-flow: row wrap;
-        padding: 80px 0;
+        padding: 0;
+        position: relative;
+        // border-bottom: #aaa dashed 1px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          border-bottom:  #aaa dashed 1px;
+          width: 0;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          transition: width 1s 1s;
+        }
+
+        &.animate {
+          
+          .about-labels-main-item:first-child:after {
+            height: 100%;
+          }
+
+          &:after {
+            width: 100%;
+          }
+        }
 
         @include bp(s) {
           padding: 0;
@@ -196,8 +224,7 @@
 
       &-item {
         width: 50%;
-        padding: 40px 80px;
-        text-align: center;
+        padding: 80px;
 
         @include bp(l) {
           padding: 20px 40px;
@@ -210,20 +237,36 @@
         }
 
         &:first-child {
-          border-right: #aaa dashed 1px;
+          position: relative;
 
-          @include bp(s) {
-            border-right: 0;
-            border-bottom: #aaa dashed 1px;
+          &:after {
+            content: '';
+            position: absolute;
+            border-right:  #aaa dashed 1px;
+            height: 0;
+            right: 0;
+            top: 0;
+            transition: height 1s;
           }
+          // border-right: #aaa dashed 1px;
+
+          // @include bp(s) {
+          //   border-right: 0;
+          //   border-bottom: #aaa dashed 1px;
+          // }
         }
       }
     }
 
     &-sub {
-      background: darken($white, 5%);
+      // background: darken($white, 5%);
       position: relative;
-      padding: 100px 0 300px;
+      padding: 100px 0 170px;
+      display: flex;
+      flex-flow: row wrap;
+      width: calc(100% - 80px);
+      max-width: 1240px;
+      margin: 0 auto;
 
       @include bp(m) {
         padding-bottom: 200px;
@@ -234,25 +277,27 @@
       }
 
       &-item {
-        width: calc(100% - 80px);
-        max-width: 1400px;
-        margin: 0 auto;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column nowrap;
         position: relative;
+        width: calc(50% - (30px / 2));
+        margin-right: 30px;
+        margin-bottom: 30px;
+        background-color: darken($white, 5%);
 
         @include bp(s) {
-          width: calc(100% - 40px);
+          width: 100%;
           max-width: 500px;
         }
 
-        + .about-labels-sub-item {
-          margin-top: 80px;
+        &:nth-child(2n) {
+          margin-right: 0;
         }
       }
 
       &-img {
-        width: 50%;
+        // width: 100%;
+        height: 300px;
         overflow: hidden;
 
         @include bp(s) {
@@ -266,8 +311,8 @@
       }
 
       &-content {
-        width: 50%;
-        padding: 80px;
+        // width: 50%;
+        padding: 50px 50px 60px;
 
         @include bp(m) {
           padding: 40px;
@@ -284,7 +329,7 @@
       display: block;
       height: 50px;
       width: auto;
-      margin: 0 auto 40px;
+      margin: 0 0 40px;
 
       @include bp(m) {
         height: 30px;
@@ -293,7 +338,7 @@
     }
 
     &-gallery {
-      background: darken($white, 5%);
+      background: $white;
       position: relative;
 
       &:after {
@@ -306,11 +351,8 @@
         background-color: #fefce9;
         z-index: 1;
       }
-      
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
+
+      &-mask {
         -webkit-mask-image: url('assets/images/about/labels-gallery-mask.svg');
         mask-image: url('assets/images/about/labels-gallery-mask.svg');
         -webkit-mask-repeat: no-repeat;
@@ -318,160 +360,17 @@
         position: relative;
         z-index: 2;
       }
-    }
-  }
-  
-
-
-
-/*
-
-  &-labels {
-    background: $blue;
-
-    &-header {
-      padding: 200px 0 40px;
-      width: calc(100% - 80px);
-      max-width: 1500px;
-      margin: 0 auto;
-      text-align: center;
-
-      h1 {
-        // font: 300 normal 120px/1 $serif-display;
-        font: 300 normal 80px/1 $serif;
-        color: $beige;
-        position: relative;
-        z-index: 2;
-      }
-    }
-
-    &-main {
-
-
-      &-img {
-        width: 60%;
-        height: 100vh;
-
-        img {
-          @include img-cover;
-        }
-      }
-
-      &-item {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-
-        &-1 {
-          margin-bottom: 200px;
-
-          .about-labels-main-content {
-            left: -100px;
-          }
-
-        }
-
-        &-2 {
-          padding-bottom: 200px;
-
-          .about-labels-main-content {
-            left: 100px;
-          }
-        }
-      }
-
-      &-content {
-        width: 40%;
-        padding: 80px;
-        background-color: #fff;
-        position: relative;
-        z-index: 2;
-        
-      }
-    }
-
-    &-sub {
-      // background: $blue;
-      background: darken($white, 5%);
-      // background: darken($white, 5%) url('assets/images/visit/ohana-bg.svg') center top / 100% 5vw no-repeat;
-      position: relative;
-      padding: 100px 0 300px;
-
-      &-item {
-        width: calc(100% - 80px);
-        max-width: 1400px;
-        margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        position: relative;
-
-        + .about-labels-sub-item {
-          margin-top: 80px;
-        }
-
-        // .h2 {
-        //   color: $beige;
-        // }
-
-        // p {
-        //   color: $white;
-        // }
-      }
-
-      &-img {
-        width: 50%;
-        overflow: hidden;
-
-        img {
-          @include img-cover;
-        }
-      }
-
-      &-content {
-        width: 50%;
-        padding: 80px;
-      }
-    }
-
-    &-logo {
-      display: block;
-      height: 50px;
-      width: auto;
-      margin: 0 0 40px;
-    }
-
-    &-gallery {
-      // background-color: #fefce9;
-      background: darken($white, 5%);
-      position: relative;
-
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 50%;
-        background-color: #fefce9;
-        z-index: 1;
-      }
       
       img {
         display: block;
         width: 100%;
         height: auto;
-        -webkit-mask-image: url('assets/images/global/large-image-mask-2.svg');
-        mask-image: url('assets/images/global/large-image-mask-2.svg');
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
+        
         position: relative;
         z-index: 2;
       }
     }
   }
-  
-*/
-
 
   &-planet {
     background: #fefce9;

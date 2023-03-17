@@ -73,5 +73,20 @@
       }
     }
   }
+
+  &-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2em;
+
+    .button {
+      margin-top: 10px;
+      margin-right: 10px;
+
+      @include bp(xs) {
+        width: 100%;
+      }
+    }
+  }
 }
 

@@ -49,11 +49,11 @@ get_header();
       $price = get_sub_field('price');
       $deal = get_sub_field('deal');
       $tock_id = get_sub_field('tock_id');
-      $title = get_sub_field('title');
+      $image = get_sub_field('image');
     ?>
   <div class="visit-tastings-item">
     <div class="visit-tastings-item-img">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/indoor.jpg" alt="">
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
     </div>
     <div class="visit-tastings-item-content">
       <h2 class="h2"><?php echo $title; ?></h2>

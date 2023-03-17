@@ -11,7 +11,7 @@ get_header();
 
 
 <div class="hero shop-hero" data-scrollax-parent="true">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/labels-aaron-aequorea.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/shop/SHOP-HERO.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
 </div>
 
 

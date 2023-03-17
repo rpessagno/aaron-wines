@@ -29,15 +29,24 @@ get_header();
     <div class="home-intro-content">
       <h1 class="home-intro-title"><?php echo $intro_title; ?></h1>
       <?php echo $intro_text; ?>
-      <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/aaron-jackson-signature.png" alt="Aaron Jackson" class="home-intro-signature">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/home/aaron-jackson-signature-brown.png" alt="Aaron Jackson" class="home-intro-signature">
     </div>
   </div>
 
   <!-- Bottles -->
   <div class="home-shop">
-    <div class="home-shop-items">
+    <div class="home-shop-items home-shop-items-desktop">
       <?php 
       $bottles = get_field('bottles');
+      if( $bottles ): ?>
+        <?php foreach( $bottles as $bottle ): ?>
+          <img src="<?php echo $bottle['url']; ?>" alt="<?php echo $bottle['alt']; ?>">
+        <?php endforeach; ?>
+      <?php endif; ?>
+    </div>
+    <div class="home-shop-items home-shop-items-mobile">
+      <?php 
+      $bottles = get_field('bottles_mobile');
       if( $bottles ): ?>
         <?php foreach( $bottles as $bottle ): ?>
           <img src="<?php echo $bottle['url']; ?>" alt="<?php echo $bottle['alt']; ?>">
