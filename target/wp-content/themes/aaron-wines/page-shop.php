@@ -24,19 +24,23 @@ get_header();
     $title = get_sub_field('title');
     $description = get_sub_field('description');
     $logo = get_sub_field('logo');
+    $background_color = get_sub_field('background_color');
+    $display = get_sub_field('display');
+    $products_count = count( get_sub_field( 'products' ) );
     $find = array(' ', '\'', '&');
     $replace = array('-', '', 'and');
     $item_slug = strtolower(str_replace($find, $replace, $title));
   ?>
 
-  <div class="shop-section" data-scroll-target="<?php echo $item_slug; ?>" tabindex="0">
+  <?php if ($display === 'show') { ?>
+  <div class="shop-section" data-scroll-target="<?php echo $item_slug; ?>" tabindex="0" style="background-color: <?php echo $background_color; ?>;">
 
     <div class="shop-header">
       <h2><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>"></h2>
       <p><?php echo $description; ?></p>
     </div>
 
-    <div class="products">
+    <div class="products products-align-<?php if ($products_count > 3) { echo 'left'; } elseif ($products_count === 1) { echo 'center'; } else { echo 'center-desktop'; } ?>">
 
       <?php while ( have_rows('products') ) { the_row(); ?>   
       <?php $post_object = get_sub_field('product'); ?>
@@ -76,6 +80,7 @@ get_header();
 
     </div>
   </div>
+  <?php } ?>
 
   <?php } ?>
   <?php } ?>

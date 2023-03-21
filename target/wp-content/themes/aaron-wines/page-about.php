@@ -138,8 +138,10 @@ get_header();
       </div>
       <div class="about-labels-sub-content">
         <h2 class="h3"><?php echo $title; ?></h2>
-        <p class="p1"><?php echo $text; ?></p>
+        <?php echo $text; ?>
+        <?php if ($link) { ?>
         <a href="<?php echo $link['url']; ?>" class="button button-outline button-small button-dark"><?php echo $link['title']; ?></a>
+        <?php } ?>
       </div>
     </div>
 

@@ -3,7 +3,6 @@
 //==============================
 
 .shop {
-  padding-bottom: 200px;
 
   &-hero {
 
@@ -20,18 +19,26 @@
   }
 
   &-section {
-    // padding-bottom: 200px;
+    padding: 140px 0;
+
+    @include bp(m) {
+      padding: 100px 0;
+    }
+
+    @include bp(s) {
+      padding: 80px 0;
+    }
   }
 
   &-header {
     text-align: center;
-    padding: 150px 40px 60px;
-    max-width: 600px;
+    padding: 0 40px 60px;
+    max-width: 700px;
     margin: 0 auto;
 
     @include bp(s) {
       max-width: 400px;
-      padding: 100px 20px 40px;
+      padding: 0 20px 40px;
     }
 
     img {
@@ -51,13 +58,33 @@
 .products {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-  width: calc(100% - 80px);
+  width: calc(100% - 120px);
   max-width: 1600px;
   margin: 0 auto;
 
+  @include bp(m) {
+    width: calc(100% - 80px);
+  }
+
   @include bp(s) {
     width: calc(100% - 40px);
+    justify-content: center !important;
+  }
+
+  &-align-left {
+    justify-content: flex-start;
+  }
+
+  &-align-center {
+    justify-content: center;
+  }
+
+  &-align-center-desktop {
+    justify-content: center;
+
+    @include bp(m) {
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -71,12 +98,6 @@
   width: calc((100% / 4) - (#{$grid-gutter * 3} / 4));
   margin-right: $grid-gutter;
   margin-bottom: $grid-gutter;
-
-  // width: calc(100% / 4);
-  // border: #bbb dashed 1px;
-  // margin-left: -1px;
-  // margin-top: -1px;
-
 
   &:nth-child(4n) {
     margin-right: 0;
@@ -122,6 +143,7 @@
 
   @include bp(s) {
     width: 100%;
+    max-width: 400px;
     margin-right: 0;
   }
 
