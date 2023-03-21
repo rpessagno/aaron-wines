@@ -32,32 +32,38 @@
     display: none;
   }
 
-  fieldset {
+  #mc_embed_signup_scroll {
+    display: flex;
 
-    > div {
-      float: left;
-    
-      // div with email field
-      &:nth-child(4) {
-        width: calc(100% - 150px) !important;
+    .mc-field-group {
+      width: calc(100% - 150px) !important;
 
-        @include bp(s) {
-          width: calc(100% - 120px) !important;
-        }
+      @include bp(s) {
+        width: calc(100% - 120px) !important;
       }
-      
-      // div with submit button
-      &:nth-child(6) {
-        width: 150px;
+    }
 
-        @include bp(s) {
-          width: 120px;
-        }
+    .clear:last-child {
+      width: 150px;
+      position: relative;
+      background-color: $white;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 20%;
+        border-left: #bbb solid 1px;
+        height: 60%;
+      }
+
+      @include bp(s) {
+        width: 120px;
       }
     }
   }
 
-  input#Email {
+  input.email {
     @include input-reset;
     font: 400 normal 18px/1 $sans-serif !important;
     background-color: $white !important;
@@ -73,17 +79,18 @@
     }
   }
 
-  button[type="submit"] {
+  input.button {
     @include input-reset;
     @include button;
     border-radius: 0;
     width: 100%;
     height: 60px;
-    background-color: $white;
+    background-color: transparent;
     color: $blue;
     padding: 0 !important;
     margin: 0;
     font-size: 16px;
+    position: relative;
 
     @include bp(m) {
       font-size: 14px;
@@ -92,13 +99,6 @@
     &:hover {
       background-color: darken($white, 10%) !important;
       cursor: pointer;
-    }
-
-    span {
-      display: block;
-      border-left: #bbb solid 1px;
-      padding: 13px 0 0 0;
-      height: 40px;
     }
   }
 }

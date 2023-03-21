@@ -17,7 +17,29 @@
     <div class="footer-item newsletter">
       <h1 class="newsletter-title">Stay Connected</h1>
       <p class="p1">Subscribe to our mailing list to hear about our new releases, updates from the winery and special events. No spam, just good news and even better wine.</p>
-      <div v65remotejs="form"></div>
+
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+          <form action="https://aaronwines.us3.list-manage.com/subscribe/post?u=bc551c70f09510adff5329851&amp;id=4aaddb9de6&amp;f_id=00172be3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
+              <div id="mc_embed_signup_scroll">
+              
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">Email Address<span class="asterisk">*</span></label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address" required>
+        <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+      </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bc551c70f09510adff5329851_4aaddb9de6" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+      </form>
+      </div>
+
+      <!--End mc_embed_signup-->
+
     </div>
 
     <div class="footer-item contact">
@@ -72,7 +94,6 @@
 <script type="text/javascript">vin65remote.cart.modalCart('https://shop.aaronwines.com',0);</script>
 <script type="text/javascript">vin65remote.cart.addToCart('https://shop.aaronwines.com');</script>
 <script type="text/javascript">vin65remote.product.addToCartForm('https://shop.aaronwines.com');</script>
-<script type="text/javascript">vin65remote.form.form('https://shop.aaronwines.com','Newsletter Signup');</script>
 
 
 </body>
