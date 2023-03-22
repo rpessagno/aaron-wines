@@ -4,71 +4,159 @@
 
 .club {
 
-  &-intro {
-    background: $blue url('assets/images/global/topography-bg-1.png') center center / cover no-repeat;
-    padding-bottom: 100px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 10%;
-      background: transparent url('assets/images/club/club-intro-mask.svg') center bottom / 100% 100% no-repeat;
-      z-index: 1;
-    }
+  &-overview {
+    background-color: $blue;
   }
 
-  &-benefits {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 200px auto 100px;
+  &-intro {
+    background-color: $white;
+    padding: 100px 160px 80px;
+    margin: 0 auto;
     width: calc(100% - 80px);
-    max-width: 1600px;
+    max-width: 1000px;
+    text-align: center;
     position: relative;
-    z-index: 3;
+    top: -100px;
+    -webkit-mask-image: url('assets/images/global/content-card-center-mask.svg');
+    mask-image: url('assets/images/global/content-card-center-mask.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    @include bp(l) {
+      padding: 80px;
+      max-width: 800px;
+      top: -150px;
+    }
 
     @include bp(s) {
       width: calc(100% - 40px);
-      margin-top: 100px;
+      padding: 80px 40px;
+      max-width: 600px;
     }
 
-    &-img {
-      width: 50%;
-      overflow: hidden;
+    @include bp(xs) {
+      width: calc(100% - 20px);
+      padding: 60px 30px;
+      top: -100px;
+    }
+  }
 
-      @include bp(m) {
-        width: 100%;
+  // &-intro {
+  //   background: $blue url('assets/images/global/topography-bg-1.png') center center / cover no-repeat;
+  //   padding-bottom: 100px;
+
+  //   &:before {
+  //     content: '';
+  //     position: absolute;
+  //     left: 0;
+  //     bottom: 0;
+  //     width: 100%;
+  //     height: 10%;
+  //     background: transparent url('assets/images/club/club-intro-mask.svg') center bottom / 100% 100% no-repeat;
+  //     z-index: 1;
+  //   }
+  // }
+
+  &-benefits {
+    background: $blue url('assets/images/club/benefits-bg.jpg') center bottom / cover no-repeat;
+    padding: 0 0 100px;
+
+    &-items {
+      display: flex;
+      flex-flow: row wrap;
+      width: calc(100% - 120px);
+      max-width: 1300px;
+      margin: 0 auto;
+      // border: $white dashed 1px;
+      border-radius: 20px;
+    }
+
+    &-item {
+      width: calc(100% / 3);
+      padding: 60px 40px;
+      text-align: center;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(5) {
+        // border-right: $white dashed 1px;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        // border-bottom: $white dashed 1px;
       }
 
       img {
-        @include img-cover;
-      }
-    }
-
-    &-content {
-      width: 50%;
-      padding: 200px 80px 200px 100px;
-      background-color: darken($white, 5%);
-
-      @include bp(l) {
-        padding: 150px 60px 150px 80px;
+        display: block;
+        margin: 0 auto 20px;
+        height: 100px;
+        width: auto;
       }
 
-      @include bp(m) {
-        width: 100%;
-        padding: 80px;
-      }
-
-      @include bp(s) {
-        padding: 60px 40px;
-      }
-
-      ul {
-        margin: 1em 0 0 1.5em;
+      p {
+        font: 300 normal 30px/1.1 $serif;
+        color: $white;
       }
     }
   }
+
+  &-cta {
+    text-align: center;
+    padding: 100px 0 0;
+  }
+
+  // &-benefits {
+  //   display: flex;
+  //   flex-flow: row wrap;
+  //   justify-content: center;
+  //   margin: 200px auto 100px;
+  //   width: calc(100% - 80px);
+  //   max-width: 1600px;
+  //   position: relative;
+  //   z-index: 3;
+
+  //   @include bp(s) {
+  //     width: calc(100% - 40px);
+  //     margin-top: 100px;
+  //   }
+
+  //   &-img {
+  //     width: 50%;
+  //     overflow: hidden;
+
+  //     @include bp(m) {
+  //       width: 100%;
+  //     }
+
+  //     img {
+  //       @include img-cover;
+  //     }
+  //   }
+
+  //   &-content {
+  //     width: 50%;
+  //     padding: 200px 80px 200px 100px;
+  //     background-color: darken($white, 5%);
+
+  //     @include bp(l) {
+  //       padding: 150px 60px 150px 80px;
+  //     }
+
+  //     @include bp(m) {
+  //       width: 100%;
+  //       padding: 80px;
+  //     }
+
+  //     @include bp(s) {
+  //       padding: 60px 40px;
+  //     }
+
+  //     ul {
+  //       margin: 1em 0 0 1.5em;
+  //     }
+  //   }
+  // }
 }

@@ -53,15 +53,14 @@
 
   &-solid {
 
-    // &.button-light {
-    //   color: $white;
-    //   border-color: $white;
+    &.button-light {
+      color: $blue;
+      background-color: $white;
 
-    //   &:hover {
-    //     background-color: $white;
-    //     color: $blue;
-    //   }
-    // }
+      &:hover {
+        background-color: $gold;
+      }
+    }
 
     &.button-dark {
       color: $white;

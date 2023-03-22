@@ -25,22 +25,64 @@ get_header();
   $intro_text = $intro['text'];
   $intro_image = $intro['image'];
 ?>
-<div class="intro intro-dark club-intro" data-scrollax-parent="true">
-  <div class="intro-content">
-    <h1 class="eyebrow">Join the Club</h1>
-    <h1 class="h1"><?php echo $intro_title; ?></h1>
-    <?php echo $intro_text; ?>
-  </div>
-  <div class="intro-img" data-scrollax="properties: { 'translateY': '-5vw' }">
-    <img src="<?php echo $intro_image['url']; ?>" alt="<?php echo $intro_image['alt']; ?>">
+
+<div class="club-overview">
+  <div class="club-intro">
+    <div class="home-intro-content">
+      <h1 class="h1"><?php echo $intro_title; ?></h1>
+      <?php echo $intro_text; ?>
+    </div>
   </div>
 </div>
 
 
+
 <!-- Benefits -->
+
+<div class="club-benefits">
+  <div class="club-benefits-items">
+    <div class="club-benefits-item">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/club/1.svg" alt="">
+      <p class="h4">6 bottles of wine 2x per year,
+in April and November</p>
+    </div>
+    <div class="club-benefits-item">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/club/2.svg" alt="">
+      <p class="h4">20% discount on all club
+shipments and wine purchases</p>
+    </div>
+    <div class="club-benefits-item">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/club/3.svg" alt="">
+      <p class="h4">First access to new releases,
+before they go public</p>
+    </div>
+    <div class="club-benefits-item">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/club/4.svg" alt="">
+      <p class="h4">Annual allocation of
+our small production wines</p>
+    </div>
+    <div class="club-benefits-item">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/club/5.svg" alt="">
+      <p class="h4">Complimentary tasting for
+you and 3 guests at the winery</p>
+    </div>
+    <div class="club-benefits-item">
+      <img src="<?php bloginfo('template_directory'); ?>/assets/images/club/6.svg" alt="">
+      <p class="h4">Membership is free and
+can be cancelled at any time</p>
+    </div>
+  </div>
+</div>
+
+<div class="club-cta">
+  <h1 class="h1">Ready to join the <br> Aaron Wines family?</h1>
+  <a href="#" class="button button-large button-solid button-dark">Join Now</a>
+</div>
+
+
+<!--
 <?php
   $benefits = get_field('benefits');
-  // $benefits_eyebrow = $benefits['eyebrow'];
   $benefits_title = $benefits['title'];
   $benefits_text = $benefits['text'];
   $benefits_link = $benefits['link'];
@@ -56,7 +98,7 @@ get_header();
     <a href="<?php echo $benefits_link['url']; ?>" target="<?php echo $benefits_link['target']; ?>" class="button button-dark button-solid button-medium"><?php echo $benefits_link['title']; ?></a>
   </div>
 </div>
-
+-->
 
 <!-- Skyline -->
 <?php
