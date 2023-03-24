@@ -17,49 +17,34 @@
     text-align: center;
     position: relative;
     top: -100px;
-    -webkit-mask-image: url('assets/images/global/content-card-center-mask.svg');
-    mask-image: url('assets/images/global/content-card-center-mask.svg');
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    @include img-mask('assets/images/global/content-card-center-mask.svg');
 
     @include bp(l) {
       padding: 80px;
       max-width: 800px;
-      top: -150px;
+      top: -100px;
     }
 
     @include bp(s) {
       width: calc(100% - 40px);
       padding: 80px 40px;
       max-width: 600px;
+      top: -80px;
     }
 
     @include bp(xs) {
       width: calc(100% - 20px);
       padding: 60px 30px;
-      top: -100px;
     }
   }
 
-  // &-intro {
-  //   background: $blue url('assets/images/global/topography-bg-1.png') center center / cover no-repeat;
-  //   padding-bottom: 100px;
-
-  //   &:before {
-  //     content: '';
-  //     position: absolute;
-  //     left: 0;
-  //     bottom: 0;
-  //     width: 100%;
-  //     height: 10%;
-  //     background: transparent url('assets/images/club/club-intro-mask.svg') center bottom / 100% 100% no-repeat;
-  //     z-index: 1;
-  //   }
-  // }
-
   &-benefits {
     background: $blue url('assets/images/club/benefits-bg.jpg') center bottom / cover no-repeat;
-    padding: 0 0 100px;
+    padding: 40px 0 100px;
+
+    @include bp(s) {
+      padding: 0 0 80px;
+    }
 
     &-items {
       display: flex;
@@ -69,12 +54,30 @@
       margin: 0 auto;
       // border: $white dashed 1px;
       border-radius: 20px;
+
+      @include bp(s) {
+        width: calc(100% - 40px);
+        max-width: 500px;
+      }
+
+      @include bp(s) {
+        width: calc(100% - 20px);
+      }
     }
 
     &-item {
       width: calc(100% / 3);
-      padding: 60px 40px;
+      padding: 0 40px;
       text-align: center;
+      margin-bottom: 60px;
+
+      @include bp(m) {
+        width: 50%;
+      }
+
+      @include bp(s) {
+        padding: 0 10px;
+      }
 
       &:nth-child(1),
       &:nth-child(2),
@@ -94,10 +97,17 @@
         margin: 0 auto 20px;
         height: 100px;
         width: auto;
+
+        @include bp(l) {
+          height: 80px;
+        }
+
+        @include bp(s) {
+          height: 60px;
+        }
       }
 
-      p {
-        font: 300 normal 30px/1.1 $serif;
+      .description {
         color: $white;
       }
     }
@@ -108,55 +118,117 @@
     padding: 100px 0 0;
   }
 
-  // &-benefits {
-  //   display: flex;
-  //   flex-flow: row wrap;
-  //   justify-content: center;
-  //   margin: 200px auto 100px;
-  //   width: calc(100% - 80px);
-  //   max-width: 1600px;
-  //   position: relative;
-  //   z-index: 3;
+  &-skyline {
 
-  //   @include bp(s) {
-  //     width: calc(100% - 40px);
-  //     margin-top: 100px;
-  //   }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 7%;
+      background: transparent url('assets/images/shop/shop-hero-mask.svg') center bottom / 100% 100% no-repeat;
+      z-index: 2;
+    }
+  }
 
-  //   &-img {
-  //     width: 50%;
-  //     overflow: hidden;
+  &-events {
+    padding-bottom: 100px;
 
-  //     @include bp(m) {
-  //       width: 100%;
-  //     }
+    &-header {
+      padding: 100px 40px 60px;
+      width: calc(100% - 120px);
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
 
-  //     img {
-  //       @include img-cover;
-  //     }
-  //   }
+      @include bp(m) {
+        width: calc(100% - 40px);
+      }
+    }
 
-  //   &-content {
-  //     width: 50%;
-  //     padding: 200px 80px 200px 100px;
-  //     background-color: darken($white, 5%);
+    &-items {
+      display: flex;
+      flex-flow: row wrap;
+      width: calc(100% - 120px);
+      max-width: 1600px;
+      margin: 0 auto;
 
-  //     @include bp(l) {
-  //       padding: 150px 60px 150px 80px;
-  //     }
+      @include bp(m) {
+        width: calc(100% - 40px);
+      }
 
-  //     @include bp(m) {
-  //       width: 100%;
-  //       padding: 80px;
-  //     }
+      @include bp(s) {
+        justify-content: center;
+      }
+    }
 
-  //     @include bp(s) {
-  //       padding: 60px 40px;
-  //     }
+    &-item {
+      width: calc((100% / 3) - (#{$team-gutter * 2} / 3));
+      margin-right: $team-gutter;
+      margin-bottom: 60px;
 
-  //     ul {
-  //       margin: 1em 0 0 1.5em;
-  //     }
-  //   }
-  // }
+      @include bp(m) {
+        width: calc((100% / 3) - (#{$grid-gutter * 2} / 3));
+        margin-right: $grid-gutter;
+      }
+
+      @include bp(s) {
+        width: 100%;
+        margin-right: 0;
+        max-width: 400px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(1) {
+        margin-top: 2%;
+
+        .club-events-item-img {
+          padding-top: 95%;
+          @include img-mask('assets/images/club/event-mask-1.svg');
+        }
+      }
+
+      &:nth-child(2) {
+
+        .club-events-item-img {
+          padding-top: 105%;
+          @include img-mask('assets/images/club/event-mask-2.svg');
+        }
+      }
+
+      &:nth-child(3) {
+        margin-top: 3%;
+
+        .club-events-item-img {
+          padding-top: 90%;
+          @include img-mask('assets/images/club/event-mask-3.svg');
+        }
+      }
+
+      &-img {
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+
+        img {
+          @include img-cover;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      &-content {
+        padding: 0 20px 0 10px;
+
+        @include bp(m) {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
 }

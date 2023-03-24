@@ -56,16 +56,12 @@
     padding: 100px;
     margin-left: auto;
     margin-right: 5%;
-    -webkit-mask-image: url('assets/images/global/content-card-center-mask.svg');
-    mask-image: url('assets/images/global/content-card-center-mask.svg');
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    @include img-mask('assets/images/global/content-card-center-mask.svg');
 
     @include bp(xl) {
       margin-right: 0;
       padding: 80px;
-      -webkit-mask-image: url('assets/images/global/content-card-right-mask.svg');
-      mask-image: url('assets/images/global/content-card-right-mask.svg');
+      @include img-mask('assets/images/global/content-card-right-mask.svg');
     }
 
     @include bp(l) {
@@ -78,8 +74,7 @@
       margin: 0 auto;
       top: -5vw;
       padding: 45px;
-      -webkit-mask-image: url('assets/images/global/content-card-center-mask.svg');
-      mask-image: url('assets/images/global/content-card-center-mask.svg');
+      @include img-mask('assets/images/global/content-card-center-mask.svg');
     }
 
     .h2 {

@@ -29,10 +29,7 @@
   }
 
   &-img {
-    -webkit-mask-image: url('assets/images/global/intro-img-mask.svg');
-    mask-image: url('assets/images/global/intro-img-mask.svg');
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    @include img-mask('assets/images/global/intro-img-mask.svg');
     width: 50%;
     max-width: 650px;
     position: relative;

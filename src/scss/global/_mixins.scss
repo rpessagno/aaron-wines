@@ -151,3 +151,10 @@
     }
   }
 }
+
+@mixin img-mask($url) {
+  -webkit-mask-image: url($url);
+  mask-image: url($url);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}

@@ -9,9 +9,6 @@ get_header();
 ?>
 
 
-
-
-
 <!-- Hero -->
 <?php $hero = get_field('hero'); ?>
 <div class="hero page-hero" data-scrollax-parent="true">

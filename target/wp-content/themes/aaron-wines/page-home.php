@@ -160,6 +160,7 @@ get_header();
 
 </div>
 
+
 <!-- Skyline -->
 <?php
   $skyline = get_field('skyline');
@@ -167,5 +168,6 @@ get_header();
 <div class="home-skyline">
   <img src="<?php echo $skyline['url']; ?>" alt="<?php echo $skyline['alt']; ?>">
 </div>
+
 
 <?php get_footer(); ?>

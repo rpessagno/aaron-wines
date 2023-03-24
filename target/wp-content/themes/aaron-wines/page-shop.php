@@ -10,9 +10,12 @@ get_header();
 
 
 
+<!-- Hero -->
+<?php $hero = get_field('hero'); ?>
 <div class="hero shop-hero" data-scrollax-parent="true">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/shop/SHOP-HERO.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+  <img src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" data-scrollax="properties: { 'translateY': '10vw' }">
 </div>
+
 
 
 <div class="shop">
@@ -37,7 +40,7 @@ get_header();
 
     <div class="shop-header">
       <h2><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>"></h2>
-      <p><?php echo $description; ?></p>
+      <p class="description"><?php echo $description; ?></p>
     </div>
 
     <div class="products products-align-<?php if ($products_count > 3) { echo 'left'; } elseif ($products_count === 1) { echo 'center'; } else { echo 'center-desktop'; } ?>">

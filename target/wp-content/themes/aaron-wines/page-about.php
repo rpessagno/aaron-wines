@@ -73,7 +73,7 @@ get_header();
 </div>
 
 
-
+<!-- Skyline -->
 <div class="home-skyline">
   <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/20-years.jpg" alt="">
 </div>
@@ -81,8 +81,8 @@ get_header();
 
 
 
-
- <div class="about-labels">
+<!-- Labels -->
+<div class="about-labels">
 
   <?php
     $labels = get_field('labels');

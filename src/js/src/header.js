@@ -49,3 +49,13 @@ $(window).scroll(function() {
 //   scrollPos = currentScrollPos;
 // });
 
+// Modal cart
+$('.js-modal-cart').on('click', function() {
+  var cartVisible = $(".v65-widgetModalCart-dropdown").is(':visible');
+  if(cartVisible == true) {
+    vin65remote.cart.hideCart();      
+  } else {
+    vin65remote.cart.showCart();  
+  }
+  return false;
+});

@@ -17,10 +17,7 @@
     text-align: center;
     position: relative;
     top: -240px;
-    -webkit-mask-image: url('assets/images/global/content-card-center-mask.svg');
-    mask-image: url('assets/images/global/content-card-center-mask.svg');
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    @include img-mask('assets/images/global/content-card-center-mask.svg');
 
     @include bp(l) {
       padding: 80px;
@@ -69,6 +66,7 @@
 
     &-signature {
       width: 180px;
+      margin-top: 20px;
      }
   }
 
@@ -145,7 +143,7 @@
         left: 0;
         bottom: 100%;
         z-index: 1;
-        background: transparent url('assets/images/home/shop-wave-2.svg') center bottom / 100% 100% no-repeat;
+        background: transparent url('assets/images/home/shop-wave.svg') center bottom / 100% 100% no-repeat;
       }
 
       &-items {
@@ -350,10 +348,7 @@
 
     &-img {
       width: 50%;
-      -webkit-mask-image: url('assets/images/home/aaron-quote-mask.svg');
-      mask-image: url('assets/images/home/aaron-quote-mask.svg');
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
+      @include img-mask('assets/images/home/aaron-quote-mask.svg');
 
       @include bp(s) {
         width: 100%;

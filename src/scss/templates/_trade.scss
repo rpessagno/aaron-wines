@@ -245,9 +245,14 @@
     }
 
     &-item {
-      width: calc(50% - (#{$grid-gutter} / 2));
-      margin-right: $grid-gutter;
+      width: calc(50% - (#{$team-gutter} / 2));
+      margin-right: $team-gutter;
       margin-bottom: 60px;
+
+      @include bp(m) {
+        width: calc(50% - (#{$grid-gutter} / 2));
+        margin-right: $grid-gutter;
+      }
 
       @include bp(s) {
         width: 100%;

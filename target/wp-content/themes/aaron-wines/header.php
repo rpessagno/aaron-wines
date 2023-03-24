@@ -90,7 +90,7 @@ $header_style = get_field('header_style', $page_id);
     <div class="header-shop">
       <ul class="header-shop-items">
         <li class="header-shop-item">
-          <a href="https://shop.aaronwines.com/index.cfm?method=cartV2.showCart">
+          <a href="https://shop.aaronwines.com/index.cfm?method=cartV2.showCart" class="js-modal-cart">
             <?php echo file_get_contents(get_template_directory() . '/assets/images/global/cart.svg') ?>
             Cart
           </a>

@@ -65,47 +65,43 @@
 
       &:nth-child(1) {
 
-        img {
-          -webkit-mask-image: url('assets/images/about/team-mask-1.svg');
-          mask-image: url('assets/images/about/team-mask-1.svg');
-          -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+        .about-team-item-img {
+          padding-top: 140%;
+          margin-top: 2%;
+          @include img-mask('assets/images/about/team-mask-1.svg');
         }
       }
 
       &:nth-child(2) {
 
-        img {
-          -webkit-mask-image: url('assets/images/about/team-mask-2.svg');
-          mask-image: url('assets/images/about/team-mask-2.svg');
-          -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+        .about-team-item-img {
+          padding-top: 135%;
+          margin-top: 5%;
+          @include img-mask('assets/images/about/team-mask-2.svg');
         }
       }
 
       &:nth-child(3) {
 
-        img {
-          -webkit-mask-image: url('assets/images/about/team-mask-3.svg');
-          mask-image: url('assets/images/about/team-mask-3.svg');
-          -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+        .about-team-item-img {
+          padding-top: 150%;
+          margin-top: 0;
+          @include img-mask('assets/images/about/team-mask-3.svg');
         }
       }
 
       &:nth-child(4) {
 
-        img {
-          -webkit-mask-image: url('assets/images/about/team-mask-4.svg');
-          mask-image: url('assets/images/about/team-mask-4.svg');
-          -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+        .about-team-item-img {
+          padding-top: 140%;
+          margin-top: 4%;
+          @include img-mask('assets/images/about/team-mask-4.svg');
         }
       }
 
       &-img {
         overflow: hidden;
-        height: 500px;
+        position: relative;
         margin-bottom: 20px;
 
         @include bp(xl) {
@@ -117,10 +113,10 @@
         }
 
         img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          @include img-cover;
+          position: absolute;
+          left: 0;
+          top: 0;
         }
       }
 
@@ -353,10 +349,7 @@
       }
 
       &-mask {
-        -webkit-mask-image: url('assets/images/about/labels-gallery-mask.svg');
-        mask-image: url('assets/images/about/labels-gallery-mask.svg');
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
+        @include img-mask('assets/images/about/labels-gallery-mask.svg');
         position: relative;
         z-index: 2;
       }

@@ -10,12 +10,14 @@ get_header();
 
 
 
-
+<!-- Hero -->
+<?php $hero = get_field('hero'); ?>
 <div class="hero page-hero contact-hero" data-scrollax-parent="true">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/contact/contact-hero.jpg" alt="" data-scrollax="properties: { 'translateY': '10vw' }">
+  <img src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" data-scrollax="properties: { 'translateY': '10vw' }">
 </div>
 
 
+<!-- Contact Info -->
 <?php
   $contact_info = get_field('contact_info');
   $email = $contact_info['email'];
@@ -36,6 +38,7 @@ get_header();
 </div>
 
 
+<!-- Contact Form -->
 <?php
   $contact_form = get_field('contact_form');
 ?>
@@ -43,6 +46,8 @@ get_header();
   <?php echo do_shortcode($contact_form); ?>
 </div>
 
+
+<!-- Map -->
 <?php the_field('map'); ?>
 
 
