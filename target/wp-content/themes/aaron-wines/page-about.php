@@ -85,28 +85,29 @@ get_header();
 <div class="about-labels">
 
   <?php
-    $labels = get_field('labels');
-    $labels_eyebrow = $labels['eyebrow'];
-    $labels_title = $labels['title'];
-    $labels_image = $labels['image'];
-    $labels_primary = $labels['primary_labels'];
+    $labels_header = get_field('labels_header');
+    $labels_header_eyebrow = $labels_header['eyebrow'];
+    $labels_header_title = $labels_header['title'];
+    $labels_header_image = $labels_header['image'];
   ?>
   <div class="about-labels-main">
     <div class="about-labels-header">
-      <p class="eyebrow"><?php echo $labels_eyebrow; ?></p>
-      <h1 class="h1"><?php echo $labels_title; ?></h1>
+      <p class="eyebrow"><?php echo $labels_header_eyebrow; ?></p>
+      <h1 class="h1"><?php echo $labels_header_title; ?></h1>
     </div>
     <div class="about-labels-main-wrap">
       <div class="about-labels-main-img" data-scrollax-parent="true">
-        <img src="<?php echo $labels_image['url']; ?>" alt="<?php echo $labels_image['alt']; ?>" data-scrollax="properties: { 'translateY': '7vw' }">
+        <img src="<?php echo $labels_header_image['url']; ?>" alt="<?php echo $labels_header_image['alt']; ?>" data-scrollax="properties: { 'translateY': '7vw' }">
       </div>
       <div class="about-labels-main-items">
 
-        <?php foreach($labels_primary as $labels_primary_item) { ?>
+        <?php if( have_rows('labels') ) { ?>
+        <?php while ( have_rows('labels') ) { the_row(); ?>
         <?php
-          $logo = $labels_primary_item['logo'];
-          $text = $labels_primary_item['text'];
-          $link = $labels_primary_item['link'];
+          $logo = get_sub_field('logo');
+          $title = get_sub_field('title');
+          $text = get_sub_field('text');
+          $link = get_sub_field('link');
         ?>
         
         <div class="about-labels-main-item">
@@ -115,6 +116,7 @@ get_header();
           <a href="<?php echo $link['url']; ?>"class="button button-solid button-medium button-dark"><?php echo $link['title']; ?></a>
         </div>
 
+        <?php } ?>
         <?php } ?>
 
       </div>
