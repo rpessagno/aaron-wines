@@ -68,6 +68,11 @@
 
     p {
       color: $white;
+      
+      a {
+        text-decoration: none;
+        border-bottom: currentColor solid 1px;
+      }
     }
   }
 }

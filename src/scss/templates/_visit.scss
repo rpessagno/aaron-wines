@@ -17,6 +17,34 @@
       background: transparent url('assets/images/visit/visit-intro-mask.svg') center bottom / 100% 100% no-repeat;
       z-index: 1;
     }
+
+    .eyebrow {
+      color: $gold;
+    }
+
+    .h3 {
+      color: $white;
+    }
+  }
+
+  &-directions {
+    margin-top: 10px;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      border: $white dashed 1px !important;
+      padding: 20px 40px 20px 80px;
+      border-radius: 10px;
+      background: transparent url('assets/images/visit/location-pin.svg') 30px center / 30px auto no-repeat;
+      transition: background-color .2s, border-color .2s;
+
+      &:hover {
+        color: $white;
+        border-color: $gold !important;
+        background-color: transparentize($black, .9);
+      }
+    }
   }
 
   &-tastings {
@@ -132,6 +160,16 @@
 
       .h3 {
         margin-bottom: 1em;
+      }
+
+      p {
+
+        br {
+
+          @include bp(xs) {
+            display: none;
+          }
+        }
       }
     }
   }

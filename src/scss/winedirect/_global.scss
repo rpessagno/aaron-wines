@@ -75,8 +75,7 @@ $border: transparentize($charcoal, .9) solid 1px;
     font-size: 80%;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     cursor: pointer;
     text-decoration: underline;
   }
@@ -229,10 +228,8 @@ $border: transparentize($charcoal, .9) solid 1px;
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     cursor: pointer;
-    outline: 0;
 
     &:before,
     &:after {

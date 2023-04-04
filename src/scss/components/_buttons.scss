@@ -9,6 +9,10 @@
   &-small {
     font-size: 14px;
     padding: .8em 1.4em;
+
+    @include bp(s) {
+      font-size: 12px;
+    }
   }
 
   &-medium {
@@ -23,6 +27,10 @@
   &-large {
     font-size: 17px;
     padding: 1.2em 2.4em;
+
+    @include bp(s) {
+      font-size: 15px;
+    }
   }
 
   &-outline {
@@ -73,18 +81,68 @@
     }
   }
 
+  &-arrow {
+    font-size: 14px;
+    position: relative;
+    padding: .8em 20px .8em 0;
+    text-align: left;
+
+    @include bp(xs) {
+      font-size: 13px;
+    }
+
+    &:after {
+      content: ' \27A4';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%) scale(.8);
+      transition: transform .2s;
+    }
+
+    &:hover {
+
+      &:after {
+        transform: translate(5px, -50%) scale(.8);
+      }
+    }
+
+    &.button-dark {
+      color: $blue;
+    }
+
+    &.button-light {
+      color: $white;
+    }
+  }
+
   &-group {
     display: flex;
-    flex-flow: row wrap;
     margin-top: 2em;
+
+    &-horizontal {
+      flex-flow: row wrap;
+
+      .button {
+        margin-right: 10px;
+      }
+
+      .button-solid,
+      .button-outline {
+
+        @include bp(xs) {
+          width: 100%;
+        }
+      }
+    }
+
+    &-vertical {
+      flex-flow: column nowrap;
+      align-items: flex-start;
+    }
 
     .button {
       margin-top: 10px;
-      margin-right: 10px;
-
-      @include bp(xs) {
-        width: 100%;
-      }
     }
   }
 }

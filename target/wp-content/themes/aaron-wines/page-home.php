@@ -73,7 +73,7 @@ get_header();
           <img src="<?php echo $aequorea_logo['url']; ?>" alt="<?php echo $aequorea_logo['alt']; ?>">
           <p><?php echo $aequorea_text; ?></p>
         </div>
-        <a href="#" class="home-shop-content-link">Shop <br> Wines</a>
+        <a href="<?php the_permalink('24'); ?>" class="home-shop-content-link">Shop <br> Wines</a>
       </div>
     </div>
   </div>

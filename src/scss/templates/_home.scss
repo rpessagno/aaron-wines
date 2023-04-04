@@ -64,6 +64,16 @@
       }
     }
 
+    p {
+
+      br {
+
+        @include bp(m) {
+          display: none;
+        }
+      }
+    }
+
     &-signature {
       width: 180px;
       margin-top: 20px;
@@ -81,7 +91,7 @@
 
         @for $i from 1 through 9 {
           &:nth-child(#{$i}) {
-            transition-delay: 0.1s * $i;
+            transition-delay: 0.05s * $i;
           }
         }
       }
@@ -155,7 +165,7 @@
         max-width: 1000px;
         margin: 0 auto;
         border-radius: 20px;
-        transform: scale(.8);
+        transform: scale(.9);
         opacity: 0;
         transition: transform .6s, opacity .6s;
 

@@ -182,8 +182,7 @@
         color: inherit;
         text-decoration: none;
 
-        &:hover,
-        &:focus {
+        &:hover {
           text-decoration: underline;
         }
       }
@@ -203,8 +202,7 @@
         border-bottom: $black solid 2px;
       }
 
-      &:hover,
-      &:focus {
+      &:hover {
 
         &:before,
         &:after {

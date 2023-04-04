@@ -194,6 +194,14 @@
           border-bottom: $white solid 2px;
           transform: translate(-50%, -50%);
           transition: width .2s, border-color $header-transition-time;
+
+          @include bp(m) {
+            top: calc(50% + 1.2em);
+          }
+
+          @include bp(xs) {
+            top: calc(50% + 1em);
+          }
         }
 
         a {
@@ -206,6 +214,10 @@
           transition: color .2s;
           position: relative;
           z-index: 2;
+
+          @include bp(l) {
+            padding: 30px .6em;
+          }
 
           @include bp(m) {
             padding: .5em;
@@ -231,7 +243,15 @@
           &:after {
             width: calc(100% - 2em);
 
+            @include bp(l) {
+              width: calc(100% - 1.2em);
+            }
+
             @include bp(m) {
+              width: calc(100% - 2em);
+            }
+
+            @include bp(xs) {
               width: calc(100% - 1.5em);
             }
           }
@@ -254,10 +274,6 @@
 
       @include bp(m) {
         display: block;
-      }
-
-      &:focus {
-        outline: 0;
       }
 
       span {
@@ -332,7 +348,7 @@
       text-transform: uppercase;
 
       + .header-shop-item {
-        margin-left: 25px;
+        margin-left: 30px;
       }
 
       a {
@@ -355,6 +371,21 @@
         fill: $white;
         margin-right: 10px;
         transition: fill $header-transition-time;
+      }
+    }
+
+    &-cart {
+      position: relative;
+
+      &-count {
+        position: absolute;
+        left: calc(100% - 4px);
+        top: -10px;
+        background: $blue;
+        border-radius: 20px;
+        font-size: 10px;
+        color: $white;
+        padding: 0 5px;
       }
     }
   }

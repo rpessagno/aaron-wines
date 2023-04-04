@@ -63,6 +63,20 @@
       @include bp(s) {
         width: calc(100% - 20px);
       }
+
+      &.animate {
+
+        .club-benefits-item {
+          opacity: 1;
+          transform: translateY(0);
+
+          @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+              transition-delay: .15s * $i;
+            }
+          }
+        }
+      }
     }
 
     &-item {
@@ -70,6 +84,9 @@
       padding: 0 40px;
       text-align: center;
       margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform .6s, opacity .6s;
 
       @include bp(m) {
         width: 50%;
@@ -115,7 +132,55 @@
 
   &-cta {
     text-align: center;
-    padding: 100px 0 0;
+    margin: 140px auto 0;
+    width: calc(100% - 120px);
+    max-width: 900px;
+    padding: 80px;
+    border: $mid-grey-border dashed 1px;
+    border-radius: 20px;
+    transform: scale(.9);
+    opacity: 0;
+    transition: transform .4s, opacity .4s;
+
+    @include bp(l) {
+      max-width: 700px;
+    }
+
+    @include bp(m) {
+      padding: 60px;
+    }
+
+    @include bp(s) {
+      width: calc(100% - 40px);
+      padding: 40px 30px;
+      margin-top: 80px;
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+
+    &.animate {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    &-title {
+      font: 300 italic 80px/1 $serif;
+      color: $gold;
+      margin-bottom: .3em;
+
+      @include bp(l) {
+        font-size: 60px;
+      }
+
+      @include bp(m) {
+        font-size: 50px;
+      }
+
+      @include bp(s) {
+        font-size: 40px;
+        margin-bottom: .5em;
+      }
+    }
   }
 
   &-skyline {
@@ -161,12 +226,29 @@
       @include bp(s) {
         justify-content: center;
       }
+
+      &.animate {
+
+        .club-events-item {
+          opacity: 1;
+          transform: translateY(0);
+
+          @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+              transition-delay: .15s * $i;
+            }
+          }
+        }
+      }
     }
 
     &-item {
       width: calc((100% / 3) - (#{$team-gutter * 2} / 3));
       margin-right: $team-gutter;
       margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform .6s, opacity .6s;
 
       @include bp(m) {
         width: calc((100% / 3) - (#{$grid-gutter * 2} / 3));
@@ -206,6 +288,12 @@
         .club-events-item-img {
           padding-top: 90%;
           @include img-mask('assets/images/club/event-mask-3.svg');
+        }
+      }
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          transition-delay: .15s * $i;
         }
       }
 

@@ -184,9 +184,9 @@ get_header();
         <h1 class="eyebrow"><?php echo $giving_back_eyebrow; ?></h1>
         <h1 class="h1"><?php echo $giving_back_title; ?></h1>
         <?php echo $giving_back_text; ?>
-        <div class="button-group">
-          <a href="<?php echo $giving_back_link_1['url']; ?>" target="<?php echo $giving_back_link_1['target']; ?>" class="button button-outline button-small button-dark"><?php echo $giving_back_link_1['title']; ?></a>
-          <a href="<?php echo $giving_back_link_2['url']; ?>" target="<?php echo $giving_back_link_2['target']; ?>" class="button button-outline button-small button-dark"><?php echo $giving_back_link_2['title']; ?></a>
+        <div class="button-group button-group-vertical">
+          <a href="<?php echo $giving_back_link_1['url']; ?>" target="<?php echo $giving_back_link_1['target']; ?>" class="button button-arrow button-dark"><?php echo $giving_back_link_1['title']; ?></a>
+          <a href="<?php echo $giving_back_link_2['url']; ?>" target="<?php echo $giving_back_link_2['target']; ?>" class="button button-arrow button-dark"><?php echo $giving_back_link_2['title']; ?></a>
         </div>
     </div>
     <div class="about-planet-intro-img">

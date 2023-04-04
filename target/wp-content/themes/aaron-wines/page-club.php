@@ -61,9 +61,14 @@ get_header();
 
 
 <!-- CTA -->
+<?php
+  $cta = get_field('cta');
+  $cta_title = $cta['title'];
+  $cta_link = $cta['link'];
+?>
 <div class="club-cta">
-  <h1 class="h1">Ready to join the <br> Aaron Wines family?</h1>
-  <a href="#" class="button button-large button-solid button-dark">Join Now</a>
+  <h1 class="club-cta-title"><?php echo $cta_title; ?></h1>
+  <a href="<?php echo $cta_link['url']; ?>" target="<?php echo $cta_link['target']; ?>" class="button button-large button-solid button-dark"><?php echo $cta_link['title']; ?></a>
 </div>
 
 

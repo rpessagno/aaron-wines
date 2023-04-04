@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 
 @mixin h1 {
   font: 300 normal 70px/1 $serif;
-  color: #b18a5e;
+  color: $gold;
 
   @include bp(l) {
     font-size: 60px;
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 
 @mixin h2 {
   font: 300 normal 54px/1.1 $serif;
-  color: #b18a5e;
+  color: $gold;
 
   @include bp(xl) {
     font-size: 50px;
@@ -137,6 +137,10 @@ ol {
 
   + p {
     margin-top: 1em;
+  }
+
+  + .h3 {
+    margin-top: 3em;
   }
 
   a {

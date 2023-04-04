@@ -39,7 +39,7 @@ get_header();
   <div class="shop-section" data-scroll-target="<?php echo $item_slug; ?>" tabindex="0" style="background-color: <?php echo $background_color; ?>;">
 
     <div class="shop-header">
-      <h2><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>"></h2>
+      <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
       <p class="description"><?php echo $description; ?></p>
     </div>
 

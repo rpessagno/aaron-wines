@@ -59,3 +59,21 @@ $('.js-modal-cart').on('click', function() {
   }
   return false;
 });
+
+
+
+
+
+$(window).on('load', function() {
+  var cartCount = parseInt($('.v65-widgetModalCart-itemCount').html());
+  $('.header-shop-cart-count').html(cartCount);
+
+  $('.v65-widgetProduct-addToCart-button .add-to-cart').on('click', function() {
+    var cartButton = $(this);
+    var cartQty = parseInt(cartButton.parent().prev().find('input').val());
+    var cartCount = parseInt($('.header-shop-cart-count').html());
+    $('.header-shop-cart-count').html(cartQty + cartCount);
+  });
+});
+
+

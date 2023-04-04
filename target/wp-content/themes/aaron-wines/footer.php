@@ -20,7 +20,7 @@
 
       <!-- Begin Mailchimp Signup Form -->
       <div id="mc_embed_signup">
-          <form action="https://aaronwines.us3.list-manage.com/subscribe/post?u=bc551c70f09510adff5329851&amp;id=4aaddb9de6&amp;f_id=00172be3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
+          <form action="https://aaronwines.us3.list-manage.com/subscribe/post?u=bc551c70f09510adff5329851&amp;id=4aaddb9de6&amp;f_id=00172be3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
               <div id="mc_embed_signup_scroll">
               
       <div class="mc-field-group">

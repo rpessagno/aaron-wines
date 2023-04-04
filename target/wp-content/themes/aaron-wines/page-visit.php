@@ -22,13 +22,19 @@ get_header();
   $intro_eyebrow = $intro['eyebrow'];
   $intro_title = $intro['title'];
   $intro_text = $intro['text'];
+  $intro_address = $intro['address'];
+  $intro_maps_link = $intro['maps_link'];
   $intro_image = $intro['image'];
 ?>
 <div class="intro intro-dark visit-intro" data-scrollax-parent="true">
   <div class="intro-content">
-    <h1 class="eyebrow">Join the Club</h1>
+    <p class="eyebrow">Experience Our Wines</p>
     <h1 class="h1"><?php echo $intro_title; ?></h1>
     <?php echo $intro_text; ?>
+    <h2 class="h3">Directions</h2>
+    <p class="visit-directions">
+      <a href="<?php echo $intro_maps_link; ?>" target="_blank"><?php echo $intro_address; ?></a>
+    </p>
   </div>
   <div class="intro-img" data-scrollax="properties: { 'translateY': '-5vw' }">
     <img src="<?php echo $intro_image['url']; ?>" alt="<?php echo $intro_image['alt']; ?>">
