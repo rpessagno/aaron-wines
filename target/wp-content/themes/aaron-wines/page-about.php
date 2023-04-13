@@ -73,9 +73,13 @@ get_header();
 </div>
 
 
+
 <!-- Skyline -->
+<?php
+  $group_photo = get_field('group_photo');
+?>
 <div class="home-skyline">
-  <img src="<?php bloginfo('template_directory'); ?>/assets/images/about/20-years.jpg" alt="">
+  <img src="<?php echo $group_photo['url']; ?>" alt="<?php echo $group_photo['alt']; ?>">
 </div>
 
 
