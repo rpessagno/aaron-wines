@@ -58,10 +58,10 @@
     </div>
 
     <div class="footer-item club">
-      <h1 class="footer-title">Members</h1>
+      <h1 class="footer-title">Club Members</h1>
       <div>
-        <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile" class="button button-small button-outline button-light">Sign In</a>
-        <a href="https://shop.aaronwines.com/index.cfm?method=memberCreateAccount.SignUp" class="button button-small button-outline button-light">Join</a>
+        <a href="https://shop.aaronwines.com/index.cfm?method=memberClubs.clubList" class="button button-small button-outline button-light">Log In</a>
+        <a href="<?php the_permalink('28'); ?>" class="button button-small button-outline button-light">Join Club</a>
       </div>
     </div>
 

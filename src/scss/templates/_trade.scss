@@ -5,7 +5,7 @@
 .trade {
 
   &-products {
-    padding: 100px 0;
+    padding: 100px 0 200px;
 
     h3 {
       margin-bottom: 20px;
@@ -236,7 +236,7 @@
     width: calc(100% - 80px);
     max-width: 1000px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 0 0 100px;
 
     @include bp(s) {
       width: calc(100% - 40px);

@@ -67,6 +67,7 @@ get_header();
   $cta_link = $cta['link'];
 ?>
 <div class="club-cta">
+  <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/shaka.svg" alt="shaka icon" class="club-cta-icon">
   <h1 class="club-cta-title"><?php echo $cta_title; ?></h1>
   <a href="<?php echo $cta_link['url']; ?>" target="<?php echo $cta_link['target']; ?>" class="button button-large button-solid button-dark"><?php echo $cta_link['title']; ?></a>
 </div>

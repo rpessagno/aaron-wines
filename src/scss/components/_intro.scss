@@ -22,6 +22,10 @@
     z-index: 2;
     padding: 185px 5% 250px 0;
 
+    @include bp(l) {
+      padding: 120px 5% 180px 0;
+    }
+
     @include bp(m) {
       width: 100%;
       padding: 60px 0 20px;

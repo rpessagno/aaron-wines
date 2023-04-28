@@ -135,9 +135,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      transform: scale(1.1);
       opacity: 0;
       visibility: hidden;
-      transition: opacity .5s, visibility .5s;
+      transition: opacity .5s, visibility .5s, transform .5s;
     }
 
     &.open {
@@ -145,6 +146,7 @@
       @include bp(m) {
         opacity: 1;
         visibility: visible;
+        transform: scale(1);
       }
     }
 

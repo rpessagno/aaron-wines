@@ -131,4 +131,28 @@ get_header();
 </div>
 
 
+
+<!-- Contacts -->
+<div class="trade-brand">
+    
+  <?php if( have_rows('contacts') ) { ?>
+  <?php while ( have_rows('contacts') ) { the_row(); ?>
+  <?php
+    $title = get_sub_field('title');
+    $text = get_sub_field('text');
+  ?>
+  <div class="trade-brand-item">
+    <div class="trade-brand-item-content">
+      <h3 class="h3"><?php echo $title; ?></h3>
+      <?php echo $text; ?>
+    </div>
+  </div>
+  <?php } ?>
+  <?php } ?>
+
+</div>
+
+
+
+
 <?php get_footer(); ?>

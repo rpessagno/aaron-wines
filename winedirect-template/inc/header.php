@@ -70,7 +70,7 @@
   c7.1,0,13.2,4.9,14.9,11.8H35.1C36.7,12,42.9,7.2,50,7.1z M83.4,88.9c0,2.2-1.8,4-4,4l0,0H20.6c-2.2,0-4-1.8-4-4V30c0-2.2,1.8-4,4-4
   l0,0h58.9c2.2,0,4,1.8,4,4l0,0l0,0V88.9z"></path>
 </svg>
-            Cart
+            Cart <span class="header-shop-cart-count hide">0</span>
           </a>
         </li>
         <li class="header-shop-item">
@@ -96,5 +96,5 @@
   </button>
 </header>
 
-<?php //include('inc/modal-cart.php'); ?>
+<?php include('inc/modal-cart.php'); ?>
 <?php //include('inc/modal-container.php'); ?>

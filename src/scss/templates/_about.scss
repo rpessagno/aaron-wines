@@ -126,6 +126,7 @@
 
       p {
         color: $blue;
+        line-height: 1.4;
       }
     }
 
@@ -188,7 +189,6 @@
         flex-flow: row wrap;
         padding: 0;
         position: relative;
-        // border-bottom: $mid-grey-border dashed 1px;
 
         &:after {
           content: '';
@@ -199,6 +199,10 @@
           bottom: 0;
           transform: translateX(-50%);
           transition: width 1s 1s;
+
+          @include bp(s) {
+            display: none;
+          }
         }
 
         &.animate {
@@ -223,12 +227,12 @@
         padding: 80px;
 
         @include bp(l) {
-          padding: 20px 40px;
+          padding: 60px 40px;
         }
 
         @include bp(s) {
           width: 100%;
-          padding: 60px 10px;
+          padding: 60px 10px 20px;
           max-width: 500px;
         }
 
@@ -243,13 +247,11 @@
             right: 0;
             top: 0;
             transition: height 1s;
-          }
-          // border-right: $mid-grey-border dashed 1px;
 
-          // @include bp(s) {
-          //   border-right: 0;
-          //   border-bottom: $mid-grey-border dashed 1px;
-          // }
+            @include bp(s) {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -284,15 +286,19 @@
         @include bp(s) {
           width: 100%;
           max-width: 500px;
+          margin: 0 auto 40px;
         }
 
         &:nth-child(2n) {
           margin-right: 0;
+
+          @include bp(s) {
+            margin-right: auto;
+          }
         }
       }
 
       &-img {
-        // width: 100%;
         height: 300px;
         overflow: hidden;
 
@@ -307,7 +313,6 @@
       }
 
       &-content {
-        // width: 50%;
         padding: 50px 50px 60px;
 
         @include bp(m) {
@@ -316,7 +321,11 @@
 
         @include bp(s) {
           width: 100%;
-          padding: 40px 10px;
+          padding: 40px;
+        }
+
+        .h3 + p {
+          margin-top: .5em;
         }
       }
     }
@@ -358,9 +367,12 @@
         display: block;
         width: 100%;
         height: auto;
-        
         position: relative;
         z-index: 2;
+
+        @include bp(s) {
+          transform: none !important;
+        }
       }
     }
   }

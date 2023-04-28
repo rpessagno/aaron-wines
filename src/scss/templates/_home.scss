@@ -285,6 +285,10 @@
       min-height: 0;
     }
 
+    @include bp(l) {
+      background-image: url('assets/images/home/map-tablet.jpg');
+    }
+
     @include bp(m) {
       padding-bottom: 60vw;
       background: $blue url('assets/images/home/map-mobile.jpg') right bottom / 100% auto no-repeat;
@@ -380,7 +384,7 @@
 
       @include bp(s) {
         width: 100%;
-        padding: 40px 0 0 0;
+        padding: 40px 0;
       }
 
       p {

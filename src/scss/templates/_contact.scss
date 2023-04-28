@@ -25,6 +25,10 @@
     margin: 0 auto;
     padding: 100px 0 0;
 
+    @include bp(s) {
+      padding-top: 60px;
+    }
+
     a {
       @include link-underline-on-hover;
     }
@@ -104,12 +108,18 @@
 
           @include bp(s) {
             width: 100%;
+            margin-right: 0 !important;
           }
         }
 
         &.full {
           width: 100% !important;
         }
+      }
+
+      &-error {
+        @include meta;
+        margin-top: .5em !important;
       }
 
       &-submit {

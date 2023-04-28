@@ -5,7 +5,7 @@
 .visit {
 
   &-intro {
-    background: $blue url('assets/images/global/topography-bg-3.png') center center / cover no-repeat;
+    background: $blue url('assets/images/visit/intro-bg.jpg') center center / cover no-repeat;
 
     &:after {
       content: '';
@@ -120,8 +120,12 @@
         font: 400 italic 30px/1 $serif;
         color: $brown;
         border-top: $gold dashed 1px;
-        padding: 1em .2em 0;
+        padding: 1em .2em .2em;
         margin-top: 1em;
+
+        @include bp(m) {
+          font-size: 24px;
+        }
 
         + p {
           margin-top: 0;
@@ -137,6 +141,7 @@
 
     @include bp(s) {
       margin-top: 40px;
+      padding-top: 80px;
     }
 
     &-intro {
@@ -152,6 +157,10 @@
         width: 100px;
         height: auto;
         margin-bottom: 20px;
+
+        @include bp(m) {
+          width: 80px;
+        }
       }
 
       .h1 {
