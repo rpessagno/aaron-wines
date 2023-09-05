@@ -31,7 +31,7 @@
 
   &-intro {
     background-color: $white;
-    padding: 100px 160px 80px;
+    padding: 100px 160px;
     margin: 0 auto;
     width: calc(100% - 80px);
     max-width: 1000px;
@@ -64,7 +64,7 @@
     padding: 40px 0 100px;
 
     @include bp(s) {
-      padding: 0 0 80px;
+      padding: 0 0 20px;
     }
 
     &-items {
@@ -253,6 +253,7 @@
     &-items {
       display: flex;
       flex-flow: row wrap;
+      justify-content: center;
       width: calc(100% - 120px);
       max-width: 1600px;
       margin: 0 auto;
@@ -307,7 +308,7 @@
         margin-top: 2%;
 
         .club-events-item-img {
-          padding-top: 95%;
+          padding-top: 105%;
           @include img-mask('assets/images/club/event-mask-1.svg');
         }
       }
@@ -315,7 +316,7 @@
       &:nth-child(2) {
 
         .club-events-item-img {
-          padding-top: 105%;
+          padding-top: 115%;
           @include img-mask('assets/images/club/event-mask-2.svg');
         }
       }
@@ -324,7 +325,7 @@
         margin-top: 3%;
 
         .club-events-item-img {
-          padding-top: 90%;
+          padding-top: 100%;
           @include img-mask('assets/images/club/event-mask-3.svg');
         }
       }
@@ -355,6 +356,11 @@
           padding: 0 10px;
         }
       }
+    }
+
+    &-no-events {
+      text-align: center;
+      padding: 0 30px;
     }
   }
 }

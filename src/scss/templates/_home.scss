@@ -137,7 +137,7 @@
 
     &-content {
       background-color: $blue;
-      padding: 20vw 0;
+      padding: 20vw 0 15vw;
       position: relative;
       margin-top: -10vw;
 
@@ -312,6 +312,10 @@
 
       p, ul {
         color: $white;
+      }
+
+      a {
+        background-color: $blue;
       }
     }
   }

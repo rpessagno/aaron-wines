@@ -26,11 +26,9 @@ get_header();
     $intro_text = $intro['text'];
   ?>
   <div class="home-intro" data-scrollax="properties: { 'translateY': '-10vw' }">
-    <div class="home-intro-content">
-      <h1 class="home-intro-title"><?php echo $intro_title; ?></h1>
-      <?php echo $intro_text; ?>
-      <img src="<?php bloginfo('template_directory'); ?>/assets/images/home/aaron-jackson-signature-brown.png" alt="Aaron Jackson" class="home-intro-signature">
-    </div>
+    <h1 class="home-intro-title"><?php echo $intro_title; ?></h1>
+    <?php echo $intro_text; ?>
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/home/aaron-jackson-signature-brown.png" alt="Aaron Jackson" class="home-intro-signature">
   </div>
 
   <!-- Bottles -->

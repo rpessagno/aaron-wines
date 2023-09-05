@@ -29,7 +29,9 @@
 
 <ul>
   <li><a href="/member-login.php">Login</a></li>
+  <li><a href="/member-create-new-account.php">Create New Account</a></li>
   <li><a href="/member-forgot-password.php">Forgot Password</a></li>
+  <li><a href="/member-password-reset.php">Password Reset</a></li>
   <li><a href="/member-edit-profile.php">Edit Profile</a></li>
   <li><a href="/member-credit-cards.php">Credit Cards</a></li>
   <li><a href="/member-credit-cards-add.php">Credit Cards Add</a></li>

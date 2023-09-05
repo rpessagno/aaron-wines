@@ -271,6 +271,8 @@
       }
 
       @include bp(s) {
+        width: calc(100% - 60px);
+        padding-top: 60px;
         padding-bottom: 50px;
       }
 

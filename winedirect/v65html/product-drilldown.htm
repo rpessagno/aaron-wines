@@ -10,9 +10,15 @@
 
 <title><v65:pageTitle></v65:pageTitle> | Aaron Wines</title>
 
-<link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/qwi5ewx.css">
 <v65:css files="/assets/custom/winedirect.css"></v65:css>
 
+<!-- App -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="application-name" content="Aaron Wines" />
+<meta name="apple-mobile-web-app-title" content="Aaron Wines">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 <!--//Vin65 QuickLaunch//-->
 <script type="text/javascript" src="https://quicklaunch.vin65.com/quicklaunch.js"></script>
@@ -25,7 +31,10 @@
 
 <body class="winedirect">
 
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7FC7ZX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 
 
@@ -82,7 +91,9 @@
 <!-- https://documentation.vin65.com/Designer-Launch/Vin65-Remote-Widgets -->
 <v65:js files="/assets/js/scripts.js,/assets/custom/main.js"></v65:js>
 <script type="text/javascript" src="https://assetss3.vin65.com/js/vin65remotetools.1.1.js"></script>
-<script type="text/javascript">vin65remote.form.form('https://shop.aaronwines.com','Newsletter Signup');</script>
+<script type="text/javascript">vin65remote.cart.modalCart('https://shop.aaronwines.com',0);</script>
+<script type="text/javascript">vin65remote.cart.addToCart('https://shop.aaronwines.com');</script>
+<script type="text/javascript">vin65remote.product.addToCartForm('https://shop.aaronwines.com');</script>
 
 
 </body>

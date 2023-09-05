@@ -54,6 +54,13 @@
     }
   }
 
+  > style {
+
+    + h3 {
+      margin-top: 1em;
+    }
+  }
+
   > h3 {
     @include wd-title3;
     text-align: center;
@@ -400,7 +407,8 @@
   }
 
   #v65-memberFormWrapper,
-  #v65-checkBilling {
+  #v65-checkBilling,
+  .v65-form {
     margin-top: 60px;
     @include wd-border(top);
     padding-top: 40px;
@@ -444,6 +452,37 @@
           @include wd-select;
         }
       }
+
+      .checks {
+        font: 400 normal 15px/1.6 $sans-serif;
+        letter-spacing: .04em;
+
+        small {
+          font-size: inherit;
+        }
+
+        .fa {
+          font-style: normal;
+
+          &-exclamation-circle {
+
+            &:before {
+              content: '\0021';
+            }
+          }
+
+          &-check {
+
+            &:before {
+              content: '\2713';
+            }
+          }
+        }
+      }
+    }
+
+    .v65-group {
+      clear: both;
     }
 
     .defaultBtn {

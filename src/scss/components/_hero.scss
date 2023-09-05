@@ -24,7 +24,9 @@
   }
 
   img {
-    @include img-cover;
+    width: 101%;
+    height: 101%; // height it set to 101% instead of 100% to fix a white line appearing in mobile Safari
+    object-fit: cover;
   }  
 }
 

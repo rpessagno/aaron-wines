@@ -115,11 +115,11 @@
         &.full {
           width: 100% !important;
         }
-      }
 
-      &-error {
-        @include meta;
-        margin-top: .5em !important;
+        label.wpforms-error {
+          @include meta;
+          margin-top: .5em !important;
+        }
       }
 
       &-submit {

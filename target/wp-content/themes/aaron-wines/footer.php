@@ -66,7 +66,7 @@
     </div>
 
     <div class="footer-item planet">
-      <img src="<?php bloginfo('template_directory'); ?>/assets/images/global/1-percent-for-the-planet.svg" alt="1% For the Planet">
+      <a href="https://onepercentfortheplanet.org/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/assets/images/global/1-percent-for-the-planet.svg" alt="1% For the Planet"></a>
     </div>
 
   </div>

@@ -70,6 +70,16 @@
         width: 100%;
       }
 
+      a {
+
+        &:hover {
+
+          img {
+            opacity: .8;
+          }
+        }
+      }
+
       img {
         display: block;
         width: 100%;
@@ -77,6 +87,7 @@
         height: auto;
         margin-left: auto;
         opacity: .5;
+        transition: opacity .2s;
 
         @include bp(m) {
           margin: 0 auto;

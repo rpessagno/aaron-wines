@@ -59,6 +59,7 @@ $border: transparentize($charcoal, .9) solid 1px;
 
 @mixin wd-button {
   @include button;
+  cursor: pointer;
 }
 
 @mixin wd-button-small {
@@ -112,10 +113,8 @@ $border: transparentize($charcoal, .9) solid 1px;
 @mixin wd-label {
   @include wd-text;
   font-weight: 400;
-  letter-spacing: 0.05em;
   line-height: 1.4;
   display: block;
-  text-transform: uppercase;
   padding-top: 3px;
   padding-right: 15px;
   padding-bottom: 5px;
@@ -144,7 +143,7 @@ $border: transparentize($charcoal, .9) solid 1px;
   input[type="radio"],
   input[type="checkbox"] {
     float: left;
-    margin: 3px 10px 0 0;
+    margin: 8px 10px 0 0;
   }
 }
 

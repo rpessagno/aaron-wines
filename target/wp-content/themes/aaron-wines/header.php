@@ -2,18 +2,14 @@
 <html <?php language_attributes(); ?>>
 <head>
 	
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48585744-1"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GC2T5WML4J"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-48585744-1', {
-    'linker': {
-      'domains': ['aaronwines.com', 'shop.aaronwines.com']
-    }
-  });
+  gtag('config', 'G-GC2T5WML4J');
 </script>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -30,8 +26,8 @@
 <!-- App -->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="application-name" content="App Short Name" />
-<meta name="apple-mobile-web-app-title" content="App Full Name">
+<meta name="application-name" content="Aaron Wines" />
+<meta name="apple-mobile-web-app-title" content="Aaron Wines">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 <?php wp_head(); ?>
@@ -73,6 +69,11 @@ tock('init', 'aaronwines');
 </head>
 
 <body <?php body_class(); ?>>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7FC7ZX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <?php
 $page_id = get_the_ID();
