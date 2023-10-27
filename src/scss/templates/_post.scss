@@ -36,6 +36,10 @@
       padding: 40px 0 100px;
     }
 
+    &-wide {
+      max-width: 1600px;
+    }
+
     h1,
     h2 {
       font: 300 normal 40px/1.1 $serif;
@@ -123,6 +127,20 @@
     a {
       color: currentColor;
       text-decoration: underline;
+    }
+
+    table {
+      @include p1;
+
+      th {
+        background-color: $darken-white;
+      }
+
+      th,
+      td {
+        text-align: left;
+        border-color: $black;
+      }
     }
   }
 }

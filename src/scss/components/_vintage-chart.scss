@@ -1,0 +1,76 @@
+//==============================
+// Vintage Chart
+//==============================
+
+.chart {
+
+  th,
+  td {
+    white-space: nowrap;
+
+    &:not(:first-child) {
+      text-align: center !important;
+      font-size: 14px;
+    }
+  }
+
+  &-vintage {
+    font-weight: bold;
+    text-align: center !important;
+  }
+
+  &-maturity {
+
+    &-option1 {
+      background-color: #a3201d;
+    }
+
+    &-option2 {
+      background-color: #3d4751;
+    }
+
+    &-option3 {
+      background-color: #607d1e;
+    }
+
+    &-option4 {
+      background-color: #ad8b60;
+    }
+
+    &-option5 {
+      background-color: #7c644b;
+    }
+
+    &-option6 {
+      background-color: #dcdcdc;
+    }
+  }
+
+  &-key {
+    margin: 40px 0 0 0 !important;
+    padding: 0 !important;
+
+    &-item {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      + .chart-key-item {
+        margin-top: .5em;
+      }
+
+      &-maturity {
+        width: 60px;
+        height: 40px;
+      }
+
+      &-description {
+        width: calc(100% - 60px);
+        padding-left: 15px;
+        line-height: 1.3;
+      }
+    }
+  }
+}

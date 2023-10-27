@@ -194,3 +194,16 @@ function custom_post_trade() {
 }
 add_action( 'init', 'custom_post_trade', 0 );
 
+
+
+// Custom Admin CSS
+add_action('admin_head', 'custom_admin_css');
+
+function custom_admin_css() {
+  echo '<style>
+    [data-name="vintage"] {
+      display: none;
+    }
+  </style>';
+}
+
