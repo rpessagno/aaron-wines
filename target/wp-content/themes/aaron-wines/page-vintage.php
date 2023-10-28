@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Vintage Charts
+Template Name: Vintage Chart
 */
 
 get_header();
