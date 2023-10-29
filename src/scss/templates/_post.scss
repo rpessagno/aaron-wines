@@ -38,6 +38,10 @@
 
     &-wide {
       max-width: 1600px;
+
+      @include bp(xl) {
+        // max-width: 1200px;
+      }
     }
 
     h1,
