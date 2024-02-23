@@ -115,30 +115,39 @@ get_header();
       </table>
     </figure>
 
+    <?php
+      $options = get_field('options');
+      $option1 = $options['option1'];
+      $option2 = $options['option2'];
+      $option3 = $options['option3'];
+      $option4 = $options['option4'];
+      $option5 = $options['option5'];
+      $option6 = $options['option6'];
+    ?>
     <ul class="chart-key">
       <li class="chart-key-item">
         <span class="chart-key-item-maturity chart-maturity-option1"></span>
-        <span class="chart-key-item-description">Don’t open yet</span>
+        <span class="chart-key-item-description"><?php echo $option1; ?></span>
       </li>
       <li class="chart-key-item">
         <span class="chart-key-item-maturity chart-maturity-option2"></span>
-        <span class="chart-key-item-description">Open and decant before drinking</span>
+        <span class="chart-key-item-description"><?php echo $option2; ?></span>
       </li>
       <li class="chart-key-item">
         <span class="chart-key-item-maturity chart-maturity-option3"></span>
-        <span class="chart-key-item-description">Pop that baby open and savor it at its peak!</span>
+        <span class="chart-key-item-description"><?php echo $option3; ?></span>
       </li>
       <li class="chart-key-item">
         <span class="chart-key-item-maturity chart-maturity-option4"></span>
-        <span class="chart-key-item-description">Appreciate the maturity of the wine</span>
+        <span class="chart-key-item-description"><?php echo $option4; ?></span>
       </li>
       <li class="chart-key-item">
         <span class="chart-key-item-maturity chart-maturity-option5"></span>
-        <span class="chart-key-item-description">You’ll regret not drinking this sooner</span>
+        <span class="chart-key-item-description"><?php echo $option5; ?></span>
       </li>
       <li class="chart-key-item">
         <span class="chart-key-item-maturity chart-maturity-option6"></span>
-        <span class="chart-key-item-description">Not released</span>
+        <span class="chart-key-item-description"><?php echo $option6; ?></span>
       </li>
     </ul>
 
