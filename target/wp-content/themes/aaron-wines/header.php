@@ -75,6 +75,30 @@ tock('init', 'aaronwines');
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<!-- RedChirp -->
+ <script>
+(function(d){
+  console.log('redchirp: pixel script start');
+  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+  p.type = 'text/javascript';
+  p.setAttribute('charset','utf-8');
+  p.async = true;
+  p.id = "your-widget";
+  
+  var meta_ref_url = document.querySelector('meta[name="redchirp-referring-url"]');
+  var meta_inbox_ids = document.querySelector('meta[name="redchirp-inbox-ids"]');
+
+  var query_string = '?ref='+encodeURIComponent(meta_ref_url == null ? window.location : meta_ref_url.content);
+
+  if ( meta_inbox_ids != null )
+    query_string += '&inbox_ids='+encodeURIComponent(meta_inbox_ids.content);
+
+  p.src = "https://app.redchirp.com/api/v1/widget/widget-loader.js"+query_string;
+  f.parentNode.insertBefore(p, f);
+}(document));
+</script>
+<!-- End RedChirp -->
+
 <?php
 $page_id = get_the_ID();
 $header_style = get_field('header_style', $page_id);

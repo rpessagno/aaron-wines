@@ -28,7 +28,7 @@ get_header();
 ?>
 <div class="intro intro-dark visit-intro" data-scrollax-parent="true">
   <div class="intro-content">
-    <p class="eyebrow">Experience Our Wines</p>
+    <p class="eyebrow"><?php echo $intro_eyebrow; ?></p>
     <h1 class="h1"><?php echo $intro_title; ?></h1>
     <?php echo $intro_text; ?>
     <h2 class="h3">Directions</h2>
