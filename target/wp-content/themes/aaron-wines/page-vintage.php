@@ -22,6 +22,7 @@ get_header();
         <thead>
           <tr>
             <th>Wine</th>
+            <th>2023</th>
             <th>2022</th>
             <th>2021</th>
             <th>2020</th>
@@ -42,6 +43,7 @@ get_header();
             <th>2005</th>
             <th>2004</th>
             <th>2003</th>
+            <th>2002</th>
 
             <?php if( have_rows('vintages') ) { ?>
             <?php while ( have_rows('vintages') ) { the_row(); ?>
@@ -60,6 +62,7 @@ get_header();
             $name = get_sub_field('name');
             $vintages = get_sub_field('vintages');
             $vintage = $vintages['vintage'];
+            $vintage_2023 = $vintages['vintage_2023_vintage'];
             $vintage_2022 = $vintages['vintage_2022_vintage'];
             $vintage_2021 = $vintages['vintage_2021_vintage'];
             $vintage_2020 = $vintages['vintage_2020_vintage'];
@@ -80,10 +83,12 @@ get_header();
             $vintage_2005 = $vintages['vintage_2005_vintage'];
             $vintage_2004 = $vintages['vintage_2004_vintage'];
             $vintage_2003 = $vintages['vintage_2003_vintage'];
+            $vintage_2002 = $vintages['vintage_2002_vintage'];
           ?>
 
           <tr>
             <th><?php echo $name; ?></th>
+            <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2023; ?>"></td>
             <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2022; ?>"></td>
             <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2021; ?>"></td>
             <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2020; ?>"></td>
@@ -104,6 +109,7 @@ get_header();
             <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2005; ?>"></td>
             <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2004; ?>"></td>
             <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2003; ?>"></td>
+            <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2002; ?>"></td>
 
           </tr>
 
