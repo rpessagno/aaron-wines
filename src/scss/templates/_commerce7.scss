@@ -1,0 +1,174 @@
+//==============================
+// Commerce7
+//==============================
+
+.c7 {
+
+  &-page {
+    padding: 100px 0;
+  }
+
+  &-h1 {
+    font: 500 normal 44px/1.1 $serif !important;
+    color: $gold !important;
+    letter-spacing: -.01em;
+
+    @include bp(xl) {
+      font-size: 50px !important;
+    }
+
+    @include bp(l) {
+      font-size: 44px !important;
+    }
+
+    @include bp(m) {
+      font-size: 44px !important;
+    }
+
+    @include bp(s) {
+      font-size: 34px !important;
+    }
+  }
+
+  &-h2 {
+    font: 500 normal 30px/1.1 $serif !important;
+    color: $blue !important;
+    letter-spacing: -.01em;
+
+    @include bp(xl) {
+      font-size: 28px !important;
+    }
+
+    @include bp(l) {
+      font-size: 26px !important;
+    }
+
+    @include bp(m) {
+      font-size: 24px !important;
+    }
+
+    @include bp(s) {
+      font-size: 22px !important;
+    }
+  }
+
+  &-btn--primary {
+    @include button;
+    font-size: 14px;
+    color: $white;
+    background-color: $blue;
+    border-color: $blue;
+    border-radius: 0;
+    align-content: center;
+
+    &:hover {
+      background-color: $gold !important;
+      color: $white;
+    }
+  }
+
+  &-btn--alt {
+    @include button;
+    font-size: 14px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    color: $blue;
+    border-color: $blue;
+    border-radius: 0;
+    align-content: center;
+
+    &:hover {
+      background-color: $blue !important;
+      color: $white;
+    }
+  }
+
+  &-btn--alt--small {
+    @include meta;
+  }
+
+  &-form__field {
+    @include p1;
+  }
+
+  &-user-nav__account__dropdown {
+    text-transform: none;
+
+    p {
+      line-height: 1.2;
+    }
+  }
+
+  &-user-nav__account__dropdown__header span {
+    margin-left: 20px;
+  }
+
+  &-account__header {
+    background-color: lighten($white, 3%);
+  }
+
+  &-account__header p:first-of-type {
+    @include h2;
+  }
+
+  &-account-dashboard__block__header__title h2.c7-h2,
+  &-account-details__header h2.c7-h2 {
+    @include h3;
+  }
+
+  &-account-block__title {
+    @include p1;
+    font-weight: 700;
+  }
+
+  &-link {
+    @include meta;
+    color: $blue;
+  }
+
+  &-cart {
+    width: calc(100% - 80px);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  &-order-summary {
+
+    &__title {
+      @include p1;
+    }
+
+    &__value {
+      @include p1;
+      font-weight: 700 !important;
+    }
+  }
+
+  &-tab {
+    font-family: $serif !important;
+  }
+}
+
+#c7-cart {
+
+  > .c7-user-nav__cart > .c7-link {
+    @include hide;
+  }
+
+  .c7-order-summary {
+    @include p1;
+
+    &__item--subtotal {
+
+    }
+  }
+
+  .c7-order-item__title {
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	
+  
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GC2T5WML4J"></script>
 <script>
@@ -16,7 +16,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <link rel="stylesheet" href="https://use.typekit.net/qwi5ewx.css">
+<link href="https://cdn.commerce7.com/v2/commerce7.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+
 
 <!-- Icons -->
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/assets/images/global/favicon.png" type="image/x-icon">
@@ -104,7 +106,7 @@ $page_id = get_the_ID();
 $header_style = get_field('header_style', $page_id);
 ?>
 
-<header class="header">
+<header class="header<?php if ($header_style) { ?> header-style-dark<?php } ?>">
   <a href="<?php the_permalink('2'); ?>" class="header-logo">
     <?php echo file_get_contents(get_template_directory() . '/assets/images/global/aaron-logo-white.svg'); ?>
   </a>
@@ -115,16 +117,10 @@ $header_style = get_field('header_style', $page_id);
     <div class="header-shop">
       <ul class="header-shop-items">
         <li class="header-shop-item">
-          <a href="https://shop.aaronwines.com/index.cfm?method=cartV2.showCart" class="header-shop-cart js-modal-cart">
-            <?php echo file_get_contents(get_template_directory() . '/assets/images/global/cart.svg') ?>
-            Cart <span class="header-shop-cart-count hide">0</span>
-          </a>
+          <a href="#" class="header-shop-cart">Cart</a>
         </li>
         <li class="header-shop-item">
-          <a href="https://shop.aaronwines.com/index.cfm?method=memberEditAccount.editProfile">
-            <?php echo file_get_contents(get_template_directory() . '/assets/images/global/account.svg') ?>
-            Account
-          </a>
+          <div id="c7-account"></div>
         </li>
       </ul>
     </div>
@@ -137,4 +133,4 @@ $header_style = get_field('header_style', $page_id);
   </button>
 </header>
 
-<div v65remotejs="modalCart"></div>
+<div id="c7-cart"></div>

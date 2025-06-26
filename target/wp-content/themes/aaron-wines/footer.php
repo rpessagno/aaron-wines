@@ -60,7 +60,7 @@
     <div class="footer-item club">
       <h1 class="footer-title">Club Members</h1>
       <div>
-        <a href="https://shop.aaronwines.com/index.cfm?method=memberClubs.clubList" class="button button-small button-outline button-light">Log In</a>
+        <a href="<?php the_permalink('31365'); ?>" class="button button-small button-outline button-light">Log In</a>
         <a href="<?php the_permalink('28'); ?>" class="button button-small button-outline button-light">Join Club</a>
       </div>
     </div>
@@ -90,11 +90,7 @@
 <?php wp_footer(); ?>
 
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
-<script type="text/javascript" src="https://assetss3.vin65.com/js/vin65remotetools.1.1.js"></script>
-<script type="text/javascript">vin65remote.cart.modalCart('https://shop.aaronwines.com',0);</script>
-<script type="text/javascript">vin65remote.cart.addToCart('https://shop.aaronwines.com');</script>
-<script type="text/javascript">vin65remote.product.addToCartForm('https://shop.aaronwines.com');</script>
-
+<script type="text/javascript" src="https://cdn.commerce7.com/v2/commerce7.js" id="c7-javascript" data-tenant="aaron-wines"></script>
 
 </body>
 </html>
