@@ -172,3 +172,7 @@
     }
   }
 }
+
+.c7-message.c7-message--alert-error {
+  @include meta;
+}

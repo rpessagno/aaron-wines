@@ -20,10 +20,8 @@ get_header();
 <!-- Intro -->
 <?php
   $intro = get_field('intro');
-  $intro_eyebrow = $intro['eyebrow'];
   $intro_title = $intro['title'];
   $intro_text = $intro['text'];
-  $intro_image = $intro['image'];
 ?>
 <div class="club-overview">
   <div class="club-intro">
@@ -62,12 +60,13 @@ get_header();
 <?php
   $cta = get_field('cta');
   $cta_title = $cta['title'];
-  $cta_link = $cta['link'];
+  $cta_slug = $cta['slug'];
+  $cta_button_text = $cta['button_text'];
 ?>
 <div class="club-cta">
   <img src="<?php bloginfo('template_directory'); ?>/assets/images/visit/shaka.svg" alt="shaka icon" class="club-cta-icon">
   <h1 class="club-cta-title"><?php echo $cta_title; ?></h1>
-  <a href="<?php echo $cta_link['url']; ?>" target="<?php echo $cta_link['target']; ?>" class="button button-large button-solid button-dark"><?php echo $cta_link['title']; ?></a>
+  <div class="c7-club-join-button" data-club-slug="<?php echo $cta_slug; ?>" data-join-text="<?php echo $cta_button_text; ?>" data-edit-text="Edit Club Membership"></div>
 </div>
 
 

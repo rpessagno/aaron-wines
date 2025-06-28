@@ -41,14 +41,29 @@
       padding: 0 40px 40px;
     }
 
-    img {
+    &-logo {
       display: block;
       margin: 0 auto;
-      height: 50px;
       width: auto;
 
       @include bp(s) {
         height: 30px;
+      }
+
+      &-normal {
+        height: 50px;
+
+        @include bp(s) {
+          height: 30px;
+        }
+      }
+
+      &-large {
+        height: 60px;
+
+        @include bp(s) {
+          height: 50px;
+        }
       }
     }
 
@@ -60,6 +75,37 @@
 
         @include bp(s) {
           display: none;
+        }
+      }
+    }
+  }
+
+  .products {
+
+    &-count {
+
+      &-one,
+      &-two {
+
+        .c7-product-collection {
+
+          &__product-list {
+            justify-content: center;
+          }
+        }
+      }
+
+      &-three {
+
+        .c7-product-collection {
+
+          &__product-list {
+            justify-content: center;
+
+            @include bp(m) {
+              justify-content: flex-start;
+            }
+          }
         }
       }
     }
@@ -78,26 +124,30 @@
 
       @include bp(s) {
         width: calc(100% - 40px);
-        justify-content: center !important;
       }
 
       &__product-list {
-        // display: flex;
-        // flex-flow: row wrap;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 12px;
-        row-gap: 12px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        // column-gap: 12px;
+        // row-gap: 12px;
 
-        @include bp(l) {
-          grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: none;
+        column-gap: 0;
+        row-gap: 0;
+
+        @include bp(xl) {
+          // grid-template-columns: 1fr 1fr 1fr;
         }
 
         @include bp(m) {
-          grid-template-columns: 1fr 1fr;
+          // grid-template-columns: 1fr 1fr;
         }
 
         @include bp(s) {
-          grid-template-columns: 1fr;
+          justify-content: center !important;
         }
 
         p {
@@ -114,13 +164,76 @@
       }
 
       .c7-product {
+        // display: flex;
+        // flex-flow: column nowrap;
+        // align-items: center;
+        // text-align: center;
+        // padding: 30px 0 40px;
+        // flex-direction: column;
+        // background-color: #fff;
+        // width: 25%;
+
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        padding: 40px 30px;
         text-align: center;
-        padding: 30px 0 40px;
-        flex-direction: column;
         background-color: #fff;
+        width: calc((100% / 4) - (#{$grid-gutter * 3} / 4));
+        margin-right: $grid-gutter;
+        margin-bottom: $grid-gutter;
+
+        &:nth-child(4n) {
+          margin-right: 0;
+
+          @include bp(xl) {
+            margin-right: $grid-gutter;
+          }
+
+          @include bp(s) {
+            margin-right: 0;
+          }
+        }
+
+        &:nth-child(3n) {
+          
+          @include bp(xl) {
+            margin-right: 0;
+          }
+
+          @include bp(m) {
+            margin-right: $grid-gutter;
+          }
+
+          @include bp(s) {
+            margin-right: 0;
+          }
+        }
+
+        &:nth-child(2n) {
+          
+          @include bp(m) {
+            margin-right: 0;
+          }
+        }
+
+        @include bp(xl) {
+          width: calc((100% / 3) - (#{$grid-gutter * 2} / 3));
+        }
+
+        @include bp(l) {
+          padding: 40px 20px;
+        }
+
+        @include bp(m) {
+          width: calc((100% / 2) - (#{$grid-gutter} / 2));
+        }
+
+        @include bp(s) {
+          width: 100%;
+          max-width: 400px;
+          margin-right: 0;
+        }
 
         &__image {
           margin-bottom: 20px;
@@ -136,19 +249,39 @@
           width: 100%;
           text-align: center;
           padding: 0 20px;
+          display: flex;
+          flex-flow: column nowrap;
+
+          .c7-form {
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1;
+          }
         }
 
         &__title {
-          font: 400 normal 22px/1.3 $sans-serif !important;
-          margin-bottom: 0;
+          font: 600 normal 18px/1.3 $sans-serif !important;
+          letter-spacing: .2em;
+          text-transform: uppercase;
+          color: $brown;
 
           @include bp(m) {
-            font-size: 20px !important;
+            font-size: 17px;
           }
 
           @include bp(s) {
-            font-size: 18px !important;
+            font-size: 16px;
           }
+          // font: 400 normal 22px/1.3 $sans-serif !important;
+          // margin-bottom: 0;
+
+          // @include bp(m) {
+          //   font-size: 20px !important;
+          // }
+
+          // @include bp(s) {
+          //   font-size: 18px !important;
+          // }
           
           a {
             color: $brown;
@@ -156,15 +289,24 @@
         }
 
         &__subtitle {
-          @include p1;
+          @include meta;
+          margin-top: 10px;
+          color: #999;
         }
 
         &__teaser {
           display: none;
         }
 
+        &__add-to-cart {
+          // height: 100%;
+          // display: flex;
+          // flex-flow: column nowrap;
+        }
+
         &__add-to-cart__form {
           justify-content: center;
+          margin-top: auto;
 
           .c7-btn--primary {
             background-color: transparent !important;
@@ -181,7 +323,14 @@
         }
 
         &__add-to-cart__price {
-          @include meta;
+          font: 400 normal 17px/1.3 $sans-serif;
+          letter-spacing: .02em;
+          font-weight: 400;
+          color: $charcoal;
+
+          &__variant {
+            vertical-align: baseline;
+          }
         }
 
         &__add-to-cart__form__quantity {
@@ -198,133 +347,133 @@
   }
 }
 
-// .products {
-//   display: flex;
-//   flex-flow: row wrap;
-//   width: calc(100% - 120px);
-//   max-width: 1600px;
-//   margin: 0 auto;
+.products {
+  display: flex;
+  flex-flow: row wrap;
+  width: calc(100% - 120px);
+  max-width: 1600px;
+  margin: 0 auto;
 
-//   @include bp(m) {
-//     width: calc(100% - 80px);
-//   }
+  @include bp(m) {
+    width: calc(100% - 80px);
+  }
 
-//   @include bp(s) {
-//     width: calc(100% - 40px);
-//     justify-content: center !important;
-//   }
+  @include bp(s) {
+    width: calc(100% - 40px);
+    justify-content: center !important;
+  }
 
-//   &-align-left {
-//     justify-content: flex-start;
-//   }
+  &-align-left {
+    justify-content: flex-start;
+  }
 
-//   &-align-center {
-//     justify-content: center;
-//   }
+  &-align-center {
+    justify-content: center;
+  }
 
-//   &-align-center-desktop {
-//     justify-content: center;
+  &-align-center-desktop {
+    justify-content: center;
 
-//     @include bp(m) {
-//       justify-content: flex-start;
-//     }
-//   }
-// }
+    @include bp(m) {
+      justify-content: flex-start;
+    }
+  }
+}
 
-// .product {
-//   display: flex;
-//   flex-flow: column nowrap;
-//   align-items: center;
-//   padding: 40px 30px 60px;
-//   text-align: center;
-//   background-color: #fff;
-//   width: calc((100% / 4) - (#{$grid-gutter * 3} / 4));
-//   margin-right: $grid-gutter;
-//   margin-bottom: $grid-gutter;
+.product {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 40px 30px 60px;
+  text-align: center;
+  background-color: #fff;
+  width: calc((100% / 4) - (#{$grid-gutter * 3} / 4));
+  margin-right: $grid-gutter;
+  margin-bottom: $grid-gutter;
 
-//   &:nth-child(4n) {
-//     margin-right: 0;
+  &:nth-child(4n) {
+    margin-right: 0;
 
-//     @include bp(xl) {
-//       margin-right: $grid-gutter;
-//     }
+    @include bp(xl) {
+      margin-right: $grid-gutter;
+    }
 
-//     @include bp(s) {
-//       margin-right: 0;
-//     }
-//   }
+    @include bp(s) {
+      margin-right: 0;
+    }
+  }
 
-//   &:nth-child(3n) {
+  &:nth-child(3n) {
     
-//     @include bp(xl) {
-//       margin-right: 0;
-//     }
+    @include bp(xl) {
+      margin-right: 0;
+    }
 
-//     @include bp(m) {
-//       margin-right: $grid-gutter;
-//     }
+    @include bp(m) {
+      margin-right: $grid-gutter;
+    }
 
-//     @include bp(s) {
-//       margin-right: 0;
-//     }
-//   }
+    @include bp(s) {
+      margin-right: 0;
+    }
+  }
 
-//   &:nth-child(2n) {
+  &:nth-child(2n) {
     
-//     @include bp(m) {
-//       margin-right: 0;
-//     }
-//   }
+    @include bp(m) {
+      margin-right: 0;
+    }
+  }
 
-//   @include bp(xl) {
-//     width: calc((100% / 3) - (#{$grid-gutter * 2} / 3));
-//   }
+  @include bp(xl) {
+    width: calc((100% / 3) - (#{$grid-gutter * 2} / 3));
+  }
 
-//   @include bp(m) {
-//     width: calc((100% / 2) - (#{$grid-gutter} / 2));
-//   }
+  @include bp(m) {
+    width: calc((100% / 2) - (#{$grid-gutter} / 2));
+  }
 
-//   @include bp(s) {
-//     width: 100%;
-//     max-width: 400px;
-//     margin-right: 0;
-//   }
+  @include bp(s) {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 0;
+  }
 
-//   &-img {
-//     height: 320px;
-//     margin-bottom: 25px;
+  &-img {
+    height: 320px;
+    margin-bottom: 25px;
 
-//     @include bp(m) {
-//       height: 260px;
-//     }
+    @include bp(m) {
+      height: 260px;
+    }
 
-//     @include bp(xs) {
-//       height: 200px;
-//     }
+    @include bp(xs) {
+      height: 200px;
+    }
 
-//     img {
-//       display: block;
-//       margin: 0 auto;
-//       height: 100%;
-//       width: 100%;
-//       object-fit: contain;
-//     }
-//   }
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
 
-//   &-content {
-//     width: 100%;
-//     flex-grow: 1;
-//     display: flex;
-//     flex-flow: column nowrap;
-//     justify-content: flex-start;
-//     align-items: center;
-//   }
+  &-content {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
-//   .meta {
-//     margin-top: 10px;
-//     color: #999;
-//   }
-// }
+  .meta {
+    margin-top: 10px;
+    color: #999;
+  }
+}
 
 // .cart {
 //   margin-top: 20px;
