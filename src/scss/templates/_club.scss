@@ -219,6 +219,17 @@
         margin-bottom: .5em;
       }
     }
+
+    .c7-club-join-button .c7-btn--primary {
+      font-size: 17px !important;
+      padding: 1.2em 2.4em !important;
+
+      @include bp(s) {
+        font-size: 15px !important;
+      }
+
+      
+    }
   }
 
   &-skyline {

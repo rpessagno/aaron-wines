@@ -43,7 +43,7 @@ get_header();
   $contact_form = get_field('contact_form');
 ?>
 <div class="contact-form">
-  <?php echo do_shortcode($contact_form); ?>
+  <div class="c7-custom-form" data-form-code="<?php echo do_shortcode($contact_form); ?>"></div>
 </div>
 
 

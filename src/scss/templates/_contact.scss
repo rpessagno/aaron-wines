@@ -40,117 +40,23 @@
     margin: 0 auto;
     padding: 40px 0 100px;
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="password"],
-    input[type="date"],
-    input[type="number"],
-    select,
-    textarea {
-      @include input-reset;
-      font: 400 normal 17px/1.7 $sans-serif !important;
-      color: $charcoal;
-      width: 100% !important;
-      background: $white;
-      border: 0 !important;
-      padding: .8em 1.3em !important;
-      color: $charcoal !important;
-      height: auto !important;
-
-      @include bp(l) {
-        font-size: 16px;
-      }
-
-      @include bp(s) {
-        line-height: 1.8;
-      }
-
-      @include bp(s) {
-        font-size: 15px;
-      }
+    @include bp(s) {
+      width: calc(100% - 40px);
     }
 
     input[type="submit"],
     button[type="submit"] {
       @include input-reset;
       @include button;
-    }
-
-    select {
-      padding-right: 2em !important;
-      background: $white url('assets/images/global/arrow-down.svg') right center / 25px auto no-repeat;
-    }
-
-    textarea {
-      resize: none;
-      height: 170px !important;
-    }
-
-    .wpforms {
-
-      &-field-container {
-        display: flex;
-        flex-flow: row wrap;
-      }
-
-      &-field {
-        margin-bottom: $form-gutter !important;
-        padding: 0 !important;
-
-        &.one-half {
-          width: calc(50% - (#{$form-gutter} / 2));
-          margin-right: $form-gutter !important;
-
-          &:nth-child(2n) {
-            margin-right: 0 !important;
-          }
-
-          @include bp(s) {
-            width: 100%;
-            margin-right: 0 !important;
-          }
-        }
-
-        &.full {
-          width: 100% !important;
-        }
-
-        label.wpforms-error {
-          @include meta;
-          margin-top: .5em !important;
-        }
-      }
-
-      &-submit {
-        font-family: $sans-serif !important;
-        font-style: normal !important;
-        font-weight: 700 !important;
-        font-size: 15px !important;
-        line-height: 1 !important;
-        letter-spacing: .15em !important;
-        border: 0 !important;
-        display: inline-block !important;
-        text-decoration: none !important;
-        text-transform: uppercase !important;
-        transition: background-color .2s, color .2s !important;
-        text-align: center !important;
-        padding: 1em 2em !important;
-        background-color: transparent !important;
-        border-style: solid !important;
-        border-width: 2px !important;
-        color: $blue !important;
-        border-color: $blue !important;
-
-        &:hover {
-          background-color: $blue !important;
-          color: $white !important;
-        }
-
-        &-container {
-          text-align: center;
-        }
-      }
+      margin: 0 auto;
     }
   }
+}
+
+.c7-custom-form .c7-form__buttons {
+  margin-top: 20px !important;
+}
+
+.c7-custom-form__success-message {
+  text-align: center !important;
 }

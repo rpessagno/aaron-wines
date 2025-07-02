@@ -22,6 +22,7 @@ get_header();
         <thead>
           <tr>
             <th>Wine</th>
+            <th>2024</th>
             <th>2023</th>
             <th>2022</th>
             <th>2021</th>
@@ -62,6 +63,7 @@ get_header();
             $name = get_sub_field('name');
             $vintages = get_sub_field('vintages');
             $vintage = $vintages['vintage'];
+            $vintage_2024 = $vintages['vintage_2024_vintage'];
             $vintage_2023 = $vintages['vintage_2023_vintage'];
             $vintage_2022 = $vintages['vintage_2022_vintage'];
             $vintage_2021 = $vintages['vintage_2021_vintage'];
@@ -88,6 +90,7 @@ get_header();
 
           <tr>
             <th><?php echo $name; ?></th>
+            <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2024; ?>"></td>
             <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2023; ?>"></td>
             <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2022; ?>"></td>
             <td class="chart-vintage chart-maturity chart-maturity-<?php echo $vintage_2021; ?>"></td>
