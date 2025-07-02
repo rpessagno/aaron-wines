@@ -4,7 +4,7 @@
 
 var offsetHeight = 50;
 var animationDuration = 1000;
-var timeoutDuration = 100;
+var timeoutDuration = 2000;
 
 // on page load
 var urlHash = window.location.hash;
@@ -12,8 +12,9 @@ var urlTarget = urlHash.replace('#', '');
 
 $(window).on('load', function() {
   if (urlHash) {
-    var getPos = $('[data-scroll-target="'+urlTarget+'"]').offset().top;
+    
     setTimeout(function() {
+      var getPos = $('[data-scroll-target="'+urlTarget+'"]').offset().top;
       $('html, body').animate({ scrollTop: getPos - offsetHeight}, animationDuration);
     }, timeoutDuration);
   }
@@ -66,3 +67,4 @@ $('.js-scroll-to-anchor').click(function() {
   }
 
 });
+

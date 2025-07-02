@@ -463,6 +463,10 @@
 .c7-user-nav__cart > button {
   padding: 0 !important;
   color: $white;
+
+  @include bp(m) {
+    color: $charcoal;
+  }
 }
 
 .c7-user-nav__account__name {

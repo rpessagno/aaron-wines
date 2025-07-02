@@ -61,7 +61,9 @@
     border-radius: 0;
     align-content: center;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       background-color: $gold !important;
       color: $white;
     }
@@ -173,6 +175,83 @@
   }
 }
 
+#c7-content {
+  font-family: $sans-serif;
+}
+
+.c7-content.c7-account-login {
+  padding-top: 60px;
+}
+
 .c7-message.c7-message--alert-error {
   @include meta;
 }
+
+.c7-club-summary__title {
+  font: 500 normal 30px/1.1 $serif !important;
+  color: $blue !important;
+  letter-spacing: -.01em;
+
+  @include bp(xl) {
+    font-size: 28px !important;
+  }
+
+  @include bp(l) {
+    font-size: 26px !important;
+  }
+
+  @include bp(m) {
+    font-size: 24px !important;
+  }
+
+  @include bp(s) {
+    font-size: 22px !important;
+  }
+}
+
+.c7-club-summary__description,
+.c7-order-items__title{
+  font-family: $sans-serif;
+}
+
+.c7-callout__title {
+  font-family: $sans-serif;
+  margin-bottom: 10px;
+}
+
+.c7-account__header {
+  background: none !important;
+}
+
+
+// Hide Reservations tabs
+.c7-account__menu,
+.c7-user-nav__account__dropdown {
+
+  ul {
+
+    li:nth-child(4) {
+      @include hide;
+    }
+  }
+}
+
+#fullsteam-hosted-digital-wallet-div {
+  display: flex;
+  justify-content: center;
+
+  @include bp(s) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #fullsteam-hosted-digitalwallet-frame {
+
+    @include bp(s) {
+      margin-right: 0 !important;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+
