@@ -66,7 +66,7 @@
 
     .c7-user-nav__account > a,
     .c7-user-nav__cart > button {
-      color: $charcoal;
+      color: $charcoal !important;
     }
   }
 
@@ -160,7 +160,7 @@
 
       .c7-user-nav__account > a,
       .c7-user-nav__cart > button {
-        color: $charcoal;
+        color: $charcoal !important;
       }
 
       .header-nav-button span {
@@ -462,10 +462,10 @@
 .c7-user-nav__account > a,
 .c7-user-nav__cart > button {
   padding: 0 !important;
-  color: $white;
+  color: $white !important;
 
   @include bp(m) {
-    color: $charcoal;
+    color: $charcoal !important;
   }
 }
 

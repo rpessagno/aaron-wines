@@ -98,17 +98,17 @@
 }
 
 @mixin button {
-  font-family: $sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: .15em;
+  font-family: $sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: .15em !important;
   border: 0;
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color .2s, color .2s;
-  text-align: center;
+  display: inline-block !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition: background-color .2s, color .2s !important;
+  text-align: center !important;
 }
 
 @mixin hide {

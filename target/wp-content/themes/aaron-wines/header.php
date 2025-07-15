@@ -16,7 +16,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <link rel="stylesheet" href="https://use.typekit.net/qwi5ewx.css">
-<link href="https://cdn.commerce7.com/v2/commerce7.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
 
@@ -120,7 +119,7 @@ $header_style = get_field('header_style', $page_id);
           <a href="#" class="header-shop-cart">Cart</a>
         </li>
         <li class="header-shop-item">
-          <div id="c7-account"></div>
+          <?php echo do_shortcode('[c7wp type="login"]'); ?>
         </li>
       </ul>
     </div>

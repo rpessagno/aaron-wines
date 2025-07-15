@@ -33,7 +33,8 @@
   &-h2 {
     font: 500 normal 30px/1.1 $serif !important;
     color: $blue !important;
-    letter-spacing: -.01em;
+    letter-spacing: -.01em !important;
+    text-transform: none !important;
 
     @include bp(xl) {
       font-size: 28px !important;
@@ -54,35 +55,35 @@
 
   &-btn--primary {
     @include button;
-    font-size: 14px;
-    color: $white;
-    background-color: $blue;
-    border-color: $blue;
-    border-radius: 0;
-    align-content: center;
+    font-size: 14px !important;
+    color: $white !important;
+    background-color: $blue !important;
+    border-color: $blue !important;
+    border-radius: 0 !important;
+    align-content: center !important;
 
     &:hover,
     &:focus,
     &:active {
       background-color: $gold !important;
-      color: $white;
+      color: $white !important;
     }
   }
 
   &-btn--alt {
     @include button;
-    font-size: 14px;
-    background-color: transparent;
-    border-style: solid;
-    border-width: 2px;
-    color: $blue;
-    border-color: $blue;
-    border-radius: 0;
-    align-content: center;
+    font-size: 14px !important;
+    background-color: transparent !important;
+    border-style: solid !important;
+    border-width: 2px !important;
+    color: $blue !important;
+    border-color: $blue !important;
+    border-radius: 0 !important;
+    align-content: center !important;
 
     &:hover {
       background-color: $blue !important;
-      color: $white;
+      color: $white !important;
     }
   }
 
@@ -107,7 +108,7 @@
   }
 
   &-account__header {
-    background-color: lighten($white, 3%);
+    background-color: lighten($white, 3%) !important;
   }
 
   &-account__header p:first-of-type {
@@ -154,6 +155,7 @@
 }
 
 #c7-cart {
+  height: 0 !important;
 
   > .c7-user-nav__cart > .c7-link {
     @include hide;
@@ -180,7 +182,7 @@
 }
 
 .c7-content.c7-account-login {
-  padding-top: 60px;
+  padding-top: 60px !important;
 }
 
 .c7-message.c7-message--alert-error {
@@ -190,7 +192,8 @@
 .c7-club-summary__title {
   font: 500 normal 30px/1.1 $serif !important;
   color: $blue !important;
-  letter-spacing: -.01em;
+  letter-spacing: -.01em !important;
+  text-transform: none !important;
 
   @include bp(xl) {
     font-size: 28px !important;
@@ -254,4 +257,8 @@
   }
 }
 
+.c7wp-wrap[data-c7-type="login"],
+.c7wp-wrap[data-c7-type="cart"] {
+    min-width: 0 !important;
+}
 

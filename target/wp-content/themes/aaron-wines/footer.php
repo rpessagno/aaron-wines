@@ -90,7 +90,6 @@
 <?php wp_footer(); ?>
 
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
-<script type="text/javascript" src="https://cdn.commerce7.com/v2/commerce7.js" id="c7-javascript" data-tenant="aaron-wines"></script>
 
 </body>
 </html>
