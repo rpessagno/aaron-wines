@@ -70,6 +70,25 @@
     }
   }
 
+  &-btn--primary--small {
+    @include button;
+    font-size: 12px !important;
+    color: $white !important;
+    background-color: $blue !important;
+    border-color: $blue !important;
+    border-radius: 0 !important;
+    align-content: center !important;
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $gold !important;
+      color: $white !important;
+    }
+  }
+
   &-btn--alt {
     @include button;
     font-size: 14px !important;
@@ -262,3 +281,6 @@
     min-width: 0 !important;
 }
 
+.c7-side-cart {
+  font-family: $sans-serif;
+}
