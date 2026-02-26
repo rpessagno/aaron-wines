@@ -284,3 +284,7 @@
 .c7-side-cart {
   font-family: $sans-serif;
 }
+
+.c7-account-details__delete-account {
+  @include hide;
+}
