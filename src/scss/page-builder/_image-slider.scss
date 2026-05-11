@@ -1,0 +1,101 @@
+//==============================
+// Image Slider
+//==============================
+
+.image-slider {
+
+  .pb-intro-content {
+    padding-bottom: 40px !important;
+  }
+
+  &-items {
+    margin-bottom: 80px;
+
+    @include bp(m) {
+      margin-bottom: 60px;
+    }
+
+    @include bp(s) {
+      margin-bottom: 40px;
+    }
+
+    .slick {
+
+      &-track {
+        display: flex;
+      }
+
+      &-arrow {
+        position: absolute;
+        top: 0;
+        width: calc(10% - 20px);
+        height: 100%;
+        z-index: 2;
+        text-indent: -9999px;
+        @include input-reset;
+        background: transparent;
+        cursor: pointer;
+
+        @include bp(m) {
+          @include hide;
+        }
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          @include centered;
+          width: 45px;
+          height: 45px;
+        }
+
+        &:before {
+          background-color: $white;
+          border-radius: 50%;
+          z-index: 1;
+          box-shadow: 0 0 15px rgba(0,0,0,.2);
+        }
+
+        &:after {
+          z-index: 2;
+          background-position: center center;
+          background-size: auto 40%;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &-prev {
+        left: 0;
+
+        &:after {
+          background-image: url('assets/images/global/slick-arrow-prev.svg');
+        }
+      }
+
+      &-next {
+        right: 0;
+
+        &:after {
+          background-image: url('assets/images/global/slick-arrow-next.svg');
+        }
+      }
+    }
+  }
+
+  &-item {
+    position: relative;
+    height: 45vw !important;
+    margin: 0 20px;
+
+    @include bp(m) {
+      margin: 0 5px;
+      height: 50vw !important;
+    }
+
+    img {
+      @include centered;
+      @include img-cover;
+      border-radius: $border-radius;
+    }
+  }
+}

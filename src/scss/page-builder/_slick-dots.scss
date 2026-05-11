@@ -1,0 +1,36 @@
+//==============================
+// Slick Dots
+//==============================
+
+.slick-dots {
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  z-index: 1;
+  order: 4;
+
+  li {
+    width: 8px;
+    height: 8px;
+    background: none;
+    list-style-type: none;
+    margin: 0 4px;
+    border-radius: 4px;
+    background-color: $slick-dots;
+    border: 0;
+    cursor: pointer;
+    transition: opacity .2s;
+    opacity: .3;
+
+    &.slick-active {
+      opacity: 1;
+    }
+
+    button {
+      display: none !important;
+    }
+  }
+}

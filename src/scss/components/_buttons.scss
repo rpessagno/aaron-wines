@@ -70,6 +70,15 @@
       }
     }
 
+    &.button-mid {
+      color: $white;
+      background-color: $gold;
+
+      &:hover {
+        background-color: darken($gold, 10%);
+      }
+    }
+
     &.button-dark {
       color: $white;
       background-color: $blue;

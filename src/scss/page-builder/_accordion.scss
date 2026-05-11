@@ -1,0 +1,64 @@
+//==============================
+// Accordion
+//==============================
+
+.accordion {
+  border-bottom: transparentize($p1-color-primary, .8) solid 1px;
+  margin: 20px 0 60px;
+
+  &-header {
+    @include input-reset;
+    position: relative;
+    width: 100%;
+    padding: 1em 3em 1em 0;
+    background: none;
+    text-align: left;
+    @include p2;
+    cursor: pointer;
+    border-top: transparentize($p1-color-primary, .8) solid 1px;
+    color: $p2-color-primary;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: .6em;
+      border-bottom: currentColor solid 1px;
+      right: .5em;
+      top: 1.8em;
+      transition: transform .5s;
+      transform-origin: center center;
+
+      @include bp(s) {
+        display: block;
+      }
+    }
+
+    &:before {
+      transform: rotate(180deg);
+    }
+
+    &:after {
+      transform: rotate(270deg);
+    }
+
+    &.active {
+      
+      &:before,
+      &:after {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &-content {
+    height: 0;
+    overflow: hidden;
+    transition: height .4s;
+    border-radius: 5px;
+
+    &-inner {
+      padding-right: 3em;
+    }
+  }
+}

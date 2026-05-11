@@ -1,0 +1,196 @@
+//==============================
+// Feature
+//==============================
+
+.pb-feature {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  &-img {
+    position: relative;
+    overflow: hidden;
+
+    @include bp(s) {
+      height: 70vw;
+      order: -1;
+      border-radius: 0 !important;
+    }
+
+    img {
+      @include centered;
+      @include img-cover;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:nth-child(odd) {
+
+    .pb-feature-img {
+      border-radius: $border-radius 0 0 $border-radius;
+    }
+  }
+
+  &:nth-child(even) {
+
+    .pb-feature-img {
+      order: -1;
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+  }
+
+  &-icon {
+    display: block;
+    width: 80px;
+    margin-bottom: 20px;
+
+    @include bp(s) {
+      width: 60px;
+    }
+  }
+
+  &-group {
+    padding-top: 80px;
+
+    @include bp(l) {
+      padding-top: 60px;
+    }
+
+    @include bp(s) {
+      // padding-top: 40px;
+      padding-top: 0;
+    }
+
+    &.layout {
+
+      &-default {
+
+        .pb-feature {
+          padding-bottom: 120px;
+
+          @include bp(m) {
+            padding-bottom: 60px;
+          }
+
+          @include bp(s) {
+            padding-bottom: 0;
+          }
+
+          &-content {
+            padding: 10vw 7vw;
+            width: 45%;
+
+            @include bp(m) {
+              width: 50%;
+            }
+
+            @include bp(s) {
+              width: 100%;
+              padding: 40px 20px 50px;
+            }
+          }
+
+          &-img {
+            width: 55%;
+
+            @include bp(m) {
+              width: 50%;
+            }
+
+            @include bp(s) {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &-overlap {
+
+        @include bp(m) {
+          padding-bottom: 60px;
+        }
+
+        @include bp(s) {
+          padding-bottom: 0;
+        }
+
+        .pb-feature {
+          padding-bottom: 200px;
+
+          @include bp(s) {
+            padding-bottom: 0;
+          }
+
+          &-content {
+            padding: 4vw;
+            width: 35%;
+            border-radius: $border-radius;
+            position: relative;
+            top: 80px;
+            z-index: 2;
+            background-color: $feature-overlap-bg;
+            @include img-mask('assets/images/global/content-card-center-mask.svg');
+
+            @include bp(xl) {
+              width: 45%;
+              padding: 60px;
+            }
+
+            @include bp(m) {
+              width: 50%;
+              padding: 40px;
+            }
+
+            @include bp(s) {
+              width: 100%;
+              padding: 40px 20px 50px;
+              left: 0 !important;
+              top: 0 !important;
+              background: transparent;
+            }
+          }
+
+          &-img {
+            width: 65%;
+
+            @include bp(xl) {
+              width: 55%;
+            }
+
+            @include bp(m) {
+              width: 50%;
+            }
+
+            @include bp(s) {
+              width: 100%;
+            }
+          }
+
+          &:nth-child(odd) {
+
+            .pb-feature {
+
+              &-content {
+                left: 5vw;
+              }
+            }
+          }
+
+          &:nth-child(even) {
+
+            .pb-feature {
+
+              &-content {
+                left: -5vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

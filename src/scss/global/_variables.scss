@@ -32,10 +32,90 @@ $header-transition-time: .4s;
 
 $easing: cubic-bezier(.16,.61,.45,1.4);
 
+$border-radius: 0;
+
+// Gutters
 $form-gutter: 10px;
-
 $grid-gutter: 15px;
-
-$team-gutter: 40px;
-
 $gallery-gutter: 2vw;
+$team-gutter: 40px;
+// $grid-gutter:       20px;
+// $form-gutter:       20px;
+$collage-gutter:    15px;
+$collage-gutter-s:  10px;
+$blog-gutter:       40px;
+$video-gutter:      40px;
+$shop-gutter:       0;
+$download-gutter:   10px;
+
+
+
+// Page Builder
+//------------------------------
+
+$color-light-1: $white;
+$color-light-2: $darken-white;
+$color-mid-1:   $blue;
+$color-mid-2:   $gold;
+$color-dark-1:  $blue;
+$color-dark-2:  darken($blue, 5%);
+
+
+// Typography
+//------------------------------
+
+$h1-color-primary:      $color-mid-2;
+$h1-color-secondary:    $color-light-1;
+
+$h2-color-primary:      $color-mid-1;
+$h2-color-secondary:    $color-mid-1;
+
+$h3-color-primary:      $color-dark-1;
+$h3-color-secondary:    $color-mid-2;
+
+$h4-color-primary:      $color-mid-1;
+$h4-color-secondary:    $color-mid-2;
+
+$p1-color-primary:      $charcoal;
+$p1-color-secondary:    $white;
+
+$p2-color-primary:      $charcoal;
+$p2-color-secondary:    $white;
+
+$meta-color-primary:    $color-dark-1;
+$meta-color-secondary:  $color-mid-2;
+
+$info-color-primary:    $color-dark-1;
+$info-color-secondary:  $color-light-1;
+
+
+// Components
+//------------------------------
+
+$hero-color-light:        $color-light-1;
+$hero-color-dark:         $color-dark-1;
+
+$overview-light-1:        $color-light-1;
+$overview-light-2:        $color-light-2;
+$overview-dark-1:         $color-dark-1;
+$overview-dark-2:         $color-dark-2;
+
+$intro-light-bg:          $color-light-1;
+$intro-light-grid:        $color-dark-1;
+$intro-dark-bg:           $color-dark-1;
+$intro-dark-grid:         $color-dark-2;
+$intro-light-boxed:       $color-light-2;
+$intro-dark-boxed:        $color-dark-1;
+
+$feature-overlap-bg:      $color-light-2;
+
+$form-light-bg:           $color-light-2;
+$form-dark-bg:            $color-dark-1;
+
+$slick-dots:              $color-dark-1;
+
+$testimonials-bg:         $color-light-2;
+$testimonials-arrow:      $color-dark-1;
+
+$shop-item-bg:            $color-light-2;
+

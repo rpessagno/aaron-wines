@@ -1,0 +1,53 @@
+//==============================
+// Content With Image
+//==============================
+
+.cwi {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: calc(100% - 120px);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 0;
+
+  @include bp(m) {
+    width: calc(100% - 80px);
+    padding: 80px 0;
+  }
+
+  @include bp(s) {
+    width: calc(100% - 40px);
+    padding: 60px 0;
+  }
+
+  &-main {
+    width: 55%;
+    padding-right: 100px;
+
+    @include bp(l) {
+      padding-right: 80px;
+    }
+
+    @include bp(s) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &-aside {
+    width: 45%;
+
+    @include bp(s) {
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: $border-radius;
+    }
+  }
+}

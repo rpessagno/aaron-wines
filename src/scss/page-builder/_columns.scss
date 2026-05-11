@@ -1,0 +1,53 @@
+//==============================
+// Colunns
+//==============================
+
+.columns {
+  display: grid;
+  column-gap: 40px;
+  width: calc(100% - 120px);
+  margin: 0 auto;
+  padding: 0 !important;
+
+  @include bp(m) {
+    width: calc(100% - 60px);
+    column-gap: 30px;
+  }
+
+  &-item {
+    margin-bottom: 40px;    
+  }
+
+  &.column {
+
+    &1 {
+      max-width: 900px;
+      grid-template-columns: 1fr;
+    }
+
+    &2 {
+      max-width: 1200px;
+      grid-template-columns: 1fr 1fr;
+
+      @include bp(s) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &3 {
+      max-width: 1600px;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      @include bp(s) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &-footer {
+
+    .pb-intro-content {
+      padding-top: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+//==============================
+// Featured Products
+//==============================
+
+.featured-products {
+
+  .c7-product-collection {
+    padding-top: 0 !important;
+
+    .c7-product-collection__product-list {
+
+      @include bp(l) {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      @include bp(s) {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+}

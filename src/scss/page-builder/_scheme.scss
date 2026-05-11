@@ -1,0 +1,14 @@
+//==============================
+// Color Scheme
+//==============================
+
+.scheme {
+
+  &-light {
+    @include scheme-light;
+  }
+
+  &-dark {
+    @include scheme-dark;
+  }
+}

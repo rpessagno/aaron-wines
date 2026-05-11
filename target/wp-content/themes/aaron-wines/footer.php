@@ -74,7 +74,6 @@
   <div class="footer-links">
 
     <nav class="footer-nav">
-      <p>&copy; <?php echo date('Y'); ?> Aaron Wines</p>
       <?php wp_nav_menu( array( 'menu' => 'footer' ) ); ?>
     </nav>
     
@@ -82,6 +81,11 @@
       <li><a href="https://www.facebook.com/AaronPetiteSirah/" target="_blank" class="facebook"></a></li>
       <li><a href="https://www.instagram.com/aaronwines/" target="_blank" class="instagram"></a></li>
     </ul>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+    <p><a href="https://metalworkdigital.com/" target="_blank">Designed by Metalwork</a></p>
   </div>
 
 </footer>

@@ -1,0 +1,130 @@
+//==============================
+// Staff
+//==============================
+
+.staff {
+  margin: 0 auto 80px;
+  width: calc(100% - 80px);
+
+  @include bp(s) {
+    width: calc(100% - 30px);
+    margin-bottom: 40px;
+  }
+
+  .h3 {
+
+    + .h4 {
+      margin-top: .4em;
+    }
+  }
+
+  &-grid {
+    display: flex;
+    flex-flow: row wrap;
+    // max-width: 1600px;
+
+    &.align-left {
+      justify-content: flex-start;
+    }
+
+    &.align-center {
+      justify-content: center;
+    }
+
+    &-item {
+      width: calc((100% / 4) - $grid-gutter);
+      margin: 0 calc($grid-gutter/2) 60px;
+
+      @include bp(l) {
+        width: calc((100% / 3) - $grid-gutter);
+        margin-bottom: 40px;
+      }
+
+      @include bp(s) {
+        width: calc((100% / 2) - $grid-gutter);
+        margin-bottom: 30px;
+      }
+
+      &-image {
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        border-radius: $border-radius;
+        overflow: hidden;
+
+        @include bp(s) {
+          margin-bottom: 10px;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 125%;
+        }
+
+        img {
+          @include centered;
+          @include img-cover;
+        }
+      }
+    }
+  }
+
+  &-column {
+    max-width: 1200px;
+    
+    &-item {
+      display: flex;
+      flex-flow: row wrap;
+      margin-bottom: 60px;
+      width: 100%;
+
+      &-image {
+        width: 35%;
+        position: relative;
+        margin-bottom: 20px;
+        border-radius: $border-radius;
+        overflow: hidden;
+
+        @include bp(s) {
+          width: 100%;
+          max-width: 200px;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 150%;
+        }
+
+        img {
+          @include centered;
+          @include img-cover;
+        }
+      }
+
+      &-content {
+        width: 65%;
+        padding-left: 60px;
+
+        @include bp(l) {
+          padding-left: 40px;
+        }
+
+        @include bp(s) {
+          width: 100%;
+          padding-left: 0;
+        }
+
+        h4.p1 {
+          font-weight: 600;
+          margin-top: 1em;
+
+          + p {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

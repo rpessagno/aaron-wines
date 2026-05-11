@@ -1,0 +1,169 @@
+//==============================
+// Overview
+//==============================
+
+.overview {
+  
+  &-hero {
+    width: 100%;
+    height: 30vw;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    @include bp(s) {
+      min-height: 300px;
+    }
+
+    &-logo {
+      position: absolute;
+      left: 50%;
+      top: calc(50% - 50px);
+      transform: translate(-50%, -50%);
+      width: 500px;
+      // height: calc(100% - 300px);
+      height: 45%;
+      z-index: 1;
+      filter: drop-shadow(0 0 10px rgba(0,0,0,.3));
+
+      @include bp(s) {
+        width: 80%;
+        top: calc(50% - 20px);
+        // height: calc(100% - 100px);
+      }
+    }
+
+    &-image {
+      @include img-cover;
+    }
+
+    &-slider {
+      height: 100%;
+
+      &-item {
+        position: relative;
+
+        img {
+          @include centered;
+          @include img-cover;
+        }
+      }
+
+      .slick {
+
+        &-list,
+        &-track {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &-intro {
+    width: calc(100% - 80px);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px;
+    border-radius: $border-radius;
+    position: relative;
+    top: -100px;
+    @include img-mask('assets/images/global/content-card-center-mask.svg');
+
+    @include bp(s) {
+      width: calc(100% - 30px);
+      padding: 40px 30px;
+      top: -40px;
+    }
+
+    br {
+      @include bp(m) {
+        display: none;
+      }
+    }
+  }
+
+  &-columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+    padding: 0 40px 0 80px;
+
+    @include bp(l) {
+      padding: 0 40px;
+    }
+
+    @include bp(m) {
+      padding: 30px 20px 20px;
+    }
+  }
+
+  &-column {
+    width: 50%;
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+    padding: 120px 80px 200px 0;
+
+    @include bp(l) {
+      padding: 120px 40px 180px 0;
+    }
+
+    @include bp(m) {
+      width: 100%;
+      padding: 30px 0;
+    }
+  }
+
+  &-image {
+    width: 50%;
+    max-width: 700px;
+    position: relative;
+    top: -100px;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: $border-radius;
+    @include img-mask('assets/images/global/content-card-center-mask.svg');
+
+    @include bp(m) {
+      width: 100%;
+      height: 60vw;
+      min-height: 300px;
+      top: 0;
+      order: -1;
+    }
+
+    img {
+      @include img-cover;
+      @include centered;
+    }
+  }
+
+  &.scheme-light {
+    background-color: $overview-light-1;
+    // background: $overview-light-1 url('assets/images/global/rough-texture.jpg') center top / cover no-repeat;
+
+    // @include bp(s) {
+    //   background-size: 200% auto;
+    // }
+
+    .overview-intro {
+      background-color: $overview-light-2;
+    }
+  }
+
+  &.scheme-dark {
+    background-color: $overview-dark-1;
+    // background: $overview-dark-1 url('assets/images/club/benefits-bg.jpg') center bottom / cover no-repeat;
+
+    // @include bp(s) {
+    //   background-size: 200% auto;
+    // }
+
+    .overview-intro {
+      background-color: $overview-dark-2;
+    }
+  }
+}

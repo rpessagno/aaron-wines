@@ -1,0 +1,74 @@
+//==============================
+// Contact
+//==============================
+
+.contact {
+
+  &-content {
+
+    @include bp(m) {
+      text-align: left;
+    }
+
+    &.scheme-light {    
+
+      .contact-item {
+        color: $p1-color-primary;
+      }
+
+      svg {
+        fill: $color-mid-1;
+      }
+    }
+
+    &.scheme-dark {
+
+      .contact-item {
+        color: $p1-color-secondary;
+      }
+
+      svg {
+        fill: $color-mid-2;
+      }
+    }
+  }
+
+  &-items {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &-item {
+    @include p1;
+    width: 50%;
+    margin-top: 2em;
+    padding-left: 2em;
+    padding-right: 1em;
+    position: relative;
+
+    @include bp(l) {
+      width: 100%;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: .9em;
+      transform: translateY(-50%);
+      width: 1.4em;
+      max-height: 1.4em;
+    }
+
+    a {
+      @include link-underline-on-hover;
+    }
+  }
+
+  &-media {
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

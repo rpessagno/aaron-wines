@@ -1,0 +1,308 @@
+//==============================
+// Hero
+//==============================
+
+.pb-hero {
+  display: flex;
+  flex-flow: row wrap;
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include bp(m) {
+      text-align: center;
+    }
+
+    &.scheme-light {
+      background-color: $hero-color-light;
+      // background: $hero-color-light url('assets/images/global/rough-texture.jpg') center top / 150% auto no-repeat;
+    }
+
+    &.scheme-dark {
+      background-color: $hero-color-dark;
+      // background: $hero-color-dark url('assets/images/club/benefits-bg.jpg') center bottom / 200% auto no-repeat;
+    }
+
+    &-inner {
+      width: 100%;
+      max-width: 700px;
+    }
+  }
+
+  &-media {
+  }
+
+  &-image {
+    @include img-cover;
+  }
+
+  &-slider {
+    height: 100%;
+
+    &-item {
+      background-color: #aaa;
+      position: relative;
+
+      img {
+        @include centered;
+        @include img-cover;
+      }
+    }
+
+    .slick {
+
+      &-list {
+        height: 100%;
+      }
+
+      &-track {
+        height: 100%;
+      }
+
+      &-prev {
+        display: none !important;
+      }
+
+      &-next {
+        @include input-reset;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-indent: -9999px;
+        outline: 0;
+        background-color: transparent;
+        
+        cursor: pointer;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          @include centered;
+          width: 45px;
+          height: 45px;
+        }
+
+        &:before {
+          background-color: #fff;
+          border-radius: 50%;
+          z-index: 1;
+          box-shadow: 0 0 15px rgba(0,0,0,.1);
+          transition: transform .2s;
+        }
+
+        &:after {
+          z-index: 2;
+          background-image: url('assets/images/global/slick-arrow-next.svg');
+          background-position: center center;
+          background-size: auto 40%;
+          background-repeat: no-repeat;
+        }
+
+        @include bp(m) {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  &-split {
+
+    .pb-hero {
+
+      &-content {
+        width: 50%;
+        padding: 150px 100px 150px;
+
+        @include bp(xl) {
+          padding-top: 100px;
+          padding-bottom: 100px;
+        }
+
+        @include bp(l) {
+          padding-top: 100px;
+          padding-bottom: 100px;
+        }
+
+        @include bp(m) {
+          padding-top: 80px;
+          padding-bottom: 80px;
+          width: 100%;
+        }
+
+        @include bp(m) {
+          width: 100%;
+        }
+
+        @include bp(s) {
+          padding: 50px 30px;
+        }
+      }
+
+      &-media {
+        width: 50%;
+        min-height: 800px;
+
+        @include bp(m) {
+          width: 100%;
+          order: -1;
+          height: 50vw;
+          min-height: 300px;
+        }
+      }
+    }
+  }
+
+  &-inset {
+    position: relative;
+
+    .pb-hero {
+
+      &-content {
+        position: absolute;
+        width: calc(100% - 80px);
+        max-width: 700px;
+        padding: 80px;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        border-radius: $border-radius;
+        @include img-mask('assets/images/global/content-card-center-mask.svg');
+
+        @include bp(m) {
+          position: static;
+          transform: none;
+          max-width: none;
+          width: 100%;
+          border-radius: 0;
+          -webkit-mask-image: none;
+          mask-image: none;
+        }
+
+        @include bp(s) {
+          padding: 50px 30px;
+
+        }
+      }
+
+      &-media {
+        width: 100%;
+        // height: calc(100vh - $header-height);
+        height: 100vh;
+        min-height: 740px;
+        
+        @include bp(m) {
+          order: -1;
+          height: 50vw;
+          min-height: 300px;
+        }
+      }
+    }
+
+    .slick-next {
+      @include hide;
+    }
+  }
+
+  &-fullscreen {
+    position: relative;
+
+    .pb-hero {
+
+      &-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: transparent;
+        text-align: center;
+        background-color: transparentize($color-dark-2, .7);
+
+        @include bp(m) {
+          max-width: none;
+          width: 100%;
+        }
+
+        @include bp(s) {
+        }
+
+        &-inner {
+          padding: 0 30px;
+
+          @include bp(m) {
+            max-width: 400px;
+          }
+
+          .h1 {
+            color: $white !important;
+            text-shadow: 0 0 10px rgba(0,0,0,.3);
+          }
+        }
+      }
+
+      &-media {
+        width: 100%;
+        // height: calc(100vh - $header-height);
+        height: 100vh;
+        min-height: 740px;
+        
+        @include bp(m) {
+          order: -1;
+          // height: calc(100vh - $header-height-m);
+          min-height: 500px;
+        }
+      }
+
+      &-logo {
+        width: calc(100% - 80px);
+        max-width: 400px;
+        max-height: 250px;
+        filter: drop-shadow(0 0 10px rgba(0,0,0,.3));
+        margin-bottom: 40px;
+
+        @include bp(m) {
+          width: 80%;
+          max-width: 300px;
+        }
+
+        @include bp(s) {
+          width: 80%;
+          max-width: 200px;
+          max-height: 200px;
+        }
+      }
+    }
+
+    .slick-next {
+      @include hide;
+    }
+  }
+
+  &-scroll {
+    @include input-reset;
+    background: transparent url('assets/images/global/hero-scroll.svg') center center / 30px auto no-repeat;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @include bp(s) {
+      @include hide;
+    }
+  }
+}

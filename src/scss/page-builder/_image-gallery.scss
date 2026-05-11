@@ -1,0 +1,62 @@
+//==============================
+// Image Gallery
+//==============================
+
+.image-gallery {
+  width: calc(100% - 20px);
+  margin: 0 auto 80px;
+
+  &-max {
+    max-width: 1600px;
+  }
+
+  &-item {
+    float: left;
+    margin-bottom: 10px;
+    opacity: 0;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    @include bp(s) {
+      border-radius: calc($border-radius/2);
+    }
+
+    &-one {
+      width: 100%;
+    }
+
+    &-two {
+      width: calc(50% - 5px);
+    }
+
+    &-three {
+      width: calc((100% / 3) - (10px * 2 / 3));
+
+      @include bp(s) {
+        width: calc(50% - 5px);
+      }
+    }
+
+    &.show {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &-caption {
+      background-color: $color-dark-1;
+      padding: 15px 20px;
+      
+
+      .p1 {
+        line-height: 1.4;
+        color: $white;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+

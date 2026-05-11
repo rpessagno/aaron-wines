@@ -1,0 +1,123 @@
+//==============================
+// Testimonials
+//==============================
+
+.testimonials {
+  padding: 80px 0;
+
+  @include bp(s) {
+    padding: 60px 0;
+  }
+
+  &-intro {
+    text-align: center;
+    padding: 0 30px 20px;
+  }
+
+  &-items {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex !important;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    @include bp(l) {
+      max-width: 900px;
+    }
+  }
+
+  &-item {
+    margin: 0 !important;
+    text-align: center;
+
+    footer {
+      margin-top: 1em;
+      font-style: italic;
+    }
+  }
+
+  .slick {
+
+    &-arrow {
+      overflow: hidden;
+      text-indent: -9999px;
+      @include input-reset;
+      background-color: transparent;
+      position: relative;
+      width: 80px;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+
+      @include bp(s) {
+        width: 50px;
+        @include hide;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        background-color: $testimonials-bg;
+        width: 35px;
+        height: 35px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+
+        @include bp(s) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        border-top: $testimonials-arrow solid 2px;
+        border-right: $testimonials-arrow solid 2px;
+        width: 7px;
+        height: 7px;
+        top: 50%;
+        left: 50%;
+
+        @include bp(s) {
+          width: 5px;
+          height: 5px;
+        }
+      }
+    }
+
+    &-prev {
+      order: 1;
+
+      &:after {
+        transform: translate(-35%, -50%) rotate(-135deg);
+      }
+    }
+
+    &-next {
+      order: 2;
+
+      &:after {
+        transform: translate(-72%, -50%) rotate(45deg);
+      }
+    }
+
+    &-dots {
+      order: 2;
+    }
+
+    &-list {
+      order: 2;
+      width: calc(100% - 160px);
+      max-width: 700px;
+      margin: 0 auto;
+
+      @include bp(s) {
+        width: calc(100% - 60px);
+      }
+    }
+  }
+}
+

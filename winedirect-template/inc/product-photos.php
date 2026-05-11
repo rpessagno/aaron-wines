@@ -1,2 +1,0 @@
-<div class="v65-product-photos-photo"><a href="#"><img src="assets/images/product/bottle.png" alt=""></a></div>
-<div class="v65-product-photos-photo"><a href="#"><img src="assets/images/product/bottle.png" alt=""></a></div>

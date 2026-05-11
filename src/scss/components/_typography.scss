@@ -85,6 +85,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   + .p1 {
     margin-top: .5em;
   }
+
+  + .meta {
+    margin-top: .7em;
+  }
 }
 
 @mixin h4 {
@@ -105,20 +109,16 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 @mixin p1 {
-  font: 300 normal 17px/1.7 $sans-serif;
+  font: 300 normal 18px/1.7 $sans-serif;
   letter-spacing: .02em;
   color: $charcoal;
 
   @include bp(l) {
+    font-size: 17px;
+  }
+
+  @include bp(s) {
     font-size: 16px;
-  }
-
-  @include bp(s) {
-    line-height: 1.6;
-  }
-
-  @include bp(s) {
-    font-size: 15px;
   }
 }
 
@@ -160,6 +160,21 @@ ol {
   }
 }
 
+@mixin p2 {
+  font: 300 normal 19px/1.7 $sans-serif;
+  letter-spacing: .02em;
+  color: $charcoal;
+
+  @include bp(l) {
+    font-size: 18px;
+  }
+
+  @include bp(s) {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+}
+
 ul.p1 {
   margin-left: 1em;
 }
@@ -180,6 +195,10 @@ ul.p1 {
 
 .meta {
   @include meta;
+
+  + .p1 {
+    margin-top: 1em;
+  }
 }
 
 @mixin eyebrow {

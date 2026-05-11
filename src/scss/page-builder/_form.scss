@@ -1,0 +1,117 @@
+//==============================
+// Form
+//==============================
+
+.form {
+  padding-bottom: 80px;
+
+  @include bp(s) {
+    padding-bottom: 40px;
+  }
+
+  .pb-intro-content {
+    padding-bottom: 0 !important;
+  }
+
+  &.scheme-light {    
+    background-color: $form-light-bg;
+
+    .wpforms-field .wpforms-field-label {
+      color: $p1-color-primary;
+    }
+  }
+
+  &.scheme-dark {
+    background-color: $form-dark-bg;
+
+    .wpforms-field .wpforms-field-label,
+    .c7-form__field label {
+      color: $p1-color-secondary;
+    }
+  }
+
+  div.wpforms-container-full {
+    width: calc(100% - 80px);
+    max-width: 900px;
+    margin: 0 auto;
+
+    @include bp(s) {
+      width: calc(100% - 40px);
+    }
+
+    .wpforms-field-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    .wpforms-field {
+      padding: 20px 0 0 0;
+      width: 100%;
+
+      .wpforms-field-label {
+        @include p1;
+        font-weight: 600;
+        margin-bottom: .2em;
+      }
+
+      &.wpforms-field-half {
+        width: calc(50% - $form-gutter/2);
+
+        @include bp(s) {
+          width: 100%;
+        }
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="password"],
+      input[type="date"],
+      input[type="number"],
+      select,
+      textarea {
+        @include p1;
+        width: 100%;
+        padding: .6em 1em;
+        height: auto;
+      }
+
+      &-wpforms-field-textarea {
+        width: 100% !important;
+      }
+
+      label.wpforms-error,
+      em.wpforms-error {
+        font-family: $sans-serif;
+        margin-top: .5em !important;
+      }
+    }
+
+    .wpforms-submit-container  {
+      text-align: center;
+      padding-top: 20px;
+
+      button[type="submit"] {
+        @include button;
+        height: auto;
+        background: 0;
+        background: $gold !important;
+
+        &:hover,
+        &:active {
+          background: darken($gold, 5%) !important;
+        }
+      }
+    }
+
+    p {
+      @include p1;
+      text-align: center;
+    }
+  }
+}
+
+.c7-custom-form {
+  padding: 40px 20px 0;
+}

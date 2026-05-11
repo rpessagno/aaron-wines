@@ -5,13 +5,12 @@
 .social {
   display: flex;
   flex-flow: row nowrap;
+  margin-left: 0;
+  padding-left: 0;
 
   li {
     list-style-type: none;
-
-    + li {
-      margin-left: 10px;
-    }
+    margin: 0 5px;
   }
 
   a {
