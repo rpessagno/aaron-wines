@@ -84,10 +84,32 @@
     <h1 class="eyebrow"><?php echo $subtitle; ?></h1>
     <h2 class="h1"><?php echo $title; ?></h2>
   </div>
-  <div class="shop featured-products">
-    <div class="c7-product-collection columns-four<?php if ($hide_product_teasers == 1) { ?> hide-product-teasers<?php } ?> hide-collection-title" data-collection-slug="<?php echo $slug; ?>"></div>
-    <?php if ($link) { ?>
-    <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button button-large button-mid button-solid"><?php echo $link['title']; ?></a>
+  <div class="featured-products scheme-light">
+    <?php if( have_rows('products') ) { ?>
+    <?php while ( have_rows('products') ) { the_row(); ?>
+    <?php
+      $image = get_sub_field('image');
+      $title = get_sub_field('title');
+      $subtitle = get_sub_field('subtitle');
+      $price = get_sub_field('price');
+      $link = get_sub_field('link');
+    ?>
+    <div class="featured-product">
+      <div class="featured-product-image">
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+      </div>
+      <h2 class="featured-product-title"><?php echo $title; ?></h2>
+      <?php if ($subtitle) { ?>
+      <h3 class="featured-product-subtitle"><?php echo $subtitle; ?></h3>
+      <?php } ?>
+      <?php if ($price) { ?>
+      <h3 class="featured-product-price"><?php echo $price; ?></h3>
+      <?php } ?>
+      <?php if ($link) { ?>
+      <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button button-medium button-dark button-outline"><?php echo $link['title']; ?></a>
+      <?php } ?>
+    </div>
+    <?php } ?>
     <?php } ?>
   </div>
 </div>

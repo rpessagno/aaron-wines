@@ -109,16 +109,12 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 @mixin p1 {
-  font: 300 normal 18px/1.7 $sans-serif;
+  font: 300 normal 17px/1.7 $sans-serif;
   letter-spacing: .02em;
   color: $charcoal;
 
-  @include bp(l) {
+  @include bp(m) {
     font-size: 17px;
-  }
-
-  @include bp(s) {
-    font-size: 16px;
   }
 }
 
