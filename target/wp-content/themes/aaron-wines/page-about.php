@@ -127,9 +127,10 @@ get_header();
     </div>
   </div>
 
+  <?php if( have_rows('secondary_labels') ) { ?>
   <div class="about-labels-sub">
 
-    <?php if( have_rows('secondary_labels') ) { ?>
+    
     <?php while ( have_rows('secondary_labels') ) { the_row(); ?>
     <?php
       $image = get_sub_field('image');
@@ -152,9 +153,9 @@ get_header();
     </div>
 
     <?php } ?>
-    <?php } ?>
 
   </div>
+  <?php } ?>
 
 </div> 
 
