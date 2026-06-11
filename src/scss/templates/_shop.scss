@@ -342,6 +342,13 @@
             border: $blue solid 2px;
           }
         }
+
+        &__login-message {
+
+          .c7-btn {
+            margin-top: 1em;
+          }
+        }
       }
     }
   }
